@@ -145,7 +145,7 @@ class SearchService {
 					if (!hasMatchingGrade) return false;
 				}
 
-				if (filters.scales?.length && !filters.scales.includes(item.scale ?? "")) return false;
+				if (filters.scales?.length && !item.scales.some(s => filters.scales!.includes(s))) return false;
 
 				if (filters.minPrice !== undefined && (item.price?.amount ?? 0) < filters.minPrice) return false;
 
@@ -181,7 +181,9 @@ class SearchService {
 		for (const record of searchRecords) {
 			const item = getItemById(record.id);
 			if (item) {
-				if (item.scale) scales.add(item.scale);
+				for (const scale of item.scales) {
+					scales.add(scale);
+				}
 				// Collect all grades (root and specific) from hierarchical structure
 				for (const grade of getNodeAllGrades(item)) {
 					grades.add(grade);

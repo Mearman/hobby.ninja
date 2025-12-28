@@ -117,7 +117,7 @@ export class SearchIndex {
 					category: record.category,
 					series: record.series,
 					grade: fullItem ? getNodePrimaryGrade(fullItem) ?? undefined : undefined,
-					scale: fullItem?.scale,
+					scale: fullItem?.scales[0],
 					price: fullItem?.price?.amount ?? undefined,
 					releaseYear: fullItem?.releaseDate?.year ?? undefined,
 					type: "item",
@@ -135,7 +135,11 @@ export class SearchIndex {
 						this.grades.add(grade);
 					}
 				}
-				if (fullItem?.scale) this.scales.add(fullItem.scale);
+				if (fullItem) {
+					for (const scale of fullItem.scales) {
+						this.scales.add(scale);
+					}
+				}
 				if (record.series) this.series.add(record.series);
 			}
 

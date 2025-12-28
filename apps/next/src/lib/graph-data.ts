@@ -156,9 +156,9 @@ function enrichItemWithRelationships(item: Item): EnrichedItem {
 		enrichedItem.categoryName = getCategoryNameById(item.categories[0].id);
 	}
 
-	// Use scale from item data
-	if (item.scale) {
-		enrichedItem.scaleName = item.scale;
+	// Use primary scale from item data (first scale in array)
+	if (item.scales.length > 0) {
+		enrichedItem.scaleName = item.scales[0];
 	}
 
 	// Extract grade
