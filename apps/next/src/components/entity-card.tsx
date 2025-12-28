@@ -41,7 +41,7 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 			h="100%"
 			style={{
 				cursor: "pointer",
-				border: isSelected ? "2px solid var(--mantine-color-blue-5)" : "2px solid transparent",
+				border: isSelected ? "2px solid var(--mantine-primary-color-filled)" : "2px solid transparent",
 				borderRadius: "var(--mantine-radius-md)",
 			}}
 		>
@@ -74,7 +74,7 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 						style={{
 							position: "absolute",
 							inset: 0,
-							background: "rgba(59, 130, 246, 0.15)",
+							background: "var(--mantine-primary-color-light)",
 							pointerEvents: "none",
 						}}
 					/>
@@ -84,13 +84,15 @@ export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelecte
 			{/* Item count section */}
 			<Box
 				style={{
-					backgroundColor: isSelected ? "var(--mantine-color-blue-0)" : "var(--mantine-color-gray-0)",
+					backgroundColor: isSelected
+						? "var(--mantine-primary-color-light)"
+						: "var(--mantine-color-default-hover)",
 					padding: "4px 8px",
 					borderBottomLeftRadius: INNER_BORDER_RADIUS,
 					borderBottomRightRadius: INNER_BORDER_RADIUS,
 				}}
 			>
-				<Text size="xs" c="dimmed" ta="center">
+				<Text size="xs" ta="center">
 					{itemCount.toLocaleString()}
 				</Text>
 			</Box>
