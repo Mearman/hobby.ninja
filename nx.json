@@ -8,10 +8,7 @@
 		},
 		"build": {
 			"cache": true,
-			"dependsOn": [
-				"^build",
-				"typecheck"
-			],
+			"dependsOn": ["^build", "typecheck"],
 			"parallel": 4,
 			"maxParallel": 4
 		},
@@ -19,12 +16,7 @@
 			"cache": true,
 			"parallel": 3,
 			"maxParallel": 3,
-			"inputs": [
-				"default",
-				"^default",
-				"{workspaceRoot}/tsconfig.base.json",
-				"{workspaceRoot}/vitest.config.ts"
-			]
+			"inputs": ["default", "^default", "{workspaceRoot}/tsconfig.base.json", "{workspaceRoot}/vitest.config.ts"]
 		},
 		"lint": {
 			"cache": true,
@@ -33,75 +25,22 @@
 		},
 		"typecheck": {
 			"cache": true,
-			"dependsOn": [
-				"^typecheck"
-			],
-			"inputs": [
-				"default",
-				"^default"
-			]
+			"dependsOn": ["^typecheck"],
+			"inputs": ["default", "^default"]
 		},
 		"serve": {
 			"cache": false,
-			"dependsOn": [
-				"^build",
-				"barrels"
-			]
+			"dependsOn": ["^build", "barrels"]
 		},
 		"test:e2e": {
 			"cache": true,
-			"dependsOn": [
-				"^build"
-			],
-			"inputs": [
-				"default",
-				"^default",
-				"{workspaceRoot}/playwright.config.ts",
-				"{workspaceRoot}/.browserslistrc"
-			],
-			"outputs": [
-				"{workspaceRoot}/coverage/{projectRoot}"
-			]
+			"dependsOn": ["^build"],
+			"inputs": ["default", "^default", "{workspaceRoot}/playwright.config.ts", "{workspaceRoot}/.browserslistrc"],
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"]
 		},
 		"check": {
-			"dependsOn": [
-				"syncpack:fix",
-				"typecheck",
-				"lint",
-				"test",
-				"build"
-			],
+			"dependsOn": ["syncpack:fix", "typecheck", "lint", "test", "build"],
 			"cache": true
-		}
-	},
-	"tasksRunnerOptions": {
-		"default": {
-			"runner": "@nx/workspace/tasks-runners/default",
-			"options": {
-				"cacheableOperations": [
-					"build",
-					"build:prod",
-					"test",
-					"test:unit",
-					"test:integration",
-					"test:e2e",
-					"lint",
-					"lint:check",
-					"lint:fix",
-					"typecheck",
-					"typecheck-root",
-					"syncpack:fix",
-					"barrels",
-					"validate",
-					"validate:affected",
-					"check"
-				],
-				"useDaemonProcess": true,
-				"runtimeCacheInputs": [
-					"node -v",
-					"npm -v"
-				]
-			}
 		}
 	},
 	"parallel": 3,
@@ -133,10 +72,7 @@
 				"startTargetName": "start",
 				"exportTargetName": "export"
 			},
-			"exclude": [
-				"apps/next/public/data/**",
-				"apps/next/src/data/**"
-			]
+			"exclude": ["apps/next/public/data/**", "apps/next/src/data/**"]
 		},
 		{
 			"plugin": "@nx/vite/plugin",
