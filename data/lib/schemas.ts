@@ -199,7 +199,7 @@ export const ItemSchema = z.object({
 	manual: ManualRefSchema.optional(),
 
 	// Product information
-	scale: z.string().optional(),
+	scales: z.array(z.string()).default([]),
 	price: PriceSchema.optional(),
 	releaseDate: ReleaseDateSchema.optional(),
 	// Grades - keyed by root grade, value is array of specific grades
