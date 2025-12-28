@@ -3,7 +3,7 @@
 import { getBrandById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
 import { Box, Card, Group, SimpleGrid, Stack, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
 import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
@@ -23,6 +23,52 @@ function formatReleaseDate(releaseDate?: { year?: number | null; month?: number 
 // First page of images load eagerly to avoid lazy loading issues for visible items
 // Native loading="lazy" can fail for images already in viewport at render time
 const EAGER_LOAD_COUNT = 24;
+
+/** Font sizes to try for auto-fitting title text (largest to smallest) */
+const TITLE_FONT_SIZES_PX = [16, 14, 13, 12, 11, 10];
+const TITLE_CONTAINER_HEIGHT = 60;
+
+/** Title text that auto-scales to fit within a fixed-height container */
+function FittedTitle({ text }: { text: string }): React.ReactElement {
+	const containerRef = useRef<HTMLDivElement>(null);
+	const textRef = useRef<HTMLDivElement>(null);
+
+	useLayoutEffect(() => {
+		const container = containerRef.current;
+		const textEl = textRef.current;
+		if (!container || !textEl) return;
+
+		// Find the largest font size that fits
+		for (const size of TITLE_FONT_SIZES_PX) {
+			textEl.style.fontSize = `${size}px`;
+			if (textEl.scrollHeight <= container.clientHeight) {
+				break;
+			}
+		}
+	}, [text]);
+
+	return (
+		<Box
+			ref={containerRef}
+			px="sm"
+			pt="sm"
+			pb="xs"
+			style={{
+				height: TITLE_CONTAINER_HEIGHT,
+				overflow: "hidden",
+			}}
+		>
+			<Text
+				ref={textRef}
+				fw={600}
+				lh={1.3}
+				style={{ wordBreak: "break-word" }}
+			>
+				{text}
+			</Text>
+		</Box>
+	);
+}
 
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
 function EntityBadge({ image, name }: { image: string; name: string }): React.ReactElement {
@@ -79,6 +125,7 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 				style={{ cursor: "pointer", overflow: "hidden" }}
 				className="item-card-hover"
 			>
+				<FittedTitle text={displayName} />
 				<Box
 					bg="gray.1"
 					style={{
@@ -148,11 +195,7 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 					)}
 				</Box>
 
-				<Stack gap={4} px="sm" pt="sm" pb={0} style={{ flex: 1 }}>
-					<Text size="sm" fw={600} lineClamp={2}>
-						{displayName}
-					</Text>
-
+				<Stack gap={4} px="sm" pt="xs" pb={0} style={{ flex: 1 }}>
 					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="auto" ml="calc(-1 * var(--mantine-spacing-sm))" mb={0}>
 						{primaryGrade?.image && (
 							<EntityBadge image={primaryGrade.image} name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja} />
