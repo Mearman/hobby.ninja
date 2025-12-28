@@ -11,7 +11,7 @@ import {
 	Text,
 	Title,
 } from "@mantine/core";
-import { IconArrowNarrowRight, IconX } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 
@@ -21,6 +21,23 @@ import { ExploreSection, OTHER_FILTER_ID, type FilterState } from "@/components/
 
 // P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
 const PBANDAI_CHILD_IDS = new Set(["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"]);
+
+type SortMode = "count" | "name";
+
+/** Get display name string from name that may be string or localized object */
+function getDisplayName(name: string | { ja: string; en?: string }): string {
+	return typeof name === "string" ? name : (name.en ?? name.ja);
+}
+
+/** Parse scale string (e.g., "1/144") to numeric value for size sorting */
+function parseScaleSize(scaleId: string): number {
+	const match = /1\/(\d+)/.exec(scaleId);
+	if (match?.[1]) {
+		return Number.parseInt(match[1], 10);
+	}
+	// Non-standard scales go to end
+	return Number.MAX_SAFE_INTEGER;
+}
 
 interface HomepageClientProps {
 	categories: Category[];
@@ -39,6 +56,9 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 		grades: [],
 		scales: [],
 	});
+
+	// Sort mode for filter sections (count = by item count, name = alphabetical/size)
+	const [sortMode, setSortMode] = useState<SortMode>("count");
 
 	// Track expanded state for each section
 	const [expandedSections, setExpandedSections] = useState({
@@ -145,48 +165,86 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 
 	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length;
 
-	// Sort items with selected ones first (for collapsed horizontal scroll view)
-	const sortedCategories = useMemo(() => {
-		if (filters.categories.length === 0) return categories;
-		const selected = categories.filter((c) => filters.categories.includes(c.id));
-		const unselected = categories.filter((c) => !filters.categories.includes(c.id));
-		return [...selected, ...unselected];
-	}, [categories, filters.categories]);
+	// Helper to sort by name or count
+	const sortByMode = useCallback(<T extends { itemIds: string[]; name: string | { ja: string; en?: string } }>(
+		items: T[],
+		mode: SortMode,
+	): T[] => {
+		return items.toSorted((a, b) => {
+			if (mode === "count") {
+				return b.itemIds.length - a.itemIds.length;
+			}
+			return getDisplayName(a.name).localeCompare(getDisplayName(b.name));
+		});
+	}, []);
 
-	const sortedSeries = useMemo(() => {
-		if (filters.series.length === 0) return series;
-		const selected = series.filter((s) => filters.series.includes(s.id));
-		const unselected = series.filter((s) => !filters.series.includes(s.id));
+	// Sort categories by mode (expanded: just sorted, collapsed: selected first then sorted)
+	const categoriesSorted = useMemo(() => sortByMode(categories, sortMode), [categories, sortMode, sortByMode]);
+	const categoriesCollapsed = useMemo(() => {
+		if (filters.categories.length === 0) return categoriesSorted;
+		const selected = categoriesSorted.filter((c) => filters.categories.includes(c.id));
+		const unselected = categoriesSorted.filter((c) => !filters.categories.includes(c.id));
 		return [...selected, ...unselected];
-	}, [series, filters.series]);
+	}, [categoriesSorted, filters.categories]);
 
-	const sortedBrands = useMemo(() => {
-		if (filters.brands.length === 0) return displayBrands;
-		const selected = displayBrands.filter((b) => filters.brands.includes(b.id));
-		const unselected = displayBrands.filter((b) => !filters.brands.includes(b.id));
+	// Sort series by mode
+	const seriesSorted = useMemo(() => sortByMode(series, sortMode), [series, sortMode, sortByMode]);
+	const seriesCollapsed = useMemo(() => {
+		if (filters.series.length === 0) return seriesSorted;
+		const selected = seriesSorted.filter((s) => filters.series.includes(s.id));
+		const unselected = seriesSorted.filter((s) => !filters.series.includes(s.id));
 		return [...selected, ...unselected];
-	}, [displayBrands, filters.brands]);
+	}, [seriesSorted, filters.series]);
 
-	const sortedScales = useMemo(() => {
-		if (filters.scales.length === 0) return scales;
-		const selected = scales.filter((s) => filters.scales.includes(s.id));
-		const unselected = scales.filter((s) => !filters.scales.includes(s.id));
+	// Sort brands by mode
+	const brandsSorted = useMemo(() => sortByMode(displayBrands, sortMode), [displayBrands, sortMode, sortByMode]);
+	const brandsCollapsed = useMemo(() => {
+		if (filters.brands.length === 0) return brandsSorted;
+		const selected = brandsSorted.filter((b) => filters.brands.includes(b.id));
+		const unselected = brandsSorted.filter((b) => !filters.brands.includes(b.id));
 		return [...selected, ...unselected];
-	}, [scales, filters.scales]);
+	}, [brandsSorted, filters.brands]);
 
-	// Sort grade hierarchy so selected families come first (for collapsed view)
-	const sortedGradeHierarchy = useMemo(() => {
-		if (filters.grades.length === 0) return gradeHierarchy;
-		const selected = gradeHierarchy.filter((entry) => {
+	// Sort scales by mode (name = size order)
+	const scalesSorted = useMemo(() => {
+		return scales.toSorted((a, b) => {
+			if (sortMode === "count") {
+				return b.itemIds.length - a.itemIds.length;
+			}
+			// Sort by scale size (smaller denominator = larger scale = first)
+			return parseScaleSize(a.id) - parseScaleSize(b.id);
+		});
+	}, [scales, sortMode]);
+	const scalesCollapsed = useMemo(() => {
+		if (filters.scales.length === 0) return scalesSorted;
+		const selected = scalesSorted.filter((s) => filters.scales.includes(s.id));
+		const unselected = scalesSorted.filter((s) => !filters.scales.includes(s.id));
+		return [...selected, ...unselected];
+	}, [scalesSorted, filters.scales]);
+
+	// Sort grade hierarchy by mode
+	const gradesSorted = useMemo(() => {
+		return gradeHierarchy.toSorted((a, b) => {
+			if (sortMode === "count") {
+				const aCount = getGradeFamilyItemIds(a.root.id).length;
+				const bCount = getGradeFamilyItemIds(b.root.id).length;
+				return bCount - aCount;
+			}
+			return getDisplayName(a.root.name).localeCompare(getDisplayName(b.root.name));
+		});
+	}, [gradeHierarchy, sortMode]);
+	const gradesCollapsed = useMemo(() => {
+		if (filters.grades.length === 0) return gradesSorted;
+		const selected = gradesSorted.filter((entry) => {
 			const familyIds = getGradeFamilyIds(entry.root.id);
 			return familyIds.some((id) => filters.grades.includes(id));
 		});
-		const unselected = gradeHierarchy.filter((entry) => {
+		const unselected = gradesSorted.filter((entry) => {
 			const familyIds = getGradeFamilyIds(entry.root.id);
 			return !familyIds.some((id) => filters.grades.includes(id));
 		});
 		return [...selected, ...unselected];
-	}, [gradeHierarchy, filters.grades]);
+	}, [gradesSorted, filters.grades]);
 
 	// Count visible selected grade cards
 	// When section collapsed: count root families with any selection (1 card per family)
@@ -194,7 +252,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 	const visibleSelectedGradeCount = useMemo(() => {
 		if (!expandedSections.grades) {
 			// Section collapsed: only root cards shown, count families with any selection
-			return sortedGradeHierarchy.filter((entry) => {
+			return gradesCollapsed.filter((entry) => {
 				const { root, children } = entry;
 				if (children.length === 0) {
 					return filters.grades.includes(root.id);
@@ -206,7 +264,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 
 		// Section expanded: count each visible selected card
 		let count = 0;
-		for (const entry of gradeHierarchy) {
+		for (const entry of gradesSorted) {
 			const { root, children } = entry;
 			const hasChildren = children.length > 0;
 			const isExpanded = expandedFamilies.has(root.id);
@@ -231,7 +289,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 			}
 		}
 		return count;
-	}, [gradeHierarchy, sortedGradeHierarchy, expandedSections.grades, expandedFamilies, filters.grades]);
+	}, [gradesSorted, gradesCollapsed, expandedSections.grades, expandedFamilies, filters.grades]);
 
 	// Count items without categories/series/brands/scales for "Other" option
 	const otherCounts = useMemo(() => ({
@@ -246,6 +304,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 			{/* Categories, Grades, Brands & Series */}
 			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
+					<Group justify="flex-end">
+						<Button
+							variant="subtle"
+							size="xs"
+							leftSection={sortMode === "count" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
+							onClick={() => { setSortMode((prev) => prev === "count" ? "name" : "count"); }}
+						>
+							{sortMode === "count" ? "By count" : "By name"}
+						</Button>
+					</Group>
+
 					<CollapsibleGrid
 						title="Category"
 						totalCount={categories.length + 1}
@@ -254,7 +323,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
 						onClear={clearCategories}
 					>
-						{(expandedSections.categories ? categories : sortedCategories).map((category) => (
+						{(expandedSections.categories ? categoriesSorted : categoriesCollapsed).map((category) => (
 							<EntityCard
 								key={category.id}
 								id={category.id}
@@ -289,7 +358,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
 						onClear={clearGrades}
 					>
-						{(expandedSections.grades ? gradeHierarchy : sortedGradeHierarchy).flatMap((entry) => {
+						{(expandedSections.grades ? gradesSorted : gradesCollapsed).flatMap((entry) => {
 							const { root, children } = entry;
 							const hasChildren = children.length > 0;
 							// Only show expanded families when the section itself is expanded
@@ -374,7 +443,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
 						onClear={clearBrands}
 					>
-						{(expandedSections.brands ? displayBrands : sortedBrands).map((brand) => (
+						{(expandedSections.brands ? brandsSorted : brandsCollapsed).map((brand) => (
 							<EntityCard
 								key={brand.id}
 								id={brand.id}
@@ -409,7 +478,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						expanded={expandedSections.series}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
 					>
-						{(expandedSections.series ? series : sortedSeries).map((s) => (
+						{(expandedSections.series ? seriesSorted : seriesCollapsed).map((s) => (
 							<EntityCard
 								key={s.id}
 								id={s.id}
@@ -444,7 +513,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
 						onClear={clearScales}
 					>
-						{(expandedSections.scales ? scales : sortedScales).map((scale) => (
+						{(expandedSections.scales ? scalesSorted : scalesCollapsed).map((scale) => (
 							<EntityCard
 								key={scale.id}
 								id={scale.id}
