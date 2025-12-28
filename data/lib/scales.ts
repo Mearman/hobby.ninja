@@ -6,7 +6,7 @@ import { items } from "./items.js";
 /**
  * Validated scales data with helper functions
  *
- * Scales are derived from items based on their scale property.
+ * Scales are derived from items based on their scales property (items can have multiple scales).
  * Common scales include 1/144, 1/100, 1/60, etc.
  */
 

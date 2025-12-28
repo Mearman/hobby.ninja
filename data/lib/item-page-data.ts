@@ -60,7 +60,7 @@ export interface ItemPageData {
 	name: string;
 	images: string[];
 	displayImage?: string;
-	scale?: string;
+	scales: string[];
 	targetAge?: number;
 	sourceUrl?: string;
 	globalSiteUrls?: { enUs?: string };
@@ -169,7 +169,7 @@ export function getItemPageData(id: string): ItemPageData | undefined {
 		name: getNodeDisplayName(item),
 		images: getNodeImages(item),
 		displayImage: item.displayImage,
-		scale: item.scale,
+		scales: item.scales,
 		targetAge: item.targetAge,
 		sourceUrl: item.sourceUrl,
 		globalSiteUrls: item.globalSiteUrls,
