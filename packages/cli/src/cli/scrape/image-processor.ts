@@ -7,7 +7,6 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 
 import { resolveWorkspacePath } from "@hobby-ninja/utils/workspace";
-import type { BrowserContext } from "playwright";
 
 import { computeBufferHash, computeFileHash, normalizeImageExtension } from "../../utils/file-utils.js";
 import { findExistingItemImage, ImageHashIndex } from "../../utils/image-utils.js";
@@ -15,6 +14,7 @@ import type { Item, ItemImage } from "../bandai-catalog-parser.js";
 import { extractFilenameFromUrl } from "../download-command.js";
 import type { ManualData } from "../manual-parser.js";
 
+import type { BrowserManager } from "./http-client.js";
 import {
 	ASSETS_DIR,
 	DEFAULT_USER_AGENT,
@@ -94,7 +94,7 @@ async function fetchWithRetry(
  * @param itemId - Item identifier (e.g., "01_5771")
  * @param itemData - Item data containing images to download
  * @param jsonPath - Path to item JSON file (for updating after download)
- * @param browserContext - Playwright browser context for signed/protected URLs
+ * @param browserManager - Browser manager for accessing captured images and browser context
  * @param saveItemJson - Callback to save updated item JSON
  * @param hashIndex - Optional hash index for deduplication (item assets are authoritative)
  * @returns Download statistics (downloaded/skipped/deduplicated counts)
@@ -103,7 +103,7 @@ export async function downloadItemImages(
 	itemId: string,
 	itemData: Item,
 	jsonPath: string,
-	browserContext: BrowserContext | null,
+	browserManager: BrowserManager | null,
 	saveItemJson: (path: string, data: Item) => Promise<void>,
 	hashIndex?: ImageHashIndex,
 ): Promise<DownloadStats> {
@@ -130,6 +130,8 @@ export async function downloadItemImages(
 	// Download each image
 	for (const { image, type } of allImages) {
 		if (!image.src) {
+			// Debug: log images without src
+			console.log(`    [Debug] Image without src: path=${image.path ?? "none"}, hash=${image.hash ?? "none"}`);
 			continue;
 		}
 
@@ -158,7 +160,7 @@ export async function downloadItemImages(
 
 		// Download the image
 		try {
-			const imageBuffer = await downloadImage(image.src, browserContext);
+			const imageBuffer = await downloadImage(image.src, browserManager);
 			const hash = computeBufferHash(imageBuffer);
 
 			// Check if this image already exists elsewhere (hash-based deduplication)
@@ -200,13 +202,28 @@ export async function downloadItemImages(
 
 /**
  * Download an image from URL
- * Tries plain fetch first, falls back to Playwright for signed/protected URLs
+ * For CloudFront URLs, checks captured images first (from page load interception)
+ * For other URLs, tries plain fetch first, falls back to Playwright
  *
  * @param url - Image URL to download
- * @param browserContext - Playwright browser context for fallback (null if not available)
+ * @param browserManager - Browser manager for captured images and context (null if not available)
  * @returns Image data as Buffer
  */
-export async function downloadImage(url: string, browserContext: BrowserContext | null): Promise<Buffer> {
+export async function downloadImage(url: string, browserManager: BrowserManager | null): Promise<Buffer> {
+	// For CloudFront URLs, check if we captured the image during page load
+	// CloudFront signed URLs are IP-bound, so we must use pre-captured data
+	if (url.includes("cloudfront.net") && browserManager) {
+		const urlObj = new URL(url);
+		const filename = urlObj.pathname.split("/").pop() ?? "";
+		const capturedBuffer = browserManager.getCapturedImage(filename);
+		if (capturedBuffer) {
+			console.log(`      Using captured image: ${filename}`);
+			return capturedBuffer;
+		}
+		// If not captured, the 403 is expected - throw immediately
+		throw new Error("CloudFront image not captured during page load");
+	}
+
 	// Try plain fetch first with hard timeout
 	try {
 		const response = await withTimeout(
@@ -238,13 +255,18 @@ export async function downloadImage(url: string, browserContext: BrowserContext 
 		// Fall back to Playwright
 	}
 
-	// Use Playwright for signed/protected URLs
+	// Use Playwright for signed/protected URLs (non-CloudFront)
+	const browserContext = browserManager?.getBrowserContext() ?? null;
 	if (!browserContext) {
 		throw new Error("Browser not initialized");
 	}
 
 	const page = await browserContext.newPage();
 	try {
+		// Set Referer header to match the original page context (required for some CDNs)
+		await page.setExtraHTTPHeaders({
+			Referer: "https://bandai-hobby.net/",
+		});
 		const response = await page.goto(url, { waitUntil: "load", timeout: 30_000 });
 		if (!response) {
 			throw new Error("No response received");

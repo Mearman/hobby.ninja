@@ -105,6 +105,21 @@ export const MAX_FETCH_RETRIES = 3;
 /** Base delay between retries in milliseconds (with exponential backoff) */
 export const RETRY_DELAY_MS = 2000;
 
+/** HTTP status code for forbidden (403) */
+export const HTTP_FORBIDDEN = 403;
+
+/** HTTP status code for success (200) */
+export const HTTP_OK = 200;
+
+/** Extra wait time for lazy-loaded images (ms) */
+export const LAZY_LOAD_EXTRA_WAIT_MS = 2000;
+
+/** Error message for uninitialized browser */
+export const BROWSER_NOT_INITIALIZED = "Browser not initialized. Call initializeBrowser() first.";
+
+/** CloudFront CDN domain identifier */
+export const CLOUDFRONT_DOMAIN = "cloudfront.net";
+
 // ============================================================================
 // Constants - Time Conversion
 // ============================================================================

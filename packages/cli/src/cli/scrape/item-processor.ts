@@ -284,6 +284,7 @@ export async function processItemComplete(
 	}
 
 	// Step 5: Download images for this item (with hash-based deduplication)
+	// Note: CloudFront images are already captured during the initial page fetch
 	if (itemData.images && !options.dryRun) {
 		try {
 			const downloadResult = await time("download-images", () =>
@@ -291,7 +292,7 @@ export async function processItemComplete(
 					itemId,
 					itemData,
 					jsonPath,
-					deps.browserManager.getBrowserContext(),
+					deps.browserManager,
 					async (p, d) => { await saveItemJson(p, d); },
 					deps.hashIndex,
 				),
@@ -477,12 +478,20 @@ export async function cleanupBlogItem(id: string): Promise<boolean> {
 
 /**
  * Fetch a page HTML with fallback from plain fetch to Playwright
+ * For Bandai item pages, always uses Playwright with image capture to handle CloudFront images
  *
  * @param url - URL to fetch
  * @param browserManager - Browser manager for Playwright fallback
  * @returns HTML content
  */
 export async function fetchPage(url: string, browserManager: BrowserManager): Promise<string> {
+	// For Bandai item pages, use image capture to grab CloudFront images during page load
+	// CloudFront signed URLs are IP-bound, so we must capture them as they're returned
+	if (url.includes("bandai-hobby.net/item/")) {
+		console.log(`  Using Playwright with image capture...`);
+		return browserManager.fetchPageWithImageCapture(url);
+	}
+
 	// Try plain fetch first (faster) with hard timeout
 	try {
 		const response = await withTimeout(
