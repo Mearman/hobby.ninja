@@ -105,21 +105,34 @@ export function isEphemeralUrl(url: string): boolean {
 /**
  * Strip ephemeral src from an image object
  * Keeps permanent URLs, removes ephemeral ones
+ * Preserves path and hash fields
  */
-export function stripEphemeralSrc(img: { src?: string; path?: string }): ItemImage {
+export function stripEphemeralSrc(img: { src?: string; path?: string; hash?: string }): ItemImage {
 	if (img.src && isEphemeralUrl(img.src)) {
-		return img.path ? { path: img.path } : {};
+		// Remove src but keep path and hash
+		const result: ItemImage = {};
+		if (img.path) result.path = img.path;
+		if (img.hash) result.hash = img.hash;
+		return result;
 	}
 	return img;
 }
 
 /**
+ * Check if an image object has any meaningful content
+ */
+function isNotEmptyImage(img: ItemImage): boolean {
+	return Boolean(img.src ?? img.path ?? img.hash);
+}
+
+/**
  * Strip ephemeral URLs from all images in an item's images object
+ * Filters out empty image objects (e.g., when download failed for ephemeral URLs)
  */
 export function stripEphemeralImageUrls(images: ItemImages): ItemImages {
 	return {
-		product: images.product.map(img => stripEphemeralSrc(img)),
-		instructions: images.instructions.map(img => stripEphemeralSrc(img)),
+		product: images.product.map(img => stripEphemeralSrc(img)).filter(img => isNotEmptyImage(img)),
+		instructions: images.instructions.map(img => stripEphemeralSrc(img)).filter(img => isNotEmptyImage(img)),
 	};
 }
 
