@@ -1,3 +1,44 @@
+## [1.1.0](https://github.com/Mearman/hobby.ninja/compare/v1.0.1...v1.1.0) (2025-12-28)
+
+### Features
+
+- **next:** add columns prop to CollapsibleGrid ([388c43e](https://github.com/Mearman/hobby.ninja/commit/388c43e27e2d5c83e210d406a086992293c5fe33))
+- **next:** show item count below filter card instead of on hover ([f2a620c](https://github.com/Mearman/hobby.ninja/commit/f2a620c1537354e80cbcc1bc64ef9d8b976d13e4))
+- **next:** show item count below filter card with theme colors ([bd0696a](https://github.com/Mearman/hobby.ninja/commit/bd0696ae35b326f8f7a0df33cc2ff456747361c2))
+
+### Bug Fixes
+
+- **cli:** remove unnecessary optional chaining in translate-command ([023ab70](https://github.com/Mearman/hobby.ninja/commit/023ab706c84b6632b2c3fef4d70cb10aabec6038))
+- **next:** display P-Bandai sub-brands as P-Bandai on item cards ([850673f](https://github.com/Mearman/hobby.ninja/commit/850673f3e3ceb34d3353478c4af9585bcf0eb82a))
+- **next:** expand grade families when selecting all grades ([27783c7](https://github.com/Mearman/hobby.ninja/commit/27783c791aeff741f56fe9e9b8e2ed649c04648b))
+- **next:** fix Select none not showing for grades filter ([b35b341](https://github.com/Mearman/hobby.ninja/commit/b35b3412d0b3e10b743abdf1297d3827cd19d256))
+- **next:** make columns prop responsive with maxColumns ([513cf02](https://github.com/Mearman/hobby.ninja/commit/513cf02f6b71da363c13d40ac4de6d08669b27e6))
+- **next:** restore title hover overlay on filter cards ([880034a](https://github.com/Mearman/hobby.ninja/commit/880034acb1a6e0954b8618bd2222e48ff078f2f1))
+- **next:** show specific child grade instead of parent on item cards ([e59723c](https://github.com/Mearman/hobby.ninja/commit/e59723ccd5b6685f9b175af29c965d9482e67899))
+
+### Refactoring
+
+- **cli:** use exported APIs instead of private method access ([45e06de](https://github.com/Mearman/hobby.ninja/commit/45e06deadd2c51ea51f2b6ec9722258fa7365964))
+- **scrapers:** apply lint fixes to base-scraper ([89c6288](https://github.com/Mearman/hobby.ninja/commit/89c628853c93e07dcdbb789ab7846aaae433ca1c))
+- **scrapers:** apply lint fixes to core scrapers ([f37105c](https://github.com/Mearman/hobby.ninja/commit/f37105c6ee783926962968848945cdebab42f930))
+- **scrapers:** apply lint fixes to index managers ([28b50a9](https://github.com/Mearman/hobby.ninja/commit/28b50a9f3e10a9d061634f784dc77d63a4ddf40f))
+- **scrapers:** apply lint fixes to manual-downloader ([0b70462](https://github.com/Mearman/hobby.ninja/commit/0b70462a9d087197624b8c8df19c7c730c7592d6))
+- **scrapers:** apply lint fixes to manual-parser ([cac1e3d](https://github.com/Mearman/hobby.ninja/commit/cac1e3dfe4c8ace69f73087550f61d59c6bd6b5d))
+- **scrapers:** apply lint fixes to url-scanner ([cb6db8a](https://github.com/Mearman/hobby.ninja/commit/cb6db8ae01742b0f249566ecce66be312fce10ca))
+
+### Styling
+
+- **next:** make filter sections more vertically compact ([f9bb5dd](https://github.com/Mearman/hobby.ninja/commit/f9bb5dd865d79a9333ea2e9b662f7caf0f4dce16))
+
+### Chores
+
+- **assets:** consolidate 30ML category images ([9e887d9](https://github.com/Mearman/hobby.ninja/commit/9e887d99baa54e7f83b845a650f16b15ad3a9642))
+- **assets:** replace pb.webp with pb.png ([4545b2d](https://github.com/Mearman/hobby.ninja/commit/4545b2d1f3c5bd78ea776b4971703ff6df9f806e))
+- **data:** consolidate duplicate character plastic model category ([f4e0f4f](https://github.com/Mearman/hobby.ninja/commit/f4e0f4f208f5f9302afa78c18b234dd79668df0d))
+- **data:** remove duplicate 30-minutes-label category ([a4e9a17](https://github.com/Mearman/hobby.ninja/commit/a4e9a17acf2f01a9ced2b12914c9c304ce143219))
+- **data:** remove empty/duplicate categories (product-list, overall-top) ([8e166c5](https://github.com/Mearman/hobby.ninja/commit/8e166c5e7067b1a3dc24368dd5f246ba520ffcf1))
+- **eslint:** add scrapers package tsconfig ([6b7937a](https://github.com/Mearman/hobby.ninja/commit/6b7937a8357ffb80b9afe997926dc01fea93078a))
+
 ## [1.0.1](https://github.com/Mearman/hobby.ninja/compare/v1.0.0...v1.0.1) (2025-12-28)
 
 ### Chores
