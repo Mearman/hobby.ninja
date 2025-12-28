@@ -178,7 +178,10 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 	const selectAllGrades = useCallback(() => {
 		const allIds = grades.map((g) => g.id);
 		setFilters((prev) => ({ ...prev, grades: [...allIds, OTHER_FILTER_ID] }));
-	}, [grades]);
+		// Expand all grade families that have children
+		const familyRoots = gradeHierarchy.filter((entry) => entry.children.length > 0).map((entry) => entry.root.id);
+		setExpandedFamilies(new Set(familyRoots));
+	}, [grades, gradeHierarchy]);
 
 	const selectAllScales = useCallback(() => {
 		const allIds = scales.map((s) => s.id);
