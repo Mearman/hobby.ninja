@@ -1,3 +1,34 @@
+## [1.2.0](https://github.com/Mearman/hobby.ninja/compare/v1.1.0...v1.2.0) (2025-12-28)
+
+### Features
+
+- **next:** add category badge to item cards ([7f9de07](https://github.com/Mearman/hobby.ninja/commit/7f9de07b5f600785972d21b2a54a1008905d0e92))
+
+### Bug Fixes
+
+- **data:** clean up 01_6976.json description and accessories ([8444be1](https://github.com/Mearman/hobby.ninja/commit/8444be16d81f849bb246ace6709783abe95452ae))
+- **data:** remove non-existent image from characterplastic category ([7bc0346](https://github.com/Mearman/hobby.ninja/commit/7bc034651249f8dbcc3cfa5c135f5eea1e95971e))
+- **data:** replace characterplastic brand with category ([7719eb9](https://github.com/Mearman/hobby.ninja/commit/7719eb9bb1229d6d84d048835014b7d966cb02e3))
+- **data:** update pb brand image path to .png ([6bd3161](https://github.com/Mearman/hobby.ninja/commit/6bd316186d2613251a3a91f6cf414adedb2ce888))
+
+### Refactoring
+
+- **next:** improve FittedTitle height measurement ([f7171a8](https://github.com/Mearman/hobby.ninja/commit/f7171a8c3c882524c131052d9cfb5e4b45a3eb9c))
+- **scripts:** apply lint fixes to all scripts ([a131159](https://github.com/Mearman/hobby.ninja/commit/a1311596ca771ac29ad96a905987c7e39d1aaa05))
+
+### Styling
+
+- **next:** improve entity badge text visibility ([a3aacfe](https://github.com/Mearman/hobby.ninja/commit/a3aacfecfdae93a2a093ac15a76cb0dd3e3844e8))
+- **next:** reduce entity badge width to 20% ([81acb56](https://github.com/Mearman/hobby.ninja/commit/81acb56134bec7894ebffac79cbec95527993ced))
+
+### Chores
+
+- **data:** remove item_all category ([7219955](https://github.com/Mearman/hobby.ninja/commit/72199557fc93302645507c369dc85f6e29c56491))
+- **data:** remove item_all category references from 95 items ([a14929e](https://github.com/Mearman/hobby.ninja/commit/a14929eaad52d6b63f12072699132741f77189be))
+- **lint:** enable linting for scripts directory ([38fd248](https://github.com/Mearman/hobby.ninja/commit/38fd24858e14b3cd4adecc5207558ad1b7e5de74))
+- remove deprecated apps/web application ([537829c](https://github.com/Mearman/hobby.ninja/commit/537829ce1a064b4a78b3f01edda3ef81fb079881))
+- **scripts:** add typescript config for scripts directory ([b6b561e](https://github.com/Mearman/hobby.ninja/commit/b6b561ec5d0366c62da4854512b78c8b0cfe65e3))
+
 ## [1.1.0](https://github.com/Mearman/hobby.ninja/compare/v1.0.1...v1.1.0) (2025-12-28)
 
 ### Features
