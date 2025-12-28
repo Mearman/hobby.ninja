@@ -15,6 +15,12 @@ const GLOBAL_BASE_URL = "https://global.bandai-hobby.net/en-us";
 /**
  * Data extracted from global.bandai-hobby.net English site
  */
+/** Tag with modifier and English text */
+export interface GlobalSiteTag {
+	modifier: string;
+	en: string;
+}
+
 export interface GlobalSiteData {
 	/** English product name */
 	name?: string;
@@ -28,6 +34,8 @@ export interface GlobalSiteData {
 	brand?: string;
 	/** Series name in English (e.g., "Mobile Suit Gundam") */
 	series?: string;
+	/** Distribution channel tags with English text */
+	tags?: GlobalSiteTag[];
 	/** Whether the page exists */
 	hasPage: boolean;
 	/** Full URL of the global page (set when hasPage is true) */
@@ -102,6 +110,9 @@ export class GlobalSiteLookup {
 		// Extract description and accessories (split by [Accessories] marker)
 		const { description, accessories } = this.extractDescriptionBullets($);
 
+		// Extract tags (distribution channel indicators)
+		const tags = this.extractTags($);
+
 		return {
 			name: this.extractName($),
 			description: description.length > 0 ? description : undefined,
@@ -109,6 +120,7 @@ export class GlobalSiteLookup {
 			releaseDate: this.extractReleaseDate($),
 			brand: this.extractBrand($),
 			series: this.extractSeries($),
+			tags: tags.length > 0 ? tags : undefined,
 			hasPage: true,
 			url,
 			html,
@@ -347,5 +359,31 @@ export class GlobalSiteLookup {
 		if (seriesLink.length === 0) return undefined;
 		const text = seriesLink.text().trim();
 		return text.length > 0 ? text : undefined;
+	}
+
+	/**
+	 * Extract distribution channel tags from global site
+	 * Tags are in elements like: <div class="pg-products__tag -gbase">THE GUNDAM BASE LIMITED</div>
+	 */
+	private extractTags($: CheerioAPI): GlobalSiteTag[] {
+		const tags: GlobalSiteTag[] = [];
+
+		$(".pg-products__tag").each((_, el) => {
+			const $el = $(el);
+			const text = $el.text().trim();
+			if (!text) return;
+
+			// Extract modifier from class (e.g., "pg-products__tag -gbase" -> "gbase")
+			const classList = $el.attr("class") ?? "";
+			const modifierMatch = /\s-(\w+)/.exec(classList);
+			const modifier = modifierMatch?.[1] ?? "other";
+
+			tags.push({
+				modifier,
+				en: text,
+			});
+		});
+
+		return tags;
 	}
 }
