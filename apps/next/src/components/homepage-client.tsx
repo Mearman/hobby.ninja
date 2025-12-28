@@ -247,7 +247,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 			<Container size="xl" py="xl" w="100%">
 				<Stack gap="xl">
 					<CollapsibleGrid
-						title="Categories"
+						title="Category"
 						totalCount={categories.length + 1}
 						selectedCount={filters.categories.length}
 						expanded={expandedSections.categories}
@@ -282,7 +282,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 					<Divider />
 
 					<CollapsibleGrid
-						title="Grades"
+						title="Grade"
 						totalCount={grades.length}
 						selectedCount={visibleSelectedGradeCount}
 						expanded={expandedSections.grades}
@@ -367,7 +367,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 					<Divider />
 
 					<CollapsibleGrid
-						title="Brands"
+						title="Brand"
 						totalCount={displayBrands.length + 1}
 						selectedCount={filters.brands.length}
 						expanded={expandedSections.brands}
@@ -402,7 +402,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 					<Divider />
 
 					<CollapsibleGrid
-						title="Scales"
+						title="Scale"
 						totalCount={scales.length + 1}
 						selectedCount={filters.scales.length}
 						expanded={expandedSections.scales}
