@@ -31,18 +31,18 @@ const WORD_BREAK_STYLE = "break-word" as const;
 
 /** Title text that auto-scales to fit within a fixed-height container */
 function FittedTitle({ text }: { text: string }): React.ReactElement {
-	const containerRef = useRef<HTMLDivElement>(null);
+	const measureRef = useRef<HTMLDivElement>(null);
 	const textRef = useRef<HTMLDivElement>(null);
 
 	useLayoutEffect(() => {
-		const container = containerRef.current;
+		const measureEl = measureRef.current;
 		const textEl = textRef.current;
-		if (!container || !textEl) return;
+		if (!measureEl || !textEl) return;
 
-		// Find the largest font size that fits
+		// Find the largest font size that fits within the content area (excluding padding)
 		for (const size of TITLE_FONT_SIZES_PX) {
 			textEl.style.fontSize = `${size}px`;
-			if (textEl.scrollHeight <= container.clientHeight) {
+			if (textEl.scrollHeight <= measureEl.clientHeight) {
 				break;
 			}
 		}
@@ -50,7 +50,6 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 
 	return (
 		<Box
-			ref={containerRef}
 			px="sm"
 			pt="sm"
 			pb="xs"
@@ -59,14 +58,23 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 				overflow: "hidden",
 			}}
 		>
-			<Text
-				ref={textRef}
-				fw={600}
-				lh={1.3}
-				style={{ wordBreak: WORD_BREAK_STYLE }}
+			{/* Inner wrapper for accurate height measurement (excludes parent padding) */}
+			<Box
+				ref={measureRef}
+				style={{
+					height: "100%",
+					overflow: "hidden",
+				}}
 			>
-				{text}
-			</Text>
+				<Text
+					ref={textRef}
+					fw={600}
+					lh={1.3}
+					style={{ wordBreak: WORD_BREAK_STYLE }}
+				>
+					{text}
+				</Text>
+			</Box>
 		</Box>
 	);
 }
