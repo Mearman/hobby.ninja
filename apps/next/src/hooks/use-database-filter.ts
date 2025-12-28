@@ -75,11 +75,12 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 					const gradesMatch =
 						Object.keys(entry.grades).some(g => g.toLowerCase().includes(query)) ||
 						Object.values(entry.grades).flat().some(g => g.toLowerCase().includes(query));
+					const scalesMatch = entry.scales.some(s => s.toLowerCase().includes(query));
 					return (
 						brand.toLowerCase().includes(query) ||
 						category.toLowerCase().includes(query) ||
 						gradesMatch ||
-						(entry.scale?.toLowerCase().includes(query) ?? false)
+						scalesMatch
 					);
 				}
 				return false;
@@ -122,11 +123,13 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 
 		// Scale filter (for both items and manuals)
 		if (filterState.scales.length > 0) {
-			filtered = filtered.filter(
-				(entry) =>
-					entry.scale &&
-					filterState.scales.includes(entry.scale),
-			);
+			filtered = filtered.filter((entry) => {
+				if (entry.type === "item") {
+					return entry.scales.some(s => filterState.scales.includes(s));
+				}
+				// Manual
+				return entry.scale && filterState.scales.includes(entry.scale);
+			});
 		}
 
 		// Series filter (only for items)
@@ -275,7 +278,9 @@ export function useDatabaseFilter(items: Item[], manuals: Manual[]) {
 					grades.add(specific);
 				}
 			}
-			if (item.scale) scales.add(item.scale);
+			for (const scale of item.scales) {
+				scales.add(scale);
+			}
 			if ((item.series).length > 0) series.add(item.series[0].id);
 		}
 

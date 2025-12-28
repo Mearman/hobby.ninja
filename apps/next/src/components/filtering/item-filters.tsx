@@ -806,11 +806,13 @@ export function ItemFilters({
 			}
 
 			// Scale counts
-			if (item.scale && item.scale in scaleCounts) {
-				scaleCounts[item.scale]++;
+			for (const scale of item.scales) {
+				if (scale in scaleCounts) {
+					scaleCounts[scale]++;
+				}
 			}
 			// Handle "Other" scales
-			if (!item.scale && "Other" in scaleCounts) {
+			if (item.scales.length === 0 && "Other" in scaleCounts) {
 				scaleCounts.Other++;
 			}
 

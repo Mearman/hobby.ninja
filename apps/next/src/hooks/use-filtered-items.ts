@@ -136,7 +136,9 @@ export function useFilteredItems(
 					grades.add(specific);
 				}
 			}
-			if (item.scale) scales.add(item.scale);
+			for (const scale of item.scales) {
+				scales.add(scale);
+			}
 			for (const s of item.series) {
 				series.add(s.id);
 			}
@@ -154,7 +156,7 @@ export function useFilteredItems(
 			if ((item.brands).length === 0) hasItemsWithNoBrand = true;
 			if ((item.series).length === 0) hasItemsWithNoSeries = true;
 			if (Object.keys(item.grades).length === 0) hasItemsWithNoGrade = true;
-			if (!item.scale) hasItemsWithNoScale = true;
+			if (item.scales.length === 0) hasItemsWithNoScale = true;
 		}
 
 		// Add "Other" options if we have items with no data
@@ -227,13 +229,13 @@ export function useFilteredItems(
 					const gradesMatch =
 						Object.keys(item.grades).some(g => g.toLowerCase().includes(query)) ||
 						Object.values(item.grades).flat().some(g => g.toLowerCase().includes(query));
-					const scale = item.scale?.toLowerCase() ?? "";
+					const scalesMatch = item.scales.some(s => s.toLowerCase().includes(query));
 					return (
 						name.includes(query) ||
 						brandIds.includes(query) ||
 						seriesIds.includes(query) ||
 						gradesMatch ||
-						scale.includes(query)
+						scalesMatch
 					);
 				});
 			}
@@ -242,9 +244,12 @@ export function useFilteredItems(
 			if (filterState.scaleRange) {
 				const [minDenom, maxDenom] = filterState.scaleRange;
 				result = result.filter(item => {
-					if (!item.scale) return false;
-					const denom = parseScaleDenominator(item.scale);
-					return denom >= minDenom && denom <= maxDenom;
+					if (item.scales.length === 0) return false;
+					// Match if ANY of the item's scales falls within the range
+					return item.scales.some(scale => {
+						const denom = parseScaleDenominator(scale);
+						return denom >= minDenom && denom <= maxDenom;
+					});
 				});
 			}
 
@@ -303,8 +308,8 @@ export function useFilteredItems(
 					case "scales":
 					{
 						const hasOtherScale = selectedValues.includes("Other");
-						const hasNoScale = !item.scale;
-						const hasMatchingScale = item.scale && selectedValues.includes(item.scale);
+						const hasNoScale = item.scales.length === 0;
+						const hasMatchingScale = item.scales.some(s => selectedValues.includes(s));
 						return hasOtherScale ? (hasNoScale || hasMatchingScale) : hasMatchingScale;
 					}
 					case "series":
@@ -389,8 +394,8 @@ export function useFilteredItems(
 		for (const scale of availableOptions.scales) {
 			const itemsWithScale = validItems.filter(item =>
 				scale === "Other"
-					? !item.scale
-					: item.scale === scale,
+					? item.scales.length === 0
+					: item.scales.includes(scale),
 			);
 			// Apply filters from different types only (scales don't affect other scale counts)
 			const visibleItemsWithScale = applyFiltersFromDifferentTypes(itemsWithScale, "scales");
@@ -455,13 +460,13 @@ export function useFilteredItems(
 				const gradesMatch =
 					Object.keys(item.grades).some(g => g.toLowerCase().includes(query)) ||
 					Object.values(item.grades).flat().some(g => g.toLowerCase().includes(query));
-				const scale = item.scale?.toLowerCase() ?? "";
+				const scalesMatch = item.scales.some(s => s.toLowerCase().includes(query));
 				return (
 					name.includes(query) ||
 					brandIds.includes(query) ||
 					seriesIds.includes(query) ||
 					gradesMatch ||
-					scale.includes(query)
+					scalesMatch
 				);
 			});
 		}
@@ -493,8 +498,8 @@ export function useFilteredItems(
 		if (filterState.scales.length > 0) {
 			result = result.filter(item => {
 				const hasOtherScale = filterState.scales.includes("Other");
-				const hasNoScale = !item.scale;
-				const hasMatchingScale = item.scale && filterState.scales.includes(item.scale);
+				const hasNoScale = item.scales.length === 0;
+				const hasMatchingScale = item.scales.some(s => filterState.scales.includes(s));
 
 				return hasOtherScale ? (hasNoScale || hasMatchingScale) : hasMatchingScale;
 			});
@@ -504,9 +509,12 @@ export function useFilteredItems(
 		if (filterState.scaleRange) {
 			const [minDenom, maxDenom] = filterState.scaleRange;
 			result = result.filter(item => {
-				if (!item.scale) return false;
-				const denom = parseScaleDenominator(item.scale);
-				return denom >= minDenom && denom <= maxDenom;
+				if (item.scales.length === 0) return false;
+				// Match if ANY of the item's scales falls within the range
+				return item.scales.some(scale => {
+					const denom = parseScaleDenominator(scale);
+					return denom >= minDenom && denom <= maxDenom;
+				});
 			});
 		}
 
@@ -605,9 +613,10 @@ export function useFilteredItems(
 				break;
 			}
 			case "scale": {
+				// Sort by primary (first) scale; items without scales sort to end
 				result = sortDirection === "asc"
-					? result.toSorted((a, b) => (a.scale ?? "").localeCompare(b.scale ?? ""))
-					: result.toSorted((a, b) => (b.scale ?? "").localeCompare(a.scale ?? ""));
+					? result.toSorted((a, b) => (a.scales[0] ?? "zzz").localeCompare(b.scales[0] ?? "zzz"))
+					: result.toSorted((a, b) => (b.scales[0] ?? "").localeCompare(a.scales[0] ?? ""));
 				break;
 			}
 			case "series": {
