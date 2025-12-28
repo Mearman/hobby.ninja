@@ -1,6 +1,6 @@
 import type { LanguageDetection } from "@hobby-ninja/types/language";
 import type { GundamData } from "@hobby-ninja/types/product";
-import * as cheerio from "cheerio";
+import { load, type CheerioAPI, type Cheerio } from "cheerio";
 import type { Element } from "domhandler";
 
 import { BaseScraper } from "./base-scraper";
@@ -15,8 +15,8 @@ export class GundamInfoScraper extends BaseScraper {
 		});
 	}
 
-	async extractFromPage(html: string, url: string): Promise<GundamData> {
-		const $ = cheerio.load(html);
+	extractFromPage(html: string, url: string): Promise<GundamData> {
+		const $ = load(html);
 		const languageDetection = this.detectLanguage($, url);
 
 		// Extract basic product information
@@ -52,20 +52,20 @@ export class GundamInfoScraper extends BaseScraper {
 		};
 
 		// Add optional properties only if they have values
-		if (price !== null && price !== undefined) {
+		if (price) {
 			result.price = price.amount;
 			result.currency = price.currency;
 		}
-		if (releaseDate !== null && releaseDate !== undefined) result.releaseDate = releaseDate;
-		if (description !== null && description !== undefined) result.description = description;
+		if (releaseDate) result.releaseDate = releaseDate;
+		if (description) result.description = description;
 
-		return result;
+		return Promise.resolve(result);
 	}
 
 	/**
    * Extract product name
    */
-	private extractName($: cheerio.CheerioAPI): string {
+	private extractName($: CheerioAPI): string {
 		// Try multiple selectors for product name
 		const selectors = [
 			"h1.product-title",
@@ -79,7 +79,7 @@ export class GundamInfoScraper extends BaseScraper {
 			const element = $(selector).first();
 			if (element.length > 0) {
 				let name = selector.includes("meta")
-					? element.attr("content") || ""
+					? element.attr("content") ?? ""
 					: element.text().trim();
 
 				if (name) {
@@ -101,7 +101,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract brand information
    */
-	private extractBrand($: cheerio.CheerioAPI): string {
+	private extractBrand($: CheerioAPI): string {
 		const selectors = [
 			".brand-name",
 			".product-brand",
@@ -113,7 +113,7 @@ export class GundamInfoScraper extends BaseScraper {
 			const element = $(selector).first();
 			if (element.length > 0) {
 				const brand = selector.includes("meta")
-					? element.attr("content") || ""
+					? element.attr("content") ?? ""
 					: element.text().trim();
 
 				if (brand) {
@@ -130,7 +130,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract category
    */
-	private extractCategory($: cheerio.CheerioAPI): string {
+	private extractCategory($: CheerioAPI): string {
 		// Look for category in breadcrumbs or tags
 		const selectors = [
 			".breadcrumb a:last",
@@ -156,7 +156,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract grade information
    */
-	private extractGrade($: cheerio.CheerioAPI): string {
+	private extractGrade($: CheerioAPI): string {
 		const text = $("body").text();
 
 		// Look for grade mentions in text
@@ -175,7 +175,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract scale information
    */
-	private extractScale($: cheerio.CheerioAPI): string {
+	private extractScale($: CheerioAPI): string {
 		const text = $("body").text();
 
 		// Common Gundam scales
@@ -193,7 +193,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract price information
    */
-	private extractGundamInfoPrice($: cheerio.CheerioAPI): { amount: number; currency: string } | null {
+	private extractGundamInfoPrice($: CheerioAPI): { amount: number; currency: string } | null {
 		const selectors = [
 			".price",
 			".product-price",
@@ -205,7 +205,7 @@ export class GundamInfoScraper extends BaseScraper {
 			const element = $(selector).first();
 			if (element.length > 0) {
 				const priceText = selector.includes("meta")
-					? element.attr("content") || ""
+					? element.attr("content") ?? ""
 					: element.text().trim();
 
 				if (priceText) {
@@ -247,7 +247,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract release date
    */
-	private extractReleaseDate($: cheerio.CheerioAPI): string | null {
+	private extractReleaseDate($: CheerioAPI): string | null {
 		const selectors = [
 			".release-date",
 			".product-date",
@@ -259,7 +259,7 @@ export class GundamInfoScraper extends BaseScraper {
 			const element = $(selector).first();
 			if (element.length > 0) {
 				const dateText = selector.includes("meta")
-					? element.attr("content") || ""
+					? element.attr("content") ?? ""
 					: element.text().trim();
 
 				if (dateText) {
@@ -278,7 +278,7 @@ export class GundamInfoScraper extends BaseScraper {
 		// Try to parse various date formats
 		const date = new Date(dateText);
 		if (!Number.isNaN(date.getTime())) {
-			return date.toISOString().split("T")[0] || null; // Return just the date part
+			return date.toISOString().split("T")[0] ?? null; // Return just the date part
 		}
 		return null;
 	}
@@ -286,7 +286,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract description
    */
-	private extractDescription($: cheerio.CheerioAPI): string | null {
+	private extractDescription($: CheerioAPI): string | null {
 		const selectors = [
 			".description",
 			".product-description",
@@ -298,7 +298,7 @@ export class GundamInfoScraper extends BaseScraper {
 			const element = $(selector).first();
 			if (element.length > 0) {
 				const description = selector.includes("meta")
-					? element.attr("content") || ""
+					? element.attr("content") ?? ""
 					: element.text().trim();
 
 				if (description && description.length > 10) {
@@ -313,7 +313,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract specifications
    */
-	private extractSpecifications($: cheerio.CheerioAPI): Record<string, unknown> {
+	private extractSpecifications($: CheerioAPI): Record<string, unknown> {
 		const specs: Record<string, unknown> = {};
 
 		// Look for specification table
@@ -334,14 +334,14 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Extract images
    */
-	private extractImages($: cheerio.CheerioAPI): Array<{ type: string; url: string; alt: string }> {
+	private extractImages($: CheerioAPI): Array<{ type: string; url: string; alt: string }> {
 		const images: Array<{ type: string; url: string; alt: string }> = [];
 
 		// Main product image
 		$(".product-image img, .main-image img, .gallery img").each((_index: number, element: Element) => {
 			const img = $(element);
-			const src = img.attr("src") || img.attr("data-src");
-			const alt = img.attr("alt") || "";
+			const src = img.attr("src") ?? img.attr("data-src");
+			const alt = img.attr("alt") ?? "";
 
 			if (src && !src.startsWith("data:")) {
 				const url = src.startsWith("http") ? src : `${this.baseUrl}${src}`;
@@ -357,7 +357,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Detect language of the page
    */
-	private detectLanguage($: cheerio.CheerioAPI, url: string): LanguageDetection {
+	private detectLanguage($: CheerioAPI, url: string): LanguageDetection {
 		// Check URL for language indicators
 		if (url.includes("/en/") || url.includes("/english")) {
 			return {
@@ -370,8 +370,8 @@ export class GundamInfoScraper extends BaseScraper {
 
 		// Check page content
 		const text = $("body").text().slice(0, 1000);
-		const japaneseChars = (text.match(/[\u3040-\u309F\u30A0-\u30FF]/g) || []).length;
-		const englishWords = (text.match(/[a-zA-Z]+/g) || []).length;
+		const japaneseChars = (text.match(/[\u3040-\u309F\u30A0-\u30FF]/g) ?? []).length;
+		const englishWords = (text.match(/[a-zA-Z]+/g) ?? []).length;
 
 		if (japaneseChars > englishWords * 2) {
 			return {
@@ -411,7 +411,7 @@ export class GundamInfoScraper extends BaseScraper {
 		};
 
 		const normalized = category.toLowerCase();
-		return categoryMap[normalized] || category;
+		return categoryMap[normalized] ?? category;
 	}
 
 	/**
@@ -427,7 +427,7 @@ export class GundamInfoScraper extends BaseScraper {
 	/**
    * Determine image type
    */
-	private determineImageType(img: cheerio.Cheerio<Element>, url: string): string {
+	private determineImageType(img: Cheerio<Element>, url: string): string {
 		if (img.hasClass("main") || img.parent().hasClass("main-image")) {
 			return "main";
 		}

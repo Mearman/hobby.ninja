@@ -1,6 +1,6 @@
 import type { LanguageDetection } from "@hobby-ninja/types/language";
 import type { GundamData } from "@hobby-ninja/types/product";
-import * as cheerio from "cheerio";
+import { load, type Cheerio, type CheerioAPI } from "cheerio";
 import type { Element } from "domhandler";
 
 import { BaseScraper } from "./base-scraper";
@@ -15,8 +15,8 @@ export class HobbyLinkScraper extends BaseScraper {
 		});
 	}
 
-	override async extractFromPage(html: string, url: string): Promise<GundamData> {
-		const $ = cheerio.load(html);
+	override extractFromPage(html: string, url: string): Promise<GundamData> {
+		const $ = load(html);
 		const languageDetection = this.detectLanguage($, url);
 
 		// Extract basic product information
@@ -31,7 +31,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		const images = this.extractImages($);
 
 		// Generate ID
-		const id = this.generateId("hobbylink", janCode || name || url);
+		const id = this.generateId("hobbylink", janCode ?? name || url);
 
 		const result: GundamData = {
 			id,
@@ -48,23 +48,23 @@ export class HobbyLinkScraper extends BaseScraper {
 		};
 
 		// Add optional properties only if they have values
-		if (brand !== undefined && brand !== "") result.brand = brand;
-		if (category !== undefined && category !== "") result.category = category;
-		if (price !== null && price !== undefined) {
+		if (brand !== "") result.brand = brand;
+		if (category !== "") result.category = category;
+		if (price !== null) {
 			result.price = price.amount;
-			result.currency = price.currency || "JPY";
+			result.currency = price.currency;
 		}
-		if (releaseDate !== null && releaseDate !== undefined) result.releaseDate = releaseDate;
-		if (janCode !== null && janCode !== undefined) result.sku = janCode;
-		if (description !== null && description !== undefined) result.description = description;
+		if (releaseDate !== null) result.releaseDate = releaseDate;
+		if (janCode !== null) result.sku = janCode;
+		if (description !== null) result.description = description;
 
-		return result;
+		return Promise.resolve(result);
 	}
 
 	/**
    * Extract product name
    */
-	private extractName($: cheerio.CheerioAPI): string {
+	private extractName($: CheerioAPI): string {
 		const selectors = [
 			'h1[itemprop="name"]',
 			".item-name",
@@ -77,8 +77,8 @@ export class HobbyLinkScraper extends BaseScraper {
 			const element = $(selector).first();
 			if (element.length > 0) {
 				let name = selector === "title"
-					? element.attr("content") || ""
-					: element.attr("content") || element.text() || "";
+					? element.attr("content") ?? ""
+					: element.attr("content") ?? element.text();
 
 				if (name) {
 					name = name.replaceAll(/\s+/g, " ").trim();
@@ -97,7 +97,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract brand information
    */
-	private extractBrand($: cheerio.CheerioAPI): string {
+	private extractBrand($: CheerioAPI): string {
 		// Look for brand in breadcrumbs or meta tags
 		const selectors = [
 			".brand-name",
@@ -109,7 +109,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		for (const selector of selectors) {
 			const element = $(selector).first();
 			if (element.length > 0) {
-				const brand = element.attr("content") || element.text() || "";
+				const brand = element.attr("content") ?? element.text();
 				if (brand) {
 					return brand.trim();
 				}
@@ -117,7 +117,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		}
 
 		// Try to extract from canonical URL or link elements
-		const canonicalLink = $('link[rel="canonical"]').attr("href") || "";
+		const canonicalLink = $('link[rel="canonical"]').attr("href") ?? "";
 		const urlPath = canonicalLink.includes("/") ? new URL(canonicalLink).pathname : "";
 		const pathSegments = urlPath.split("/");
 		const brandSegment = pathSegments.find(segment =>
@@ -134,7 +134,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract category
    */
-	private extractCategory($: cheerio.CheerioAPI): string {
+	private extractCategory($: CheerioAPI): string {
 		// Look for category in breadcrumbs or navigation
 		const selectors = [
 			".breadcrumb a",
@@ -169,7 +169,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract price information
    */
-	protected override extractPrice($: cheerio.CheerioAPI): { amount: number; currency: string; originalText: string } | null {
+	protected override extractPrice($: CheerioAPI): { amount: number; currency: string; originalText: string } | null {
 		const selectors = [
 			".price",
 			".price-value",
@@ -180,7 +180,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		for (const selector of selectors) {
 			const element = $(selector).first();
 			if (element.length > 0) {
-				const priceText = element.text() || element.attr("content") || "";
+				const priceText = element.text() || element.attr("content");
 				if (priceText) {
 					return this.parseJapanesePrice(priceText);
 				}
@@ -214,7 +214,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract release date
    */
-	private extractReleaseDate($: cheerio.CheerioAPI): string | null {
+	private extractReleaseDate($: CheerioAPI): string | null {
 		const selectors = [
 			".release-date",
 			".launch-date",
@@ -224,7 +224,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		for (const selector of selectors) {
 			const element = $(selector).first();
 			if (element.length > 0) {
-				const dateText = element.text() || element.attr("content") || "";
+				const dateText = element.text() || element.attr("content");
 				if (dateText) {
 					return this.parseJapaneseDate(dateText);
 				}
@@ -237,7 +237,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract JAN code (Japanese Article Number)
    */
-	private extractJanCode($: cheerio.CheerioAPI): string | null {
+	private extractJanCode($: CheerioAPI): string | null {
 		const selectors = [
 			".jan-code",
 			".product-code",
@@ -248,7 +248,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		for (const selector of selectors) {
 			const element = $(selector).first();
 			if (element.length > 0) {
-				const code = element.text() || element.attr("content") || "";
+				const code = element.text() || element.attr("content");
 				if (code) {
 					const cleaned = code.replaceAll(/[^0-9]/g, "").trim();
 					if (cleaned.length >= 8) {
@@ -264,7 +264,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract description
    */
-	private extractDescription($: cheerio.CheerioAPI): string | null {
+	private extractDescription($: CheerioAPI): string | null {
 		const selectors = [
 			".description",
 			".product-description",
@@ -275,7 +275,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		for (const selector of selectors) {
 			const element = $(selector).first();
 			if (element.length > 0) {
-				const description = element.attr("content") || element.text() || "";
+				const description = element.attr("content") ?? element.text();
 				if (description && description.length > 20) {
 					return description.trim();
 				}
@@ -288,7 +288,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract specifications
    */
-	private extractSpecifications($: cheerio.CheerioAPI): Record<string, unknown> | null {
+	private extractSpecifications($: CheerioAPI): Record<string, unknown> | null {
 		const specs: Record<string, unknown> = {};
 
 		// Look for specification table
@@ -322,14 +322,14 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Extract images
    */
-	private extractImages($: cheerio.CheerioAPI): Array<{ type: string; url: string; alt: string }> {
+	private extractImages($: CheerioAPI): Array<{ type: string; url: string; alt: string }> {
 		const images: Array<{ type: string; url: string; alt: string }> = [];
 
 		// Main product images
 		$(".item-image img, .product-image img, .gallery img").each((_index: number, element: Element) => {
 			const img = $(element);
-			const src = img.attr("src") || img.attr("data-src") || img.attr("data-original");
-			const alt = img.attr("alt") || "";
+			const src = img.attr("src") ?? img.attr("data-src") ?? img.attr("data-original");
+			const alt = img.attr("alt") ?? "";
 
 			if (src && !src.startsWith("data:")) {
 				const url = src.startsWith("http") ? src : `${this.baseUrl}${src}`;
@@ -345,7 +345,7 @@ export class HobbyLinkScraper extends BaseScraper {
 	/**
    * Detect language
    */
-	private detectLanguage(_$: cheerio.CheerioAPI, _url: string): LanguageDetection {
+	private detectLanguage(_$: CheerioAPI, _url: string): LanguageDetection {
 		// Japanese site defaults to Japanese
 		return {
 			language: "ja",
@@ -371,7 +371,7 @@ export class HobbyLinkScraper extends BaseScraper {
 		};
 
 		const normalized = category.toLowerCase();
-		return categoryMap[normalized] || category;
+		return categoryMap[normalized] ?? category;
 	}
 
 	/**
@@ -390,13 +390,13 @@ export class HobbyLinkScraper extends BaseScraper {
 		};
 
 		const normalized = key.toLowerCase().replaceAll(/\s+/g, "_");
-		return keyMap[normalized] || normalized;
+		return keyMap[normalized] ?? normalized;
 	}
 
 	/**
    * Determine image type
    */
-	private determineImageType(img: cheerio.Cheerio<Element>, url: string): string {
+	private determineImageType(img: Cheerio<Element>, url: string): string {
 		if (img.hasClass("main") || img.parent().hasClass("main-image")) {
 			return "main";
 		}
@@ -417,33 +417,35 @@ export class HobbyLinkScraper extends BaseScraper {
    */
 	private parseJapaneseDate(dateText: string): string | null {
 		// Common Japanese date patterns
-		const patterns = [
-			/(\d{4})年(\d{1,2})月(\d{1,2})日/, // YYYY年MM月DD日
-			/(\d{4})\/(\d{1,2})\/(\d{1,2})/, // YYYY/MM/DD
-			/(\d{1,2})\/(\d{1,2})\/(\d{4})/, // MM/DD/YYYY
-		];
+		// YYYY年MM月DD日
+		const japanesePattern = /(\d{4})年(\d{1,2})月(\d{1,2})日/;
+		// YYYY/MM/DD
+		const isoSlashPattern = /(\d{4})\/(\d{1,2})\/(\d{1,2})/;
+		// MM/DD/YYYY
+		const usSlashPattern = /(\d{1,2})\/(\d{1,2})\/(\d{4})/;
 
-		for (const pattern of patterns) {
-			const match = dateText.match(pattern);
-			if (match && match.length >= 4) {
-				let year, month, day;
+		const japaneseMatch = japanesePattern.exec(dateText);
+		if (japaneseMatch) {
+			const year = japaneseMatch[1];
+			const month = japaneseMatch[2].padStart(2, "0");
+			const day = japaneseMatch[3].padStart(2, "0");
+			return `${year}-${month}-${day}`;
+		}
 
-				if (pattern === patterns[0]) { // YYYY年MM月DD日
-					year = match[1] ?? "";
-					month = (match[2] ?? "").padStart(2, "0");
-					day = (match[3] ?? "").padStart(2, "0");
-				} else if (pattern === patterns[1]) { // YYYY/MM/DD
-					year = match[1] ?? "";
-					month = (match[2] ?? "").padStart(2, "0");
-					day = (match[3] ?? "").padStart(2, "0");
-				} else { // MM/DD/YYYY
-					year = match[3] ?? "";
-					month = (match[1] ?? "").padStart(2, "0");
-					day = (match[2] ?? "").padStart(2, "0");
-				}
+		const isoMatch = isoSlashPattern.exec(dateText);
+		if (isoMatch) {
+			const year = isoMatch[1];
+			const month = isoMatch[2].padStart(2, "0");
+			const day = isoMatch[3].padStart(2, "0");
+			return `${year}-${month}-${day}`;
+		}
 
-				return `${year}-${month}-${day}`;
-			}
+		const usMatch = usSlashPattern.exec(dateText);
+		if (usMatch) {
+			const year = usMatch[3];
+			const month = usMatch[1].padStart(2, "0");
+			const day = usMatch[2].padStart(2, "0");
+			return `${year}-${month}-${day}`;
 		}
 
 		return null;

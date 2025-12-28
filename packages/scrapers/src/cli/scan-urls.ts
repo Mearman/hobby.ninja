@@ -10,9 +10,16 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
 import { URLScanner } from "../url-scanner/scanner.js";
+
+const DEFAULT_OUTPUT_DIR = "./scan-results";
+const DEFAULT_CONCURRENCY = 3;
+const DEFAULT_TIMEOUT_MS = 10_000;
+const DEFAULT_RETRIES = 3;
+const DEFAULT_DELAY_MS = 500;
+const DEFAULT_MAX_REDIRECTS = 5;
+const DEFAULT_USER_AGENT = "GundamURLScanner/1.0";
 
 interface CLIOptions {
   url?: string;
@@ -249,28 +256,29 @@ async function main(): Promise<void> {
 			process.exit(1);
 		}
 
+		const outputDir = options.output ?? DEFAULT_OUTPUT_DIR;
 		console.log(`Initializing URL scanner...`);
 		console.log(`URLs to scan: ${urls.length}`);
-		console.log(`Output directory: ${options.output || "./scan-results"}`);
+		console.log(`Output directory: ${outputDir}`);
 
 		// Initialize scanner
 		const scanner = new URLScanner();
 		await scanner.initialize({
 			urlPatterns: [],
-			concurrency: options.concurrency || 3,
-			timeoutMs: options.timeout || 10_000,
-			retryAttempts: options.retries || 3,
-			requestDelayMs: options.delay || 500,
-			outputDirectory: options.output || "./scan-results",
+			concurrency: options.concurrency ?? DEFAULT_CONCURRENCY,
+			timeoutMs: options.timeout ?? DEFAULT_TIMEOUT_MS,
+			retryAttempts: options.retries ?? DEFAULT_RETRIES,
+			requestDelayMs: options.delay ?? DEFAULT_DELAY_MS,
+			outputDirectory: outputDir,
 			followRedirects: options.followRedirects !== false,
-			maxRedirects: options.maxRedirects || 5,
-			userAgent: options.userAgent || "GundamURLScanner/1.0",
+			maxRedirects: options.maxRedirects ?? DEFAULT_MAX_REDIRECTS,
+			userAgent: options.userAgent ?? DEFAULT_USER_AGENT,
 			progressFile: options.progress,
 		});
 
 		// Show progress if resuming
 		if (options.resume && options.progress) {
-			const progress = await scanner.getProgress();
+			const progress = scanner.getProgress();
 			console.log(`Resuming from previous scan: ${progress.totalProcessed} URLs already processed`);
 		}
 
@@ -308,10 +316,10 @@ async function main(): Promise<void> {
 
 		console.log(`\n--- Invalid/Error URLs (${invalidResults.length}) ---`);
 		for (const result of invalidResults) {
-			console.log(`  ✗ ${result.url} (${result.error || "Invalid"})`);
+			console.log(`  ✗ ${result.url} (${result.error ?? "Invalid"})`);
 		}
 
-		console.log(`\nResults saved to: ${path.join(options.output || "./scan-results", "scan-results.json")}`);
+		console.log(`\nResults saved to: ${path.join(outputDir, "scan-results.json")}`);
 
 	} catch (error) {
 		console.error("Error:", error instanceof Error ? error.message : "Unknown error");
@@ -321,5 +329,5 @@ async function main(): Promise<void> {
 
 // Run main function
 if (import.meta.url === `file://${process.argv[1]}`) {
-	main();
+	await main();
 }
