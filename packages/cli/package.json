@@ -20,6 +20,7 @@
 		"test:watch": "vitest --watch"
 	},
 	"dependencies": {
+		"@hobby-ninja/data": "workspace:*",
 		"@hobby-ninja/scrapers": "workspace:*",
 		"@hobby-ninja/translation": "workspace:*",
 		"@hobby-ninja/types": "workspace:*",

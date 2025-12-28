@@ -4,7 +4,9 @@
  * Outputs normalized Item format with ID references
  */
 
+import type { TagRef } from "@hobby-ninja/data";
 import { load, type CheerioAPI } from "cheerio";
+
 
 import { parseCountedItems } from "./count-parser";
 
@@ -127,6 +129,7 @@ export interface Item {
 	description?: LocalizedTextArray;
 	accessories?: ParsedAccessoryItem[];
 	contents?: ParsedAccessoryItem[];
+	tags?: TagRef[];
 	images?: ItemImages;
 	globalSiteUrls?: GlobalSiteUrls;
 	sourceUrl?: string;
@@ -198,6 +201,9 @@ export class BandaiCatalogParser {
 				? { id: manualId, url: `https://manual.bandai-hobby.net/menus/detail/${manualId}` }
 				: undefined;
 
+			// Extract tags (distribution channel indicators)
+			const tags = this.extractTags($);
+
 			// Build normalized item
 			const item: Item = {
 				id,
@@ -215,6 +221,7 @@ export class BandaiCatalogParser {
 				description: this.extractDescriptionNormalized($),
 				accessories: this.extractAccessoriesNormalized($),
 				contents: this.extractContentsNormalized($),
+				tags: tags.length > 0 ? tags : undefined,
 				images: this.extractImages($),
 				sourceUrl,
 				// Note: timing fields (extractedAt, pageScrapedAt) are stored in index.json
@@ -674,5 +681,32 @@ export class BandaiCatalogParser {
 		});
 
 		return manualId;
+	}
+
+	/**
+	 * Extract distribution channel tags from product page
+	 * Tags are in elements like: <div class="pg-products__tag -gbase">ガンダムベース</div>
+	 * The modifier is extracted from the class (e.g., "-gbase" -> "gbase")
+	 */
+	private extractTags($: CheerioAPI): TagRef[] {
+		const tags: TagRef[] = [];
+
+		$(".pg-products__tag").each((_, el) => {
+			const $el = $(el);
+			const text = $el.text().trim();
+			if (!text) return;
+
+			// Extract modifier from class (e.g., "pg-products__tag -gbase" -> "gbase")
+			const classList = $el.attr("class") ?? "";
+			const modifierMatch = /\s-(\w+)/.exec(classList);
+			const modifier = modifierMatch?.[1] ?? "other";
+
+			tags.push({
+				modifier,
+				ja: text,
+			});
+		});
+
+		return tags;
 	}
 }
