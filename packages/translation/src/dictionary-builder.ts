@@ -54,7 +54,7 @@ export interface DictionaryBuildResult {
 export interface DictionaryBuildOptions {
 	/** Directory containing translation cache files (default: data/translations/ja/en) */
 	cacheDir?: string;
-	/** Output path for dictionary.json (default: data/translations/dictionary.json) */
+	/** Output path for dictionary.json (default: data/src/translations/dictionary.json) */
 	outputPath?: string;
 	/** Enable verbose logging */
 	verbose?: boolean;

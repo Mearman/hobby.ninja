@@ -106,10 +106,10 @@ export async function loadDictionary(dictionaryPath?: string): Promise<Translati
 function findDictionaryPath(): string | undefined {
 	// Try common locations
 	const locations = [
-		"data/translations/dictionary.json",
-		"../../data/translations/dictionary.json",
-		"../../../data/translations/dictionary.json",
-		path.join(process.cwd(), "data/translations/dictionary.json"),
+		"data/src/translations/dictionary.json",
+		"../../data/src/translations/dictionary.json",
+		"../../../data/src/translations/dictionary.json",
+		path.join(process.cwd(), "data/src/translations/dictionary.json"),
 	];
 
 	// Check each location to see if file exists

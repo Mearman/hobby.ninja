@@ -247,7 +247,7 @@ export const MAX_CACHE_SIZE = 10_000; // Maximum number of entries in memory cac
 
 // Shared translation storage paths (resolved to workspace root)
 export const TRANSLATION_STORE_DIR = resolveWorkspacePath("data/translations");
-export const TRANSLATION_DICTIONARY_PATH = resolveWorkspacePath("data/translations/dictionary.json");
+export const TRANSLATION_DICTIONARY_PATH = resolveWorkspacePath("data/src/translations/dictionary.json");
 export const TRANSLATION_CACHE_DIR = resolveWorkspacePath("data/translations/ja/en");
 export const CANONICAL_PHRASES_PATH = resolveWorkspacePath("data/translations/canonical-phrases.json");
 

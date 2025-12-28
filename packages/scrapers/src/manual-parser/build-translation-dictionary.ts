@@ -400,10 +400,10 @@ async function main() {
 	console.log("Building translation dictionary from cache files...\n");
 
 	let cacheDir = "data/translations/ja/en";
-	let outputDir = "data/translations";
+	let outputDir = "data/src/translations";
 	if (process.cwd().endsWith("packages/scrapers")) {
 		cacheDir = "../../data/translations/ja/en";
-		outputDir = "../../data/translations";
+		outputDir = "../../data/src/translations";
 	}
 
 	// 1. Load all translation cache files
