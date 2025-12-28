@@ -109,6 +109,14 @@ jobs:
             nextjs-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
             nextjs-${{ runner.os }}-
 
+      - name: Restore data package cache
+        uses: actions/cache/restore@v4
+        with:
+          path: data/dist
+          key: data-${{ runner.os }}-${{ hashFiles('data/src/**/*', 'data/lib/**/*', 'data/scripts/**/*') }}
+          restore-keys: |
+            data-${{ runner.os }}-
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -125,7 +133,7 @@ jobs:
         run: pnpm nx test next --passWithNoTests
 
       - name: Build Next.js static export
-        run: pnpm nx build next
+        run: pnpm nx build next -- --turbo
 
       - name: Verify build output
         run: |
@@ -165,6 +173,13 @@ jobs:
         with:
           path: apps/next/.next/cache
           key: nextjs-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('apps/next/**/*.ts', 'apps/next/**/*.tsx') }}
+
+      - name: Save data package cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: data/dist
+          key: data-${{ runner.os }}-${{ hashFiles('data/src/**/*', 'data/lib/**/*', 'data/scripts/**/*') }}
 
   deploy:
     name: Deploy
@@ -206,7 +221,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "pnpm"
 
       - name: Install dependencies
