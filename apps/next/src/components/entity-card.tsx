@@ -12,7 +12,7 @@ interface EntityCardProps {
 	name?: string | { ja: string; en?: string };
 	itemIds?: string[];
 	image?: string;
-	type: "category" | "brand" | "series" | "grade";
+	type: "category" | "brand" | "series" | "grade" | "scale";
 	asFilter?: boolean;
 	isSelected?: boolean;
 	onToggle?: () => void;
@@ -23,6 +23,7 @@ const TYPE_TO_PATH: Record<EntityCardProps["type"], string> = {
 	brand: "brands",
 	series: "series",
 	grade: "grades",
+	scale: "scales",
 };
 
 export function EntityCard({ id, name, itemIds, image, type, asFilter, isSelected, onToggle }: EntityCardProps): React.ReactElement {

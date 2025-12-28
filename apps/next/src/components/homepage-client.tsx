@@ -1,6 +1,6 @@
 "use client";
 
-import type { Brand, Category, GradeData, Item, Series } from "@hobby-ninja/data";
+import type { Brand, Category, GradeData, Item, ScaleData, Series } from "@hobby-ninja/data";
 import { getGradeFamilyIds, getGradeFamilyItemIds, getGradesHierarchy } from "@hobby-ninja/data";
 import {
 	Button,
@@ -27,15 +27,17 @@ interface HomepageClientProps {
 	series: Series[];
 	grades: GradeData[];
 	brands: Brand[];
+	scales: ScaleData[];
 	items: Item[];
 }
 
-export function HomepageClient({ categories, series, grades, brands, items }: HomepageClientProps): React.ReactElement {
+export function HomepageClient({ categories, series, grades, brands, scales, items }: HomepageClientProps): React.ReactElement {
 	const [filters, setFilters] = useState<FilterState>({
 		categories: [],
 		series: [],
 		brands: [],
 		grades: [],
+		scales: [],
 	});
 
 	// Track expanded state for each section
@@ -44,6 +46,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		series: false,
 		grades: false,
 		brands: false,
+		scales: false,
 	});
 
 	// Track which grade families are expanded to show children
@@ -72,7 +75,7 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 	}, []);
 
 	const clearFilters = useCallback(() => {
-		setFilters({ categories: [], series: [], brands: [], grades: [] });
+		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [] });
 	}, []);
 
 	const clearCategories = useCallback(() => {
@@ -90,6 +93,10 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 	const clearGrades = useCallback(() => {
 		setFilters((prev) => ({ ...prev, grades: [] }));
 		setExpandedFamilies(new Set());
+	}, []);
+
+	const clearScales = useCallback(() => {
+		setFilters((prev) => ({ ...prev, scales: [] }));
 	}, []);
 
 	// Toggle all grades in a family (select/deselect entire family)
@@ -133,9 +140,10 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		filters.categories.length > 0 ||
 		filters.series.length > 0 ||
 		filters.brands.length > 0 ||
-		filters.grades.length > 0;
+		filters.grades.length > 0 ||
+		filters.scales.length > 0;
 
-	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length;
+	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length;
 
 	// Sort items with selected ones first (for collapsed horizontal scroll view)
 	const sortedCategories = useMemo(() => {
@@ -158,6 +166,13 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		const unselected = displayBrands.filter((b) => !filters.brands.includes(b.id));
 		return [...selected, ...unselected];
 	}, [displayBrands, filters.brands]);
+
+	const sortedScales = useMemo(() => {
+		if (filters.scales.length === 0) return scales;
+		const selected = scales.filter((s) => filters.scales.includes(s.id));
+		const unselected = scales.filter((s) => !filters.scales.includes(s.id));
+		return [...selected, ...unselected];
+	}, [scales, filters.scales]);
 
 	// Sort grade hierarchy so selected families come first (for collapsed view)
 	const sortedGradeHierarchy = useMemo(() => {
@@ -218,11 +233,12 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 		return count;
 	}, [gradeHierarchy, sortedGradeHierarchy, expandedSections.grades, expandedFamilies, filters.grades]);
 
-	// Count items without categories/series/brands for "Other" option
+	// Count items without categories/series/brands/scales for "Other" option
 	const otherCounts = useMemo(() => ({
 		categories: items.filter((item) => item.categories.length === 0).length,
 		series: items.filter((item) => item.series.length === 0).length,
 		brands: items.filter((item) => item.brands.length === 0).length,
+		scales: items.filter((item) => item.scales.length === 0).length,
 	}), [items]);
 
 	return (
@@ -380,6 +396,40 @@ export function HomepageClient({ categories, series, grades, brands, items }: Ho
 							asFilter={true}
 							isSelected={filters.brands.includes(OTHER_FILTER_ID)}
 							onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
+						/>
+					</CollapsibleGrid>
+
+					<Divider />
+
+					<CollapsibleGrid
+						title="Scales"
+						totalCount={scales.length + 1}
+						selectedCount={filters.scales.length}
+						expanded={expandedSections.scales}
+						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
+						onClear={clearScales}
+					>
+						{(expandedSections.scales ? scales : sortedScales).map((scale) => (
+							<EntityCard
+								key={scale.id}
+								id={scale.id}
+								name={scale.name}
+								itemIds={scale.itemIds}
+								type="scale"
+								asFilter={true}
+								isSelected={filters.scales.includes(scale.id)}
+								onToggle={() => { toggleFilter("scales", scale.id); }}
+							/>
+						))}
+						<EntityCard
+							key={OTHER_FILTER_ID}
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemIds={Array.from({ length: otherCounts.scales }, () => "")}
+							type="scale"
+							asFilter={true}
+							isSelected={filters.scales.includes(OTHER_FILTER_ID)}
+							onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
 						/>
 					</CollapsibleGrid>
 

@@ -232,6 +232,7 @@ export interface FilterState {
 	series: string[];
 	brands: string[];
 	grades: string[];
+	scales: string[];
 }
 
 interface ExploreSectionProps {
@@ -249,7 +250,8 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 			filters.categories.length > 0 ||
 			filters.series.length > 0 ||
 			filters.brands.length > 0 ||
-			filters.grades.length > 0;
+			filters.grades.length > 0 ||
+			filters.scales.length > 0;
 
 		if (!hasActiveFilters) return items;
 
@@ -314,6 +316,16 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 				}
 			}
 
+			// Check scales (OR within type)
+			if (filters.scales.length > 0) {
+				const hasOther = filters.scales.includes(OTHER_FILTER_ID);
+				const hasNoScale = item.scales.length === 0;
+				const matchesScale = item.scales.some((s) => filters.scales.includes(s));
+				if (!matchesScale && !(hasOther && hasNoScale)) {
+					return false;
+				}
+			}
+
 			return true;
 		});
 	}, [items, filters]);
@@ -335,7 +347,8 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 		filters.categories.length > 0 ||
 		filters.series.length > 0 ||
 		filters.brands.length > 0 ||
-		filters.grades.length > 0
+		filters.grades.length > 0 ||
+		filters.scales.length > 0
 	);
 
 	return (

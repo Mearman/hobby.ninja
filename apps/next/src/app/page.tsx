@@ -1,4 +1,4 @@
-import { brands, categories as allCategoriesData, getGradesSorted, items, series } from "@hobby-ninja/data";
+import { brands, categories as allCategoriesData, getGradesSorted, getScalesBySize, items, series } from "@hobby-ninja/data";
 
 import { HomepageClient } from "@/components/homepage-client";
 
@@ -25,12 +25,17 @@ export default function HomePage() {
 		.filter((b) => b.itemIds.length > 0 && b.type !== "grade")
 		.toSorted((a, b) => b.itemIds.length - a.itemIds.length);
 
+	// Get scales sorted by size (largest first: 1/60, 1/100, 1/144, etc.)
+	const allScales = getScalesBySize()
+		.filter((s) => s.itemIds.length > 0);
+
 	return (
 		<HomepageClient
 			categories={allCategories}
 			series={allSeries}
 			grades={allGrades}
 			brands={allBrands}
+			scales={allScales}
 			items={allItems}
 		/>
 	);
