@@ -140,6 +140,7 @@ export default [
 					path.resolve(__dirname, "packages/utils/tsconfig.test.json"),
 					path.resolve(__dirname, "packages/translation/tsconfig.json"),
 					path.resolve(__dirname, "packages/translation/tsconfig.test.json"),
+					path.resolve(__dirname, "packages/scrapers/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.json"),
 					path.resolve(__dirname, "packages/cli/tsconfig.test.json"),
 					path.resolve(__dirname, "apps/next/tsconfig.json"),
