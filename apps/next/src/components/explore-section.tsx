@@ -27,6 +27,7 @@ const EAGER_LOAD_COUNT = 24;
 /** Font sizes to try for auto-fitting title text (largest to smallest) */
 const TITLE_FONT_SIZES_PX = [16, 14, 13, 12, 11, 10];
 const TITLE_CONTAINER_HEIGHT = 60;
+const WORD_BREAK_STYLE = "break-word" as const;
 
 /** Title text that auto-scales to fit within a fixed-height container */
 function FittedTitle({ text }: { text: string }): React.ReactElement {
@@ -62,7 +63,7 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 				ref={textRef}
 				fw={600}
 				lh={1.3}
-				style={{ wordBreak: "break-word" }}
+				style={{ wordBreak: WORD_BREAK_STYLE }}
 			>
 				{text}
 			</Text>
@@ -71,7 +72,7 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 }
 
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
-function EntityBadge({ image, name }: { image: string; name: string }): React.ReactElement {
+function EntityBadge({ image, name }: { image?: string; name: string }): React.ReactElement {
 	return (
 		<Tooltip label={name} withArrow={true}>
 			<Box
@@ -81,13 +82,22 @@ function EntityBadge({ image, name }: { image: string; name: string }): React.Re
 					borderRadius: 4,
 					overflow: "hidden",
 					backgroundColor: "white",
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
 				}}
 			>
-				<img
-					src={resolveCdnUrl(image)}
-					alt={name}
-					style={{ width: "100%", height: "100%", objectFit: "contain" }}
-				/>
+				{image ? (
+					<img
+						src={resolveCdnUrl(image)}
+						alt={name}
+						style={{ width: "100%", height: "100%", objectFit: "contain" }}
+					/>
+				) : (
+					<Text size="8px" fw={600} c="dimmed" ta="center" px={2} style={{ wordBreak: WORD_BREAK_STYLE, lineHeight: 1.2 }}>
+						{name}
+					</Text>
+				)}
 			</Box>
 		</Tooltip>
 	);
@@ -145,7 +155,7 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 							ta="center"
 							p="md"
 							style={{
-								wordBreak: "break-word",
+								wordBreak: WORD_BREAK_STYLE,
 								position: hasValidImage ? "absolute" : "static",
 								zIndex: 0,
 							}}
@@ -196,13 +206,13 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 
 				<Stack gap={0} px="sm" pt={0} pb={0} style={{ flex: 1 }}>
 					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="xs" ml="calc(-1 * var(--mantine-spacing-sm))" mb="xs">
-						{primaryGrade?.image && (
+						{primaryGrade && (
 							<EntityBadge image={primaryGrade.image} name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja} />
 						)}
-						{primaryBrand?.image && (
+						{primaryBrand && (
 							<EntityBadge image={primaryBrand.image} name={typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja} />
 						)}
-						{primarySeries?.image && (
+						{primarySeries && (
 							<EntityBadge image={primarySeries.image} name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja} />
 						)}
 					</Group>
