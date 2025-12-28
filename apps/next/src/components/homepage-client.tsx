@@ -247,22 +247,34 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 	}, [gradesSorted, filters.grades]);
 
 	// Count visible selected grade cards
-	// When section collapsed: count root families with any selection (1 card per family)
+	// When section collapsed: count individual selected cards (partial selection shows children)
 	// When section expanded: count all visible selected cards including expanded children
 	const visibleSelectedGradeCount = useMemo(() => {
 		// Count "Other" option separately (always visible)
 		const otherSelected = filters.grades.includes(OTHER_FILTER_ID) ? 1 : 0;
 
 		if (!expandedSections.grades) {
-			// Section collapsed: only root cards shown, count families with any selection
-			return gradesCollapsed.filter((entry) => {
+			// Section collapsed: count visible selected cards
+			// - Full/no selection: 1 card per family (if selected)
+			// - Partial selection: individual selected children shown
+			let count = 0;
+			for (const entry of gradesCollapsed) {
 				const { root, children } = entry;
-				if (children.length === 0) {
-					return filters.grades.includes(root.id);
-				}
 				const familyIds = getGradeFamilyIds(root.id);
-				return familyIds.some((id) => filters.grades.includes(id));
-			}).length + otherSelected;
+				const selectedInFamily = familyIds.filter((id) => filters.grades.includes(id)).length;
+
+				if (children.length === 0) {
+					// No children: count if selected
+					if (filters.grades.includes(root.id)) count++;
+				} else if (selectedInFamily === 0 || selectedInFamily === familyIds.length) {
+					// Full selection or no selection: 1 card shown (count if selected)
+					if (selectedInFamily > 0) count++;
+				} else {
+					// Partial selection: count each individual selected card
+					count += selectedInFamily;
+				}
+			}
+			return count + otherSelected;
 		}
 
 		// Section expanded: count each visible selected card
@@ -365,13 +377,74 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 						{(expandedSections.grades ? gradesSorted : gradesCollapsed).flatMap((entry) => {
 							const { root, children } = entry;
 							const hasChildren = children.length > 0;
-							// Only show expanded families when the section itself is expanded
-							const isExpanded = expandedSections.grades && expandedFamilies.has(root.id);
 							const familyIds = getGradeFamilyIds(root.id);
 							const selectedInFamily = familyIds.filter((id) => filters.grades.includes(id)).length;
 
-							// When section collapsed, family collapsed, or no children: just show root grade
-							if (!isExpanded || !hasChildren) {
+							// When section collapsed: show parent OR individual selected children
+							if (!expandedSections.grades) {
+								// No children or no partial selection: show root card
+								if (!hasChildren || selectedInFamily === 0 || selectedInFamily === familyIds.length) {
+									return (
+										<EntityCard
+											key={root.id}
+											id={root.id}
+											name={root.name}
+											itemIds={hasChildren ? getGradeFamilyItemIds(root.id) : root.itemIds}
+											image={root.image}
+											type="grade"
+											asFilter={true}
+											isSelected={hasChildren ? selectedInFamily > 0 : filters.grades.includes(root.id)}
+											onToggle={() => {
+												if (hasChildren) {
+													toggleGradeFamily(root.id);
+												} else {
+													toggleFilter("grades", root.id);
+												}
+											}}
+										/>
+									);
+								}
+
+								// Partial selection: show individual selected grades
+								const selectedCards: React.ReactElement[] = [];
+								if (filters.grades.includes(root.id)) {
+									selectedCards.push(
+										<EntityCard
+											key={root.id}
+											id={root.id}
+											name={root.name}
+											itemIds={root.itemIds}
+											image={root.image}
+											type="grade"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("grades", root.id); }}
+										/>,
+									);
+								}
+								for (const child of children) {
+									if (filters.grades.includes(child.id)) {
+										selectedCards.push(
+											<EntityCard
+												key={child.id}
+												id={child.id}
+												name={child.name}
+												itemIds={child.itemIds}
+												image={child.image}
+												type="grade"
+												asFilter={true}
+												isSelected={true}
+												onToggle={() => { toggleFilter("grades", child.id); }}
+											/>,
+										);
+									}
+								}
+								return selectedCards;
+							}
+
+							// Section expanded but family collapsed: show root card
+							const isFamilyExpanded = expandedFamilies.has(root.id);
+							if (!isFamilyExpanded || !hasChildren) {
 								return (
 									<EntityCard
 										key={root.id}
@@ -393,7 +466,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, ite
 								);
 							}
 
-							// Expanded with children: return array of cards (each gets own grid cell)
+							// Family expanded with children: return array of cards
 							return [
 								// Root grade - clicking toggles family selection + collapses
 								<EntityCard
