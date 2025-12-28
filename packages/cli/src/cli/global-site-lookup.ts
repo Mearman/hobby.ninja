@@ -260,13 +260,15 @@ export class GlobalSiteLookup {
 				const markerIndex = bulletLower.indexOf("[accessories]");
 				const afterMarker = bullet.slice(markerIndex + "[accessories]".length).trim();
 				if (afterMarker) {
-					accessories.push(afterMarker.replace(/^■\s*/, "• "));
+					// Strip bullet prefix - accessories are parsed separately for name/count
+					accessories.push(afterMarker.replace(/^[•■]\s*/, ""));
 				}
 				continue;
 			}
 
 			if (inAccessoriesSection) {
-				accessories.push(bullet);
+				// Strip bullet prefix - accessories are parsed separately for name/count
+				accessories.push(bullet.replace(/^[•■]\s*/, ""));
 			} else {
 				description.push(bullet);
 			}
