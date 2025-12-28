@@ -30,13 +30,12 @@ function EntityBadge({ image, name }: { image: string; name: string }): React.Re
 		<Tooltip label={name} withArrow={true}>
 			<Box
 				style={{
-					height: 20,
+					flex: "0 0 30%",
 					aspectRatio: "300 / 170",
 					borderRadius: 4,
 					overflow: "hidden",
 					backgroundColor: "white",
 					border: "1px solid var(--mantine-color-gray-3)",
-					flexShrink: 0,
 				}}
 			>
 				<img
@@ -129,14 +128,32 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 							}}
 						/>
 					)}
+					{item.releaseDate?.year && (
+						<Text
+							size="xs"
+							fw={500}
+							style={{
+								position: "absolute",
+								top: 0,
+								right: 0,
+								zIndex: 2,
+								backgroundColor: "rgba(0, 0, 0, 0.6)",
+								color: "white",
+								padding: "2px 6px",
+								borderRadius: "0 0 0 4px",
+							}}
+						>
+							{formatReleaseDate(item.releaseDate)}
+						</Text>
+					)}
 				</Box>
 
-				<Stack gap={4} p="sm">
+				<Stack gap={4} px="sm" pt="sm" pb={0} style={{ flex: 1 }}>
 					<Text size="sm" fw={600} lineClamp={2}>
 						{displayName}
 					</Text>
 
-					<Group gap={4} wrap="nowrap">
+					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="auto" ml="calc(-1 * var(--mantine-spacing-sm))" mb={0}>
 						{primaryGrade?.image && (
 							<EntityBadge image={primaryGrade.image} name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja} />
 						)}
@@ -145,11 +162,6 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 						)}
 						{primarySeries?.image && (
 							<EntityBadge image={primarySeries.image} name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja} />
-						)}
-						{item.releaseDate?.year && (
-							<Text size="xs" c="dimmed" ml="auto">
-								{formatReleaseDate(item.releaseDate)}
-							</Text>
 						)}
 					</Group>
 				</Stack>
