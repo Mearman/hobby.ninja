@@ -81,7 +81,6 @@ function EntityBadge({ image, name }: { image: string; name: string }): React.Re
 					borderRadius: 4,
 					overflow: "hidden",
 					backgroundColor: "white",
-					border: "1px solid var(--mantine-color-gray-3)",
 				}}
 			>
 				<img
@@ -195,8 +194,8 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 					)}
 				</Box>
 
-				<Stack gap={4} px="sm" pt="xs" pb={0} style={{ flex: 1 }}>
-					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="auto" ml="calc(-1 * var(--mantine-spacing-sm))" mb={0}>
+				<Stack gap={0} px="sm" pt={0} pb={0} style={{ flex: 1 }}>
+					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="xs" ml="calc(-1 * var(--mantine-spacing-sm))" mb="xs">
 						{primaryGrade?.image && (
 							<EntityBadge image={primaryGrade.image} name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja} />
 						)}
