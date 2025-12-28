@@ -1,6 +1,6 @@
 #!/usr/bin/env tsx
 
-import { resolve, relative } from "node:path";
+import path from "node:path";
 
 import { globSync } from "glob";
 
@@ -22,10 +22,6 @@ interface LinkInfo {
 	type: LinkType;
 }
 
-interface FileLinks {
-	filePath: string;
-	links: LinkInfo[];
-}
 
 interface ValidationReport {
 	totalFiles: number;
@@ -50,7 +46,7 @@ interface LinkValidationResult {
 /**
  * Extract all markdown links from content
  */
-function extractLinks(content: string, filePath: string): LinkInfo[] {
+function extractLinks(content: string, _filePath: string): LinkInfo[] {
 	const links: LinkInfo[] = [];
 	const lines = content.split("\n");
 
@@ -59,8 +55,8 @@ function extractLinks(content: string, filePath: string): LinkInfo[] {
 		const matches = [...line.matchAll(MARKDOWN_LINK_REGEX)];
 
 		for (const match of matches) {
-			const [fullMatch, text, url] = match;
-			const column = match.index || 0;
+			const [, text, url] = match;
+			const column = match.index;
 
 			links.push({
 				text,
@@ -77,8 +73,8 @@ function extractLinks(content: string, filePath: string): LinkInfo[] {
 		const matches = [...line.matchAll(MARKDOWN_REFERENCE_LINK_REGEX)];
 
 		for (const match of matches) {
-			const [fullMatch, text, url] = match;
-			const column = match.index || 0;
+			const [, text, url] = match;
+			const column = match.index;
 			const trimmedUrl = url.trim();
 
 			links.push({
@@ -143,7 +139,7 @@ function checkFileLinks(
 	const results = links.map((link) => validateLink(link, directory));
 
 	return {
-		filePath: relative(process.cwd(), absolutePath),
+		filePath: path.relative(process.cwd(), absolutePath),
 		links: results,
 	};
 }
@@ -162,7 +158,7 @@ function checkDirectory(
 			"**/build/**",
 			"**/.next/**",
 			"**/.nx/**",
-			...(options.ignore || []),
+			...(options.ignore ?? []),
 		],
 		nodir: true,
 	});

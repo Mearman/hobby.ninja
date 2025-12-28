@@ -3,12 +3,44 @@
  */
 
 import { readFileSync, readdirSync } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
 const WORKSPACE_ROOT = process.cwd();
-const ITEMS_DIR = join(WORKSPACE_ROOT, "data/src/items");
-const MANUALS_DIR = join(WORKSPACE_ROOT, "data/src/manuals");
-const PBANDAI_DIR = join(WORKSPACE_ROOT, "data/src/pbandai/en/items");
+const ITEMS_DIR = path.join(WORKSPACE_ROOT, "data/src/items");
+const MANUALS_DIR = path.join(WORKSPACE_ROOT, "data/src/manuals");
+const PBANDAI_DIR = path.join(WORKSPACE_ROOT, "data/src/pbandai/en/items");
+
+const JSON_EXTENSION = ".json";
+const INDEX_FILE = "index.json";
+const PAD_LENGTH = 15;
+
+interface ImageData {
+	path: string;
+	hash?: string;
+}
+
+interface ItemImages {
+	product?: ImageData[];
+	instructions?: ImageData[];
+}
+
+interface ItemData {
+	id: string;
+	images?: ItemImages;
+}
+
+interface ManualData {
+	id: string;
+	image?: {
+		path: string;
+		hash?: string;
+	};
+}
+
+interface PBandaiData {
+	id: string;
+	images?: ImageData[];
+}
 
 interface HashEntry {
 	source: "item" | "manual" | "pbandai";
@@ -23,25 +55,33 @@ const hashMap = new Map<string, HashEntry[]>();
 // Process items
 console.log("Processing items...");
 const itemFiles = readdirSync(ITEMS_DIR).filter(
-	(f) => f.endsWith(".json") && f !== "index.json",
+	(f) => f.endsWith(JSON_EXTENSION) && f !== INDEX_FILE,
 );
 let itemHashes = 0;
 
 for (const file of itemFiles) {
-	const data = JSON.parse(readFileSync(join(ITEMS_DIR, file), "utf8"));
+	const data = JSON.parse(readFileSync(path.join(ITEMS_DIR, file), "utf8")) as ItemData;
 	const id = data.id;
 
-	for (const img of data.images?.product || []) {
+	for (const img of data.images?.product ?? []) {
 		if (img.hash) {
-			if (!hashMap.has(img.hash)) hashMap.set(img.hash, []);
-			hashMap.get(img.hash)!.push({ source: "item", id, path: img.path, type: "product" });
+			const existing = hashMap.get(img.hash);
+			if (existing) {
+				existing.push({ source: "item", id, path: img.path, type: "product" });
+			} else {
+				hashMap.set(img.hash, [{ source: "item", id, path: img.path, type: "product" }]);
+			}
 			itemHashes++;
 		}
 	}
-	for (const img of data.images?.instructions || []) {
+	for (const img of data.images?.instructions ?? []) {
 		if (img.hash) {
-			if (!hashMap.has(img.hash)) hashMap.set(img.hash, []);
-			hashMap.get(img.hash)!.push({ source: "item", id, path: img.path, type: "instructions" });
+			const existing = hashMap.get(img.hash);
+			if (existing) {
+				existing.push({ source: "item", id, path: img.path, type: "instructions" });
+			} else {
+				hashMap.set(img.hash, [{ source: "item", id, path: img.path, type: "instructions" }]);
+			}
 			itemHashes++;
 		}
 	}
@@ -51,17 +91,22 @@ console.log(`  Items: ${itemFiles.length} files, ${itemHashes} hashes`);
 // Process manuals
 console.log("Processing manuals...");
 const manualFiles = readdirSync(MANUALS_DIR).filter(
-	(f) => f.endsWith(".json") && f !== "index.json",
+	(f) => f.endsWith(JSON_EXTENSION) && f !== INDEX_FILE,
 );
 let manualHashes = 0;
 
 for (const file of manualFiles) {
-	const data = JSON.parse(readFileSync(join(MANUALS_DIR, file), "utf8"));
+	const data = JSON.parse(readFileSync(path.join(MANUALS_DIR, file), "utf8")) as ManualData;
 	const id = data.id;
 
 	if (data.image?.hash) {
-		if (!hashMap.has(data.image.hash)) hashMap.set(data.image.hash, []);
-		hashMap.get(data.image.hash)!.push({ source: "manual", id, path: data.image.path });
+		const hash = data.image.hash;
+		const existing = hashMap.get(hash);
+		if (existing) {
+			existing.push({ source: "manual", id, path: data.image.path });
+		} else {
+			hashMap.set(hash, [{ source: "manual", id, path: data.image.path }]);
+		}
 		manualHashes++;
 	}
 }
@@ -72,7 +117,7 @@ console.log("Processing P-Bandai US...");
 let pbandaiFiles: string[] = [];
 try {
 	pbandaiFiles = readdirSync(PBANDAI_DIR).filter(
-		(f) => f.endsWith(".json") && f !== "index.json",
+		(f) => f.endsWith(JSON_EXTENSION) && f !== INDEX_FILE,
 	);
 } catch {
 	console.log("  P-Bandai directory not found");
@@ -80,13 +125,17 @@ try {
 let pbandaiHashes = 0;
 
 for (const file of pbandaiFiles) {
-	const data = JSON.parse(readFileSync(join(PBANDAI_DIR, file), "utf8"));
+	const data = JSON.parse(readFileSync(path.join(PBANDAI_DIR, file), "utf8")) as PBandaiData;
 	const id = data.id;
 
-	for (const img of data.images || []) {
+	for (const img of data.images ?? []) {
 		if (img.hash) {
-			if (!hashMap.has(img.hash)) hashMap.set(img.hash, []);
-			hashMap.get(img.hash)!.push({ source: "pbandai", id, path: img.path });
+			const existing = hashMap.get(img.hash);
+			if (existing) {
+				existing.push({ source: "pbandai", id, path: img.path });
+			} else {
+				hashMap.set(img.hash, [{ source: "pbandai", id, path: img.path }]);
+			}
 			pbandaiHashes++;
 		}
 	}
@@ -96,7 +145,7 @@ console.log(`  P-Bandai: ${pbandaiFiles.length} files, ${pbandaiHashes} hashes`)
 // Find cross-source matches
 console.log("\n=== Cross-Source Hash Matches ===\n");
 
-const crossMatches: { hash: string; entries: HashEntry[] }[] = [];
+const crossMatches: Array<{ hash: string; entries: HashEntry[] }> = [];
 for (const [hash, entries] of hashMap) {
 	const sources = new Set(entries.map((e) => e.source));
 	if (sources.size > 1) {
@@ -129,31 +178,31 @@ for (const match of crossMatches) {
 }
 
 console.log("\nMatch breakdown:");
-console.log("  Item ↔ Manual:", matchTypes["item-manual"]);
-console.log("  Item ↔ P-Bandai:", matchTypes["item-pbandai"]);
-console.log("  Manual ↔ P-Bandai:", matchTypes["manual-pbandai"]);
+console.log("  Item <-> Manual:", matchTypes["item-manual"]);
+console.log("  Item <-> P-Bandai:", matchTypes["item-pbandai"]);
+console.log("  Manual <-> P-Bandai:", matchTypes["manual-pbandai"]);
 console.log("  All three:", matchTypes["all-three"]);
 
-// Show Item ↔ P-Bandai matches (most valuable)
+// Show Item <-> P-Bandai matches (most valuable)
 const itemPbandaiMatches = crossMatches.filter((m) => {
 	const sources = new Set(m.entries.map((e) => e.source));
 	return sources.has("item") && sources.has("pbandai");
 });
 
 if (itemPbandaiMatches.length > 0) {
-	console.log("\n=== Item ↔ P-Bandai Matches (Cross-Site Links) ===\n");
+	console.log("\n=== Item <-> P-Bandai Matches (Cross-Site Links) ===\n");
 	for (const match of itemPbandaiMatches) {
 		console.log("Hash:", match.hash);
 		for (const e of match.entries) {
 			const typeStr = e.type ? ` (${e.type})` : "";
-			console.log(`  - ${e.source.padEnd(8)} ${e.id.padEnd(15)} ${e.path}${typeStr}`);
+			console.log(`  - ${e.source.padEnd(8)} ${e.id.padEnd(PAD_LENGTH)} ${e.path}${typeStr}`);
 		}
 		console.log();
 	}
 }
 
-// Show a sample of Item ↔ Manual matches
-console.log("\n=== Item ↔ Manual Matches (Same File, Different References) ===\n");
+// Show a sample of Item <-> Manual matches
+console.log("\n=== Item <-> Manual Matches (Same File, Different References) ===\n");
 const itemManualMatches = crossMatches.filter((m) => {
 	const sources = new Set(m.entries.map((e) => e.source));
 	return sources.has("item") && sources.has("manual") && !sources.has("pbandai");
@@ -165,7 +214,7 @@ for (const match of itemManualMatches.slice(0, 5)) {
 	console.log("Hash:", match.hash);
 	for (const e of match.entries) {
 		const typeStr = e.type ? ` (${e.type})` : "";
-		console.log(`  - ${e.source.padEnd(8)} ${e.id.padEnd(15)} ${e.path}${typeStr}`);
+		console.log(`  - ${e.source.padEnd(8)} ${e.id.padEnd(PAD_LENGTH)} ${e.path}${typeStr}`);
 	}
 	console.log();
 }

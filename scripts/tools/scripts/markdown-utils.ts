@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
 import { readFileSync, existsSync, statSync, lstatSync, readlinkSync } from "node:fs";
-import { resolve, dirname, isAbsolute, relative, basename } from "node:path";
+import path from "node:path";
 
 import { encoding_for_model, get_encoding } from "tiktoken";
 
@@ -11,7 +11,7 @@ import { encoding_for_model, get_encoding } from "tiktoken";
 export const MARKDOWN_LINK_REGEX = /\[([^\]]*)\]\(([^)]+)\)/g;
 export const MARKDOWN_REFERENCE_LINK_REGEX = /\[([^\]]+)\]:\s*(.+)/g;
 export const EMBED_LINK_REGEX = /\[@([^\]]+)\]\(([^)]+)\)/g;
-export const EMBED_SIMPLE_REGEX = /@([a-zA-Z0-9][a-zA-Z0-9_\-\/]*\.[a-zA-Z0-9]+(?:\/[a-zA-Z0-9_\-\/\.]*)?)/g;
+export const EMBED_SIMPLE_REGEX = /@([a-zA-Z0-9][a-zA-Z0-9_\-/]*\.[a-zA-Z0-9]+(?:\/[a-zA-Z0-9_\-/.]*)?)/g;
 
 /**
  * Link type classification
@@ -28,7 +28,7 @@ export function classifyLinkType(url: string): LinkType {
 	if (url.startsWith("http://") || url.startsWith("https://")) {
 		return "external";
 	}
-	if (isAbsolute(url)) {
+	if (path.isAbsolute(url)) {
 		return "absolute";
 	}
 	if (url.startsWith("./") || url.startsWith("../")) {
@@ -51,7 +51,7 @@ export interface MarkdownFile {
 }
 
 export function readMarkdownFile(filePath: string, baseDir?: string): MarkdownFile {
-	const absolutePath = resolve(baseDir || process.cwd(), filePath);
+	const absolutePath = path.resolve(baseDir ?? process.cwd(), filePath);
 	const stat = lstatSync(absolutePath);
 	const isSymlink = stat.isSymbolicLink();
 
@@ -61,13 +61,13 @@ export function readMarkdownFile(filePath: string, baseDir?: string): MarkdownFi
 	if (isSymlink) {
 		// Use readlink to get the symlink target properly
 		const linkTarget = readlinkSync(absolutePath);
-		realPath = resolve(dirname(absolutePath), linkTarget);
-		symlinkTarget = relative(process.cwd(), realPath);
+		realPath = path.resolve(path.dirname(absolutePath), linkTarget);
+		symlinkTarget = path.relative(process.cwd(), realPath);
 	}
 
-	const content = readFileSync(realPath, "utf-8");
+	const content = readFileSync(realPath, "utf8");
 	const lines = content.split("\n");
-	const directory = dirname(realPath);
+	const directory = path.dirname(realPath);
 
 	return {
 		absolutePath,
@@ -136,7 +136,7 @@ export function resolveLinkPath(
 		return urlWithoutAnchor;
 	}
 
-	return resolve(baseDir, urlWithoutAnchor);
+	return path.resolve(baseDir, urlWithoutAnchor);
 }
 
 /**
@@ -217,7 +217,8 @@ export function countTokens(content: string): TokenCount {
 	} catch (error) {
 		// Fallback to word-based estimation if tiktoken fails
 		console.warn("tiktoken failed, using word-based estimation:", error instanceof Error ? error.message : error);
-		const estimatedTokens = Math.ceil(words * 1.3);
+		const WORD_TO_TOKEN_RATIO = 1.3;
+		const estimatedTokens = Math.ceil(words * WORD_TO_TOKEN_RATIO);
 		return {
 			words,
 			characters,
@@ -246,8 +247,8 @@ export function countFileTokens(filePath: string, baseDir?: string): TokenCount 
 
 	return {
 		...tokenCount,
-		filePath: relative(process.cwd(), markdownFile.absolutePath),
-		realPath: relative(process.cwd(), markdownFile.realPath),
+		filePath: path.relative(process.cwd(), markdownFile.absolutePath),
+		realPath: path.relative(process.cwd(), markdownFile.realPath),
 		isSymlink: markdownFile.isSymlink,
 		symlinkTarget: markdownFile.symlinkTarget,
 	};

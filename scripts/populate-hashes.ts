@@ -4,13 +4,13 @@
 
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
 const WORKSPACE_ROOT = process.cwd();
-const ITEMS_DIR = join(WORKSPACE_ROOT, "data/src/items");
-const MANUALS_DIR = join(WORKSPACE_ROOT, "data/src/manuals");
-const PBANDAI_DIR = join(WORKSPACE_ROOT, "data/src/pbandai/en/items");
-const ASSETS_DIR = join(WORKSPACE_ROOT, "assets");
+const ITEMS_DIR = path.join(WORKSPACE_ROOT, "data/src/items");
+const MANUALS_DIR = path.join(WORKSPACE_ROOT, "data/src/manuals");
+const PBANDAI_DIR = path.join(WORKSPACE_ROOT, "data/src/pbandai/en/items");
+const ASSETS_DIR = path.join(WORKSPACE_ROOT, "assets");
 
 function computeHash(filePath: string): string | undefined {
 	try {
@@ -25,12 +25,12 @@ function resolveImagePath(relativePath: string): string {
 	// Convert /images/items/... to assets/images/items/...
 	// Convert /manuals/... to assets/manuals/...
 	if (relativePath.startsWith("/images/")) {
-		return join(ASSETS_DIR, relativePath);
+		return path.join(ASSETS_DIR, relativePath);
 	}
 	if (relativePath.startsWith("/manuals/")) {
-		return join(ASSETS_DIR, relativePath);
+		return path.join(ASSETS_DIR, relativePath);
 	}
-	return join(ASSETS_DIR, relativePath);
+	return path.join(ASSETS_DIR, relativePath);
 }
 
 interface ImageData {
@@ -69,17 +69,19 @@ let pbandaiUpdated = 0;
 let pbandaiSkipped = 0;
 let hashesAdded = 0;
 
+const INDEX_JSON = "index.json";
+
 // Process items
 console.log("Processing items...");
-const itemFiles = readdirSync(ITEMS_DIR).filter((f) => f.endsWith(".json") && f !== "index.json");
+const itemFiles = readdirSync(ITEMS_DIR).filter((f) => f.endsWith(".json") && f !== INDEX_JSON);
 
 for (const file of itemFiles) {
-	const filePath = join(ITEMS_DIR, file);
-	const data: ItemData = JSON.parse(readFileSync(filePath, "utf8"));
+	const filePath = path.join(ITEMS_DIR, file);
+	const data: ItemData = JSON.parse(readFileSync(filePath, "utf8")) as ItemData;
 	let modified = false;
 
 	if (data.images) {
-		for (const img of data.images.product || []) {
+		for (const img of data.images.product ?? []) {
 			if (img.path && !img.hash) {
 				const absPath = resolveImagePath(img.path);
 				const hash = computeHash(absPath);
@@ -90,7 +92,7 @@ for (const file of itemFiles) {
 				}
 			}
 		}
-		for (const img of data.images.instructions || []) {
+		for (const img of data.images.instructions ?? []) {
 			if (img.path && !img.hash) {
 				const absPath = resolveImagePath(img.path);
 				const hash = computeHash(absPath);
@@ -119,11 +121,11 @@ console.log(`Items: ${itemsUpdated} updated, ${itemsSkipped} skipped`);
 
 // Process manuals
 console.log("\nProcessing manuals...");
-const manualFiles = readdirSync(MANUALS_DIR).filter((f) => f.endsWith(".json") && f !== "index.json");
+const manualFiles = readdirSync(MANUALS_DIR).filter((f) => f.endsWith(".json") && f !== INDEX_JSON);
 
 for (const file of manualFiles) {
-	const filePath = join(MANUALS_DIR, file);
-	const data: ManualData = JSON.parse(readFileSync(filePath, "utf8"));
+	const filePath = path.join(MANUALS_DIR, file);
+	const data: ManualData = JSON.parse(readFileSync(filePath, "utf8")) as ManualData;
 	let modified = false;
 
 	if (data.image?.path && !data.image.hash) {
@@ -154,14 +156,14 @@ console.log(`Manuals: ${manualsUpdated} updated, ${manualsSkipped} skipped`);
 console.log("\nProcessing P-Bandai US items...");
 let pbandaiFiles: string[] = [];
 try {
-	pbandaiFiles = readdirSync(PBANDAI_DIR).filter((f) => f.endsWith(".json") && f !== "index.json");
+	pbandaiFiles = readdirSync(PBANDAI_DIR).filter((f) => f.endsWith(".json") && f !== INDEX_JSON);
 } catch {
 	console.log("  P-Bandai directory not found, skipping...");
 }
 
 for (const file of pbandaiFiles) {
-	const filePath = join(PBANDAI_DIR, file);
-	const data: PBandaiItemData = JSON.parse(readFileSync(filePath, "utf8"));
+	const filePath = path.join(PBANDAI_DIR, file);
+	const data: PBandaiItemData = JSON.parse(readFileSync(filePath, "utf8")) as PBandaiItemData;
 	let modified = false;
 
 	if (data.images) {

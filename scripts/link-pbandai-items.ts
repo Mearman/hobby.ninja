@@ -7,12 +7,38 @@
  */
 
 import { readFileSync, writeFileSync, readdirSync, unlinkSync, rmdirSync } from "node:fs";
-import { join, dirname } from "node:path";
+import path from "node:path";
 
 const WORKSPACE_ROOT = process.cwd();
-const ITEMS_DIR = join(WORKSPACE_ROOT, "data/src/items");
-const PBANDAI_DIR = join(WORKSPACE_ROOT, "data/src/pbandai/en/items");
-const ASSETS_DIR = join(WORKSPACE_ROOT, "assets");
+const ITEMS_DIR = path.join(WORKSPACE_ROOT, "data/src/items");
+const PBANDAI_DIR = path.join(WORKSPACE_ROOT, "data/src/pbandai/en/items");
+const ASSETS_DIR = path.join(WORKSPACE_ROOT, "assets");
+
+interface ImageData {
+	path: string;
+	hash?: string;
+}
+
+interface ItemImages {
+	product?: ImageData[];
+}
+
+interface ItemData {
+	id: string;
+	images?: ItemImages;
+	pbandaiIds?: string[];
+}
+
+interface PBandaiImageData {
+	path: string;
+	hash?: string;
+}
+
+interface PBandaiData {
+	id: string;
+	images?: PBandaiImageData[];
+	itemId?: string;
+}
 
 interface HashEntry {
 	source: "item" | "pbandai";
@@ -34,18 +60,27 @@ const itemFiles = readdirSync(ITEMS_DIR).filter(
 );
 
 for (const file of itemFiles) {
-	const data = JSON.parse(readFileSync(join(ITEMS_DIR, file), "utf8"));
+	const data = JSON.parse(readFileSync(path.join(ITEMS_DIR, file), "utf8")) as ItemData;
 	const id = data.id;
 
-	for (const img of data.images?.product || []) {
+	for (const img of data.images?.product ?? []) {
 		if (img.hash) {
-			if (!itemHashMap.has(img.hash)) itemHashMap.set(img.hash, []);
-			itemHashMap.get(img.hash)!.push({
-				source: "item",
-				id,
-				path: img.path,
-				hash: img.hash,
-			});
+			const existing = itemHashMap.get(img.hash);
+			if (existing) {
+				existing.push({
+					source: "item",
+					id,
+					path: img.path,
+					hash: img.hash,
+				});
+			} else {
+				itemHashMap.set(img.hash, [{
+					source: "item",
+					id,
+					path: img.path,
+					hash: img.hash,
+				}]);
+			}
 		}
 	}
 }
@@ -56,20 +91,30 @@ const pbandaiFiles = readdirSync(PBANDAI_DIR).filter(
 );
 
 for (const file of pbandaiFiles) {
-	const data = JSON.parse(readFileSync(join(PBANDAI_DIR, file), "utf8"));
+	const data = JSON.parse(readFileSync(path.join(PBANDAI_DIR, file), "utf8")) as PBandaiData;
 	const id = data.id;
 
-	for (let i = 0; i < (data.images || []).length; i++) {
-		const img = data.images[i];
+	const images = data.images ?? [];
+	for (const [i, img] of images.entries()) {
 		if (img.hash) {
-			if (!pbandaiHashMap.has(img.hash)) pbandaiHashMap.set(img.hash, []);
-			pbandaiHashMap.get(img.hash)!.push({
-				source: "pbandai",
-				id,
-				path: img.path,
-				hash: img.hash,
-				imageIndex: i,
-			});
+			const existing = pbandaiHashMap.get(img.hash);
+			if (existing) {
+				existing.push({
+					source: "pbandai",
+					id,
+					path: img.path,
+					hash: img.hash,
+					imageIndex: i,
+				});
+			} else {
+				pbandaiHashMap.set(img.hash, [{
+					source: "pbandai",
+					id,
+					path: img.path,
+					hash: img.hash,
+					imageIndex: i,
+				}]);
+			}
 		}
 	}
 }
@@ -89,22 +134,23 @@ for (const [hash, itemEntries] of itemHashMap) {
 	for (const itemEntry of itemEntries) {
 		for (const pbandaiEntry of pbandaiEntries) {
 			// Link item -> pbandai
-			if (!itemToPbandai.has(itemEntry.id)) {
-				itemToPbandai.set(itemEntry.id, new Set());
+			const existingPbandaiSet = itemToPbandai.get(itemEntry.id);
+			if (existingPbandaiSet) {
+				existingPbandaiSet.add(pbandaiEntry.id);
+			} else {
+				itemToPbandai.set(itemEntry.id, new Set([pbandaiEntry.id]));
 			}
-			itemToPbandai.get(itemEntry.id)!.add(pbandaiEntry.id);
 
 			// Link pbandai -> item
 			pbandaiToItem.set(pbandaiEntry.id, itemEntry.id);
 
 			// Track image path update
-			if (!pbandaiImageUpdates.has(pbandaiEntry.id)) {
-				pbandaiImageUpdates.set(pbandaiEntry.id, new Map());
+			const existingUpdates = pbandaiImageUpdates.get(pbandaiEntry.id);
+			if (existingUpdates && pbandaiEntry.imageIndex !== undefined) {
+				existingUpdates.set(pbandaiEntry.imageIndex, itemEntry.path);
+			} else if (pbandaiEntry.imageIndex !== undefined) {
+				pbandaiImageUpdates.set(pbandaiEntry.id, new Map([[pbandaiEntry.imageIndex, itemEntry.path]]));
 			}
-			pbandaiImageUpdates.get(pbandaiEntry.id)!.set(
-				pbandaiEntry.imageIndex!,
-				itemEntry.path,
-			);
 		}
 	}
 }
@@ -118,15 +164,15 @@ console.log("Updating item files...");
 let itemsUpdated = 0;
 
 for (const [itemId, pbandaiIds] of itemToPbandai) {
-	const filePath = join(ITEMS_DIR, `${itemId}.json`);
-	const data = JSON.parse(readFileSync(filePath, "utf8"));
+	const filePath = path.join(ITEMS_DIR, `${itemId}.json`);
+	const data = JSON.parse(readFileSync(filePath, "utf8")) as ItemData;
 
 	// Add pbandaiIds array (merge with existing if present)
-	const existingIds = new Set(data.pbandaiIds || []);
+	const existingIds = data.pbandaiIds ? new Set(data.pbandaiIds) : new Set<string>();
 	for (const id of pbandaiIds) {
 		existingIds.add(id);
 	}
-	data.pbandaiIds = Array.from(existingIds).sort();
+	data.pbandaiIds = [...existingIds].toSorted();
 
 	writeFileSync(filePath, JSON.stringify(data, null, "\t"));
 	itemsUpdated++;
@@ -139,24 +185,26 @@ let pbandaiUpdated = 0;
 const imagesToDelete: string[] = [];
 
 for (const [pbandaiId, itemId] of pbandaiToItem) {
-	const filePath = join(PBANDAI_DIR, `${pbandaiId}.json`);
-	const data = JSON.parse(readFileSync(filePath, "utf8"));
+	const filePath = path.join(PBANDAI_DIR, `${pbandaiId}.json`);
+	const data = JSON.parse(readFileSync(filePath, "utf8")) as PBandaiData;
 
 	// Add itemId
 	data.itemId = itemId;
 
 	// Update image paths for matching images
 	const imageUpdates = pbandaiImageUpdates.get(pbandaiId);
-	if (imageUpdates) {
+	if (imageUpdates && data.images) {
 		for (const [index, newPath] of imageUpdates) {
-			const oldPath = data.images[index].path;
-			const oldAbsPath = join(ASSETS_DIR, oldPath);
+			// Index is validated during hash map building, so image exists
+			const image = data.images[index];
+			const oldPath = image.path;
+			const oldAbsPath = path.join(ASSETS_DIR, oldPath);
 
 			// Track for deletion
 			imagesToDelete.push(oldAbsPath);
 
 			// Update path to point to item asset
-			data.images[index].path = newPath;
+			image.path = newPath;
 			console.log(`  ${pbandaiId}[${index}]: ${oldPath} -> ${newPath}`);
 		}
 	}
@@ -174,8 +222,8 @@ for (const imagePath of imagesToDelete) {
 	try {
 		unlinkSync(imagePath);
 		imagesDeleted++;
-		dirsToCheck.add(dirname(imagePath));
-	} catch (error) {
+		dirsToCheck.add(path.dirname(imagePath));
+	} catch {
 		// File may not exist or already deleted
 	}
 }

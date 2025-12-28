@@ -35,7 +35,7 @@ async function main() {
 			const item = JSON.parse(content) as ItemData;
 
 			// Determine item type based on price presence
-			const itemType: "product" | "blog" = item.price !== undefined ? "product" : "blog";
+			const itemType: "product" | "blog" = item.price === undefined ? "blog" : "product";
 
 			// Skip if already has correct itemType
 			if (item.itemType === itemType) {

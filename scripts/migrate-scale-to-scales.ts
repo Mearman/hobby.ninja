@@ -3,9 +3,14 @@
  */
 
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import path from "node:path";
 
-const ITEMS_DIR = join(import.meta.dirname, "../data/src/items");
+const ITEMS_DIR = path.join(import.meta.dirname, "../data/src/items");
+
+interface ItemData {
+	scale?: string;
+	scales?: string[];
+}
 
 let migratedCount = 0;
 let skippedCount = 0;
@@ -13,9 +18,9 @@ let skippedCount = 0;
 const files = readdirSync(ITEMS_DIR).filter(f => f.endsWith(".json"));
 
 for (const file of files) {
-	const filePath = join(ITEMS_DIR, file);
-	const content = readFileSync(filePath, "utf-8");
-	const item = JSON.parse(content);
+	const filePath = path.join(ITEMS_DIR, file);
+	const content = readFileSync(filePath, "utf8");
+	const item = JSON.parse(content) as ItemData;
 
 	// Skip if already has scales array
 	if (Array.isArray(item.scales)) {

@@ -2,10 +2,10 @@
  * Generate image-lookup.json by matching series/brand IDs to existing image files
  *
  * Uses pattern-based matching to connect database IDs to sanitized filenames:
- * - Direct match: `gundam` → `gundam.jpg`
- * - Strip `mobile-suit-gundam-`: `mobile-suit-gundam-seed` → `seed.jpg`
- * - Strip `gundam-`: `gundam-build-divers` → `build-divers.jpg`
- * - Strip `-series` suffix: `digimon-series` → `digimon.jpg`
+ * - Direct match: `gundam` -> `gundam.jpg`
+ * - Strip `mobile-suit-gundam-`: `mobile-suit-gundam-seed` -> `seed.jpg`
+ * - Strip `gundam-`: `gundam-build-divers` -> `build-divers.jpg`
+ * - Strip `-series` suffix: `digimon-series` -> `digimon.jpg`
  *
  * Usage: pnpm tsx scripts/generate-image-lookup.ts
  */
@@ -19,6 +19,12 @@ const SERIES_IMAGES_DIR = "apps/next/public/images/series";
 const BRANDS_IMAGES_DIR = "apps/next/public/images/brands";
 const OUTPUT_PATH = "apps/next/src/data/image-lookup.json";
 const EXISTING_LOOKUP_PATH = "apps/next/src/data/image-lookup.json";
+
+const MOBILE_SUIT_GUNDAM_PREFIX = "mobile-suit-gundam-";
+const MOBILE_SUIT_PREFIX = "mobile-suit-";
+const GUNDAM_PREFIX = "gundam-";
+const SERIES_SUFFIX = "-series";
+const SUMMARY_WIDTH = 50;
 
 interface EntityNode {
 	id: string;
@@ -35,7 +41,7 @@ interface ImageLookup {
 }
 
 /**
- * Scan a directory for image files and return a map of base name → full filename
+ * Scan a directory for image files and return a map of base name -> full filename
  */
 function scanImageDirectory(dir: string): Map<string, string> {
 	const imageMap = new Map<string, string>();
@@ -224,40 +230,40 @@ function generateCandidates(id: string, overrides: Record<string, string>): stri
 	const candidates: string[] = [id];
 
 	// Pattern 1: Strip `mobile-suit-gundam-` prefix
-	if (id.startsWith("mobile-suit-gundam-")) {
-		candidates.push(id.replace("mobile-suit-gundam-", ""));
+	if (id.startsWith(MOBILE_SUIT_GUNDAM_PREFIX)) {
+		candidates.push(id.replace(MOBILE_SUIT_GUNDAM_PREFIX, ""));
 	}
 
 	// Pattern 2: Strip `gundam-` prefix
-	if (id.startsWith("gundam-")) {
-		candidates.push(id.replace("gundam-", ""));
+	if (id.startsWith(GUNDAM_PREFIX)) {
+		candidates.push(id.replace(GUNDAM_PREFIX, ""));
 	}
 
 	// Pattern 3: Strip `mobile-suit-` prefix
-	if (id.startsWith("mobile-suit-")) {
-		candidates.push(id.replace("mobile-suit-", ""));
+	if (id.startsWith(MOBILE_SUIT_PREFIX)) {
+		candidates.push(id.replace(MOBILE_SUIT_PREFIX, ""));
 	}
 
 	// Pattern 4: Strip `-series` suffix
-	if (id.endsWith("-series")) {
+	if (id.endsWith(SERIES_SUFFIX)) {
 		const withoutSuffix = id.replace(/-series$/, "");
 		candidates.push(withoutSuffix);
 		// Also try with prefix stripping
-		if (withoutSuffix.startsWith("gundam-")) {
-			candidates.push(withoutSuffix.replace("gundam-", ""));
+		if (withoutSuffix.startsWith(GUNDAM_PREFIX)) {
+			candidates.push(withoutSuffix.replace(GUNDAM_PREFIX, ""));
 		}
 	}
 
 	// Pattern 5: Strip both prefix and suffix combinations
 	let stripped = id;
-	if (stripped.startsWith("mobile-suit-gundam-")) {
-		stripped = stripped.replace("mobile-suit-gundam-", "");
-	} else if (stripped.startsWith("gundam-")) {
-		stripped = stripped.replace("gundam-", "");
-	} else if (stripped.startsWith("mobile-suit-")) {
-		stripped = stripped.replace("mobile-suit-", "");
+	if (stripped.startsWith(MOBILE_SUIT_GUNDAM_PREFIX)) {
+		stripped = stripped.replace(MOBILE_SUIT_GUNDAM_PREFIX, "");
+	} else if (stripped.startsWith(GUNDAM_PREFIX)) {
+		stripped = stripped.replace(GUNDAM_PREFIX, "");
+	} else if (stripped.startsWith(MOBILE_SUIT_PREFIX)) {
+		stripped = stripped.replace(MOBILE_SUIT_PREFIX, "");
 	}
-	if (stripped.endsWith("-series")) {
+	if (stripped.endsWith(SERIES_SUFFIX)) {
 		stripped = stripped.replace(/-series$/, "");
 	}
 	if (stripped !== id && !candidates.includes(stripped)) {
@@ -265,13 +271,13 @@ function generateCandidates(id: string, overrides: Record<string, string>): stri
 	}
 
 	// Pattern 6: Remove hyphens entirely
-	const noHyphens = id.replace(/-/g, "");
+	const noHyphens = id.replaceAll("-", "");
 	if (!candidates.includes(noHyphens)) {
 		candidates.push(noHyphens);
 	}
 
 	// Pattern 7: Replace hyphens with underscores
-	const underscored = id.replace(/-/g, "_");
+	const underscored = id.replaceAll("-", "_");
 	if (!candidates.includes(underscored)) {
 		candidates.push(underscored);
 	}
@@ -354,11 +360,11 @@ function main() {
 	// Create output with preserved grades
 	const output: ImageLookup = {
 		brands: Object.fromEntries(
-			Object.entries(brandMappings).sort(([a], [b]) => a.localeCompare(b)),
+			Object.entries(brandMappings).toSorted(([a], [b]) => a.localeCompare(b)),
 		),
 		grades: existingLookup.grades, // Preserve manually curated grade mappings
 		series: Object.fromEntries(
-			Object.entries(seriesMappings).sort(([a], [b]) => a.localeCompare(b)),
+			Object.entries(seriesMappings).toSorted(([a], [b]) => a.localeCompare(b)),
 		),
 	};
 
@@ -366,9 +372,9 @@ function main() {
 	writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, "\t") + "\n");
 
 	// Print summary
-	console.log("=".repeat(50));
+	console.log("=".repeat(SUMMARY_WIDTH));
 	console.log("SUMMARY");
-	console.log("=".repeat(50));
+	console.log("=".repeat(SUMMARY_WIDTH));
 	console.log(`Series: ${Object.keys(seriesMappings).length}/${seriesData.length} mapped`);
 	console.log(`Brands: ${Object.keys(brandMappings).length}/${brandsData.length} mapped`);
 	console.log(`Grades: ${Object.keys(existingLookup.grades).length} preserved`);

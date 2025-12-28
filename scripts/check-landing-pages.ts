@@ -46,6 +46,7 @@ const SELECTOR_TIMEOUT_MS = 10_000;
 const SLOW_MO_MS = 100;
 const BYTES_PER_KB = 1024;
 const SUMMARY_SEPARATOR_LENGTH = 50;
+const IMAGE_URL_TRUNCATE_LENGTH = 60;
 
 // =============================================================================
 // Interfaces
@@ -87,18 +88,18 @@ interface ProcessingResult {
 // =============================================================================
 
 function parseArgs(): CheckerOptions {
-	const args = process.argv.slice(2);
+	const args = new Set(process.argv.slice(2));
 
 	return {
-		mode: args.includes("--brands")
+		mode: args.has("--brands")
 			? "brands"
-			: args.includes("--series")
+			: args.has("--series")
 				? "series"
 				: "all",
-		headless: args.includes("--headless"),
-		skipExisting: args.includes("--skip-existing"),
-		force: args.includes("--force"),
-		dryRun: args.includes("--dry-run"),
+		headless: args.has("--headless"),
+		skipExisting: args.has("--skip-existing"),
+		force: args.has("--force"),
+		dryRun: args.has("--dry-run"),
 	};
 }
 
@@ -285,7 +286,7 @@ async function processItem(
 			const imgSrc = await imgElement.getAttribute("src");
 
 			if (imgSrc) {
-				console.log(`  Image found: ${imgSrc.slice(0, 60)}...`);
+				console.log(`  Image found: ${imgSrc.slice(0, IMAGE_URL_TRUNCATE_LENGTH)}...`);
 
 				const ext = getFileExtension(imgSrc);
 				const imageDir = getImageDir(type);
@@ -302,7 +303,9 @@ async function processItem(
 					}
 
 					// Download immediately before CloudFront URL expires
-					if (!options.dryRun) {
+					if (options.dryRun) {
+						console.log(`  [dry-run] Would download to: ${outputPath}`);
+					} else {
 						const success = await downloadImage(page, imgSrc, outputPath);
 						result.imageDownloaded = success;
 
@@ -311,8 +314,6 @@ async function processItem(
 							waitUntil: "domcontentloaded",
 							timeout: NAVIGATION_TIMEOUT_MS,
 						});
-					} else {
-						console.log(`  [dry-run] Would download to: ${outputPath}`);
 					}
 				}
 			} else {
@@ -428,7 +429,7 @@ async function main() {
 	if (errors.length > 0) {
 		console.log(`\nErrors: ${String(errors.length)}`);
 		for (const r of errors) {
-			console.log(`  - ${r.type}/${r.id}: ${r.error}`);
+			console.log(`  - ${r.type}/${r.id}: ${r.error ?? "Unknown error"}`);
 		}
 	}
 

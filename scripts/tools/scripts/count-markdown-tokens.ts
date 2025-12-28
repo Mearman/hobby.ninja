@@ -1,10 +1,19 @@
 #!/usr/bin/env tsx
 
-import { resolve } from "node:path";
-
 import { globSync } from "glob";
 
-import { countFileTokens, countTokens } from "./markdown-utils";
+import { countFileTokens, countTokens, type TokenCount } from "./markdown-utils";
+
+// Token threshold constants
+const TOKEN_WARNING_THRESHOLD = 4000;
+const TOKEN_CRITICAL_THRESHOLD = 100_000;
+
+interface ExtendedTokenResult extends TokenCount {
+	filePath: string;
+	realPath?: string;
+	isSymlink: boolean;
+	symlinkTarget?: string;
+}
 
 interface TokenCountResult {
 	filePath: string;
@@ -36,23 +45,6 @@ interface TokenCountReport {
 }
 
 /**
- * Count tokens in a single markdown file
- */
-function countFile(filePath: string): TokenCountResult {
-	const tokenCount = countFileTokens(filePath);
-	return {
-		filePath: tokenCount.filePath,
-		tokens: {
-			words: tokenCount.words,
-			characters: tokenCount.characters,
-			charactersNoSpaces: tokenCount.charactersNoSpaces,
-			estimatedTokens: tokenCount.estimatedTokens,
-			modelTokens: tokenCount.modelTokens,
-		},
-	};
-}
-
-/**
  * Count tokens in multiple markdown files with symlink deduplication
  */
 function countFiles(pattern: string, options: { ignore?: string[] } = {}): TokenCountReport {
@@ -63,7 +55,7 @@ function countFiles(pattern: string, options: { ignore?: string[] } = {}): Token
 			"**/build/**",
 			"**/.next/**",
 			"**/.nx/**",
-			...(options.ignore || []),
+			...(options.ignore ?? []),
 		],
 		nodir: true,
 	});
@@ -83,7 +75,7 @@ function countFiles(pattern: string, options: { ignore?: string[] } = {}): Token
 	for (const file of files) {
 		try {
 			// Get full result with symlink info
-			const resultWithSymlinkInfo = countFile(file) as any;
+			const resultWithSymlinkInfo: ExtendedTokenResult = countFileTokens(file);
 
 			// Skip if we've already processed this real file (deduplicate symlinks)
 			if (resultWithSymlinkInfo.realPath && processedRealPaths.has(resultWithSymlinkInfo.realPath)) {
@@ -95,29 +87,29 @@ function countFiles(pattern: string, options: { ignore?: string[] } = {}): Token
 				processedRealPaths.add(resultWithSymlinkInfo.realPath);
 			}
 
-			if (resultWithSymlinkInfo.isSymlink) {
-				symlinksFound.push(`${resultWithSymlinkInfo.filePath} → ${resultWithSymlinkInfo.symlinkTarget}`);
+			if (resultWithSymlinkInfo.isSymlink && resultWithSymlinkInfo.symlinkTarget) {
+				symlinksFound.push(`${resultWithSymlinkInfo.filePath} -> ${resultWithSymlinkInfo.symlinkTarget}`);
 			}
 
 			// Add to results using the standard format
 			fileResults.push({
 				filePath: resultWithSymlinkInfo.filePath,
 				tokens: {
-					words: resultWithSymlinkInfo.tokens.words,
-					characters: resultWithSymlinkInfo.tokens.characters,
-					charactersNoSpaces: resultWithSymlinkInfo.tokens.charactersNoSpaces,
-					estimatedTokens: resultWithSymlinkInfo.tokens.estimatedTokens,
-					modelTokens: resultWithSymlinkInfo.tokens.modelTokens,
+					words: resultWithSymlinkInfo.words,
+					characters: resultWithSymlinkInfo.characters,
+					charactersNoSpaces: resultWithSymlinkInfo.charactersNoSpaces,
+					estimatedTokens: resultWithSymlinkInfo.estimatedTokens,
+					modelTokens: resultWithSymlinkInfo.modelTokens,
 				},
 			});
 
-			totalWords += resultWithSymlinkInfo.tokens.words;
-			totalCharacters += resultWithSymlinkInfo.tokens.characters;
-			totalCharactersNoSpaces += resultWithSymlinkInfo.tokens.charactersNoSpaces;
-			totalEstimatedTokens += resultWithSymlinkInfo.tokens.estimatedTokens;
-			totalGpt3_5Tokens += resultWithSymlinkInfo.tokens.modelTokens.gpt3_5;
-			totalGpt4Tokens += resultWithSymlinkInfo.tokens.modelTokens.gpt4;
-			totalClaudeTokens += resultWithSymlinkInfo.tokens.modelTokens.claude;
+			totalWords += resultWithSymlinkInfo.words;
+			totalCharacters += resultWithSymlinkInfo.characters;
+			totalCharactersNoSpaces += resultWithSymlinkInfo.charactersNoSpaces;
+			totalEstimatedTokens += resultWithSymlinkInfo.estimatedTokens;
+			totalGpt3_5Tokens += resultWithSymlinkInfo.modelTokens.gpt3_5;
+			totalGpt4Tokens += resultWithSymlinkInfo.modelTokens.gpt4;
+			totalClaudeTokens += resultWithSymlinkInfo.modelTokens.claude;
 		} catch (error) {
 			console.error(`Error processing ${file}:`, error instanceof Error ? error.message : error);
 		}
@@ -125,7 +117,7 @@ function countFiles(pattern: string, options: { ignore?: string[] } = {}): Token
 
 	// Report symlinks found
 	if (symlinksFound.length > 0) {
-		console.log(`\n🔗 Found ${symlinksFound.length} symlink(s):`);
+		console.log(`\nFound ${String(symlinksFound.length)} symlink(s):`);
 		for (const symlink of symlinksFound) console.log(`   ${symlink}`);
 		console.log(`   (Deduplicated to avoid double-counting)\n`);
 	}
@@ -141,7 +133,7 @@ function countFiles(pattern: string, options: { ignore?: string[] } = {}): Token
 			gpt4: totalGpt4Tokens,
 			claude: totalClaudeTokens,
 		},
-		fileResults: fileResults.sort((a, b) => b.tokens.estimatedTokens - a.tokens.estimatedTokens),
+		fileResults: fileResults.toSorted((a, b) => b.tokens.estimatedTokens - a.tokens.estimatedTokens),
 	};
 }
 
@@ -226,11 +218,11 @@ function countFromString(content: string) {
 	console.log(`  Claude (approx): ${formatNumber(tokenCount.modelTokens.claude)} tokens`);
 	console.log();
 
-	if (tokenCount.modelTokens.gpt4 > 4000) {
-		console.log(`⚠️  Warning: This content exceeds typical context window limits`);
+	if (tokenCount.modelTokens.gpt4 > TOKEN_WARNING_THRESHOLD) {
+		console.log(`Warning: This content exceeds typical context window limits`);
 	}
-	if (tokenCount.modelTokens.gpt4 > 100_000) {
-		console.log(`🚨 Critical: This content exceeds 100k tokens - very expensive to process`);
+	if (tokenCount.modelTokens.gpt4 > TOKEN_CRITICAL_THRESHOLD) {
+		console.log(`Critical: This content exceeds 100k tokens - very expensive to process`);
 	}
 }
 
@@ -314,6 +306,6 @@ if (require.main === module) {
 	main();
 }
 
-export { countFile, countFiles,  type TokenCountResult, type TokenCountReport };
+export { countFiles, type TokenCountResult, type TokenCountReport };
 
 export {countTokens} from "./markdown-utils";

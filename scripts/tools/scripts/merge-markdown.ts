@@ -1,12 +1,11 @@
 #!/usr/bin/env tsx
 
-import { resolve } from "node:path";
+import path from "node:path";
 
 import {
 	EMBED_LINK_REGEX,
 	EMBED_SIMPLE_REGEX,
 	readMarkdownFile,
-	checkFileExists,
 } from "./markdown-utils";
 
 interface MergeOptions {
@@ -81,7 +80,7 @@ function validateEmbeds(
 		}
 
 		// Recursively validate embedded file
-		const embeddedPath = resolve(currentDir, linkPath);
+		const embeddedPath = path.resolve(currentDir, linkPath);
 		const embeddedResult = validateEmbeds(
 			embeddedPath,
 			{ ...options, baseDir: currentDir },
@@ -101,7 +100,7 @@ function validateEmbeds(
 	const processedEmbeds = new Set<string>();
 
 	for (const match of simpleMatches) {
-		const [fullMatch, path] = match;
+		const [fullMatch, embedPath] = match;
 
 		// Skip if already processed
 		if (processedEmbeds.has(fullMatch)) {
@@ -116,14 +115,14 @@ function validateEmbeds(
 		// Skip if within a markdown link that was already processed
 		const matchIndex = content.indexOf(fullMatch);
 		const beforeMatch = content.slice(0, matchIndex);
-		if (beforeMatch.endsWith("[") || beforeMatch.includes(`[@${path}](`)) {
+		if (beforeMatch.endsWith("[") || beforeMatch.includes(`[@${embedPath}](`)) {
 			continue;
 		}
 
 		processedEmbeds.add(fullMatch);
 
 		// Recursively validate embedded file
-		const embeddedPath = resolve(currentDir, path);
+		const embeddedPath = path.resolve(currentDir, embedPath);
 		const embeddedResult = validateEmbeds(
 			embeddedPath,
 			{ ...options, baseDir: currentDir },
@@ -176,9 +175,9 @@ function mergeMarkdown(
 	visited.add(absolutePath);
 
 	// Helper function to embed a file
-	const embedFile = (path: string): string => {
+	const embedFile = (filePath: string): string => {
 		// Resolve relative path from current file's directory
-		const embeddedPath = resolve(currentDir, path);
+		const embeddedPath = path.resolve(currentDir, filePath);
 
 		// Recursively merge embedded file
 		const embeddedContent = mergeMarkdown(
@@ -190,13 +189,13 @@ function mergeMarkdown(
 
 		// Return embedded content with optional markers
 		if (includeMarkers) {
-			return `\n\n<!-- BEGIN EMBEDDED: ${path} -->\n\n${embeddedContent}\n\n<!-- END EMBEDDED: ${path} -->\n\n`;
+			return `\n\n<!-- BEGIN EMBEDDED: ${filePath} -->\n\n${embeddedContent}\n\n<!-- END EMBEDDED: ${filePath} -->\n\n`;
 		}
 		return `\n\n${embeddedContent}\n\n`;
 	};
 
 	// Process [@path](path) format embeds
-	let merged = content.replace(EMBED_LINK_REGEX, (match, linkText, linkPath) => {
+	let merged = content.replace(EMBED_LINK_REGEX, (_match: string, linkText: string, linkPath: string) => {
 		// Validate that link text matches link path (after @ prefix)
 		if (linkText !== linkPath) {
 			return `<!-- Invalid embed format: link text "${linkText}" does not match path "${linkPath}" -->`;
@@ -208,7 +207,7 @@ function mergeMarkdown(
 	// Process @path format embeds (but not within existing embeds or links)
 	// Skip if it's part of an email address or already processed link
 	const processedEmbeds = new Set<string>();
-	merged = merged.replace(EMBED_SIMPLE_REGEX, (match, path) => {
+	merged = merged.replace(EMBED_SIMPLE_REGEX, (match: string, embedPath: string) => {
 		// Skip if already processed
 		if (processedEmbeds.has(match)) {
 			return match;
@@ -221,12 +220,12 @@ function mergeMarkdown(
 
 		// Skip if within a markdown link that was already processed
 		const beforeMatch = merged.slice(0, merged.indexOf(match));
-		if (beforeMatch.endsWith("[") || beforeMatch.includes(`[@${path}](`)) {
+		if (beforeMatch.endsWith("[") || beforeMatch.includes(`[@${embedPath}](`)) {
 			return match;
 		}
 
 		processedEmbeds.add(match);
-		return embedFile(path);
+		return embedFile(embedPath);
 	});
 
 	return merged;
