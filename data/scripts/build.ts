@@ -91,7 +91,7 @@ interface Item {
 	relatedItems: RelatedItemRef[];
 	/** 1:1 manual relationship */
 	manual?: ManualRef;
-	scale?: string;
+	scales?: string[];
 	// Grades - keyed by root grade, value is array of specific grades
 	// e.g., { "hg": ["hg-uc"], "mg": [] }
 	grades?: Record<string, string[]>;
@@ -427,14 +427,15 @@ function buildGrades(items: Map<string, Item>, brands: Map<string, Brand>): Map<
 function buildScales(items: Map<string, Item>): Map<string, ScaleData> {
 	const scaleItemIds = new Map<string, string[]>();
 
-	// Extract scale from each item
+	// Extract scales from each item (items can have multiple scales)
 	for (const [itemId, item] of items) {
-		if (item.scale) {
-			const scaleId = item.scale;
-			if (!scaleItemIds.has(scaleId)) {
-				scaleItemIds.set(scaleId, []);
+		if (item.scales && item.scales.length > 0) {
+			for (const scaleId of item.scales) {
+				if (!scaleItemIds.has(scaleId)) {
+					scaleItemIds.set(scaleId, []);
+				}
+				scaleItemIds.get(scaleId)!.push(itemId);
 			}
-			scaleItemIds.get(scaleId)!.push(itemId);
 		}
 	}
 
