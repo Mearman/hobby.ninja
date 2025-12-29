@@ -6,8 +6,8 @@ const DATA_YEAR_SELECTOR = "[data-year]";
 
 /**
  * Hook to track which year is currently most visible in the viewport.
- * Uses IntersectionObserver to watch elements with data-year attribute.
- * Tracks the year of the topmost visible item in the center region.
+ * Uses IntersectionObserver to track which elements are visible,
+ * and scroll events to update positions for smooth tracking.
  *
  * @param containerSelector - CSS selector for the container to observe (defaults to document)
  * @returns The year most visible in the viewport, or undefined if none
@@ -15,8 +15,8 @@ const DATA_YEAR_SELECTOR = "[data-year]";
 export function useScrollYear(containerSelector?: string): number | undefined {
 	const [currentYear, setCurrentYear] = useState<number | undefined>();
 	const observerRef = useRef<IntersectionObserver | null>(null);
-	// Track currently visible elements with their positions
-	const visibleElementsRef = useRef<Map<HTMLElement, number>>(new Map());
+	// Track currently visible elements (without stale positions)
+	const visibleElementsRef = useRef<Set<HTMLElement>>(new Set());
 
 	useEffect(() => {
 		// Disconnect existing observer
@@ -26,19 +26,33 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 
 		visibleElementsRef.current.clear();
 
+		// Calculate viewport center region bounds
+		const getViewportCenter = () => {
+			const vh = window.innerHeight;
+			return {
+				top: vh * 0.3, // 30% from top
+				bottom: vh * 0.7, // 70% from top (middle 40%)
+			};
+		};
+
 		const updateCurrentYear = () => {
 			const visibleElements = visibleElementsRef.current;
 			if (visibleElements.size === 0) {
 				return; // Keep last known year
 			}
 
-			// Find the element closest to the top of the viewport center region
+			const center = getViewportCenter();
+
+			// Find the element closest to the top of the center region
+			// Use fresh getBoundingClientRect for accurate positions
 			let topElement: HTMLElement | undefined;
 			let topPosition = Number.POSITIVE_INFINITY;
 
-			for (const [element, position] of visibleElements) {
-				if (position < topPosition) {
-					topPosition = position;
+			for (const element of visibleElements) {
+				const rect = element.getBoundingClientRect();
+				// Check if element is in the center region
+				if (rect.bottom >= center.top && rect.top <= center.bottom && rect.top < topPosition) {
+					topPosition = rect.top;
 					topElement = element;
 				}
 			}
@@ -63,8 +77,7 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 					if (!element.dataset.year) continue;
 
 					if (entry.isIntersecting) {
-						// Store element with its top position
-						visibleElements.set(element, entry.boundingClientRect.top);
+						visibleElements.add(element);
 					} else {
 						visibleElements.delete(element);
 					}
@@ -73,8 +86,8 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 				updateCurrentYear();
 			},
 			{
-				// Focus on the middle 40% of the viewport for current year detection
-				rootMargin: "-30% 0px -30% 0px",
+				// Watch a larger region to track elements before they reach center
+				rootMargin: "-10% 0px -10% 0px",
 				threshold: 0,
 			},
 		);
@@ -93,8 +106,16 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 			}
 		}
 
+		// Add scroll listener for smooth position updates
+		const handleScroll = () => {
+			updateCurrentYear();
+		};
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+
 		return () => {
 			observer.disconnect();
+			window.removeEventListener("scroll", handleScroll);
 		};
 	}, [containerSelector]);
 
@@ -112,7 +133,7 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 		// Use MutationObserver to watch for new elements
 		const mutationObserver = new MutationObserver((mutations) => {
 			for (const mutation of mutations) {
-				// Handle removed nodes - clean up our tracking map
+				// Handle removed nodes - clean up our tracking set
 				for (const node of mutation.removedNodes) {
 					if (node instanceof HTMLElement) {
 						visibleElementsRef.current.delete(node);
