@@ -5,12 +5,14 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export interface VirtualGridOptions<T> {
 	items: T[];
-	/** Responsive column counts: { base, sm, md, lg } */
+	/** Responsive column counts: { base, number; sm: number; md: number; lg: number } */
 	columns: { base: number; sm: number; md: number; lg: number };
 	/** Gap between items in pixels */
 	gap: number;
-	/** Fixed portion of card height (title + badges + gap) - image height is calculated from width */
+	/** Fixed portion of card height (title only) - image and badges calculated from width */
 	fixedCardHeight: number;
+	/** Multiplier for additional height based on card width (for badges that scale) */
+	dynamicHeightMultiplier?: number;
 	/** Overscan rows to render above/below viewport */
 	overscan?: number;
 	/** Offset from top of document to account for headers */
@@ -61,6 +63,7 @@ export function useVirtualGrid<T>({
 	columns,
 	gap,
 	fixedCardHeight,
+	dynamicHeightMultiplier = 0,
 	overscan = 5,
 	scrollMargin = 0,
 }: VirtualGridOptions<T>): VirtualGridReturn<T> {
@@ -99,11 +102,11 @@ export function useVirtualGrid<T>({
 
 	// Calculate row height based on actual card width (image is 1:1 aspect ratio)
 	const rowHeight = useMemo(() => {
-		if (containerWidth === 0) return fixedCardHeight + 300; // fallback estimate
+		if (containerWidth === 0) return fixedCardHeight + 300 + 300 * dynamicHeightMultiplier; // fallback estimate
 		const cardWidth = (containerWidth - (columnCount - 1) * gap) / columnCount;
-		// Card height = fixed parts + image height (same as width due to 1:1 aspect)
-		return fixedCardHeight + cardWidth + gap;
-	}, [containerWidth, columnCount, gap, fixedCardHeight]);
+		// Card height = fixed parts + image height + dynamic portion (badges that scale with width)
+		return fixedCardHeight + cardWidth + cardWidth * dynamicHeightMultiplier + gap;
+	}, [containerWidth, columnCount, gap, fixedCardHeight, dynamicHeightMultiplier]);
 
 	// Update scroll margin when list ref is available and on layout changes
 	useEffect(() => {

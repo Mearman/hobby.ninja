@@ -29,11 +29,13 @@ const TITLE_CONTAINER_HEIGHT = 60;
 const WORD_BREAK_STYLE = "break-word" as const;
 
 // Virtual grid configuration
-const CARD_BADGES_HEIGHT = 80; // Entity badges (2x2 grid, approx)
 const GRID_GAP = 16; // Matches Mantine "lg" spacing
 const GRID_COLUMNS = { base: 1, sm: 2, md: 3, lg: 4 };
-// Fixed card height = title + badges (image height calculated dynamically from width)
-const FIXED_CARD_HEIGHT = TITLE_CONTAINER_HEIGHT + CARD_BADGES_HEIGHT;
+// Fixed card height = title + badge padding (image and badge heights scale with card width)
+const CARD_FIXED_PADDING = 12; // pt(4) + pb(4) + gap(4) for badges
+const FIXED_CARD_HEIGHT = TITLE_CONTAINER_HEIGHT + CARD_FIXED_PADDING;
+// Badges: 45% width, 300:170 ratio, 2 rows = 0.45 * 0.567 * 2 ≈ 0.51
+const BADGE_HEIGHT_MULTIPLIER = 0.51;
 
 /** Title text that auto-scales to fit within a fixed-height container */
 function FittedTitle({ text }: { text: string }): React.ReactElement {
@@ -473,6 +475,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		columns: GRID_COLUMNS,
 		gap: GRID_GAP,
 		fixedCardHeight: FIXED_CARD_HEIGHT,
+		dynamicHeightMultiplier: BADGE_HEIGHT_MULTIPLIER,
 		overscan: 3,
 	});
 
