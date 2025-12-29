@@ -103,9 +103,13 @@ const nextConfig: NextConfig = {
 	// Configure experimental features for Mantine and Vanilla Extract
 	experimental: {
 		optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
-		// Reduce worker threads to prevent OOM during static generation (6160 pages)
-		workerThreads: false,
-		cpus: 4,
+		// Enable worker threads for faster static generation
+		// CI has 8GB+ RAM allocated via NODE_OPTIONS
+		workerThreads: true,
+		// Use available CPUs (CI can override via NEXT_STATIC_GEN_CPUS env var)
+		cpus: process.env.NEXT_STATIC_GEN_CPUS
+			? parseInt(process.env.NEXT_STATIC_GEN_CPUS, 10)
+			: Math.max(require("os").cpus().length, 4),
 		// Disable optimizeCss for Vanilla Extract compatibility
 		// optimizeCss: true,
 	},

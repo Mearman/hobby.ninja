@@ -8,7 +8,6 @@
 			"executor": "@nx/next:build",
 			"outputs": ["{options.outputPath}"],
 			"defaultConfiguration": "production",
-			"cache": false,
 			"options": {
 				"outputPath": "apps/next/out"
 			},
