@@ -199,7 +199,10 @@ jobs:
       - name: Build Next.js static export
         env:
           NEXT_PUBLIC_APP_VERSION: ${{ needs.prepare-release.outputs.version || '0.0.1' }}
-        run: pnpm nx build next -- --turbo
+        run: |
+          # Increase file descriptor limit for Nx caching with 15k+ static pages
+          ulimit -n 65536
+          pnpm nx build next -- --turbo
 
       - name: Verify build output
         run: |
