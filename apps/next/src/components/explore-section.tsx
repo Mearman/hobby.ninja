@@ -336,6 +336,8 @@ interface ExploreSectionProps {
 export interface ExploreSectionHandle {
 	/** Scroll to the first item of the given year, loading items if needed */
 	scrollToYear: (year: number) => void;
+	/** Get the scroll position (0-1) where a year's items start */
+	getYearScrollPosition: (year: number) => number | null;
 }
 
 export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionProps>(function ExploreSection({ items, filters, totalCount, onFilterToggle }, ref) {
@@ -454,7 +456,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		overscan: 3,
 	});
 
-	// Expose scrollToYear function via ref
+	// Expose scrollToYear and getYearScrollPosition via ref
 	useImperativeHandle(ref, () => ({
 		scrollToYear: (year: number) => {
 			// Find the index of the first item with this year in the sorted list
@@ -463,6 +465,14 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 
 			// Scroll to that item using virtual grid
 			scrollToIndex(firstIndex);
+		},
+		getYearScrollPosition: (year: number) => {
+			// Find the index of the first item with this year
+			const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
+			if (firstIndex === -1) return null;
+
+			// Return as fraction of total items (approximates scroll position)
+			return sortedItems.length > 0 ? firstIndex / sortedItems.length : null;
 		},
 	}), [sortedItems, scrollToIndex]);
 

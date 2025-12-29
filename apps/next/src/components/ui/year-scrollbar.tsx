@@ -8,6 +8,8 @@ interface YearScrollbarProps {
 	years: number[];
 	/** Callback when a year is clicked or drag ends */
 	onYearSelect?: (year: number) => void;
+	/** Get scroll position (0-1) for a year based on actual item distribution */
+	getYearPosition?: (year: number) => number | null;
 }
 
 // Track dimensions
@@ -27,6 +29,7 @@ const SCROLL_ARRIVAL_THRESHOLD = 0.02;
 export function YearScrollbar({
 	years,
 	onYearSelect,
+	getYearPosition,
 }: YearScrollbarProps): React.ReactElement | null {
 	const trackRef = useRef<HTMLDivElement>(null);
 	const [isDragging, setIsDragging] = useState(false);
@@ -35,6 +38,8 @@ export function YearScrollbar({
 	const [targetYear, setTargetYear] = useState<number | null>(null);
 	// Ref to access targetYear in scroll handler without re-registering listeners
 	const targetYearRef = useRef<number | null>(null);
+	// Ref to access yearToPosition function in scroll handler
+	const yearToPositionRef = useRef<(year: number) => number>(() => 0);
 	// Scroll progress (0-1) for smooth thumb movement
 	const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -47,37 +52,52 @@ export function YearScrollbar({
 		return years.filter((year) => year % 5 === 0);
 	}, [years]);
 
+	// Convert year to Y position (0-1) - uses actual scroll position if available
+	const yearToPosition = useCallback(
+		(year: number): number => {
+			// Use actual item-based position if available
+			const actualPos = getYearPosition?.(year);
+			if (actualPos !== null && actualPos !== undefined) {
+				return actualPos;
+			}
+			// Fallback to linear year-based position
+			return yearRange > 0 ? (maxYear - year) / yearRange : 0;
+		},
+		[getYearPosition, maxYear, yearRange],
+	);
+
 	// Convert Y position (0-1, top to bottom) to year
-	// Top = newest (maxYear), Bottom = oldest (minYear)
+	// Finds the year whose actual scroll position is closest to the clicked position
 	const positionToYear = useCallback(
 		(position: number): number => {
 			const clampedPos = Math.max(0, Math.min(1, position));
-			// Position 0 (top) = maxYear, Position 1 (bottom) = minYear
-			const rawYear = maxYear - clampedPos * yearRange;
-			// Find closest year in our list
+
+			// Find year whose position is closest to clicked position
 			let closest = years[0];
+			let closestDist = Infinity;
+
 			for (const year of years) {
-				if (Math.abs(year - rawYear) < Math.abs(closest - rawYear)) {
+				const yearPos = yearToPosition(year);
+				const dist = Math.abs(yearPos - clampedPos);
+				if (dist < closestDist) {
 					closest = year;
+					closestDist = dist;
 				}
 			}
+
 			return closest;
 		},
-		[years, maxYear, yearRange],
+		[years, yearToPosition],
 	);
 
-	// Convert year to Y position (0-1)
-	const yearToPosition = useCallback(
-		(year: number): number => {
-			return (maxYear - year) / yearRange;
-		},
-		[maxYear, yearRange],
-	);
-
-	// Sync ref with state for use in scroll handler
+	// Sync refs with state for use in scroll handler
 	useEffect(() => {
 		targetYearRef.current = targetYear;
 	}, [targetYear]);
+
+	useEffect(() => {
+		yearToPositionRef.current = yearToPosition;
+	}, [yearToPosition]);
 
 	// Track scroll position directly and clear target when reached
 	useEffect(() => {
@@ -90,8 +110,8 @@ export function YearScrollbar({
 
 				// Clear target when scroll position is close to target
 				const currentTarget = targetYearRef.current;
-				if (currentTarget !== null && yearRange > 0) {
-					const targetPos = (maxYear - currentTarget) / yearRange;
+				if (currentTarget !== null) {
+					const targetPos = yearToPositionRef.current(currentTarget);
 					if (Math.abs(clampedProgress - targetPos) < SCROLL_ARRIVAL_THRESHOLD) {
 						setTargetYear(null);
 					}
@@ -107,7 +127,7 @@ export function YearScrollbar({
 			window.removeEventListener("scroll", updateScrollProgress);
 			window.removeEventListener("resize", updateScrollProgress);
 		};
-	}, [maxYear, yearRange]);
+	}, []);
 
 	// Get position from pointer event
 	const getPositionFromEvent = useCallback(

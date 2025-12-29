@@ -100,6 +100,11 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		exploreSectionRef.current?.scrollToYear(year);
 	}, []);
 
+	// Get scroll position for a year based on actual item distribution
+	const getYearScrollPosition = useCallback((year: number) => {
+		return exploreSectionRef.current?.getYearScrollPosition(year) ?? null;
+	}, []);
+
 	// Sort mode per filter type
 	const [sortModes, setSortModes] = useState<FilterSortModes>({
 		categories: "count",
@@ -874,6 +879,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 			<YearScrollbar
 				years={yearNumbers}
 				onYearSelect={handleYearSelect}
+				getYearPosition={getYearScrollPosition}
 			/>
 		</>
 	);
