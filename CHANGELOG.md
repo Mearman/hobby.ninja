@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/Mearman/hobby.ninja/compare/v1.3.0...v1.3.1) (2025-12-29)
+
+### Bug Fixes
+
+- **nx:** disable cache only for next:build target ([6be1732](https://github.com/Mearman/hobby.ninja/commit/6be1732f1ec37b64662e467e3a306658d57abeca))
+
 ## [1.3.0](https://github.com/Mearman/hobby.ninja/compare/v1.2.0...v1.3.0) (2025-12-29)
 
 ### Features
