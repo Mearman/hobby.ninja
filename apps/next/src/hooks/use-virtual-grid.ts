@@ -9,8 +9,8 @@ export interface VirtualGridOptions<T> {
 	columns: { base: number; sm: number; md: number; lg: number };
 	/** Gap between items in pixels */
 	gap: number;
-	/** Fixed row height in pixels (card height + gap) */
-	rowHeight: number;
+	/** Fixed portion of card height (title + badges + gap) - image height is calculated from width */
+	fixedCardHeight: number;
 	/** Overscan rows to render above/below viewport */
 	overscan?: number;
 	/** Offset from top of document to account for headers */
@@ -59,13 +59,14 @@ function getColumnCount(
 export function useVirtualGrid<T>({
 	items,
 	columns,
-	gap: _gap,
-	rowHeight,
+	gap,
+	fixedCardHeight,
 	overscan = 5,
 	scrollMargin = 0,
 }: VirtualGridOptions<T>): VirtualGridReturn<T> {
 	const listRef = useRef<HTMLDivElement>(null);
 	const [columnCount, setColumnCount] = useState(columns.lg);
+	const [containerWidth, setContainerWidth] = useState(0);
 	const [computedScrollMargin, setComputedScrollMargin] = useState(scrollMargin);
 
 	// Update column count on resize
@@ -79,6 +80,30 @@ export function useVirtualGrid<T>({
 		window.addEventListener("resize", updateColumns);
 		return () => { window.removeEventListener("resize", updateColumns); };
 	}, [columns]);
+
+	// Track container width for dynamic row height calculation
+	useEffect(() => {
+		const element = listRef.current;
+		if (!element) return;
+
+		const updateWidth = () => {
+			setContainerWidth(element.offsetWidth);
+		};
+
+		updateWidth();
+		const observer = new ResizeObserver(updateWidth);
+		observer.observe(element);
+
+		return () => { observer.disconnect(); };
+	}, []);
+
+	// Calculate row height based on actual card width (image is 1:1 aspect ratio)
+	const rowHeight = useMemo(() => {
+		if (containerWidth === 0) return fixedCardHeight + 300; // fallback estimate
+		const cardWidth = (containerWidth - (columnCount - 1) * gap) / columnCount;
+		// Card height = fixed parts + image height (same as width due to 1:1 aspect)
+		return fixedCardHeight + cardWidth + gap;
+	}, [containerWidth, columnCount, gap, fixedCardHeight]);
 
 	// Update scroll margin when list ref is available and on layout changes
 	useEffect(() => {
