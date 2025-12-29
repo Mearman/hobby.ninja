@@ -488,7 +488,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						title="Grade"
 						totalCount={grades.length + 1}
 						selectedCount={visibleSelectedGradeCount}
-						isAllSelected={filters.grades.length === grades.length + 1}
 						expanded={expandedSections.grades}
 						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
 						onClear={clearGrades}

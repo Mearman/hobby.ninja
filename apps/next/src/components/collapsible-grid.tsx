@@ -15,8 +15,6 @@ interface CollapsibleGridProps {
 	maxColumns?: number;
 	/** Number of selected items (for filter mode) */
 	selectedCount?: number;
-	/** Override for "all selected" state (when selectedCount doesn't reflect actual selection) */
-	isAllSelected?: boolean;
 	/** Controlled expanded state */
 	expanded?: boolean;
 	/** Callback when expanded state changes */
@@ -42,7 +40,6 @@ export function CollapsibleGrid({
 	cardWidth: minCardWidth = 140,
 	maxColumns,
 	selectedCount = 0,
-	isAllSelected,
 	expanded: controlledExpanded,
 	onExpandedChange,
 	onClear,
@@ -129,11 +126,11 @@ export function CollapsibleGrid({
 					{headerRight}
 					{onClear != null && onSelectAll != null && (
 						<UnstyledButton
-							onClick={(isAllSelected ?? selectedCount === totalCount) ? onClear : onSelectAll}
+							onClick={selectedCount > 0 ? onClear : onSelectAll}
 							style={{ cursor: "pointer" }}
 						>
 							<Text size="sm" c="dimmed" fw={500}>
-								{(isAllSelected ?? selectedCount === totalCount) ? "Select none" : "Select all"}
+								{selectedCount > 0 ? "Select none" : "Select all"}
 							</Text>
 						</UnstyledButton>
 					)}
