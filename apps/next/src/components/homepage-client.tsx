@@ -19,6 +19,9 @@ import { useCallback, useMemo, useState } from "react";
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
 import { ExploreSection, OTHER_FILTER_ID, type FilterState } from "@/components/explore-section";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { YearScrollbar } from "@/components/ui/year-scrollbar";
+import { useScrollYear } from "@/hooks/use-scroll-year";
 
 // P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
 const PBANDAI_CHILD_IDS = new Set(["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"]);
@@ -83,6 +86,22 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		scales: [],
 		years: [],
 	});
+
+	// Year scrollbar data and current scroll position
+	const yearNumbers = useMemo(
+		() => years.map((y) => y.year).toSorted((a, b) => b - a),
+		[years],
+	);
+	const currentYear = useScrollYear();
+
+	// Handle year selection from scrollbar
+	const handleYearSelect = useCallback((year: number) => {
+		// Find the first element with this data-year attribute
+		const element = document.querySelector(`[data-year="${year}"]`);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth", block: "start" });
+		}
+	}, []);
 
 	// Sort mode per filter type
 	const [sortModes, setSortModes] = useState<FilterSortModes>({
@@ -851,6 +870,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 					/>
 				</Stack>
 			</Container>
+
+			{/* Scroll navigation */}
+			<ScrollToTop />
+			<YearScrollbar
+				years={yearNumbers}
+				currentYear={currentYear}
+				onYearSelect={handleYearSelect}
+			/>
 		</>
 	);
 }
