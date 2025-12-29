@@ -92,10 +92,19 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 }
 
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
-function EntityBadge({ image, name }: { image?: string; name: string }): React.ReactElement {
+function EntityBadge({ image, name, onClick }: { image?: string; name: string; onClick?: () => void }): React.ReactElement {
+	const handleClick = (e: React.MouseEvent) => {
+		if (onClick) {
+			e.preventDefault();
+			e.stopPropagation();
+			onClick();
+		}
+	};
+
 	return (
-		<Tooltip label={name} withArrow={true}>
+		<Tooltip label={onClick ? `Filter by ${name}` : name} withArrow={true}>
 			<Box
+				onClick={handleClick}
 				style={{
 					flex: "0 0 20%",
 					aspectRatio: "300 / 170",
@@ -105,7 +114,10 @@ function EntityBadge({ image, name }: { image?: string; name: string }): React.R
 					display: "flex",
 					alignItems: "center",
 					justifyContent: "center",
+					cursor: onClick ? "pointer" : "default",
+					transition: "transform 0.1s, box-shadow 0.1s",
 				}}
+				className={onClick ? "entity-badge-clickable" : undefined}
 			>
 				{image ? (
 					<img
@@ -123,7 +135,7 @@ function EntityBadge({ image, name }: { image?: string; name: string }): React.R
 	);
 }
 
-function ItemCard({ item, index }: { item: Item; index: number }): React.ReactElement {
+function ItemCard({ item, index, onFilterToggle }: { item: Item; index: number; onFilterToggle?: (type: keyof FilterState, id: string) => void }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
 	// First batch loads eagerly for fastest initial paint
 	// Subsequent batches still use eager loading since native lazy doesn't work reliably
@@ -249,16 +261,32 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 				<Stack gap={0} px="sm" pt={0} pb={0} style={{ flex: 1 }}>
 					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="xs" ml="calc(-1 * var(--mantine-spacing-sm))" mb="xs">
 						{primaryGrade && (
-							<EntityBadge image={primaryGrade.image} name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja} />
+							<EntityBadge
+								image={primaryGrade.image}
+								name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja}
+								onClick={onFilterToggle ? () => { onFilterToggle("grades", primaryGrade.id); } : undefined}
+							/>
 						)}
 						{primaryBrand && (
-							<EntityBadge image={primaryBrand.image} name={typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja} />
+							<EntityBadge
+								image={primaryBrand.image}
+								name={typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
+								onClick={onFilterToggle ? () => { onFilterToggle("brands", primaryBrand.id); } : undefined}
+							/>
 						)}
 						{primarySeries && (
-							<EntityBadge image={primarySeries.image} name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja} />
+							<EntityBadge
+								image={primarySeries.image}
+								name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
+								onClick={onFilterToggle ? () => { onFilterToggle("series", primarySeries.id); } : undefined}
+							/>
 						)}
 						{primaryCategory && (
-							<EntityBadge image={primaryCategory.image} name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja} />
+							<EntityBadge
+								image={primaryCategory.image}
+								name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja}
+								onClick={onFilterToggle ? () => { onFilterToggle("categories", primaryCategory.id); } : undefined}
+							/>
 						)}
 					</Group>
 				</Stack>
@@ -295,6 +323,8 @@ interface ExploreSectionProps {
 	items: Item[];
 	filters?: FilterState;
 	totalCount?: number;
+	/** Callback to toggle a filter - type is "categories" | "series" | "brands" | "grades" */
+	onFilterToggle?: (type: keyof FilterState, id: string) => void;
 }
 
 /** Ref handle for ExploreSection - exposes year navigation */
@@ -303,7 +333,7 @@ export interface ExploreSectionHandle {
 	scrollToYear: (year: number) => void;
 }
 
-export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionProps>(function ExploreSection({ items, filters, totalCount }, ref) {
+export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionProps>(function ExploreSection({ items, filters, totalCount, onFilterToggle }, ref) {
 	// Filter items based on selected filters
 	const filteredItems = useMemo(() => {
 		if (!filters) return items;
@@ -480,7 +510,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 									data-item-id={item.id}
 									style={{ height: CARD_TOTAL_HEIGHT }}
 								>
-									<ItemCard item={item} index={globalIndex} />
+									<ItemCard item={item} index={globalIndex} onFilterToggle={onFilterToggle} />
 								</Box>
 							);
 						})}

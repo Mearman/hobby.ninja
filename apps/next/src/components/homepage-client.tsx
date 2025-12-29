@@ -867,6 +867,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						items={items}
 						filters={filters}
 						totalCount={items.length}
+						onFilterToggle={toggleFilter}
 					/>
 				</Stack>
 			</Container>

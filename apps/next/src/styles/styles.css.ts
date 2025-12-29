@@ -360,3 +360,10 @@ globalStyle(".item-card-hover:hover", {
 	borderColor: MANTINE_COLORS.BLUE_6,
 	transition: `all ${ANIMATION_DURATIONS.FAST_200} ease`,
 });
+
+// Entity badge hover styles (clickable filter badges on cards)
+globalStyle(".entity-badge-clickable:hover", {
+	transform: "scale(1.1)",
+	boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+	zIndex: 1,
+});
