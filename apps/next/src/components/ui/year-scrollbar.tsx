@@ -3,6 +3,9 @@
 import { Box, Text, rem } from "@mantine/core";
 import { useCallback, useRef, useState } from "react";
 
+// Check if year is a major tick (divisible by 5: 1980, 1985, 1990, etc.)
+const isMajorYear = (year: number) => year % 5 === 0;
+
 interface YearScrollbarProps {
 	/** All available years sorted newest first */
 	years: number[];
@@ -90,9 +93,6 @@ export function YearScrollbar({
 
 	if (years.length === 0) return null;
 
-	// Show fewer labels for readability (every 5 years or so)
-	const labelStep = years.length > 20 ? 5 : years.length > 10 ? 2 : 1;
-
 	return (
 		<Box
 			pos="fixed"
@@ -148,9 +148,9 @@ export function YearScrollbar({
 					overflowY: "auto",
 				}}
 			>
-				{years.map((year, index) => {
+				{years.map((year) => {
 					const isCurrentYear = year === currentYear;
-					const showLabel = index % labelStep === 0;
+					const showLabel = isMajorYear(year);
 
 					return (
 						<Box
