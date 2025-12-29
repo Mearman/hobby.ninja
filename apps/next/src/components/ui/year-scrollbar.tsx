@@ -113,8 +113,8 @@ export function YearScrollbar({
 					top="50%"
 					style={{
 						transform: "translateY(-50%)",
-						backgroundColor: "var(--mantine-color-dark-6)",
-						color: "white",
+						backgroundColor: "var(--mantine-color-text)",
+						color: "var(--mantine-color-body)",
 						padding: "4px 12px",
 						borderRadius: 4,
 						fontSize: 14,
@@ -139,7 +139,8 @@ export function YearScrollbar({
 					alignItems: "center",
 					gap: 0,
 					padding: "8px 4px",
-					backgroundColor: "var(--mantine-color-gray-1)",
+					backgroundColor: "var(--mantine-color-default)",
+					border: "1px solid var(--mantine-color-default-border)",
 					borderRadius: 8,
 					cursor: isDragging ? "grabbing" : "grab",
 					userSelect: "none",
@@ -186,7 +187,7 @@ export function YearScrollbar({
 										borderRadius: "50%",
 										backgroundColor: isCurrentYear
 											? "var(--mantine-color-blue-6)"
-											: "var(--mantine-color-gray-4)",
+											: "var(--mantine-color-dimmed)",
 									}}
 								/>
 							)}
