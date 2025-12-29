@@ -92,7 +92,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		() => years.map((y) => y.year).toSorted((a, b) => b - a),
 		[years],
 	);
-	const currentYear = useScrollYear();
+	const { currentYear } = useScrollYear();
 
 	// Ref for ExploreSection to call scrollToYear
 	const exploreSectionRef = useRef<ExploreSectionHandle>(null);

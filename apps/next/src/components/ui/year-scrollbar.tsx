@@ -135,7 +135,7 @@ export function YearScrollbar({
 
 	if (years.length === 0) return null;
 
-	// Calculate positions for thumbs
+	// Calculate positions for thumbs (year-based for consistency with marks)
 	const currentPosition = currentYear === undefined ? undefined : yearToPosition(currentYear);
 	// Target position: during drag use dragYear, after release use targetYear
 	const activeTargetYear = dragYear ?? targetYear;
@@ -247,30 +247,28 @@ export function YearScrollbar({
 				})}
 
 				{/* Current position thumb (shows where you are) */}
-				{currentPosition !== undefined && (
+				<Box
+					pos="absolute"
+					left="50%"
+					style={{
+						top: `calc(${currentPosition * 100}% - ${THUMB_SIZE / 2}px)`,
+						transform: CENTER_TRANSFORM,
+						// No transition - scrollProgress provides smooth values directly
+					}}
+				>
 					<Box
-						pos="absolute"
-						left="50%"
+						w={THUMB_SIZE}
+						h={THUMB_SIZE}
+						bg={showTargetThumb ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)"}
 						style={{
-							top: `calc(${currentPosition * 100}% - ${THUMB_SIZE / 2}px)`,
-							transform: CENTER_TRANSFORM,
-							transition: "top 100ms ease-out",
+							borderRadius: THUMB_SIZE / 2,
+							border: "2px solid white",
+							boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
+							opacity: showTargetThumb ? 0.5 : 1,
+							transition: "background-color 150ms ease, opacity 150ms ease",
 						}}
-					>
-						<Box
-							w={THUMB_SIZE}
-							h={THUMB_SIZE}
-							bg={showTargetThumb ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)"}
-							style={{
-								borderRadius: THUMB_SIZE / 2,
-								border: "2px solid white",
-								boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
-								opacity: showTargetThumb ? 0.5 : 1,
-								transition: "background-color 150ms ease, opacity 150ms ease",
-							}}
-						/>
-					</Box>
-				)}
+					/>
+				</Box>
 
 				{/* Target position thumb (shows where you're going) */}
 				{showTargetThumb && targetPosition !== undefined && (

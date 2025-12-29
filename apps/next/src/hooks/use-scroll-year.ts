@@ -4,16 +4,22 @@ import { useEffect, useRef, useState } from "react";
 
 const DATA_YEAR_SELECTOR = "[data-year]";
 
+export interface ScrollYearResult {
+	/** The year most visible in the viewport */
+	currentYear: number | undefined;
+}
+
 /**
  * Hook to track which year is currently most visible in the viewport.
  * Uses IntersectionObserver to track which elements are visible,
  * and requestAnimationFrame for smooth scroll tracking.
  *
  * @param containerSelector - CSS selector for the container to observe (defaults to document)
- * @returns The year most visible in the viewport, or undefined if none
+ * @returns Object with currentYear and scrollProgress for smooth scrollbar positioning
  */
-export function useScrollYear(containerSelector?: string): number | undefined {
+export function useScrollYear(containerSelector?: string): ScrollYearResult {
 	const [currentYear, setCurrentYear] = useState<number | undefined>();
+	const [scrollProgress, setScrollProgress] = useState(0);
 	const observerRef = useRef<IntersectionObserver | null>(null);
 	// Track currently visible elements (without stale positions)
 	const visibleElementsRef = useRef<Set<HTMLElement>>(new Set());
@@ -29,6 +35,11 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 		visibleElementsRef.current.clear();
 
 		const updateCurrentYear = () => {
+			// Always update scroll progress for smooth thumb movement
+			const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+			const progress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
+			setScrollProgress(Math.max(0, Math.min(1, progress)));
+
 			const visibleElements = visibleElementsRef.current;
 			if (visibleElements.size === 0) {
 				return; // Keep last known year
@@ -171,5 +182,5 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 		};
 	}, [containerSelector]);
 
-	return currentYear;
+	return { currentYear, scrollProgress };
 }
