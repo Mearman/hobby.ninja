@@ -22,6 +22,8 @@ env:
   NX_CACHE_DIRECTORY: .nx/cache
   NODE_OPTIONS: "--max-old-space-size=8192"
   NEXT_TELEMETRY_DISABLED: 1
+  # Nx Cloud remote caching - enable by adding NX_CLOUD_ACCESS_TOKEN secret
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
 jobs:
   prepare-release:
