@@ -1,7 +1,7 @@
 "use client";
 
 import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Box, Card, Group, Text, Tooltip } from "@mantine/core";
+import { Box, Card, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { forwardRef, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
 
@@ -91,11 +91,8 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 	);
 }
 
-// Fixed badge dimensions for consistent sizing across all cards
-const BADGE_WIDTH = 56;
-const BADGE_ASPECT_RATIO = 300 / 170;
-const BADGE_HEIGHT = Math.round(BADGE_WIDTH / BADGE_ASPECT_RATIO); // ~32px
-const BADGE_ROW_HEIGHT = BADGE_HEIGHT + 8 + 4; // badge + pt="xs" (8px) + pb={4}
+// Badge aspect ratio (same as filter cards)
+const BADGE_ASPECT_RATIO = "300 / 170";
 
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
 function EntityBadge({ image, name, onClick, isSelected }: { image?: string; name: string; onClick?: () => void; isSelected?: boolean }): React.ReactElement {
@@ -112,9 +109,9 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 			<Box
 				onClick={handleClick}
 				style={{
-					width: BADGE_WIDTH,
-					flexShrink: 0,
-					aspectRatio: "300 / 170",
+					flex: "1 1 0",
+					minWidth: 0,
+					aspectRatio: BADGE_ASPECT_RATIO,
 					borderRadius: 4,
 					overflow: "hidden",
 					backgroundColor: "white",
@@ -266,7 +263,15 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 					)}
 				</Box>
 
-				<Group gap="xs" wrap="nowrap" justify="center" pt="xs" pb={4} h={BADGE_ROW_HEIGHT}>
+				<Box
+					pt="xs"
+					pb={4}
+					style={{
+						display: "grid",
+						gridTemplateColumns: "repeat(4, 1fr)",
+						gap: 8,
+					}}
+				>
 					{primaryCategory && (
 						<EntityBadge
 							image={primaryCategory.image}
@@ -299,7 +304,7 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 							isSelected={filters?.series.includes(primarySeries.id)}
 						/>
 					)}
-				</Group>
+				</Box>
 			</Card>
 		</Link>
 	);
