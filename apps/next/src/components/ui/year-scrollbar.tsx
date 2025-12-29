@@ -13,7 +13,7 @@ interface YearScrollbarProps {
 }
 
 // Track dimensions
-const TRACK_HEIGHT = "calc(100vh - 120px)"; // Nearly full height with 60px padding top/bottom
+const TRACK_HEIGHT = "70vh"; // Tall but leaves room for header and bottom spacing
 const TRACK_WIDTH = 4;
 const THUMB_SIZE = 14;
 const MARK_SIZE = 8;
