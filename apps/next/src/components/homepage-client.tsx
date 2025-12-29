@@ -14,11 +14,11 @@ import {
 } from "@mantine/core";
 import { IconArrowNarrowRight, IconCalendar, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
 import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
-import { ExploreSection, OTHER_FILTER_ID, type FilterState } from "@/components/explore-section";
+import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
 import { useScrollYear } from "@/hooks/use-scroll-year";
@@ -94,13 +94,12 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 	);
 	const currentYear = useScrollYear();
 
-	// Handle year selection from scrollbar
+	// Ref for ExploreSection to call scrollToYear
+	const exploreSectionRef = useRef<ExploreSectionHandle>(null);
+
+	// Handle year selection from scrollbar - scrolls to that year in the virtual grid
 	const handleYearSelect = useCallback((year: number) => {
-		// Find the first element with this data-year attribute
-		const element = document.querySelector(`[data-year="${year}"]`);
-		if (element) {
-			element.scrollIntoView({ behavior: "smooth", block: "start" });
-		}
+		exploreSectionRef.current?.scrollToYear(year);
 	}, []);
 
 	// Sort mode per filter type
@@ -864,6 +863,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 					</Group>
 
 					<ExploreSection
+						ref={exploreSectionRef}
 						items={items}
 						filters={filters}
 						totalCount={items.length}
