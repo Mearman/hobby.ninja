@@ -127,7 +127,21 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 						style={{ width: "100%", height: "100%", objectFit: "contain" }}
 					/>
 				) : (
-					<Text size="10px" fw={600} c="gray.7" ta="center" px={2} style={{ wordBreak: WORD_BREAK_STYLE, lineHeight: 1.2 }}>
+					<Text
+						size="8px"
+						fw={600}
+						c="gray.7"
+						ta="center"
+						px={2}
+						style={{
+							wordBreak: WORD_BREAK_STYLE,
+							lineHeight: 1.1,
+							overflow: "hidden",
+							display: "-webkit-box",
+							WebkitLineClamp: 3,
+							WebkitBoxOrient: "vertical",
+						}}
+					>
 						{name}
 					</Text>
 				)}
