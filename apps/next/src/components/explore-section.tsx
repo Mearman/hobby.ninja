@@ -204,7 +204,6 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 				style={{ cursor: "pointer", overflow: "hidden", display: "flex", flexDirection: "column" }}
 				className="item-card-hover"
 			>
-				<FittedTitle text={displayName} />
 				<Box
 					bg="gray.1"
 					style={{
@@ -275,6 +274,8 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 						</Text>
 					)}
 				</Box>
+
+				<FittedTitle text={displayName} />
 
 				<Box
 					py={4}
