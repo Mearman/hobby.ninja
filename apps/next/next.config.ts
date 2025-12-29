@@ -100,8 +100,9 @@ const nextConfig: NextConfig = {
 	// Configure experimental features for Mantine and Vanilla Extract
 	experimental: {
 		optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
-		// Enable worker threads for faster static generation (no custom webpack = no DataCloneError)
-		workerThreads: true,
+		// Worker threads disabled - incompatible with webpack plugins (Vanilla Extract, PWA)
+		// The plugins inject webpack config that can't be serialized for worker threads
+		workerThreads: false,
 		// Use available CPUs (CI can override via NEXT_STATIC_GEN_CPUS env var)
 		cpus: process.env.NEXT_STATIC_GEN_CPUS
 			? parseInt(process.env.NEXT_STATIC_GEN_CPUS, 10)
