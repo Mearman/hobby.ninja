@@ -193,13 +193,14 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 	const primaryCategory = item.categories.length > 0 ? getCategoryById(item.categories[0].id) : undefined;
 
 	return (
-		<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+		<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit", display: "block", height: "100%" }}>
 			<Card
 				shadow="sm"
 				padding={0}
 				radius="md"
 				withBorder={true}
-				style={{ cursor: "pointer", overflow: "hidden" }}
+				h="100%"
+				style={{ cursor: "pointer", overflow: "hidden", display: "flex", flexDirection: "column" }}
 				className="item-card-hover"
 			>
 				<FittedTitle text={displayName} />
@@ -546,6 +547,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 									key={item.id}
 									data-year={item.releaseDate?.year}
 									data-item-id={item.id}
+									h="100%"
 								>
 									<ItemCard item={item} index={globalIndex} onFilterToggle={onFilterToggle} filters={filters} />
 								</Box>
