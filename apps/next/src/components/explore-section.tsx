@@ -109,8 +109,8 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 			<Box
 				onClick={handleClick}
 				style={{
-					flex: "1 1 0",
-					minWidth: 0,
+					width: "20%",
+					flexShrink: 0,
 					aspectRatio: BADGE_ASPECT_RATIO,
 					borderRadius: 4,
 					overflow: "hidden",
@@ -267,8 +267,9 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 					pt="xs"
 					pb={4}
 					style={{
-						display: "grid",
-						gridTemplateColumns: "repeat(4, 1fr)",
+						display: "flex",
+						justifyContent: "space-evenly",
+						alignItems: "center",
 						gap: 8,
 					}}
 				>
