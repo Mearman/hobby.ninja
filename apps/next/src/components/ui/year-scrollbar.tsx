@@ -1,6 +1,7 @@
 "use client";
 
 import { ActionIcon, Box, rem, Text, Transition } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { IconArrowUp } from "@tabler/icons-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -17,10 +18,17 @@ interface YearScrollbarProps {
 const TRACK_HEIGHT = "70vh"; // Tall but leaves room for header and bottom spacing
 const TRACK_WIDTH = 4;
 const THUMB_SIZE = 14;
+const THUMB_SIZE_MOBILE = 18; // Larger touch target on mobile
 const MARK_SIZE = 8;
 const CENTER_TRANSFORM = "translateX(-50%)";
 // Threshold for considering scroll "arrived" at target (2% of scroll height)
 const SCROLL_ARRIVAL_THRESHOLD = 0.02;
+
+// Responsive dimensions
+const CONTAINER_WIDTH_DESKTOP = 60;
+const CONTAINER_WIDTH_MOBILE = 36;
+const RIGHT_OFFSET_DESKTOP = 16;
+const RIGHT_OFFSET_MOBILE = 8;
 
 /**
  * Custom vertical year navigation rail.
@@ -43,6 +51,12 @@ export function YearScrollbar({
 	const yearToPositionRef = useRef<(year: number) => number>(() => 0);
 	// Scroll progress (0-1) for smooth thumb movement
 	const [scrollProgress, setScrollProgress] = useState(0);
+
+	// Responsive: detect if we're on desktop (md+)
+	const isDesktop = useMediaQuery("(min-width: 768px)");
+	const containerWidth = isDesktop ? CONTAINER_WIDTH_DESKTOP : CONTAINER_WIDTH_MOBILE;
+	const rightOffset = isDesktop ? RIGHT_OFFSET_DESKTOP : RIGHT_OFFSET_MOBILE;
+	const thumbSize = isDesktop ? THUMB_SIZE : THUMB_SIZE_MOBILE;
 
 	const minYear = useMemo(() => Math.min(...years), [years]);
 	const maxYear = useMemo(() => Math.max(...years), [years]);
@@ -213,7 +227,7 @@ export function YearScrollbar({
 	return (
 		<Box
 			pos="fixed"
-			right={rem(16)}
+			right={rem(rightOffset)}
 			top="50%"
 			style={{
 				height: TRACK_HEIGHT,
@@ -222,7 +236,6 @@ export function YearScrollbar({
 				display: "flex",
 				alignItems: "center",
 			}}
-			visibleFrom="md"
 		>
 			{/* Year label when navigating */}
 			{showTargetThumb && targetPosition !== null && (
@@ -251,7 +264,7 @@ export function YearScrollbar({
 				ref={trackRef}
 				pos="relative"
 				h="100%"
-				w={60}
+				w={containerWidth}
 				style={{ cursor: "pointer" }}
 				onClick={handleClick}
 				onPointerDown={handlePointerDown}
@@ -293,21 +306,23 @@ export function YearScrollbar({
 								bg="var(--mantine-color-default-border)"
 								style={{ borderRadius: MARK_SIZE / 2 }}
 							/>
-							{/* Year label */}
-							<Text
-								pos="absolute"
-								size="xs"
-								c="dimmed"
-								style={{
-									right: 20,
-									top: "50%",
-									transform: "translateY(-50%)",
-									whiteSpace: "nowrap",
-									fontSize: 10,
-								}}
-							>
-								{year}
-							</Text>
+							{/* Year label - desktop only */}
+							{isDesktop && (
+								<Text
+									pos="absolute"
+									size="xs"
+									c="dimmed"
+									style={{
+										right: 20,
+										top: "50%",
+										transform: "translateY(-50%)",
+										whiteSpace: "nowrap",
+										fontSize: 10,
+									}}
+								>
+									{year}
+								</Text>
+							)}
 						</Box>
 					);
 				})}
@@ -317,16 +332,16 @@ export function YearScrollbar({
 					pos="absolute"
 					left="50%"
 					style={{
-						top: `calc(${thumbPosition * 100}% - ${THUMB_SIZE / 2}px)`,
+						top: `calc(${thumbPosition * 100}% - ${thumbSize / 2}px)`,
 						transform: CENTER_TRANSFORM,
 					}}
 				>
 					<Box
-						w={THUMB_SIZE}
-						h={THUMB_SIZE}
+						w={thumbSize}
+						h={thumbSize}
 						bg={showTargetThumb ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)"}
 						style={{
-							borderRadius: THUMB_SIZE / 2,
+							borderRadius: thumbSize / 2,
 							border: "2px solid white",
 							boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
 							opacity: showTargetThumb ? 0.5 : 1,
@@ -341,16 +356,16 @@ export function YearScrollbar({
 						pos="absolute"
 						left="50%"
 						style={{
-							top: `calc(${targetPosition * 100}% - ${THUMB_SIZE / 2}px)`,
+							top: `calc(${targetPosition * 100}% - ${thumbSize / 2}px)`,
 							transform: CENTER_TRANSFORM,
 						}}
 					>
 						<Box
-							w={THUMB_SIZE}
-							h={THUMB_SIZE}
+							w={thumbSize}
+							h={thumbSize}
 							bg="var(--mantine-color-blue-filled)"
 							style={{
-								borderRadius: THUMB_SIZE / 2,
+								borderRadius: thumbSize / 2,
 								border: "2px solid white",
 								boxShadow: "0 2px 4px rgba(0,0,0,0.4)",
 							}}

@@ -440,7 +440,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 	return (
 		<>
 			{/* Main content with right padding for year scrollbar */}
-			<Box pr={{ base: 0, md: 80 }}>
+			<Box pr={{ base: 48, md: 80 }}>
 				{/* Categories, Grades, Brands & Series */}
 				<Container size="xl" py="xs" w="100%">
 					<Stack gap="xs">
