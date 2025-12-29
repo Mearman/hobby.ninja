@@ -1,14 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-magic-numbers */
 import type { NextConfig } from "next";
+import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 import withPWA from "next-pwa";
+
+const withVanillaExtract = createVanillaExtractPlugin();
 
 const withPWAConfig = withPWA({
 	dest: "public",
 	disable: process.env.NODE_ENV === "development",
 	register: true,
 	skipWaiting: true,
-	// Increase maximum file size for precaching to handle large chunks
-	// maximumFileSizeToCacheInBytes: 20 * 1024 * 1024, // 20MB to handle graph data
 	runtimeCaching: [
 		{
 			urlPattern: /^https?.*/,
@@ -62,9 +62,6 @@ const withPWAConfig = withPWA({
 	buildExcludes: ["middleware-manifest.json"],
 });
 
-// Create Vanilla Extract plugin instance - temporarily disabled
-// const withVanillaExtract = createVanillaExtractPlugin();
-
 const nextConfig: NextConfig = {
 	// Enable static export for GitHub Pages deployment
 	output: "export",
@@ -103,14 +100,12 @@ const nextConfig: NextConfig = {
 	// Configure experimental features for Mantine and Vanilla Extract
 	experimental: {
 		optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
-		// Worker threads disabled - incompatible with custom webpack config (DataCloneError)
-		workerThreads: false,
+		// Enable worker threads for faster static generation (no custom webpack = no DataCloneError)
+		workerThreads: true,
 		// Use available CPUs (CI can override via NEXT_STATIC_GEN_CPUS env var)
 		cpus: process.env.NEXT_STATIC_GEN_CPUS
 			? parseInt(process.env.NEXT_STATIC_GEN_CPUS, 10)
 			: Math.max(require("os").cpus().length, 4),
-		// Disable optimizeCss for Vanilla Extract compatibility
-		// optimizeCss: true,
 	},
 
 	// Increase static page generation timeout for large dataset (6000+ pages)
@@ -127,95 +122,10 @@ const nextConfig: NextConfig = {
 		ignoreBuildErrors: true,
 	},
 
-	// Next.js 16 automatically handles Turbopack/Webpack switching
-	// Development uses Turbopack by default, static export uses webpack
-
 	// Empty turbopack config to avoid webpack/turbopack conflicts
 	turbopack: {},
-
-	// Additional webpack configuration for Vanilla Extract and bundle optimization
-	/* eslint-disable @typescript-eslint/no-explicit-any,  @typescript-eslint/no-unsafe-member-access */
-	webpack: (config: any, { isServer }: { isServer: boolean }): any => {
-		// Fix for Webpack 5 and client-side modules in static export
-		if (!isServer) {
-			config.resolve.fallback = {
-				...config.resolve.fallback,
-				fs: false,
-				net: false,
-				tls: false,
-				crypto: false,
-				stream: false,
-				url: false,
-				zlib: false,
-				http: false,
-				https: false,
-				assert: false,
-				os: false,
-				path: false,
-			};
-		}
-
-		// Add CSS file extension alias
-		config.resolve.extensionAlias = {
-			".css": [".css.ts", ".css"],
-			...config.resolve.extensionAlias,
-		};
-
-		// Optimize chunk splitting to prevent large bundles
-		if (!isServer) {
-			config.optimization.splitChunks = {
-				...config.optimization.splitChunks,
-				chunks: "all",
-				maxSize: 244_000, // ~244KB chunks
-				cacheGroups: {
-					default: {
-						minChunks: 2,
-						priority: -20,
-						reuseExistingChunk: true,
-					},
-					vendor: {
-						test: /[\\/]node_modules[\\/]/,
-						name: "vendors",
-						priority: -10,
-						chunks: "all",
-					},
-					vanilla: {
-						test: /[\\/]node_modules[\\/]@vanilla-extract[\\/]/,
-						name: "vanilla-extract",
-						priority: 10,
-						chunks: "all",
-					},
-					// Separate graph data into its own chunk
-					graphData: {
-						test: /[\\/](graph-data|data)[\\/]/,
-						name: "graph-data",
-						priority: 20,
-						chunks: "all",
-					},
-					// Large UI libraries
-					mantine: {
-						test: /[\\/]node_modules[\\/]@mantine[\\/]/,
-						name: "mantine",
-						priority: 15,
-						chunks: "all",
-					},
-					// Critical fix for Vanilla Extract static export
-					css: {
-						name: "css",
-						test: /\.css$/,
-						chunks: "all",
-						enforce: true,
-						priority: 30,
-					},
-				},
-			};
-		}
-
-		return config;
-	},
-	/* eslint-enable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access */
 };
 
-// Apply PWA plugin only - Vanilla Extract temporarily disabled for static export
-// eslint-disable-next-line import/no-default-export, @typescript-eslint/no-unsafe-call
-export default withPWAConfig(nextConfig);
+// Apply Vanilla Extract and PWA plugins
+// eslint-disable-next-line import/no-default-export
+export default withVanillaExtract(withPWAConfig(nextConfig));
