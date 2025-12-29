@@ -263,7 +263,7 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 					)}
 				</Box>
 
-				<Group gap="xs" wrap="nowrap" justify="center" py="xs">
+				<Group gap="xs" wrap="nowrap" justify="center" pt="xs" pb={4}>
 					{primaryCategory && (
 						<EntityBadge
 							image={primaryCategory.image}
