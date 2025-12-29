@@ -1,3 +1,33 @@
+## [1.4.0](https://github.com/Mearman/hobby.ninja/compare/v1.3.1...v1.4.0) (2025-12-29)
+
+### Features
+
+- **next:** add data-year attributes to explore section items ([e958bbe](https://github.com/Mearman/hobby.ninja/commit/e958bbeb3316b4c98aa0e986b16715ca2eb14831))
+- **next:** add loadUntil method to infinite scroll hook ([910a37b](https://github.com/Mearman/hobby.ninja/commit/910a37b2603575a6a8517d885d09ffc150afcd4e))
+- **next:** add scroll-to-top button component ([b1ab8b5](https://github.com/Mearman/hobby.ninja/commit/b1ab8b5759bbef0f57039b296331d89ed2f40723))
+- **next:** add useScrollYear hook for year detection ([65bb35a](https://github.com/Mearman/hobby.ninja/commit/65bb35a3939edc855acb756a2e69f66a7ace1ba8))
+- **next:** add useVirtualGrid hook for window-based virtualization ([a43a161](https://github.com/Mearman/hobby.ninja/commit/a43a161dcd18066aaf82641baa739f8040442c5f))
+- **next:** add year scrollbar navigation component ([6df67b8](https://github.com/Mearman/hobby.ninja/commit/6df67b85d2fd4e8a88d6c1288c77cea0f4cf79a5))
+- **next:** integrate scroll navigation on homepage ([933f95b](https://github.com/Mearman/hobby.ninja/commit/933f95b7abf5c342051e57cbfb40ec61d831d872))
+- **next:** replace infinite scroll with virtual grid in ExploreSection ([a8ccf5c](https://github.com/Mearman/hobby.ninja/commit/a8ccf5c3dae7e694923d9fd7d79cd68552ff615b))
+- **next:** use virtual grid scrollToYear for year navigation ([d406650](https://github.com/Mearman/hobby.ninja/commit/d406650e1024220219cef2f9e323ac6b48326902))
+
+### Bug Fixes
+
+- **build:** disable workerThreads due to webpack config incompatibility ([17fd88a](https://github.com/Mearman/hobby.ninja/commit/17fd88a24aa2fa478b52b1836af463e18ee0e293))
+- **build:** disable workerThreads for plugin compatibility ([48464da](https://github.com/Mearman/hobby.ninja/commit/48464da1cd05206bdd9d127f6549dafc9cc4591c))
+- **ci:** revert to cache: false for next:build ([bd6128d](https://github.com/Mearman/hobby.ninja/commit/bd6128dda73d450440e086947ef1e56b9d9e3e94))
+- **next:** convert virtual row positions from window to container-relative ([a84789c](https://github.com/Mearman/hobby.ninja/commit/a84789c84eb7067a1d089939809677a35f1e822b))
+
+### Performance
+
+- **build:** enable Vanilla Extract plugin and worker threads ([a77887f](https://github.com/Mearman/hobby.ninja/commit/a77887f86fdc3bbe9c332ae029f195c8b827087a))
+- **build:** enable worker threads and Nx Cloud caching ([be162cb](https://github.com/Mearman/hobby.ninja/commit/be162cb6182cf03056cc02038c5609c6846d951d))
+
+### Documentation
+
+- **next:** generalize loadUntil comment in useInfiniteScroll ([32c4185](https://github.com/Mearman/hobby.ninja/commit/32c418552c4da69c58ace8916e2fa2f7bf884b19))
+
 ## [1.3.1](https://github.com/Mearman/hobby.ninja/compare/v1.3.0...v1.3.1) (2025-12-29)
 
 ### Bug Fixes
