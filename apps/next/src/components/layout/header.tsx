@@ -1,6 +1,6 @@
 "use client";
 
-import { ActionIcon, Box, Group, rem, TextInput, Tooltip } from "@mantine/core";
+import { ActionIcon, Box, Group, TextInput, Tooltip } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import {
 	IconDatabase,
@@ -36,13 +36,13 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const getThemeIcon = (): React.ReactNode => {
 		switch (colorScheme) {
 			case "light": {
-				return <IconSun style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
+				return <IconSun size={UI.ICON_SIZE_LG} />;
 			}
 			case "dark": {
-				return <IconMoon style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
+				return <IconMoon size={UI.ICON_SIZE_LG} />;
 			}
 			case "system": {
-				return <IconDeviceDesktop style={{ width: rem(UI.ICON_SIZE_SM), height: rem(UI.ICON_SIZE_SM) }} />;
+				return <IconDeviceDesktop size={UI.ICON_SIZE_LG} />;
 			}
 		}
 	};
