@@ -20,7 +20,7 @@ import React, { useEffect, useState } from "react";
 
 import { TIMING, UI } from "@/lib/constants";
 import { useThemeContext } from "@/providers/mantine-provider";
-import { desktopOnly, header, headerContent, logo, mobileOnly, nav, navLink } from "@/styles/components.css";
+import { header, headerContent, logo, nav, navLink } from "@/styles/components.css";
 
 interface HeaderProps {
   onMenuToggle?: () => void;
@@ -92,7 +92,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 						size="lg"
 						variant="subtle"
 						onClick={onMenuToggle}
-						className={mobileOnly}
+						hiddenFrom="lg"
 						aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
 					>
 						{mobileMenuOpen ? <IconX size={UI.ICON_SIZE_LG} /> : <IconMenu2 size={UI.ICON_SIZE_LG} />}
@@ -115,7 +115,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 					</Box>
 
 					{/* Desktop navigation */}
-					<nav className={`${nav} ${desktopOnly}`}>
+					<Box component="nav" className={nav} visibleFrom="lg">
 						{navigationItems.map(({ href, label }) => (
 							<Link
 								key={href}
@@ -126,13 +126,13 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 								{label}
 							</Link>
 						))}
-					</nav>
+					</Box>
 				</Group>
 
 				{/* Search and actions */}
 				<Group gap="md" align="center">
 					{/* Search bar */}
-					<Box className={desktopOnly} style={{ flex: 1, maxWidth: "400px" }}>
+					<Box visibleFrom="lg" style={{ flex: 1, maxWidth: "400px" }}>
 						<TextInput
 							placeholder="Search items, brands, series..."
 							leftSection={<IconSearch size={UI.ICON_SIZE_SM} />}
@@ -162,38 +162,42 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 						size="lg"
 						variant="subtle"
 						onClick={() => globalThis.location.href = "/search"}
-						className={mobileOnly}
+						hiddenFrom="lg"
 						aria-label="Search"
 					>
 						<IconSearch size={UI.ICON_SIZE_LG} />
 					</ActionIcon>
 
-					{/* Collection badge */}
-					<Tooltip label="View collections">
-						<ActionIcon
-							size="lg"
-							variant={isActive("/collection") ? "filled" : "subtle"}
-							color="blue"
-							component={Link}
-							href="/collection"
-							aria-label="Collections"
-						>
-							<IconFolder size={UI.ICON_SIZE_LG} />
-						</ActionIcon>
-					</Tooltip>
+					{/* Collection badge - hidden on mobile, accessible via menu */}
+					<Box visibleFrom="sm">
+						<Tooltip label="View collections">
+							<ActionIcon
+								size="lg"
+								variant={isActive("/collection") ? "filled" : "subtle"}
+								color="blue"
+								component={Link}
+								href="/collection"
+								aria-label="Collections"
+							>
+								<IconFolder size={UI.ICON_SIZE_LG} />
+							</ActionIcon>
+						</Tooltip>
+					</Box>
 
-					{/* About */}
-					<Tooltip label="About hobby.ninja">
-						<ActionIcon
-							size="lg"
-							variant={isActive("/about") ? "filled" : "subtle"}
-							component={Link}
-							href="/about"
-							aria-label="About"
-						>
-							<IconInfoCircle size={UI.ICON_SIZE_LG} />
-						</ActionIcon>
-					</Tooltip>
+					{/* About - hidden on mobile, accessible via menu */}
+					<Box visibleFrom="sm">
+						<Tooltip label="About hobby.ninja">
+							<ActionIcon
+								size="lg"
+								variant={isActive("/about") ? "filled" : "subtle"}
+								component={Link}
+								href="/about"
+								aria-label="About"
+							>
+								<IconInfoCircle size={UI.ICON_SIZE_LG} />
+							</ActionIcon>
+						</Tooltip>
+					</Box>
 
 					{/* Theme toggle */}
 					<Tooltip label={getThemeLabel()}>

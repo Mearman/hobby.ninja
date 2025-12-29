@@ -32,6 +32,8 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .logo {
@@ -77,16 +79,16 @@
   to { opacity: 1; }
 }
 
-/* Responsive Utilities */
+/* Responsive Utilities - kept for backwards compatibility but prefer Mantine visibleFrom/hiddenFrom */
 .mobile-only {
-  display: block;
+  display: flex;
 }
 
 .desktop-only {
   display: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .mobile-only {
     display: none;
   }
