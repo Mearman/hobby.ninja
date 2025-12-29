@@ -106,7 +106,9 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 			<Box
 				onClick={handleClick}
 				style={{
-					flex: "0 0 20%",
+					flex: "1 1 0",
+					minWidth: 0,
+					maxWidth: 80,
 					aspectRatio: "300 / 170",
 					borderRadius: 4,
 					overflow: "hidden",
@@ -260,7 +262,7 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 				</Box>
 
 				<Stack gap={0} px="sm" pt={0} pb={0} style={{ flex: 1 }}>
-					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="xs" ml="calc(-1 * var(--mantine-spacing-sm))" mb="xs">
+					<Group gap="xs" wrap="nowrap" justify="center" mt="xs" mb="xs">
 						{primaryCategory && (
 							<EntityBadge
 								image={primaryCategory.image}
