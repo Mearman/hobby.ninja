@@ -116,8 +116,7 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 					justifyContent: "center",
 					cursor: onClick ? "pointer" : "default",
 					transition: "transform 0.1s, box-shadow 0.1s, outline 0.1s",
-					outline: isSelected ? "2px solid var(--mantine-color-blue-6)" : "none",
-					outlineOffset: -2,
+					outline: isSelected ? "2px solid var(--mantine-color-blue-6)" : "2px solid transparent",
 				}}
 				className={onClick ? "entity-badge-clickable" : undefined}
 			>
