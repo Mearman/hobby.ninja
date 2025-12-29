@@ -20,7 +20,6 @@ import { useCallback, useMemo, useRef, useState } from "react";
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
 import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
-import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
 
 // P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
@@ -878,8 +877,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 				</Container>
 			</Box>
 
-			{/* Scroll navigation */}
-			<ScrollToTop />
+			{/* Year navigation with integrated scroll-to-top */}
 			<YearScrollbar
 				years={yearNumbers}
 				onYearSelect={handleYearSelect}

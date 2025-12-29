@@ -1,6 +1,7 @@
 "use client";
 
-import { Box, rem, Text } from "@mantine/core";
+import { ActionIcon, Box, rem, Text, Transition } from "@mantine/core";
+import { IconArrowUp } from "@tabler/icons-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 interface YearScrollbarProps {
@@ -191,6 +192,10 @@ export function YearScrollbar({
 		[isDragging, positionToYear, onYearSelect],
 	);
 
+	const scrollToTop = useCallback(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, []);
+
 	// Compute active target for display
 	const activeTargetYear = dragYear ?? targetYear;
 	const targetPosition = activeTargetYear === null ? null : yearToPosition(activeTargetYear);
@@ -201,6 +206,8 @@ export function YearScrollbar({
 	const thumbPosition = scrollProgress;
 	// Show target thumb when navigating
 	const showTargetThumb = activeTargetYear !== null;
+	// Show scroll-to-top button when not at top
+	const showScrollToTop = scrollProgress > 0;
 
 	return (
 		<Box
@@ -350,6 +357,29 @@ export function YearScrollbar({
 					</Box>
 				)}
 			</Box>
+
+			{/* Scroll to top button */}
+			<Transition transition="slide-up" mounted={showScrollToTop}>
+				{(transitionStyles) => (
+					<ActionIcon
+						pos="absolute"
+						left="50%"
+						style={{
+							bottom: -40,
+							transform: CENTER_TRANSFORM,
+							...transitionStyles,
+						}}
+						size="lg"
+						radius="xl"
+						variant="filled"
+						color="gray"
+						onClick={scrollToTop}
+						aria-label="Scroll to top"
+					>
+						<IconArrowUp size={20} />
+					</ActionIcon>
+				)}
+			</Transition>
 		</Box>
 	);
 }
