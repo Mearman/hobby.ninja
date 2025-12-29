@@ -1,3 +1,16 @@
+## [1.7.1](https://github.com/Mearman/hobby.ninja/compare/v1.7.0...v1.7.1) (2025-12-29)
+
+### Bug Fixes
+
+- **data:** correct category for 62 items with 30... brands to 30ML ([29299e2](https://github.com/Mearman/hobby.ninja/commit/29299e2baa2b0c0107750d46dba45f07066fbfa2))
+- **data:** remove duplicate brand entries from 497 items ([e1f3d46](https://github.com/Mearman/hobby.ninja/commit/e1f3d46dd895ffcdaeacc6c4920f2ba872bb1ecc))
+- **next:** position year marks at actual scroll positions ([699f206](https://github.com/Mearman/hobby.ninja/commit/699f20693f132f7635e8a8eb43126d22110e26fe))
+- **next:** use scroll progress for smoother year scrollbar positioning ([f2f86ba](https://github.com/Mearman/hobby.ninja/commit/f2f86ba6d24dca4fa3053a3d249ad9cfd334b36b))
+
+### Refactoring
+
+- **next:** rewrite YearScrollbar as self-contained scroll-tracking component ([30bb149](https://github.com/Mearman/hobby.ninja/commit/30bb149966f6a15178e5af264cef7d658f795c67))
+
 ## [1.7.0](https://github.com/Mearman/hobby.ninja/compare/v1.6.0...v1.7.0) (2025-12-29)
 
 ### Features
