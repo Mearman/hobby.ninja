@@ -29,7 +29,7 @@ const TITLE_CONTAINER_HEIGHT = 60;
 const WORD_BREAK_STYLE = "break-word" as const;
 
 // Virtual grid configuration
-const CARD_BADGES_HEIGHT = 40; // Entity badges row (approx)
+const CARD_BADGES_HEIGHT = 80; // Entity badges (2x2 grid, approx)
 const GRID_GAP = 16; // Matches Mantine "lg" spacing
 const GRID_COLUMNS = { base: 1, sm: 2, md: 3, lg: 4 };
 // Fixed card height = title + badges (image height calculated dynamically from width)
@@ -105,8 +105,7 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 			<Box
 				onClick={handleClick}
 				style={{
-					width: "22%",
-					flexShrink: 0,
+					width: "90%",
 					aspectRatio: BADGE_ASPECT_RATIO,
 					borderRadius: 4,
 					overflow: "hidden",
@@ -128,14 +127,14 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 					/>
 				) : (
 					<Text
-						size="8px"
+						size="10px"
 						fw={600}
 						c="gray.7"
 						ta="center"
-						px={2}
+						px={4}
 						style={{
 							wordBreak: WORD_BREAK_STYLE,
-							lineHeight: 1.1,
+							lineHeight: 1.2,
 							overflow: "hidden",
 							display: "-webkit-box",
 							WebkitLineClamp: 3,
@@ -277,10 +276,10 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 					pt={4}
 					pb={4}
 					style={{
-						display: "flex",
-						justifyContent: "space-evenly",
-						alignItems: "center",
+						display: "grid",
+						gridTemplateColumns: "repeat(2, 1fr)",
 						gap: 4,
+						justifyItems: "center",
 					}}
 				>
 					{primaryCategory && (
