@@ -1,3 +1,29 @@
+## [1.6.0](https://github.com/Mearman/hobby.ninja/compare/v1.5.0...v1.6.0) (2025-12-29)
+
+### Features
+
+- **next:** add outline to selected entity badges on cards ([3c8ec54](https://github.com/Mearman/hobby.ninja/commit/3c8ec54c44f7167590be03e0d49aedd7bbc4b97b))
+- **next:** add tag color utility with official brand colors ([ef06f37](https://github.com/Mearman/hobby.ninja/commit/ef06f37c44726acd54794e2c95eaf6df213f4614)), closes [#9e2222](https://github.com/Mearman/hobby.ninja/issues/9e2222) [#01598b](https://github.com/Mearman/hobby.ninja/issues/01598b) [#d3ba66](https://github.com/Mearman/hobby.ninja/issues/d3ba66) [#e67300](https://github.com/Mearman/hobby.ninja/issues/e67300) [#616364](https://github.com/Mearman/hobby.ninja/issues/616364)
+- **next:** apply brand colors to tags index page ([c056ca7](https://github.com/Mearman/hobby.ninja/commit/c056ca71df2462fea601a0db43beabed55d58207))
+- **next:** display clickable distribution tags on item pages ([a30222e](https://github.com/Mearman/hobby.ninja/commit/a30222ed54a4e65404c1b0e8af8ce33428cbd76f))
+
+### Bug Fixes
+
+- **ci:** disable cache for next:build due to EMFILE limits ([312e80d](https://github.com/Mearman/hobby.ninja/commit/312e80d7f41679e9885b121f9365e51603e58170))
+- **data:** correct Haro translation from "halo" to proper name ([76324e9](https://github.com/Mearman/hobby.ninja/commit/76324e9939f046fee3704bcb72734947cb6b3814))
+- **next:** ensure year scrollbar tooltip renders above labels ([46a409d](https://github.com/Mearman/hobby.ninja/commit/46a409df2d8135bedc562d68bb8f7625bd67ff5f))
+- **next:** keep last known year when no items in viewport center ([4159d12](https://github.com/Mearman/hobby.ninja/commit/4159d122691c2c74a02cfe4b7efb03eaf9f68dda))
+- **next:** rewrite scroll year detection for virtual scrolling ([a8c46a8](https://github.com/Mearman/hobby.ninja/commit/a8c46a8c0b4de8c29cc062f3df9c6fc02a38db81))
+- **next:** rewrite year scrollbar as custom vertical slider ([fe81a6e](https://github.com/Mearman/hobby.ninja/commit/fe81a6eb3cfe5547a6205ad24609505500b4538e))
+- **next:** scroll year navigation to position item at window top ([79bd7d7](https://github.com/Mearman/hobby.ninja/commit/79bd7d75c3adf28b31295354c38cc02b877f72ce))
+- **next:** show "Select none" when any filter is selected ([c6e8d6e](https://github.com/Mearman/hobby.ninja/commit/c6e8d6e76aafefc7ffefa7c71f3bc4ed3e55cd78))
+- **next:** use theme-aware colors in year scrollbar ([0e95f1d](https://github.com/Mearman/hobby.ninja/commit/0e95f1d8ffe1806b55e669ef8585298b94ff06a2))
+- **next:** use transparent outline on unselected badges to reserve space ([4e4203e](https://github.com/Mearman/hobby.ninja/commit/4e4203e999dcf4bf0c1d44f5fd4b8db21fff5980))
+
+### Performance
+
+- **ci:** enable Nx caching for next:build with Nx Cloud ([f6ada97](https://github.com/Mearman/hobby.ninja/commit/f6ada979758aaa2d7f702bd66ea3160555645861))
+
 ## [1.5.0](https://github.com/Mearman/hobby.ninja/compare/v1.4.0...v1.5.0) (2025-12-29)
 
 ### Features
