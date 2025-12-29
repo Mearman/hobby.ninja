@@ -188,7 +188,6 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 				padding={0}
 				radius="md"
 				withBorder={true}
-				h="100%"
 				style={{ cursor: "pointer", overflow: "hidden" }}
 				className="item-card-hover"
 			>
@@ -198,6 +197,7 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 					style={{
 						aspectRatio: "1 / 1",
 						width: "100%",
+						flexShrink: 0,
 						background: "linear-gradient(135deg, var(--mantine-color-gray-1) 0%, var(--mantine-color-gray-2) 100%)",
 						display: "flex",
 						alignItems: "center",
