@@ -1,13 +1,11 @@
 "use client";
 
 import { Box, rem, Text } from "@mantine/core";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 interface YearScrollbarProps {
 	/** All available years sorted newest first */
 	years: number[];
-	/** Currently visible year (from scroll position) */
-	currentYear?: number;
 	/** Callback when a year is clicked or drag ends */
 	onYearSelect?: (year: number) => void;
 }
@@ -18,22 +16,27 @@ const TRACK_WIDTH = 4;
 const THUMB_SIZE = 14;
 const MARK_SIZE = 8;
 const CENTER_TRANSFORM = "translateX(-50%)";
+// Threshold for considering scroll "arrived" at target (2% of scroll height)
+const SCROLL_ARRIVAL_THRESHOLD = 0.02;
 
 /**
- * Custom vertical slider showing years for quick navigation.
- * Built from scratch to handle vertical pointer events correctly.
- * Hidden on mobile.
+ * Custom vertical year navigation rail.
+ * Thumb position tracks scroll progress directly (no year detection needed).
+ * Click/drag navigates to years.
  */
 export function YearScrollbar({
 	years,
-	currentYear,
 	onYearSelect,
 }: YearScrollbarProps): React.ReactElement | null {
 	const trackRef = useRef<HTMLDivElement>(null);
 	const [isDragging, setIsDragging] = useState(false);
 	const [dragYear, setDragYear] = useState<number | null>(null);
-	// Target year persists after click/drag until scroll completes
+	// Target year persists after release until scroll completes
 	const [targetYear, setTargetYear] = useState<number | null>(null);
+	// Ref to access targetYear in scroll handler without re-registering listeners
+	const targetYearRef = useRef<number | null>(null);
+	// Scroll progress (0-1) for smooth thumb movement
+	const [scrollProgress, setScrollProgress] = useState(0);
 
 	const minYear = useMemo(() => Math.min(...years), [years]);
 	const maxYear = useMemo(() => Math.max(...years), [years]);
@@ -70,6 +73,41 @@ export function YearScrollbar({
 		},
 		[maxYear, yearRange],
 	);
+
+	// Sync ref with state for use in scroll handler
+	useEffect(() => {
+		targetYearRef.current = targetYear;
+	}, [targetYear]);
+
+	// Track scroll position directly and clear target when reached
+	useEffect(() => {
+		const updateScrollProgress = () => {
+			const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+			if (scrollHeight > 0) {
+				const progress = window.scrollY / scrollHeight;
+				const clampedProgress = Math.max(0, Math.min(1, progress));
+				setScrollProgress(clampedProgress);
+
+				// Clear target when scroll position is close to target
+				const currentTarget = targetYearRef.current;
+				if (currentTarget !== null && yearRange > 0) {
+					const targetPos = (maxYear - currentTarget) / yearRange;
+					if (Math.abs(clampedProgress - targetPos) < SCROLL_ARRIVAL_THRESHOLD) {
+						setTargetYear(null);
+					}
+				}
+			}
+		};
+
+		updateScrollProgress();
+		window.addEventListener("scroll", updateScrollProgress, { passive: true });
+		window.addEventListener("resize", updateScrollProgress, { passive: true });
+
+		return () => {
+			window.removeEventListener("scroll", updateScrollProgress);
+			window.removeEventListener("resize", updateScrollProgress);
+		};
+	}, [maxYear, yearRange]);
 
 	// Get position from pointer event
 	const getPositionFromEvent = useCallback(
@@ -110,7 +148,6 @@ export function YearScrollbar({
 			(e.target as HTMLElement).releasePointerCapture(e.pointerId);
 			setIsDragging(false);
 			if (dragYear !== null) {
-				// Keep target visible until scroll completes
 				setTargetYear(dragYear);
 				onYearSelect?.(dragYear);
 			}
@@ -128,20 +165,22 @@ export function YearScrollbar({
 			const y = e.clientY - rect.top;
 			const position = y / rect.height;
 			const year = positionToYear(position);
+			setTargetYear(year);
 			onYearSelect?.(year);
 		},
 		[isDragging, positionToYear, onYearSelect],
 	);
 
+	// Compute active target for display
+	const activeTargetYear = dragYear ?? targetYear;
+	const targetPosition = activeTargetYear === null ? null : yearToPosition(activeTargetYear);
+
 	if (years.length === 0) return null;
 
-	// Calculate positions for thumbs (year-based for consistency with marks)
-	const currentPosition = currentYear === undefined ? undefined : yearToPosition(currentYear);
-	// Target position: during drag use dragYear, after release use targetYear
-	const activeTargetYear = dragYear ?? targetYear;
-	const targetPosition = activeTargetYear === null ? undefined : yearToPosition(activeTargetYear);
-	// Show target thumb when there's a target different from current
-	const showTargetThumb = activeTargetYear !== null && activeTargetYear !== currentYear;
+	// Thumb uses scroll progress directly for smooth movement
+	const thumbPosition = scrollProgress;
+	// Show target thumb when navigating
+	const showTargetThumb = activeTargetYear !== null;
 
 	return (
 		<Box
@@ -157,14 +196,13 @@ export function YearScrollbar({
 			}}
 			visibleFrom="md"
 		>
-			{/* Year label (shows during interaction and scroll) */}
-			{showTargetThumb && targetPosition !== undefined && (
+			{/* Year label when navigating */}
+			{showTargetThumb && targetPosition !== null && (
 				<Box
 					pos="absolute"
 					right={40}
 					style={{
 						top: `calc(${targetPosition * 100}% - 12px)`,
-						transition: isDragging ? "top 50ms ease-out" : "none",
 						zIndex: 1,
 					}}
 				>
@@ -246,14 +284,13 @@ export function YearScrollbar({
 					);
 				})}
 
-				{/* Current position thumb (shows where you are) */}
+				{/* Current scroll position thumb - moves with scroll */}
 				<Box
 					pos="absolute"
 					left="50%"
 					style={{
-						top: `calc(${currentPosition * 100}% - ${THUMB_SIZE / 2}px)`,
+						top: `calc(${thumbPosition * 100}% - ${THUMB_SIZE / 2}px)`,
 						transform: CENTER_TRANSFORM,
-						// No transition - scrollProgress provides smooth values directly
 					}}
 				>
 					<Box
@@ -270,15 +307,14 @@ export function YearScrollbar({
 					/>
 				</Box>
 
-				{/* Target position thumb (shows where you're going) */}
-				{showTargetThumb && targetPosition !== undefined && (
+				{/* Target thumb - shows where you're going */}
+				{showTargetThumb && targetPosition !== null && (
 					<Box
 						pos="absolute"
 						left="50%"
 						style={{
 							top: `calc(${targetPosition * 100}% - ${THUMB_SIZE / 2}px)`,
 							transform: CENTER_TRANSFORM,
-							transition: isDragging ? "none" : "top 100ms ease-out",
 						}}
 					>
 						<Box

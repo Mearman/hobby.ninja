@@ -21,7 +21,6 @@ import { EntityCard } from "@/components/entity-card";
 import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
-import { useScrollYear } from "@/hooks/use-scroll-year";
 
 // P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
 const PBANDAI_CHILD_IDS = new Set(["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"]);
@@ -87,12 +86,11 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		years: [],
 	});
 
-	// Year scrollbar data and current scroll position
+	// Year scrollbar data
 	const yearNumbers = useMemo(
 		() => years.map((y) => y.year).toSorted((a, b) => b - a),
 		[years],
 	);
-	const { currentYear } = useScrollYear();
 
 	// Ref for ExploreSection to call scrollToYear
 	const exploreSectionRef = useRef<ExploreSectionHandle>(null);
@@ -875,7 +873,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 			<ScrollToTop />
 			<YearScrollbar
 				years={yearNumbers}
-				currentYear={currentYear}
 				onYearSelect={handleYearSelect}
 			/>
 		</>
