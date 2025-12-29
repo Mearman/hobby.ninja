@@ -15,6 +15,7 @@ import {
 import { IconHome, IconTag } from "@tabler/icons-react";
 import Link from "next/link";
 
+import { getTagColor } from "@/lib/tag-colors";
 import { categoryCard } from "@/styles/components.css";
 
 // Sort tags by item count (most popular first)
@@ -25,6 +26,7 @@ function sortTags(tags: TagData[]): TagData[] {
 // Tag Card Component
 function TagCard({ tag }: { tag: TagData }) {
 	const displayName = getTagDisplayName(tag);
+	const tagColor = getTagColor(tag.id);
 
 	return (
 		<Link
@@ -34,27 +36,25 @@ function TagCard({ tag }: { tag: TagData }) {
 			<Card p="md" radius="md" className={categoryCard} withBorder={true}>
 				<Stack gap="md">
 					<Group justify="space-between" align="flex-start">
-						<Stack gap="xs" flex={1}>
-							<Group gap="sm">
-								<IconTag size={24} color="var(--mantine-color-pink-6)" />
-								<Text size="lg" fw={700}>
-									{displayName}
-								</Text>
-							</Group>
-						</Stack>
+						<Badge
+							size="lg"
+							variant="filled"
+							style={{ backgroundColor: tagColor }}
+							leftSection={<IconTag size={14} />}
+						>
+							{displayName}
+						</Badge>
 					</Group>
 
 					<Group gap="xs" wrap="wrap">
-						<Badge variant="light" color="pink" size="sm">
+						<Badge variant="outline" size="sm">
 							{tag.itemCount.toLocaleString()} items
 						</Badge>
 					</Group>
 
-					<Group justify="space-between" align="center">
-						<Text size="sm" fw={500} c="pink">
-							View all items →
-						</Text>
-					</Group>
+					<Text size="sm" fw={500} style={{ color: tagColor }}>
+						View all items →
+					</Text>
 				</Stack>
 			</Card>
 		</Link>
