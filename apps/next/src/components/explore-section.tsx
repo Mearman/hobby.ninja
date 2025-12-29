@@ -261,6 +261,14 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 
 				<Stack gap={0} px="sm" pt={0} pb={0} style={{ flex: 1 }}>
 					<Group gap={0} wrap="nowrap" justify="space-evenly" w="calc(100% + var(--mantine-spacing-sm) * 2)" mt="xs" ml="calc(-1 * var(--mantine-spacing-sm))" mb="xs">
+						{primaryCategory && (
+							<EntityBadge
+								image={primaryCategory.image}
+								name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja}
+								onClick={onFilterToggle ? () => { onFilterToggle("categories", primaryCategory.id); } : undefined}
+								isSelected={filters?.categories.includes(primaryCategory.id)}
+							/>
+						)}
 						{primaryGrade && (
 							<EntityBadge
 								image={primaryGrade.image}
@@ -283,14 +291,6 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 								name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
 								onClick={onFilterToggle ? () => { onFilterToggle("series", primarySeries.id); } : undefined}
 								isSelected={filters?.series.includes(primarySeries.id)}
-							/>
-						)}
-						{primaryCategory && (
-							<EntityBadge
-								image={primaryCategory.image}
-								name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja}
-								onClick={onFilterToggle ? () => { onFilterToggle("categories", primaryCategory.id); } : undefined}
-								isSelected={filters?.categories.includes(primaryCategory.id)}
 							/>
 						)}
 					</Group>
