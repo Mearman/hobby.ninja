@@ -1,12 +1,11 @@
 "use client";
 
 import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Box, Card, Group, SimpleGrid, Stack, Text, Tooltip } from "@mantine/core";
+import { Box, Card, Group, Stack, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { forwardRef, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
 
-import { InfiniteScrollLoader } from "@/components/ui/infinite-scroll-loader";
-import { useInfiniteScroll } from "@/hooks/use-infinite-scroll";
+import { useVirtualGrid } from "@/hooks/use-virtual-grid";
 
 function formatReleaseDate(releaseDate?: { year?: number | null; month?: number | null; day?: number | null }): string {
 	if (!releaseDate?.year) return "";
@@ -28,6 +27,14 @@ const EAGER_LOAD_COUNT = 24;
 const TITLE_FONT_SIZES_PX = [16, 15, 14, 13, 12, 11, 10];
 const TITLE_CONTAINER_HEIGHT = 60;
 const WORD_BREAK_STYLE = "break-word" as const;
+
+// Virtual grid configuration - fixed heights for consistent virtualization
+const CARD_IMAGE_HEIGHT = 240; // Fixed image height
+const CARD_BADGES_HEIGHT = 40; // Entity badges row
+const CARD_TOTAL_HEIGHT = TITLE_CONTAINER_HEIGHT + CARD_IMAGE_HEIGHT + CARD_BADGES_HEIGHT;
+const GRID_GAP = 16; // Matches Mantine "lg" spacing
+const ROW_HEIGHT = CARD_TOTAL_HEIGHT + GRID_GAP; // Row height including gap
+const GRID_COLUMNS = { base: 1, sm: 2, md: 3, lg: 4 };
 
 /** Title text that auto-scales to fit within a fixed-height container */
 function FittedTitle({ text }: { text: string }): React.ReactElement {
@@ -169,7 +176,7 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 				<Box
 					bg="gray.1"
 					style={{
-						aspectRatio: "1 / 1",
+						height: CARD_IMAGE_HEIGHT,
 						background: "linear-gradient(135deg, var(--mantine-color-gray-1) 0%, var(--mantine-color-gray-2) 100%)",
 						display: "flex",
 						alignItems: "center",
@@ -286,7 +293,13 @@ interface ExploreSectionProps {
 	totalCount?: number;
 }
 
-export function ExploreSection({ items, filters, totalCount }: ExploreSectionProps): React.ReactElement {
+/** Ref handle for ExploreSection - exposes year navigation */
+export interface ExploreSectionHandle {
+	/** Scroll to the first item of the given year, loading items if needed */
+	scrollToYear: (year: number) => void;
+}
+
+export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionProps>(function ExploreSection({ items, filters, totalCount }, ref) {
 	// Filter items based on selected filters
 	const filteredItems = useMemo(() => {
 		if (!filters) return items;
@@ -393,12 +406,26 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 		[filteredItems],
 	);
 
-	const { visibleItems, isLoading, hasMore, loadMore, lastItemRef } = useInfiniteScroll({
+	// Virtual grid for efficient rendering of large item lists
+	const { listRef, virtualRows, totalHeight, columnCount, scrollToIndex } = useVirtualGrid({
 		items: sortedItems,
-		itemsPerPage: 24,
-		autoLoad: true,
-		rootMargin: "600px", // Load next batch well before reaching the bottom
+		columns: GRID_COLUMNS,
+		gap: GRID_GAP,
+		rowHeight: ROW_HEIGHT,
+		overscan: 3,
 	});
+
+	// Expose scrollToYear function via ref
+	useImperativeHandle(ref, () => ({
+		scrollToYear: (year: number) => {
+			// Find the index of the first item with this year in the sorted list
+			const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
+			if (firstIndex === -1) return;
+
+			// Scroll to that item using virtual grid
+			scrollToIndex(firstIndex);
+		},
+	}), [sortedItems, scrollToIndex]);
 
 	const hasActiveFilters = filters && (
 		filters.categories.length > 0 ||
@@ -416,28 +443,46 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 					Showing {filteredItems.length.toLocaleString()} of {(totalCount ?? items.length).toLocaleString()} items
 				</Text>
 			)}
-			<SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
-				{visibleItems.map((item, index) => {
-					const isLast = index === visibleItems.length - 1;
-					return (
-						<Box
-							key={item.id}
-							ref={isLast ? lastItemRef : undefined}
-							data-year={item.releaseDate?.year}
-							data-item-id={item.id}
-						>
-							<ItemCard item={item} index={index} />
-						</Box>
-					);
-				})}
-			</SimpleGrid>
-
-			<InfiniteScrollLoader
-				isLoading={isLoading}
-				hasMore={hasMore}
-				onLoadMore={loadMore}
-				autoLoad={true}
-			/>
+			{/* Virtual grid container - height matches total virtualized content */}
+			<Box
+				ref={listRef}
+				style={{
+					height: totalHeight,
+					width: "100%",
+					position: "relative",
+				}}
+			>
+				{virtualRows.map((virtualRow) => (
+					<Box
+						key={virtualRow.index}
+						style={{
+							position: "absolute",
+							top: 0,
+							left: 0,
+							width: "100%",
+							height: virtualRow.size,
+							transform: `translateY(${virtualRow.start}px)`,
+							display: "grid",
+							gridTemplateColumns: `repeat(${columnCount}, 1fr)`,
+							gap: GRID_GAP,
+						}}
+					>
+						{virtualRow.items.map((item, itemIndex) => {
+							const globalIndex = virtualRow.index * columnCount + itemIndex;
+							return (
+								<Box
+									key={item.id}
+									data-year={item.releaseDate?.year}
+									data-item-id={item.id}
+									style={{ height: CARD_TOTAL_HEIGHT }}
+								>
+									<ItemCard item={item} index={globalIndex} />
+								</Box>
+							);
+						})}
+					</Box>
+				))}
+			</Box>
 		</>
 	);
-}
+});
