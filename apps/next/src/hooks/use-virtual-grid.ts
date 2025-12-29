@@ -80,12 +80,25 @@ export function useVirtualGrid<T>({
 		return () => { window.removeEventListener("resize", updateColumns); };
 	}, [columns]);
 
-	// Update scroll margin when list ref is available
+	// Update scroll margin when list ref is available and on layout changes
 	useEffect(() => {
-		if (listRef.current) {
-			setComputedScrollMargin(listRef.current.offsetTop);
-		}
-	}, []);
+		const element = listRef.current;
+		if (!element) return;
+
+		const updateMargin = () => {
+			const newMargin = element.offsetTop;
+			setComputedScrollMargin((prev) => prev === newMargin ? prev : newMargin);
+		};
+
+		// Initial update
+		updateMargin();
+
+		// Update on resize (layout changes)
+		const observer = new ResizeObserver(updateMargin);
+		observer.observe(element);
+
+		return () => { observer.disconnect(); };
+	});
 
 	// Calculate row count
 	const rowCount = Math.ceil(items.length / columnCount);

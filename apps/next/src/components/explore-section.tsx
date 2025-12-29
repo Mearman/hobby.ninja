@@ -29,12 +29,15 @@ const TITLE_CONTAINER_HEIGHT = 60;
 const WORD_BREAK_STYLE = "break-word" as const;
 
 // Virtual grid configuration - fixed heights for consistent virtualization
-const CARD_IMAGE_HEIGHT = 240; // Fixed image height
+// Square images: aspect-ratio 1:1, height estimated from typical card width
 const CARD_BADGES_HEIGHT = 40; // Entity badges row
-const CARD_TOTAL_HEIGHT = TITLE_CONTAINER_HEIGHT + CARD_IMAGE_HEIGHT + CARD_BADGES_HEIGHT;
 const GRID_GAP = 16; // Matches Mantine "lg" spacing
-const ROW_HEIGHT = CARD_TOTAL_HEIGHT + GRID_GAP; // Row height including gap
 const GRID_COLUMNS = { base: 1, sm: 2, md: 3, lg: 4 };
+// Estimate card width for row height calculation (works across breakpoints)
+// At 4 cols on typical desktop (~1300px container): (1300 - 3*16) / 4 ≈ 312px
+const ESTIMATED_CARD_WIDTH = 312;
+const CARD_TOTAL_HEIGHT = TITLE_CONTAINER_HEIGHT + ESTIMATED_CARD_WIDTH + CARD_BADGES_HEIGHT;
+const ROW_HEIGHT = CARD_TOTAL_HEIGHT + GRID_GAP; // Row height including gap
 
 /** Title text that auto-scales to fit within a fixed-height container */
 function FittedTitle({ text }: { text: string }): React.ReactElement {
@@ -176,7 +179,8 @@ function ItemCard({ item, index }: { item: Item; index: number }): React.ReactEl
 				<Box
 					bg="gray.1"
 					style={{
-						height: CARD_IMAGE_HEIGHT,
+						aspectRatio: "1 / 1",
+						width: "100%",
 						background: "linear-gradient(135deg, var(--mantine-color-gray-1) 0%, var(--mantine-color-gray-2) 100%)",
 						display: "flex",
 						alignItems: "center",
