@@ -29,7 +29,7 @@ export interface InfiniteScrollReturn<T> {
 	reset: () => void;
 	itemCount: number;
 	lastItemRef: (node: HTMLElement | null) => void;
-	/** Load items up to a specific count (for year navigation) */
+	/** Load items up to a specific count (for navigation) */
 	loadUntil: (count: number) => void;
 }
 
@@ -189,7 +189,7 @@ export function useInfiniteScroll<T>({
 		setIsLoading(false);
 	}, [itemsPerPage]);
 
-	// Load items up to a specific count (for year navigation)
+	// Load items up to a specific count (for navigation)
 	const loadUntil = useCallback((count: number) => {
 		setLoadedCount(Math.min(count, items.length, maxCachedItems));
 	}, [items.length, maxCachedItems]);
