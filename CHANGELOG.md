@@ -1,3 +1,40 @@
+## [1.3.0](https://github.com/Mearman/hobby.ninja/compare/v1.2.0...v1.3.0) (2025-12-29)
+
+### Features
+
+- **cli:** add English tag extraction to global site lookup ([276b918](https://github.com/Mearman/hobby.ninja/commit/276b91874cd5668ee60d984a6a2c015e64067671))
+- **cli:** add tag extraction to bandai catalog parser ([26fb20a](https://github.com/Mearman/hobby.ninja/commit/26fb20a9fb40610d37bd2fc9ee665aae877b517b))
+- **data:** add script to backfill tags from HTML files ([10cc349](https://github.com/Mearman/hobby.ninja/commit/10cc349445fc15f9eacd2c8c935a7ee2f6fca79b))
+- **data:** add TagRef schema for distribution channel tags ([9b114f6](https://github.com/Mearman/hobby.ninja/commit/9b114f6082eadd8dc02cfdb884cfe448de23c72f))
+- **data:** populate tags for 1478 items ([d9eda54](https://github.com/Mearman/hobby.ninja/commit/d9eda549ceede97f77b08e3d6a530cb6701a04fd))
+- **nx-cloud:** setup nx cloud workspace ([d4358da](https://github.com/Mearman/hobby.ninja/commit/d4358da0ef004e58868d79f5cf5af39a387923a3))
+
+### Bug Fixes
+
+- **ci:** increase file descriptor limit for Nx caching ([6ad6bc6](https://github.com/Mearman/hobby.ninja/commit/6ad6bc66f36208888a68ab49cf27b924d2e97dda))
+- **ci:** skip Nx cache for build to avoid EMFILE error ([c1dca14](https://github.com/Mearman/hobby.ninja/commit/c1dca14f685cf5958a7dcb0c346f7ebc79ed015f))
+- **data:** clean up 01_6976.json bullet points and accessory format ([db31edf](https://github.com/Mearman/hobby.ninja/commit/db31edf17c3327c3e0982af4369ad96bceb1b737))
+- **eslint:** ignore all .cjs files at any directory depth ([60b702f](https://github.com/Mearman/hobby.ninja/commit/60b702f42b2528b6a42025505164e6b35c58b437))
+- **eslint:** ignore files not in TS projects and fix CLI patterns ([0a94c01](https://github.com/Mearman/hobby.ninja/commit/0a94c01ae2367c21c4f030a12b426a6fd918d93c))
+- **next:** center title text vertically in FittedTitle container ([28bdec4](https://github.com/Mearman/hobby.ninja/commit/28bdec43f9f82448bf147278fb0cf6d639d74ec9))
+- **next:** reduce FittedTitle padding for more text space ([210ce1e](https://github.com/Mearman/hobby.ninja/commit/210ce1e7329adcfc46fcfd44b3667895aafa51f4))
+- **nx:** enable Nx Cloud remote caching ([7a65590](https://github.com/Mearman/hobby.ninja/commit/7a65590b1b55a235ef302bcfad905737ca8ae8cd))
+
+### Refactoring
+
+- **next:** add 15px font size for more granular title scaling ([8555d02](https://github.com/Mearman/hobby.ninja/commit/8555d0274bdb8d88d760dd20aa220a07e43f0cee))
+
+### CI/CD
+
+- add filter:tree:0 to checkout for faster clones ([fe46a91](https://github.com/Mearman/hobby.ninja/commit/fe46a918aed1f8a5ebefd66599f9c692b7057713))
+- add nrwl/nx-set-shas for better affected detection ([8bc7679](https://github.com/Mearman/hobby.ninja/commit/8bc76790ca20a2da76cd98b6411d7bf53fa90552))
+- remove --fix flag from lint step ([c12578c](https://github.com/Mearman/hobby.ninja/commit/c12578c3cb6bb141a5ee764d6fa35ff329cd8b0c))
+- standardize Node.js version to 22 in build job ([119024d](https://github.com/Mearman/hobby.ninja/commit/119024dd0a3c9c08ecd590064aa2b2a6308537b3))
+
+### Chores
+
+- update pnpm-lock.yaml for cli data dependency ([9979112](https://github.com/Mearman/hobby.ninja/commit/997911212ee6534b0cf427a5cb2921d1c2712699))
+
 ## [1.2.0](https://github.com/Mearman/hobby.ninja/compare/v1.1.0...v1.2.0) (2025-12-28)
 
 ### Features
