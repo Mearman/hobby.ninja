@@ -1,10 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const DATA_YEAR_SELECTOR = "[data-year]";
 
 /**
  * Hook to track which year is currently most visible in the viewport.
  * Uses IntersectionObserver to watch elements with data-year attribute.
+ * Tracks the year of the topmost visible item in the center region.
  *
  * @param containerSelector - CSS selector for the container to observe (defaults to document)
  * @returns The year most visible in the viewport, or undefined if none
@@ -12,30 +15,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 export function useScrollYear(containerSelector?: string): number | undefined {
 	const [currentYear, setCurrentYear] = useState<number | undefined>();
 	const observerRef = useRef<IntersectionObserver | null>(null);
-	const visibleYearsRef = useRef<Map<number, number>>(new Map());
-
-	const updateCurrentYear = useCallback(() => {
-		const visibleYears = visibleYearsRef.current;
-		// Keep the last known year if nothing is currently visible
-		if (visibleYears.size === 0) {
-			return;
-		}
-
-		// Find the year with the most visible items
-		let maxCount = 0;
-		let topYear: number | undefined;
-
-		for (const [year, count] of visibleYears) {
-			if (count > maxCount) {
-				maxCount = count;
-				topYear = year;
-			}
-		}
-
-		if (topYear !== undefined) {
-			setCurrentYear(topYear);
-		}
-	}, []);
+	// Track currently visible elements with their positions
+	const visibleElementsRef = useRef<Map<HTMLElement, number>>(new Map());
 
 	useEffect(() => {
 		// Disconnect existing observer
@@ -43,37 +24,57 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 			observerRef.current.disconnect();
 		}
 
-		visibleYearsRef.current.clear();
+		visibleElementsRef.current.clear();
+
+		const updateCurrentYear = () => {
+			const visibleElements = visibleElementsRef.current;
+			if (visibleElements.size === 0) {
+				return; // Keep last known year
+			}
+
+			// Find the element closest to the top of the viewport center region
+			let topElement: HTMLElement | undefined;
+			let topPosition = Number.POSITIVE_INFINITY;
+
+			for (const [element, position] of visibleElements) {
+				if (position < topPosition) {
+					topPosition = position;
+					topElement = element;
+				}
+			}
+
+			if (topElement) {
+				const yearAttr = topElement.dataset.year;
+				if (yearAttr) {
+					const year = Number.parseInt(yearAttr, 10);
+					if (!Number.isNaN(year)) {
+						setCurrentYear(year);
+					}
+				}
+			}
+		};
 
 		const observer = new IntersectionObserver(
 			(entries) => {
+				const visibleElements = visibleElementsRef.current;
+
 				for (const entry of entries) {
 					const element = entry.target as HTMLElement;
-					const yearAttr = element.dataset.year;
-					if (!yearAttr) continue;
-
-					const year = Number.parseInt(yearAttr, 10);
-					if (Number.isNaN(year)) continue;
-
-					const visibleYears = visibleYearsRef.current;
+					if (!element.dataset.year) continue;
 
 					if (entry.isIntersecting) {
-						visibleYears.set(year, (visibleYears.get(year) ?? 0) + 1);
+						// Store element with its top position
+						visibleElements.set(element, entry.boundingClientRect.top);
 					} else {
-						const count = visibleYears.get(year) ?? 0;
-						if (count <= 1) {
-							visibleYears.delete(year);
-						} else {
-							visibleYears.set(year, count - 1);
-						}
+						visibleElements.delete(element);
 					}
 				}
 
 				updateCurrentYear();
 			},
 			{
-				// Focus on the middle 20% of the viewport for current year detection
-				rootMargin: "-40% 0px -40% 0px",
+				// Focus on the middle 40% of the viewport for current year detection
+				rootMargin: "-30% 0px -30% 0px",
 				threshold: 0,
 			},
 		);
@@ -86,7 +87,7 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 			: document;
 
 		if (container) {
-			const elements = container.querySelectorAll("[data-year]");
+			const elements = container.querySelectorAll(DATA_YEAR_SELECTOR);
 			for (const element of elements) {
 				observer.observe(element);
 			}
@@ -95,9 +96,9 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 		return () => {
 			observer.disconnect();
 		};
-	}, [containerSelector, updateCurrentYear]);
+	}, [containerSelector]);
 
-	// Re-observe when DOM changes (for infinite scroll)
+	// Re-observe when DOM changes (for virtual scroll)
 	useEffect(() => {
 		const observer = observerRef.current;
 		if (!observer) return;
@@ -111,14 +112,24 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 		// Use MutationObserver to watch for new elements
 		const mutationObserver = new MutationObserver((mutations) => {
 			for (const mutation of mutations) {
+				// Handle removed nodes - clean up our tracking map
+				for (const node of mutation.removedNodes) {
+					if (node instanceof HTMLElement) {
+						visibleElementsRef.current.delete(node);
+						const childElements = node.querySelectorAll(DATA_YEAR_SELECTOR);
+						for (const child of childElements) {
+							visibleElementsRef.current.delete(child as HTMLElement);
+						}
+					}
+				}
+
+				// Handle added nodes - observe them
 				for (const node of mutation.addedNodes) {
 					if (node instanceof HTMLElement) {
-						// Check if the added node has data-year
 						if (node.dataset.year) {
 							observer.observe(node);
 						}
-						// Check children
-						const childElements = node.querySelectorAll("[data-year]");
+						const childElements = node.querySelectorAll(DATA_YEAR_SELECTOR);
 						for (const child of childElements) {
 							observer.observe(child);
 						}
