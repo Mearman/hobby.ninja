@@ -7,7 +7,7 @@ const DATA_YEAR_SELECTOR = "[data-year]";
 /**
  * Hook to track which year is currently most visible in the viewport.
  * Uses IntersectionObserver to track which elements are visible,
- * and scroll events to update positions for smooth tracking.
+ * and requestAnimationFrame for smooth scroll tracking.
  *
  * @param containerSelector - CSS selector for the container to observe (defaults to document)
  * @returns The year most visible in the viewport, or undefined if none
@@ -17,6 +17,8 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 	const observerRef = useRef<IntersectionObserver | null>(null);
 	// Track currently visible elements (without stale positions)
 	const visibleElementsRef = useRef<Set<HTMLElement>>(new Set());
+	// RAF scheduling to avoid jank
+	const rafIdRef = useRef<number | null>(null);
 
 	useEffect(() => {
 		// Disconnect existing observer
@@ -26,39 +28,31 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 
 		visibleElementsRef.current.clear();
 
-		// Calculate viewport center region bounds
-		const getViewportCenter = () => {
-			const vh = window.innerHeight;
-			return {
-				top: vh * 0.3, // 30% from top
-				bottom: vh * 0.7, // 70% from top (middle 40%)
-			};
-		};
-
 		const updateCurrentYear = () => {
 			const visibleElements = visibleElementsRef.current;
 			if (visibleElements.size === 0) {
 				return; // Keep last known year
 			}
 
-			const center = getViewportCenter();
-
-			// Find the element closest to the top of the center region
-			// Use fresh getBoundingClientRect for accurate positions
-			let topElement: HTMLElement | undefined;
-			let topPosition = Number.POSITIVE_INFINITY;
+			// Find element closest to viewport center (50% mark)
+			const viewportCenter = window.innerHeight / 2;
+			let closestElement: HTMLElement | undefined;
+			let closestDistance = Number.POSITIVE_INFINITY;
 
 			for (const element of visibleElements) {
 				const rect = element.getBoundingClientRect();
-				// Check if element is in the center region
-				if (rect.bottom >= center.top && rect.top <= center.bottom && rect.top < topPosition) {
-					topPosition = rect.top;
-					topElement = element;
+				// Calculate element's center point
+				const elementCenter = rect.top + rect.height / 2;
+				const distance = Math.abs(elementCenter - viewportCenter);
+
+				if (distance < closestDistance) {
+					closestDistance = distance;
+					closestElement = element;
 				}
 			}
 
-			if (topElement) {
-				const yearAttr = topElement.dataset.year;
+			if (closestElement) {
+				const yearAttr = closestElement.dataset.year;
 				if (yearAttr) {
 					const year = Number.parseInt(yearAttr, 10);
 					if (!Number.isNaN(year)) {
@@ -66,6 +60,15 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 					}
 				}
 			}
+		};
+
+		// Schedule update on next animation frame (avoids jank)
+		const scheduleUpdate = () => {
+			if (rafIdRef.current !== null) return; // Already scheduled
+			rafIdRef.current = requestAnimationFrame(() => {
+				rafIdRef.current = null;
+				updateCurrentYear();
+			});
 		};
 
 		const observer = new IntersectionObserver(
@@ -83,7 +86,7 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 					}
 				}
 
-				updateCurrentYear();
+				scheduleUpdate();
 			},
 			{
 				// Watch a larger region to track elements before they reach center
@@ -106,16 +109,15 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 			}
 		}
 
-		// Add scroll listener for smooth position updates
-		const handleScroll = () => {
-			updateCurrentYear();
-		};
-
-		window.addEventListener("scroll", handleScroll, { passive: true });
+		// Add scroll listener - RAF scheduling ensures smooth updates
+		window.addEventListener("scroll", scheduleUpdate, { passive: true });
 
 		return () => {
 			observer.disconnect();
-			window.removeEventListener("scroll", handleScroll);
+			window.removeEventListener("scroll", scheduleUpdate);
+			if (rafIdRef.current !== null) {
+				cancelAnimationFrame(rafIdRef.current);
+			}
 		};
 	}, [containerSelector]);
 
