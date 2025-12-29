@@ -265,7 +265,7 @@ export function YearScrollbar({
 				pos="relative"
 				h="100%"
 				w={containerWidth}
-				style={{ cursor: "pointer" }}
+				style={{ cursor: "pointer", touchAction: "none" }}
 				onClick={handleClick}
 				onPointerDown={handlePointerDown}
 				onPointerMove={handlePointerMove}
