@@ -4,6 +4,7 @@ import type { Brand, Category, GradeData, Item, ScaleData, Series } from "@hobby
 import { getGradeFamilyIds, getGradeFamilyItemIds, getGradesHierarchy } from "@hobby-ninja/data";
 import {
 	ActionIcon,
+	Box,
 	Button,
 	Container,
 	Group,
@@ -439,84 +440,147 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 
 	return (
 		<>
-			{/* Categories, Grades, Brands & Series */}
-			<Container size="xl" py="xs" w="100%">
-				<Stack gap="xs">
-					<CollapsibleGrid
-						title="Category"
-						totalCount={categories.length + 1}
-						selectedCount={filters.categories.length}
-						expanded={expandedSections.categories}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
-						onClear={clearCategories}
-						onSelectAll={selectAllCategories}
-						headerRight={
-							<Tooltip label={sortModes.categories === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
-								<ActionIcon
-									variant="subtle"
-									size="sm"
-									onClick={() => { setSortModes((prev) => ({ ...prev, categories: prev.categories === "count" ? "name" : "count" })); }}
-								>
-									{sortModes.categories === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
-								</ActionIcon>
-							</Tooltip>
-						}
-					>
-						{(expandedSections.categories ? categoriesSorted : categoriesCollapsed).map((category) => (
+			{/* Main content with right padding for year scrollbar */}
+			<Box pr={{ base: 0, md: 80 }}>
+				{/* Categories, Grades, Brands & Series */}
+				<Container size="xl" py="xs" w="100%">
+					<Stack gap="xs">
+						<CollapsibleGrid
+							title="Category"
+							totalCount={categories.length + 1}
+							selectedCount={filters.categories.length}
+							expanded={expandedSections.categories}
+							onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, categories: exp })); }}
+							onClear={clearCategories}
+							onSelectAll={selectAllCategories}
+							headerRight={
+								<Tooltip label={sortModes.categories === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
+									<ActionIcon
+										variant="subtle"
+										size="sm"
+										onClick={() => { setSortModes((prev) => ({ ...prev, categories: prev.categories === "count" ? "name" : "count" })); }}
+									>
+										{sortModes.categories === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
+									</ActionIcon>
+								</Tooltip>
+							}
+						>
+							{(expandedSections.categories ? categoriesSorted : categoriesCollapsed).map((category) => (
+								<EntityCard
+									key={category.id}
+									id={category.id}
+									name={category.name}
+									itemIds={category.itemIds}
+									image={category.image}
+									type="category"
+									asFilter={true}
+									isSelected={filters.categories.includes(category.id)}
+									onToggle={() => { toggleFilter("categories", category.id); }}
+								/>
+							))}
 							<EntityCard
-								key={category.id}
-								id={category.id}
-								name={category.name}
-								itemIds={category.itemIds}
-								image={category.image}
+								key={OTHER_FILTER_ID}
+								id={OTHER_FILTER_ID}
+								name="Other"
+								itemIds={Array.from({ length: otherCounts.categories }, () => "")}
 								type="category"
 								asFilter={true}
-								isSelected={filters.categories.includes(category.id)}
-								onToggle={() => { toggleFilter("categories", category.id); }}
+								isSelected={filters.categories.includes(OTHER_FILTER_ID)}
+								onToggle={() => { toggleFilter("categories", OTHER_FILTER_ID); }}
 							/>
-						))}
-						<EntityCard
-							key={OTHER_FILTER_ID}
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemIds={Array.from({ length: otherCounts.categories }, () => "")}
-							type="category"
-							asFilter={true}
-							isSelected={filters.categories.includes(OTHER_FILTER_ID)}
-							onToggle={() => { toggleFilter("categories", OTHER_FILTER_ID); }}
-						/>
-					</CollapsibleGrid>
+						</CollapsibleGrid>
 
-					<CollapsibleGrid
-						title="Grade"
-						totalCount={grades.length + 1}
-						selectedCount={visibleSelectedGradeCount}
-						expanded={expandedSections.grades}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
-						onClear={clearGrades}
-						onSelectAll={selectAllGrades}
-						headerRight={
-							<Tooltip label={sortModes.grades === "default" ? SORT_BY_COUNT : "Default order"}>
-								<ActionIcon
-									variant="subtle"
-									size="sm"
-									onClick={() => { setSortModes((prev) => ({ ...prev, grades: prev.grades === "default" ? "count" : "default" })); }}
-								>
-									{sortModes.grades === "default" ? <IconSortAscendingLetters size={16} /> : <IconSortDescendingNumbers size={16} />}
-								</ActionIcon>
-							</Tooltip>
-						}
-					>
-						{(expandedSections.grades ? gradesSorted : gradesCollapsed).flatMap((entry) => {
-							const { root, children } = entry;
-							const hasChildren = children.length > 0;
-							const familyIds = getGradeFamilyIds(root.id);
-							const selectedInFamily = familyIds.filter((id) => filters.grades.includes(id)).length;
+						<CollapsibleGrid
+							title="Grade"
+							totalCount={grades.length + 1}
+							selectedCount={visibleSelectedGradeCount}
+							expanded={expandedSections.grades}
+							onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, grades: exp })); }}
+							onClear={clearGrades}
+							onSelectAll={selectAllGrades}
+							headerRight={
+								<Tooltip label={sortModes.grades === "default" ? SORT_BY_COUNT : "Default order"}>
+									<ActionIcon
+										variant="subtle"
+										size="sm"
+										onClick={() => { setSortModes((prev) => ({ ...prev, grades: prev.grades === "default" ? "count" : "default" })); }}
+									>
+										{sortModes.grades === "default" ? <IconSortAscendingLetters size={16} /> : <IconSortDescendingNumbers size={16} />}
+									</ActionIcon>
+								</Tooltip>
+							}
+						>
+							{(expandedSections.grades ? gradesSorted : gradesCollapsed).flatMap((entry) => {
+								const { root, children } = entry;
+								const hasChildren = children.length > 0;
+								const familyIds = getGradeFamilyIds(root.id);
+								const selectedInFamily = familyIds.filter((id) => filters.grades.includes(id)).length;
 
-							// When section collapsed: show parent OR individual selected children
-							if (!expandedSections.grades) {
+								// When section collapsed: show parent OR individual selected children
+								if (!expandedSections.grades) {
 								// No children or no partial selection: show root card
-								if (!hasChildren || selectedInFamily === 0 || selectedInFamily === familyIds.length) {
+									if (!hasChildren || selectedInFamily === 0 || selectedInFamily === familyIds.length) {
+										return (
+											<EntityCard
+												key={root.id}
+												id={root.id}
+												name={root.name}
+												itemIds={hasChildren ? getGradeFamilyItemIds(root.id) : root.itemIds}
+												image={root.image}
+												type="grade"
+												asFilter={true}
+												isSelected={hasChildren ? selectedInFamily > 0 : filters.grades.includes(root.id)}
+												onToggle={() => {
+													if (hasChildren) {
+														toggleGradeFamily(root.id);
+													} else {
+														toggleFilter("grades", root.id);
+													}
+												}}
+											/>
+										);
+									}
+
+									// Partial selection: show individual selected grades
+									const selectedCards: React.ReactElement[] = [];
+									if (filters.grades.includes(root.id)) {
+										selectedCards.push(
+											<EntityCard
+												key={root.id}
+												id={root.id}
+												name={root.name}
+												itemIds={root.itemIds}
+												image={root.image}
+												type="grade"
+												asFilter={true}
+												isSelected={true}
+												onToggle={() => { toggleFilter("grades", root.id); }}
+											/>,
+										);
+									}
+									for (const child of children) {
+										if (filters.grades.includes(child.id)) {
+											selectedCards.push(
+												<EntityCard
+													key={child.id}
+													id={child.id}
+													name={child.name}
+													itemIds={child.itemIds}
+													image={child.image}
+													type="grade"
+													asFilter={true}
+													isSelected={true}
+													onToggle={() => { toggleFilter("grades", child.id); }}
+												/>,
+											);
+										}
+									}
+									return selectedCards;
+								}
+
+								// Section expanded but family collapsed: show root card
+								const isFamilyExpanded = expandedFamilies.has(root.id);
+								if (!isFamilyExpanded || !hasChildren) {
 									return (
 										<EntityCard
 											key={root.id}
@@ -538,341 +602,281 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 									);
 								}
 
-								// Partial selection: show individual selected grades
-								const selectedCards: React.ReactElement[] = [];
-								if (filters.grades.includes(root.id)) {
-									selectedCards.push(
-										<EntityCard
-											key={root.id}
-											id={root.id}
-											name={root.name}
-											itemIds={root.itemIds}
-											image={root.image}
-											type="grade"
-											asFilter={true}
-											isSelected={true}
-											onToggle={() => { toggleFilter("grades", root.id); }}
-										/>,
-									);
-								}
-								for (const child of children) {
-									if (filters.grades.includes(child.id)) {
-										selectedCards.push(
-											<EntityCard
-												key={child.id}
-												id={child.id}
-												name={child.name}
-												itemIds={child.itemIds}
-												image={child.image}
-												type="grade"
-												asFilter={true}
-												isSelected={true}
-												onToggle={() => { toggleFilter("grades", child.id); }}
-											/>,
-										);
-									}
-								}
-								return selectedCards;
-							}
-
-							// Section expanded but family collapsed: show root card
-							const isFamilyExpanded = expandedFamilies.has(root.id);
-							if (!isFamilyExpanded || !hasChildren) {
-								return (
+								// Family expanded with children: return array of cards
+								return [
+								// Root grade - clicking toggles family selection + collapses
 									<EntityCard
 										key={root.id}
 										id={root.id}
 										name={root.name}
-										itemIds={hasChildren ? getGradeFamilyItemIds(root.id) : root.itemIds}
+										itemIds={getGradeFamilyItemIds(root.id)}
 										image={root.image}
 										type="grade"
 										asFilter={true}
-										isSelected={hasChildren ? selectedInFamily > 0 : filters.grades.includes(root.id)}
-										onToggle={() => {
-											if (hasChildren) {
-												toggleGradeFamily(root.id);
-											} else {
-												toggleFilter("grades", root.id);
-											}
-										}}
-									/>
-								);
-							}
-
-							// Family expanded with children: return array of cards
-							return [
-								// Root grade - clicking toggles family selection + collapses
-								<EntityCard
-									key={root.id}
-									id={root.id}
-									name={root.name}
-									itemIds={getGradeFamilyItemIds(root.id)}
-									image={root.image}
-									type="grade"
-									asFilter={true}
-									isSelected={selectedInFamily > 0}
-									onToggle={() => { toggleGradeFamily(root.id); }}
-								/>,
-								// Root-only option - toggle just the root grade
-								<EntityCard
-									key={`${root.id}-root-only`}
-									id={`${root.id}-root-only`}
-									name={`${typeof root.name === "string" ? root.name : root.name.en ?? root.name.ja} only`}
-									itemIds={root.itemIds}
-									image={root.image}
-									type="grade"
-									asFilter={true}
-									isSelected={filters.grades.includes(root.id)}
-									onToggle={() => { toggleFilter("grades", root.id); }}
-								/>,
-								// Child grades
-								...children.map((child) => (
+										isSelected={selectedInFamily > 0}
+										onToggle={() => { toggleGradeFamily(root.id); }}
+									/>,
+									// Root-only option - toggle just the root grade
 									<EntityCard
-										key={child.id}
-										id={child.id}
-										name={child.name}
-										itemIds={child.itemIds}
-										image={child.image}
+										key={`${root.id}-root-only`}
+										id={`${root.id}-root-only`}
+										name={`${typeof root.name === "string" ? root.name : root.name.en ?? root.name.ja} only`}
+										itemIds={root.itemIds}
+										image={root.image}
 										type="grade"
 										asFilter={true}
-										isSelected={filters.grades.includes(child.id)}
-										onToggle={() => { toggleFilter("grades", child.id); }}
-									/>
-								)),
-							];
-						})}
-						<EntityCard
-							key={OTHER_FILTER_ID}
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemIds={Array.from({ length: otherCounts.grades }, () => "")}
-							type="grade"
-							asFilter={true}
-							isSelected={filters.grades.includes(OTHER_FILTER_ID)}
-							onToggle={() => { toggleFilter("grades", OTHER_FILTER_ID); }}
-						/>
-					</CollapsibleGrid>
-
-					<CollapsibleGrid
-						title="Brand"
-						totalCount={displayBrands.length + 1}
-						selectedCount={filters.brands.length}
-						expanded={expandedSections.brands}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
-						onClear={clearBrands}
-						onSelectAll={selectAllBrands}
-						headerRight={
-							<Tooltip label={sortModes.brands === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
-								<ActionIcon
-									variant="subtle"
-									size="sm"
-									onClick={() => { setSortModes((prev) => ({ ...prev, brands: prev.brands === "count" ? "name" : "count" })); }}
-								>
-									{sortModes.brands === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
-								</ActionIcon>
-							</Tooltip>
-						}
-					>
-						{(expandedSections.brands ? brandsSorted : brandsCollapsed).map((brand) => (
-							<EntityCard
-								key={brand.id}
-								id={brand.id}
-								name={brand.name}
-								itemIds={brand.itemIds}
-								image={brand.image}
-								type="brand"
-								asFilter={true}
-								isSelected={filters.brands.includes(brand.id)}
-								onToggle={() => { toggleFilter("brands", brand.id); }}
-							/>
-						))}
-						<EntityCard
-							key={OTHER_FILTER_ID}
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemIds={Array.from({ length: otherCounts.brands }, () => "")}
-							type="brand"
-							asFilter={true}
-							isSelected={filters.brands.includes(OTHER_FILTER_ID)}
-							onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
-						/>
-					</CollapsibleGrid>
-
-					<CollapsibleGrid
-						title="Series"
-						totalCount={series.length + 1}
-						selectedCount={filters.series.length}
-						onClear={clearSeries}
-						onSelectAll={selectAllSeries}
-						expanded={expandedSections.series}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
-						headerRight={
-							<Tooltip label={sortModes.series === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
-								<ActionIcon
-									variant="subtle"
-									size="sm"
-									onClick={() => { setSortModes((prev) => ({ ...prev, series: prev.series === "count" ? "name" : "count" })); }}
-								>
-									{sortModes.series === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
-								</ActionIcon>
-							</Tooltip>
-						}
-					>
-						{(expandedSections.series ? seriesSorted : seriesCollapsed).map((s) => (
-							<EntityCard
-								key={s.id}
-								id={s.id}
-								name={s.name}
-								itemIds={s.itemIds}
-								image={s.image}
-								type="series"
-								asFilter={true}
-								isSelected={filters.series.includes(s.id)}
-								onToggle={() => { toggleFilter("series", s.id); }}
-							/>
-						))}
-						<EntityCard
-							key={OTHER_FILTER_ID}
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemIds={Array.from({ length: otherCounts.series }, () => "")}
-							type="series"
-							asFilter={true}
-							isSelected={filters.series.includes(OTHER_FILTER_ID)}
-							onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
-						/>
-					</CollapsibleGrid>
-
-					<CollapsibleGrid
-						title="Scale"
-						totalCount={scales.length + 1}
-						selectedCount={filters.scales.length}
-						expanded={expandedSections.scales}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
-						onClear={clearScales}
-						onSelectAll={selectAllScales}
-						headerRight={
-							<Tooltip label={sortModes.scales === "count" ? "Sort by size" : SORT_BY_COUNT}>
-								<ActionIcon
-									variant="subtle"
-									size="sm"
-									onClick={() => { setSortModes((prev) => ({ ...prev, scales: prev.scales === "count" ? "size" : "count" })); }}
-								>
-									{sortModes.scales === "count" ? <IconSortDescendingNumbers size={16} /> : <IconRuler2 size={16} />}
-								</ActionIcon>
-							</Tooltip>
-						}
-					>
-						{(expandedSections.scales ? scalesSorted : scalesCollapsed).map((scale) => (
-							<EntityCard
-								key={scale.id}
-								id={scale.id}
-								name={scale.name}
-								itemIds={scale.itemIds}
-								type="scale"
-								asFilter={true}
-								isSelected={filters.scales.includes(scale.id)}
-								onToggle={() => { toggleFilter("scales", scale.id); }}
-							/>
-						))}
-						<EntityCard
-							key={OTHER_FILTER_ID}
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemIds={Array.from({ length: otherCounts.scales }, () => "")}
-							type="scale"
-							asFilter={true}
-							isSelected={filters.scales.includes(OTHER_FILTER_ID)}
-							onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
-						/>
-					</CollapsibleGrid>
-
-					<CollapsibleGrid
-						title="Year"
-						totalCount={years.length + (otherCounts.years > 0 ? 1 : 0)}
-						selectedCount={filters.years.length}
-						cardWidth={80}
-						maxColumns={10}
-						expanded={expandedSections.years}
-						onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, years: exp })); }}
-						onClear={clearYears}
-						onSelectAll={selectAllYears}
-						headerRight={
-							<Tooltip label={sortModes.years === "date" ? SORT_BY_COUNT : "Sort by date"}>
-								<ActionIcon
-									variant="subtle"
-									size="sm"
-									onClick={() => { setSortModes((prev) => ({ ...prev, years: prev.years === "date" ? "count" : "date" })); }}
-								>
-									{sortModes.years === "date" ? <IconCalendar size={16} /> : <IconSortDescendingNumbers size={16} />}
-								</ActionIcon>
-							</Tooltip>
-						}
-					>
-						{(expandedSections.years ? yearsSorted : yearsCollapsed).map((year) => (
-							<EntityCard
-								key={year.id}
-								id={year.id}
-								name={year.name}
-								itemIds={year.itemIds}
-								type="year"
-								asFilter={true}
-								isSelected={filters.years.includes(year.id)}
-								onToggle={() => { toggleFilter("years", year.id); }}
-							/>
-						))}
-						{otherCounts.years > 0 && (
+										isSelected={filters.grades.includes(root.id)}
+										onToggle={() => { toggleFilter("grades", root.id); }}
+									/>,
+									// Child grades
+									...children.map((child) => (
+										<EntityCard
+											key={child.id}
+											id={child.id}
+											name={child.name}
+											itemIds={child.itemIds}
+											image={child.image}
+											type="grade"
+											asFilter={true}
+											isSelected={filters.grades.includes(child.id)}
+											onToggle={() => { toggleFilter("grades", child.id); }}
+										/>
+									)),
+								];
+							})}
 							<EntityCard
 								key={OTHER_FILTER_ID}
 								id={OTHER_FILTER_ID}
 								name="Other"
-								itemIds={Array.from({ length: otherCounts.years }, () => "")}
-								type="year"
+								itemIds={Array.from({ length: otherCounts.grades }, () => "")}
+								type="grade"
 								asFilter={true}
-								isSelected={filters.years.includes(OTHER_FILTER_ID)}
-								onToggle={() => { toggleFilter("years", OTHER_FILTER_ID); }}
+								isSelected={filters.grades.includes(OTHER_FILTER_ID)}
+								onToggle={() => { toggleFilter("grades", OTHER_FILTER_ID); }}
 							/>
-						)}
-					</CollapsibleGrid>
-				</Stack>
-			</Container>
+						</CollapsibleGrid>
 
-			{/* Explore */}
-			<Container size="xl" py="xl" w="100%">
-				<Stack gap="xl">
-					<Group justify="space-between" align="center">
-						<Group gap="md">
-							<Title order={2} size="h2" fw={600}>
-								Explore
-							</Title>
-							{hasActiveFilters && (
-								<Button
-									variant="subtle"
-									size="xs"
-									leftSection={<IconX size={14} />}
-									onClick={clearFilters}
-								>
-									Clear {selectedCount} filter{selectedCount > 1 ? "s" : ""}
-								</Button>
+						<CollapsibleGrid
+							title="Brand"
+							totalCount={displayBrands.length + 1}
+							selectedCount={filters.brands.length}
+							expanded={expandedSections.brands}
+							onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, brands: exp })); }}
+							onClear={clearBrands}
+							onSelectAll={selectAllBrands}
+							headerRight={
+								<Tooltip label={sortModes.brands === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
+									<ActionIcon
+										variant="subtle"
+										size="sm"
+										onClick={() => { setSortModes((prev) => ({ ...prev, brands: prev.brands === "count" ? "name" : "count" })); }}
+									>
+										{sortModes.brands === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
+									</ActionIcon>
+								</Tooltip>
+							}
+						>
+							{(expandedSections.brands ? brandsSorted : brandsCollapsed).map((brand) => (
+								<EntityCard
+									key={brand.id}
+									id={brand.id}
+									name={brand.name}
+									itemIds={brand.itemIds}
+									image={brand.image}
+									type="brand"
+									asFilter={true}
+									isSelected={filters.brands.includes(brand.id)}
+									onToggle={() => { toggleFilter("brands", brand.id); }}
+								/>
+							))}
+							<EntityCard
+								key={OTHER_FILTER_ID}
+								id={OTHER_FILTER_ID}
+								name="Other"
+								itemIds={Array.from({ length: otherCounts.brands }, () => "")}
+								type="brand"
+								asFilter={true}
+								isSelected={filters.brands.includes(OTHER_FILTER_ID)}
+								onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
+							/>
+						</CollapsibleGrid>
+
+						<CollapsibleGrid
+							title="Series"
+							totalCount={series.length + 1}
+							selectedCount={filters.series.length}
+							onClear={clearSeries}
+							onSelectAll={selectAllSeries}
+							expanded={expandedSections.series}
+							onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, series: exp })); }}
+							headerRight={
+								<Tooltip label={sortModes.series === "count" ? SORT_BY_NAME : SORT_BY_COUNT}>
+									<ActionIcon
+										variant="subtle"
+										size="sm"
+										onClick={() => { setSortModes((prev) => ({ ...prev, series: prev.series === "count" ? "name" : "count" })); }}
+									>
+										{sortModes.series === "count" ? <IconSortDescendingNumbers size={16} /> : <IconSortAscendingLetters size={16} />}
+									</ActionIcon>
+								</Tooltip>
+							}
+						>
+							{(expandedSections.series ? seriesSorted : seriesCollapsed).map((s) => (
+								<EntityCard
+									key={s.id}
+									id={s.id}
+									name={s.name}
+									itemIds={s.itemIds}
+									image={s.image}
+									type="series"
+									asFilter={true}
+									isSelected={filters.series.includes(s.id)}
+									onToggle={() => { toggleFilter("series", s.id); }}
+								/>
+							))}
+							<EntityCard
+								key={OTHER_FILTER_ID}
+								id={OTHER_FILTER_ID}
+								name="Other"
+								itemIds={Array.from({ length: otherCounts.series }, () => "")}
+								type="series"
+								asFilter={true}
+								isSelected={filters.series.includes(OTHER_FILTER_ID)}
+								onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
+							/>
+						</CollapsibleGrid>
+
+						<CollapsibleGrid
+							title="Scale"
+							totalCount={scales.length + 1}
+							selectedCount={filters.scales.length}
+							expanded={expandedSections.scales}
+							onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, scales: exp })); }}
+							onClear={clearScales}
+							onSelectAll={selectAllScales}
+							headerRight={
+								<Tooltip label={sortModes.scales === "count" ? "Sort by size" : SORT_BY_COUNT}>
+									<ActionIcon
+										variant="subtle"
+										size="sm"
+										onClick={() => { setSortModes((prev) => ({ ...prev, scales: prev.scales === "count" ? "size" : "count" })); }}
+									>
+										{sortModes.scales === "count" ? <IconSortDescendingNumbers size={16} /> : <IconRuler2 size={16} />}
+									</ActionIcon>
+								</Tooltip>
+							}
+						>
+							{(expandedSections.scales ? scalesSorted : scalesCollapsed).map((scale) => (
+								<EntityCard
+									key={scale.id}
+									id={scale.id}
+									name={scale.name}
+									itemIds={scale.itemIds}
+									type="scale"
+									asFilter={true}
+									isSelected={filters.scales.includes(scale.id)}
+									onToggle={() => { toggleFilter("scales", scale.id); }}
+								/>
+							))}
+							<EntityCard
+								key={OTHER_FILTER_ID}
+								id={OTHER_FILTER_ID}
+								name="Other"
+								itemIds={Array.from({ length: otherCounts.scales }, () => "")}
+								type="scale"
+								asFilter={true}
+								isSelected={filters.scales.includes(OTHER_FILTER_ID)}
+								onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
+							/>
+						</CollapsibleGrid>
+
+						<CollapsibleGrid
+							title="Year"
+							totalCount={years.length + (otherCounts.years > 0 ? 1 : 0)}
+							selectedCount={filters.years.length}
+							cardWidth={80}
+							maxColumns={10}
+							expanded={expandedSections.years}
+							onExpandedChange={(exp) => { setExpandedSections((prev) => ({ ...prev, years: exp })); }}
+							onClear={clearYears}
+							onSelectAll={selectAllYears}
+							headerRight={
+								<Tooltip label={sortModes.years === "date" ? SORT_BY_COUNT : "Sort by date"}>
+									<ActionIcon
+										variant="subtle"
+										size="sm"
+										onClick={() => { setSortModes((prev) => ({ ...prev, years: prev.years === "date" ? "count" : "date" })); }}
+									>
+										{sortModes.years === "date" ? <IconCalendar size={16} /> : <IconSortDescendingNumbers size={16} />}
+									</ActionIcon>
+								</Tooltip>
+							}
+						>
+							{(expandedSections.years ? yearsSorted : yearsCollapsed).map((year) => (
+								<EntityCard
+									key={year.id}
+									id={year.id}
+									name={year.name}
+									itemIds={year.itemIds}
+									type="year"
+									asFilter={true}
+									isSelected={filters.years.includes(year.id)}
+									onToggle={() => { toggleFilter("years", year.id); }}
+								/>
+							))}
+							{otherCounts.years > 0 && (
+								<EntityCard
+									key={OTHER_FILTER_ID}
+									id={OTHER_FILTER_ID}
+									name="Other"
+									itemIds={Array.from({ length: otherCounts.years }, () => "")}
+									type="year"
+									asFilter={true}
+									isSelected={filters.years.includes(OTHER_FILTER_ID)}
+									onToggle={() => { toggleFilter("years", OTHER_FILTER_ID); }}
+								/>
 							)}
-						</Group>
-						<Link href="/database" style={{ textDecoration: "none" }}>
-							<Group gap="xs" c="blue">
-								<Text size="sm" fw={600}>View all</Text>
-								<IconArrowNarrowRight size={16} />
-							</Group>
-						</Link>
-					</Group>
+						</CollapsibleGrid>
+					</Stack>
+				</Container>
 
-					<ExploreSection
-						ref={exploreSectionRef}
-						items={items}
-						filters={filters}
-						totalCount={items.length}
-						onFilterToggle={toggleFilter}
-					/>
-				</Stack>
-			</Container>
+				{/* Explore */}
+				<Container size="xl" py="xl" w="100%">
+					<Stack gap="xl">
+						<Group justify="space-between" align="center">
+							<Group gap="md">
+								<Title order={2} size="h2" fw={600}>
+								Explore
+								</Title>
+								{hasActiveFilters && (
+									<Button
+										variant="subtle"
+										size="xs"
+										leftSection={<IconX size={14} />}
+										onClick={clearFilters}
+									>
+									Clear {selectedCount} filter{selectedCount > 1 ? "s" : ""}
+									</Button>
+								)}
+							</Group>
+							<Link href="/database" style={{ textDecoration: "none" }}>
+								<Group gap="xs" c="blue">
+									<Text size="sm" fw={600}>View all</Text>
+									<IconArrowNarrowRight size={16} />
+								</Group>
+							</Link>
+						</Group>
+
+						<ExploreSection
+							ref={exploreSectionRef}
+							items={items}
+							filters={filters}
+							totalCount={items.length}
+							onFilterToggle={toggleFilter}
+						/>
+					</Stack>
+				</Container>
+			</Box>
 
 			{/* Scroll navigation */}
 			<ScrollToTop />
