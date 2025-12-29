@@ -356,30 +356,30 @@ export function YearScrollbar({
 						/>
 					</Box>
 				)}
-			</Box>
 
-			{/* Scroll to top button */}
-			<Transition transition="slide-up" mounted={showScrollToTop}>
-				{(transitionStyles) => (
-					<ActionIcon
-						pos="absolute"
-						left="50%"
-						style={{
-							bottom: -40,
-							transform: CENTER_TRANSFORM,
-							...transitionStyles,
-						}}
-						size="lg"
-						radius="xl"
-						variant="filled"
-						color="gray"
-						onClick={scrollToTop}
-						aria-label="Scroll to top"
-					>
-						<IconArrowUp size={20} />
-					</ActionIcon>
-				)}
-			</Transition>
+				{/* Scroll to top button - positioned as final point after track */}
+				<Transition transition="slide-up" mounted={showScrollToTop}>
+					{(transitionStyles) => (
+						<ActionIcon
+							pos="absolute"
+							left="50%"
+							style={{
+								top: `calc(100% + 16px)`,
+								transform: CENTER_TRANSFORM,
+								...transitionStyles,
+							}}
+							size="lg"
+							radius="xl"
+							variant="filled"
+							color="gray"
+							onClick={scrollToTop}
+							aria-label="Scroll to top"
+						>
+							<IconArrowUp size={20} />
+						</ActionIcon>
+					)}
+				</Transition>
+			</Box>
 		</Box>
 	);
 }
