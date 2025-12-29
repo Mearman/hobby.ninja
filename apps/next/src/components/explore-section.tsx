@@ -537,7 +537,9 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 							transform: `translateY(${virtualRow.start}px)`,
 							display: "grid",
 							gridTemplateColumns: `repeat(${columnCount}, 1fr)`,
+							gridTemplateRows: `calc(100% - ${GRID_GAP}px)`,
 							gap: GRID_GAP,
+							alignContent: "start",
 						}}
 					>
 						{virtualRow.items.map((item, itemIndex) => {
