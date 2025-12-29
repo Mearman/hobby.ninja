@@ -192,7 +192,8 @@ export function YearScrollbar({
 		[isDragging, positionToYear, onYearSelect],
 	);
 
-	const scrollToTop = useCallback(() => {
+	const scrollToTop = useCallback((e: React.MouseEvent) => {
+		e.stopPropagation(); // Prevent track click handler from firing
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}, []);
 
