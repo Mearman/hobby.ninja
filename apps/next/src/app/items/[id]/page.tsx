@@ -19,8 +19,11 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+
 import { ItemImageGallery } from "./item-image-gallery";
 import { PdfAccordion } from "./pdf-accordion";
+
+import { getTagColor } from "@/lib/tag-colors";
 
 interface ItemPageProps {
 	params: Promise<{ id: string }>;
@@ -166,6 +169,16 @@ export default async function ItemPage({ params }: ItemPageProps) {
 										<Link key={series.id} href={`/series/${series.id}`} style={{ textDecoration: "none" }}>
 											<Badge color="violet" variant="light" style={{ cursor: "pointer" }}>
 												{series.name}
+											</Badge>
+										</Link>
+									))}
+									{item.tags.map(tag => (
+										<Link key={tag.modifier} href={`/tags/${tag.modifier}`} style={{ textDecoration: "none" }}>
+											<Badge
+												variant="filled"
+												style={{ backgroundColor: getTagColor(tag.modifier), cursor: "pointer" }}
+											>
+												{tag.name}
 											</Badge>
 										</Link>
 									))}
