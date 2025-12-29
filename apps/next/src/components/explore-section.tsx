@@ -91,8 +91,11 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 	);
 }
 
-// Fixed badge width for consistent sizing across all cards
+// Fixed badge dimensions for consistent sizing across all cards
 const BADGE_WIDTH = 56;
+const BADGE_ASPECT_RATIO = 300 / 170;
+const BADGE_HEIGHT = Math.round(BADGE_WIDTH / BADGE_ASPECT_RATIO); // ~32px
+const BADGE_ROW_HEIGHT = BADGE_HEIGHT + 8 + 4; // badge + pt="xs" (8px) + pb={4}
 
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
 function EntityBadge({ image, name, onClick, isSelected }: { image?: string; name: string; onClick?: () => void; isSelected?: boolean }): React.ReactElement {
@@ -263,7 +266,7 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 					)}
 				</Box>
 
-				<Group gap="xs" wrap="nowrap" justify="center" pt="xs" pb={4}>
+				<Group gap="xs" wrap="nowrap" justify="center" pt="xs" pb={4} h={BADGE_ROW_HEIGHT}>
 					{primaryCategory && (
 						<EntityBadge
 							image={primaryCategory.image}
