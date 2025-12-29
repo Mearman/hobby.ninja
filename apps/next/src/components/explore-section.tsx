@@ -34,8 +34,8 @@ const GRID_COLUMNS = { base: 1, sm: 2, md: 3, lg: 4 };
 // Fixed card height = title + badge padding (image and badge heights scale with card width)
 const CARD_FIXED_PADDING = 12; // pt(4) + pb(4) + gap(4) for badges
 const FIXED_CARD_HEIGHT = TITLE_CONTAINER_HEIGHT + CARD_FIXED_PADDING;
-// Badges: 45% width, 300:170 ratio, 2 rows = 0.45 * 0.567 * 2 ≈ 0.51
-const BADGE_HEIGHT_MULTIPLIER = 0.51;
+// Badges: increased height for better visibility
+const BADGE_HEIGHT_MULTIPLIER = 0.18;
 
 /** Title text that auto-scales to fit within a fixed-height container */
 function FittedTitle({ text }: { text: string }): React.ReactElement {
@@ -107,7 +107,8 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 			<Box
 				onClick={handleClick}
 				style={{
-					width: "45%",
+					flex: "1 1 0",
+					maxWidth: "32%",
 					aspectRatio: BADGE_ASPECT_RATIO,
 					borderRadius: 4,
 					overflow: "hidden",
@@ -276,13 +277,16 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 				</Box>
 
 				<Box
-					pt={4}
-					pb={4}
+					py={4}
 					style={{
 						display: "flex",
-						flexWrap: "wrap",
-						justifyContent: "center",
+						flexWrap: "nowrap",
+						justifyContent: "space-evenly",
 						gap: 4,
+						paddingLeft: 4,
+						paddingRight: 4,
+						marginTop: "auto",
+						marginBottom: "auto",
 					}}
 				>
 					{primaryCategory && (
