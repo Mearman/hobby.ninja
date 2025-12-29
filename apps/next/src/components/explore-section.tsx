@@ -525,7 +525,6 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 									key={item.id}
 									data-year={item.releaseDate?.year}
 									data-item-id={item.id}
-									style={{ height: CARD_TOTAL_HEIGHT }}
 								>
 									<ItemCard item={item} index={globalIndex} onFilterToggle={onFilterToggle} filters={filters} />
 								</Box>
