@@ -131,9 +131,9 @@ export function YearScrollbar({
 
 	if (years.length === 0) return null;
 
-	// Show drag preview or current year position
-	const displayYear = dragYear ?? currentYear;
-	const thumbPosition = displayYear === undefined ? undefined : yearToPosition(displayYear);
+	// Calculate positions for both thumbs
+	const currentPosition = currentYear === undefined ? undefined : yearToPosition(currentYear);
+	const dragPosition = dragYear === null ? undefined : yearToPosition(dragYear);
 
 	return (
 		<Box
@@ -149,13 +149,13 @@ export function YearScrollbar({
 			}}
 			visibleFrom="md"
 		>
-			{/* Year label (shows during drag or hover) */}
-			{isDragging && dragYear !== null && thumbPosition !== undefined && (
+			{/* Year label (shows during drag) */}
+			{isDragging && dragYear !== null && dragPosition !== undefined && (
 				<Box
 					pos="absolute"
 					right={40}
 					style={{
-						top: `calc(${thumbPosition * 100}% - 12px)`,
+						top: `calc(${dragPosition * 100}% - 12px)`,
 						transition: "top 50ms ease-out",
 						zIndex: 1,
 					}}
@@ -238,15 +238,40 @@ export function YearScrollbar({
 					);
 				})}
 
-				{/* Thumb */}
-				{thumbPosition !== undefined && (
+				{/* Current position thumb (shows where you are) */}
+				{currentPosition !== undefined && (
 					<Box
 						pos="absolute"
 						left="50%"
 						style={{
-							top: `calc(${thumbPosition * 100}% - ${THUMB_SIZE / 2}px)`,
+							top: `calc(${currentPosition * 100}% - ${THUMB_SIZE / 2}px)`,
 							transform: CENTER_TRANSFORM,
-							transition: isDragging ? "none" : "top 100ms ease-out",
+							transition: "top 100ms ease-out",
+						}}
+					>
+						<Box
+							w={THUMB_SIZE}
+							h={THUMB_SIZE}
+							bg={isDragging ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)"}
+							style={{
+								borderRadius: THUMB_SIZE / 2,
+								border: "2px solid white",
+								boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
+								opacity: isDragging ? 0.5 : 1,
+								transition: "background-color 150ms ease, opacity 150ms ease",
+							}}
+						/>
+					</Box>
+				)}
+
+				{/* Target position thumb (shows where you're dragging to) */}
+				{isDragging && dragPosition !== undefined && (
+					<Box
+						pos="absolute"
+						left="50%"
+						style={{
+							top: `calc(${dragPosition * 100}% - ${THUMB_SIZE / 2}px)`,
+							transform: CENTER_TRANSFORM,
 						}}
 					>
 						<Box
@@ -256,7 +281,7 @@ export function YearScrollbar({
 							style={{
 								borderRadius: THUMB_SIZE / 2,
 								border: "2px solid white",
-								boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
+								boxShadow: "0 2px 4px rgba(0,0,0,0.4)",
 							}}
 						/>
 					</Box>
