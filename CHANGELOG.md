@@ -1,3 +1,16 @@
+## [1.5.0](https://github.com/Mearman/hobby.ninja/compare/v1.4.0...v1.5.0) (2025-12-29)
+
+### Features
+
+- **ci:** add Nx Cloud remote caching support ([bb9ab48](https://github.com/Mearman/hobby.ninja/commit/bb9ab48fe2a661f66c4e10a539442305f6d7a3fc))
+- **data:** add tags support to ItemPageData ([04cf192](https://github.com/Mearman/hobby.ninja/commit/04cf192d984e61c5de97e7532673e4a2d18d7928))
+- **next:** make card entity badges clickable to toggle filters ([6876b9c](https://github.com/Mearman/hobby.ninja/commit/6876b9cab65d7288fd71feafe6aade2944d846e1))
+- **next:** make card images square with 1:1 aspect ratio ([881e9ad](https://github.com/Mearman/hobby.ninja/commit/881e9adb14123c76e5af0e0a2a662761831850f2))
+
+### Refactoring
+
+- **next:** show year scrollbar major ticks on 5-year intervals ([c803a8b](https://github.com/Mearman/hobby.ninja/commit/c803a8b2a49b5e819881563931005f373e8e4b01))
+
 ## [1.4.0](https://github.com/Mearman/hobby.ninja/compare/v1.3.1...v1.4.0) (2025-12-29)
 
 ### Features
