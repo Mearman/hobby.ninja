@@ -420,7 +420,12 @@ export function ExploreSection({ items, filters, totalCount }: ExploreSectionPro
 				{visibleItems.map((item, index) => {
 					const isLast = index === visibleItems.length - 1;
 					return (
-						<Box key={item.id} ref={isLast ? lastItemRef : undefined}>
+						<Box
+							key={item.id}
+							ref={isLast ? lastItemRef : undefined}
+							data-year={item.releaseDate?.year}
+							data-item-id={item.id}
+						>
 							<ItemCard item={item} index={index} />
 						</Box>
 					);
