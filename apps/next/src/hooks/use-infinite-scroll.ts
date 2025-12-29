@@ -29,6 +29,8 @@ export interface InfiniteScrollReturn<T> {
 	reset: () => void;
 	itemCount: number;
 	lastItemRef: (node: HTMLElement | null) => void;
+	/** Load items up to a specific count (for year navigation) */
+	loadUntil: (count: number) => void;
 }
 
 // Get initial page from URL for position restoration (safe for SSR)
@@ -187,6 +189,11 @@ export function useInfiniteScroll<T>({
 		setIsLoading(false);
 	}, [itemsPerPage]);
 
+	// Load items up to a specific count (for year navigation)
+	const loadUntil = useCallback((count: number) => {
+		setLoadedCount(Math.min(count, items.length, maxCachedItems));
+	}, [items.length, maxCachedItems]);
+
 	// Reset loaded count when items array reference changes (filter/search)
 	// Skip reset on initial load to preserve URL-restored state
 	/* eslint-disable react-hooks/set-state-in-effect -- Reset on filter change is intentional */
@@ -245,6 +252,7 @@ export function useInfiniteScroll<T>({
 		reset,
 		itemCount: loadedCount,
 		lastItemRef,
+		loadUntil,
 	};
 }
 
