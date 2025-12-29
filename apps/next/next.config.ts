@@ -103,9 +103,8 @@ const nextConfig: NextConfig = {
 	// Configure experimental features for Mantine and Vanilla Extract
 	experimental: {
 		optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
-		// Enable worker threads for faster static generation
-		// CI has 8GB+ RAM allocated via NODE_OPTIONS
-		workerThreads: true,
+		// Worker threads disabled - incompatible with custom webpack config (DataCloneError)
+		workerThreads: false,
 		// Use available CPUs (CI can override via NEXT_STATIC_GEN_CPUS env var)
 		cpus: process.env.NEXT_STATIC_GEN_CPUS
 			? parseInt(process.env.NEXT_STATIC_GEN_CPUS, 10)
