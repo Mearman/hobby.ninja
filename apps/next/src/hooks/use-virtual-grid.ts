@@ -132,13 +132,15 @@ export function useVirtualGrid<T>({
 		});
 	}, [virtualItems, columnCount, items, computedScrollMargin]);
 
-	// Scroll to a specific item index
+	// Scroll to a specific item index - positions the row at top of window
 	const scrollToIndex = useCallback(
 		(index: number) => {
 			const rowIndex = Math.floor(index / columnCount);
-			virtualizer.scrollToIndex(rowIndex, { align: "start", behavior: "smooth" });
+			// Calculate exact pixel position: row position + container offset from top of document
+			const scrollPosition = rowIndex * rowHeight + computedScrollMargin;
+			window.scrollTo({ top: scrollPosition, behavior: "smooth" });
 		},
-		[virtualizer, columnCount],
+		[columnCount, rowHeight, computedScrollMargin],
 	);
 
 	// Get row index for item index
