@@ -32,6 +32,8 @@ export function YearScrollbar({
 	const trackRef = useRef<HTMLDivElement>(null);
 	const [isDragging, setIsDragging] = useState(false);
 	const [dragYear, setDragYear] = useState<number | null>(null);
+	// Target year persists after click/drag until scroll completes
+	const [targetYear, setTargetYear] = useState<number | null>(null);
 
 	const minYear = useMemo(() => Math.min(...years), [years]);
 	const maxYear = useMemo(() => Math.max(...years), [years]);
@@ -108,6 +110,8 @@ export function YearScrollbar({
 			(e.target as HTMLElement).releasePointerCapture(e.pointerId);
 			setIsDragging(false);
 			if (dragYear !== null) {
+				// Keep target visible until scroll completes
+				setTargetYear(dragYear);
 				onYearSelect?.(dragYear);
 			}
 			setDragYear(null);
@@ -131,9 +135,13 @@ export function YearScrollbar({
 
 	if (years.length === 0) return null;
 
-	// Calculate positions for both thumbs
+	// Calculate positions for thumbs
 	const currentPosition = currentYear === undefined ? undefined : yearToPosition(currentYear);
-	const dragPosition = dragYear === null ? undefined : yearToPosition(dragYear);
+	// Target position: during drag use dragYear, after release use targetYear
+	const activeTargetYear = dragYear ?? targetYear;
+	const targetPosition = activeTargetYear === null ? undefined : yearToPosition(activeTargetYear);
+	// Show target thumb when there's a target different from current
+	const showTargetThumb = activeTargetYear !== null && activeTargetYear !== currentYear;
 
 	return (
 		<Box
@@ -149,14 +157,14 @@ export function YearScrollbar({
 			}}
 			visibleFrom="md"
 		>
-			{/* Year label (shows during drag) */}
-			{isDragging && dragYear !== null && dragPosition !== undefined && (
+			{/* Year label (shows during interaction and scroll) */}
+			{showTargetThumb && targetPosition !== undefined && (
 				<Box
 					pos="absolute"
 					right={40}
 					style={{
-						top: `calc(${dragPosition * 100}% - 12px)`,
-						transition: "top 50ms ease-out",
+						top: `calc(${targetPosition * 100}% - 12px)`,
+						transition: isDragging ? "top 50ms ease-out" : "none",
 						zIndex: 1,
 					}}
 				>
@@ -167,7 +175,7 @@ export function YearScrollbar({
 						py={4}
 						style={{ borderRadius: 4, fontSize: 12, fontWeight: 600 }}
 					>
-						{dragYear}
+						{activeTargetYear}
 					</Box>
 				</Box>
 			)}
@@ -252,26 +260,27 @@ export function YearScrollbar({
 						<Box
 							w={THUMB_SIZE}
 							h={THUMB_SIZE}
-							bg={isDragging ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)"}
+							bg={showTargetThumb ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)"}
 							style={{
 								borderRadius: THUMB_SIZE / 2,
 								border: "2px solid white",
 								boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
-								opacity: isDragging ? 0.5 : 1,
+								opacity: showTargetThumb ? 0.5 : 1,
 								transition: "background-color 150ms ease, opacity 150ms ease",
 							}}
 						/>
 					</Box>
 				)}
 
-				{/* Target position thumb (shows where you're dragging to) */}
-				{isDragging && dragPosition !== undefined && (
+				{/* Target position thumb (shows where you're going) */}
+				{showTargetThumb && targetPosition !== undefined && (
 					<Box
 						pos="absolute"
 						left="50%"
 						style={{
-							top: `calc(${dragPosition * 100}% - ${THUMB_SIZE / 2}px)`,
+							top: `calc(${targetPosition * 100}% - ${THUMB_SIZE / 2}px)`,
 							transform: CENTER_TRANSFORM,
+							transition: isDragging ? "none" : "top 100ms ease-out",
 						}}
 					>
 						<Box
