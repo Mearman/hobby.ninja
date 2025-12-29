@@ -1,7 +1,7 @@
 "use client";
 
 import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Box, Card, Group, Stack, Text, Tooltip } from "@mantine/core";
+import { Box, Card, Group, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { forwardRef, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
 
@@ -91,6 +91,9 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 	);
 }
 
+// Fixed badge width for consistent sizing across all cards
+const BADGE_WIDTH = 56;
+
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
 function EntityBadge({ image, name, onClick, isSelected }: { image?: string; name: string; onClick?: () => void; isSelected?: boolean }): React.ReactElement {
 	const handleClick = (e: React.MouseEvent) => {
@@ -106,9 +109,8 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 			<Box
 				onClick={handleClick}
 				style={{
-					flex: "1 1 0",
-					minWidth: 0,
-					maxWidth: 80,
+					width: BADGE_WIDTH,
+					flexShrink: 0,
 					aspectRatio: "300 / 170",
 					borderRadius: 4,
 					overflow: "hidden",
@@ -261,42 +263,40 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 					)}
 				</Box>
 
-				<Stack gap={0} px="sm" pt={0} pb={0} style={{ flex: 1 }}>
-					<Group gap="xs" wrap="nowrap" justify="center" mt="xs" mb="xs">
-						{primaryCategory && (
-							<EntityBadge
-								image={primaryCategory.image}
-								name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja}
-								onClick={onFilterToggle ? () => { onFilterToggle("categories", primaryCategory.id); } : undefined}
-								isSelected={filters?.categories.includes(primaryCategory.id)}
-							/>
-						)}
-						{primaryGrade && (
-							<EntityBadge
-								image={primaryGrade.image}
-								name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja}
-								onClick={onFilterToggle ? () => { onFilterToggle("grades", primaryGrade.id); } : undefined}
-								isSelected={filters?.grades.includes(primaryGrade.id)}
-							/>
-						)}
-						{primaryBrand && (
-							<EntityBadge
-								image={primaryBrand.image}
-								name={typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
-								onClick={onFilterToggle ? () => { onFilterToggle("brands", primaryBrand.id); } : undefined}
-								isSelected={filters?.brands.includes(primaryBrand.id)}
-							/>
-						)}
-						{primarySeries && (
-							<EntityBadge
-								image={primarySeries.image}
-								name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
-								onClick={onFilterToggle ? () => { onFilterToggle("series", primarySeries.id); } : undefined}
-								isSelected={filters?.series.includes(primarySeries.id)}
-							/>
-						)}
-					</Group>
-				</Stack>
+				<Group gap="xs" wrap="nowrap" justify="center" py="xs">
+					{primaryCategory && (
+						<EntityBadge
+							image={primaryCategory.image}
+							name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja}
+							onClick={onFilterToggle ? () => { onFilterToggle("categories", primaryCategory.id); } : undefined}
+							isSelected={filters?.categories.includes(primaryCategory.id)}
+						/>
+					)}
+					{primaryGrade && (
+						<EntityBadge
+							image={primaryGrade.image}
+							name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja}
+							onClick={onFilterToggle ? () => { onFilterToggle("grades", primaryGrade.id); } : undefined}
+							isSelected={filters?.grades.includes(primaryGrade.id)}
+						/>
+					)}
+					{primaryBrand && (
+						<EntityBadge
+							image={primaryBrand.image}
+							name={typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
+							onClick={onFilterToggle ? () => { onFilterToggle("brands", primaryBrand.id); } : undefined}
+							isSelected={filters?.brands.includes(primaryBrand.id)}
+						/>
+					)}
+					{primarySeries && (
+						<EntityBadge
+							image={primarySeries.image}
+							name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
+							onClick={onFilterToggle ? () => { onFilterToggle("series", primarySeries.id); } : undefined}
+							isSelected={filters?.series.includes(primarySeries.id)}
+						/>
+					)}
+				</Group>
 			</Card>
 		</Link>
 	);
