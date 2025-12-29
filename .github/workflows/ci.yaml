@@ -196,31 +196,10 @@ jobs:
       - name: Test
         run: pnpm nx test next --passWithNoTests
 
-      - name: Increase file descriptor limits
-        run: |
-          # Increase system-wide limits for Nx caching with 15k+ static pages
-          echo "Current limits:"
-          ulimit -n
-          cat /proc/sys/fs/file-max
-          # Increase kernel file-max
-          sudo sysctl -w fs.file-max=500000
-          # Increase nofile limits
-          echo "* soft nofile 65536" | sudo tee -a /etc/security/limits.conf
-          echo "* hard nofile 65536" | sudo tee -a /etc/security/limits.conf
-          echo "root soft nofile 65536" | sudo tee -a /etc/security/limits.conf
-          echo "root hard nofile 65536" | sudo tee -a /etc/security/limits.conf
-          # Apply to current session
-          sudo prlimit --nofile=65536 --pid $$
-          echo "New limits:"
-          ulimit -n
-
       - name: Build Next.js static export
         env:
           NEXT_PUBLIC_APP_VERSION: ${{ needs.prepare-release.outputs.version || '0.0.1' }}
-        run: |
-          # Ensure high file limits in this shell
-          ulimit -n 65536 2>/dev/null || true
-          pnpm nx build next -- --turbo
+        run: pnpm nx build next -- --turbo
 
       - name: Verify build output
         run: |
