@@ -191,10 +191,56 @@ jobs:
       - name: Test
         run: pnpm nx test next --passWithNoTests
 
+      # Build dependencies first (these are cached by Nx Cloud)
+      - name: Build dependencies
+        run: pnpm nx run-many -t build -p types,utils,data
+
+      # Tarball-based caching for Next.js output (bypasses EMFILE issue)
+      - name: Compute Next.js output cache key
+        id: next-output-key
+        run: |
+          # Hash all inputs that affect the static build output
+          HASH="${{ hashFiles('apps/next/src/**/*', 'apps/next/next.config.ts', 'apps/next/public/**/*', 'data/dist/**/*', 'packages/types/dist/**/*', 'packages/utils/dist/**/*', 'pnpm-lock.yaml') }}"
+          echo "key=next-output-v1-${HASH}" >> $GITHUB_OUTPUT
+          echo "Cache key: next-output-v1-${HASH}"
+
+      - name: Restore Next.js output from cache
+        id: next-output-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: next-output.tar.gz
+          key: ${{ steps.next-output-key.outputs.key }}
+
+      - name: Extract cached Next.js output
+        if: steps.next-output-cache.outputs.cache-hit == 'true'
+        run: |
+          echo "=== Extracting cached Next.js output ==="
+          tar -xzf next-output.tar.gz
+          echo "Extracted $(find apps/next/out -type f | wc -l) files"
+          ls -la apps/next/out | head -10
+
       - name: Build Next.js static export
+        if: steps.next-output-cache.outputs.cache-hit != 'true'
         env:
           NEXT_PUBLIC_APP_VERSION: ${{ needs.prepare-release.outputs.version || '0.0.1' }}
-        run: pnpm nx build next -- --turbo
+        run: |
+          echo "=== Building Next.js static export (cache miss) ==="
+          pnpm nx build next --skip-nx-cache -- --turbo
+
+      - name: Archive Next.js output for caching
+        if: steps.next-output-cache.outputs.cache-hit != 'true'
+        run: |
+          echo "=== Archiving Next.js output ==="
+          tar -czf next-output.tar.gz apps/next/out
+          ls -lh next-output.tar.gz
+          echo "Archive created: $(du -h next-output.tar.gz | cut -f1)"
+
+      - name: Save Next.js output cache
+        if: steps.next-output-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: next-output.tar.gz
+          key: ${{ steps.next-output-key.outputs.key }}
 
       - name: Verify build output
         run: |
@@ -203,6 +249,7 @@ jobs:
             exit 1
           fi
           echo "Build verified successfully"
+          echo "Total files: $(find apps/next/out -type f | wc -l)"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
