@@ -92,7 +92,7 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 }
 
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
-function EntityBadge({ image, name, onClick }: { image?: string; name: string; onClick?: () => void }): React.ReactElement {
+function EntityBadge({ image, name, onClick, isSelected }: { image?: string; name: string; onClick?: () => void; isSelected?: boolean }): React.ReactElement {
 	const handleClick = (e: React.MouseEvent) => {
 		if (onClick) {
 			e.preventDefault();
@@ -115,7 +115,9 @@ function EntityBadge({ image, name, onClick }: { image?: string; name: string; o
 					alignItems: "center",
 					justifyContent: "center",
 					cursor: onClick ? "pointer" : "default",
-					transition: "transform 0.1s, box-shadow 0.1s",
+					transition: "transform 0.1s, box-shadow 0.1s, outline 0.1s",
+					outline: isSelected ? "2px solid var(--mantine-color-blue-6)" : "none",
+					outlineOffset: -2,
 				}}
 				className={onClick ? "entity-badge-clickable" : undefined}
 			>
@@ -135,7 +137,7 @@ function EntityBadge({ image, name, onClick }: { image?: string; name: string; o
 	);
 }
 
-function ItemCard({ item, index, onFilterToggle }: { item: Item; index: number; onFilterToggle?: (type: keyof FilterState, id: string) => void }): React.ReactElement {
+function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index: number; onFilterToggle?: (type: keyof FilterState, id: string) => void; filters?: FilterState }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
 	// First batch loads eagerly for fastest initial paint
 	// Subsequent batches still use eager loading since native lazy doesn't work reliably
@@ -265,6 +267,7 @@ function ItemCard({ item, index, onFilterToggle }: { item: Item; index: number; 
 								image={primaryGrade.image}
 								name={typeof primaryGrade.name === "string" ? primaryGrade.name : primaryGrade.name.en ?? primaryGrade.name.ja}
 								onClick={onFilterToggle ? () => { onFilterToggle("grades", primaryGrade.id); } : undefined}
+								isSelected={filters?.grades.includes(primaryGrade.id)}
 							/>
 						)}
 						{primaryBrand && (
@@ -272,6 +275,7 @@ function ItemCard({ item, index, onFilterToggle }: { item: Item; index: number; 
 								image={primaryBrand.image}
 								name={typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
 								onClick={onFilterToggle ? () => { onFilterToggle("brands", primaryBrand.id); } : undefined}
+								isSelected={filters?.brands.includes(primaryBrand.id)}
 							/>
 						)}
 						{primarySeries && (
@@ -279,6 +283,7 @@ function ItemCard({ item, index, onFilterToggle }: { item: Item; index: number; 
 								image={primarySeries.image}
 								name={typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
 								onClick={onFilterToggle ? () => { onFilterToggle("series", primarySeries.id); } : undefined}
+								isSelected={filters?.series.includes(primarySeries.id)}
 							/>
 						)}
 						{primaryCategory && (
@@ -286,6 +291,7 @@ function ItemCard({ item, index, onFilterToggle }: { item: Item; index: number; 
 								image={primaryCategory.image}
 								name={typeof primaryCategory.name === "string" ? primaryCategory.name : primaryCategory.name.en ?? primaryCategory.name.ja}
 								onClick={onFilterToggle ? () => { onFilterToggle("categories", primaryCategory.id); } : undefined}
+								isSelected={filters?.categories.includes(primaryCategory.id)}
 							/>
 						)}
 					</Group>
@@ -510,7 +516,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 									data-item-id={item.id}
 									style={{ height: CARD_TOTAL_HEIGHT }}
 								>
-									<ItemCard item={item} index={globalIndex} onFilterToggle={onFilterToggle} />
+									<ItemCard item={item} index={globalIndex} onFilterToggle={onFilterToggle} filters={filters} />
 								</Box>
 							);
 						})}
