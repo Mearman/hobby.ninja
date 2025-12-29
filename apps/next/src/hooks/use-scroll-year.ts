@@ -16,8 +16,8 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 
 	const updateCurrentYear = useCallback(() => {
 		const visibleYears = visibleYearsRef.current;
+		// Keep the last known year if nothing is currently visible
 		if (visibleYears.size === 0) {
-			setCurrentYear(undefined);
 			return;
 		}
 
@@ -32,7 +32,9 @@ export function useScrollYear(containerSelector?: string): number | undefined {
 			}
 		}
 
-		setCurrentYear(topYear);
+		if (topYear !== undefined) {
+			setCurrentYear(topYear);
+		}
 	}, []);
 
 	useEffect(() => {
