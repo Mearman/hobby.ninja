@@ -102,6 +102,7 @@ export function useVirtualGrid<T>({
 	const virtualItems = virtualizer.getVirtualItems();
 
 	// Get items for each virtual row
+	// Adjust start positions to be container-relative (subtract scrollMargin)
 	const virtualRows = useMemo(() => {
 		return virtualItems.map((virtualRow) => {
 			const startIndex = virtualRow.index * columnCount;
@@ -110,12 +111,13 @@ export function useVirtualGrid<T>({
 
 			return {
 				index: virtualRow.index,
-				start: virtualRow.start,
+				// Convert window-relative to container-relative position
+				start: virtualRow.start - computedScrollMargin,
 				size: virtualRow.size,
 				items: rowItems,
 			};
 		});
-	}, [virtualItems, columnCount, items]);
+	}, [virtualItems, columnCount, items, computedScrollMargin]);
 
 	// Scroll to a specific item index
 	const scrollToIndex = useCallback(
