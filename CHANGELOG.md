@@ -1,3 +1,19 @@
+## [1.7.0](https://github.com/Mearman/hobby.ninja/compare/v1.6.0...v1.7.0) (2025-12-29)
+
+### Features
+
+- **next:** add dual thumb indicators to year scrollbar ([2f71a2b](https://github.com/Mearman/hobby.ninja/commit/2f71a2bd188e5f8a2f5717117bffbdd883ec0da2))
+
+### Bug Fixes
+
+- **next:** improve scroll year detection smoothness and accuracy ([ef48801](https://github.com/Mearman/hobby.ninja/commit/ef48801a760edf83338f05bf33964519b773ef7b))
+- **next:** improve scroll year detection with fresh position calculations ([c9bfa69](https://github.com/Mearman/hobby.ninja/commit/c9bfa690c79899ad0ed39da04fa7f4085bae7664))
+- **next:** persist year scrollbar target indicator until scroll completes ([e74b0c1](https://github.com/Mearman/hobby.ninja/commit/e74b0c130645c076d101aeffe4104c5081e1c03b))
+
+### Performance
+
+- **ci:** implement tarball-based caching for Next.js output ([73da343](https://github.com/Mearman/hobby.ninja/commit/73da343489f7a7bfbdd2edd92dee3f7709db1649))
+
 ## [1.6.0](https://github.com/Mearman/hobby.ninja/compare/v1.5.0...v1.6.0) (2025-12-29)
 
 ### Features
