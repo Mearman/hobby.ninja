@@ -52,6 +52,14 @@ export interface ManualSummary {
 }
 
 /**
+ * Tag reference with modifier and resolved display name
+ */
+export interface TagSummary {
+	modifier: string;
+	name: string;
+}
+
+/**
  * Lightweight item data for page rendering
  * Only includes fields actually displayed on the item detail page
  */
@@ -79,6 +87,9 @@ export interface ItemPageData {
 	categories: NamedRef[];
 	brands: NamedRef[];
 	series: NamedRef[];
+
+	// Tags (e.g., "HOBBY ONLINE SHOP", "EVENT")
+	tags: TagSummary[];
 
 	// Manual summary (if available)
 	manual?: ManualSummary;
@@ -164,6 +175,12 @@ export function getItemPageData(id: string): ItemPageData | undefined {
 		}
 	}
 
+	// Extract tags with resolved names
+	const tags: TagSummary[] = (item.tags ?? []).map((tag) => ({
+		modifier: tag.modifier,
+		name: tag.en ?? tag.ja,
+	}));
+
 	return {
 		id: item.id,
 		name: getNodeDisplayName(item),
@@ -182,6 +199,7 @@ export function getItemPageData(id: string): ItemPageData | undefined {
 		categories,
 		brands,
 		series,
+		tags,
 		manual,
 	};
 }
