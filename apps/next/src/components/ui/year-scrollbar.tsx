@@ -157,6 +157,7 @@ export function YearScrollbar({
 					style={{
 						top: `calc(${thumbPosition * 100}% - 12px)`,
 						transition: "top 50ms ease-out",
+						zIndex: 1,
 					}}
 				>
 					<Box
