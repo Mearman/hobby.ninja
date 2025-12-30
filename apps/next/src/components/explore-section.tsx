@@ -1,7 +1,7 @@
 "use client";
 
 import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Box, Card, Text, Tooltip } from "@mantine/core";
+import { Box, Card, Skeleton, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { forwardRef, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
 
@@ -218,9 +218,39 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 				radius="md"
 				withBorder={true}
 				h="100%"
-				style={{ cursor: "pointer", overflow: "hidden", display: "flex", flexDirection: "column" }}
+				style={{ cursor: "pointer", overflow: "hidden", display: "flex", flexDirection: "column", position: "relative" }}
 				className="item-card-hover"
 			>
+				{/* Skeleton overlay - shows while image is loading */}
+				{!imageLoaded && hasValidImage && (
+					<Box
+						style={{
+							position: "absolute",
+							inset: 0,
+							zIndex: 10,
+							display: "flex",
+							flexDirection: "column",
+							backgroundColor: "var(--mantine-color-body)",
+							borderRadius: "inherit",
+						}}
+					>
+						<Skeleton
+							style={{ aspectRatio: "1 / 1", width: "100%", flexShrink: 0 }}
+							radius={0}
+							animate={true}
+						/>
+						<Box px="xs" pt="xs" pb={4} style={{ flex: "1 1 auto" }}>
+							<Skeleton height={16} radius="sm" mb={8} />
+							<Skeleton height={16} radius="sm" width="70%" />
+						</Box>
+						<Box py={4} px={4} style={{ display: "flex", gap: 4 }}>
+							<Skeleton height={32} radius={4} style={{ flex: 1 }} />
+							<Skeleton height={32} radius={4} style={{ flex: 1 }} />
+							<Skeleton height={32} radius={4} style={{ flex: 1 }} />
+						</Box>
+					</Box>
+				)}
+
 				<Box
 					bg="gray.1"
 					style={{
