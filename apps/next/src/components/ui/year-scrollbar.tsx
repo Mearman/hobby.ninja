@@ -3,7 +3,7 @@
 import { ActionIcon, Box, rem, Text, Transition } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconArrowUp } from "@tabler/icons-react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 interface YearScrollbarProps {
 	/** All available years sorted newest first */
@@ -41,6 +41,7 @@ export function YearScrollbar({
 	getYearPosition,
 }: YearScrollbarProps): React.ReactElement | null {
 	const trackRef = useRef<HTMLDivElement>(null);
+	const thumbRef = useRef<HTMLDivElement>(null);
 	const [isDragging, setIsDragging] = useState(false);
 	const [dragYear, setDragYear] = useState<number | null>(null);
 	// Target year persists after release until scroll completes
@@ -114,22 +115,42 @@ export function YearScrollbar({
 		yearToPositionRef.current = yearToPosition;
 	}, [yearToPosition]);
 
-	// Track scroll position directly and clear target when reached
+	// Set initial thumb position before first paint (prevents flash at wrong position)
+	useLayoutEffect(() => {
+		if (thumbRef.current) {
+			const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+			const progress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
+			const clampedProgress = Math.max(0, Math.min(1, progress));
+			const size = window.innerWidth >= 768 ? THUMB_SIZE : THUMB_SIZE_MOBILE;
+			thumbRef.current.style.transition = "none";
+			thumbRef.current.style.top = `calc(${clampedProgress * 100}% - ${size / 2}px)`;
+		}
+	}, []); // Run once on mount only
+
+	// Track scroll position and update thumb via direct DOM manipulation
 	useEffect(() => {
 		const updateScrollProgress = () => {
 			const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-			if (scrollHeight > 0) {
-				const progress = window.scrollY / scrollHeight;
-				const clampedProgress = Math.max(0, Math.min(1, progress));
-				setScrollProgress(clampedProgress);
+			if (scrollHeight <= 0) return;
 
-				// Clear target when scroll position is close to target
-				const currentTarget = targetYearRef.current;
-				if (currentTarget !== null) {
-					const targetPos = yearToPositionRef.current(currentTarget);
-					if (Math.abs(clampedProgress - targetPos) < SCROLL_ARRIVAL_THRESHOLD) {
-						setTargetYear(null);
-					}
+			const progress = window.scrollY / scrollHeight;
+			const clampedProgress = Math.max(0, Math.min(1, progress));
+
+			setScrollProgress(clampedProgress);
+
+			// Update thumb position via DOM
+			if (thumbRef.current) {
+				const size = window.innerWidth >= 768 ? THUMB_SIZE : THUMB_SIZE_MOBILE;
+				thumbRef.current.style.transition = "none";
+				thumbRef.current.style.top = `calc(${clampedProgress * 100}% - ${size / 2}px)`;
+			}
+
+			// Clear target when scroll position is close to target
+			const currentTarget = targetYearRef.current;
+			if (currentTarget !== null) {
+				const targetPos = yearToPositionRef.current(currentTarget);
+				if (Math.abs(clampedProgress - targetPos) < SCROLL_ARRIVAL_THRESHOLD) {
+					setTargetYear(null);
 				}
 			}
 		};
@@ -217,8 +238,6 @@ export function YearScrollbar({
 
 	if (years.length === 0) return null;
 
-	// Thumb uses scroll progress directly for smooth movement
-	const thumbPosition = scrollProgress;
 	// Show target thumb when navigating
 	const showTargetThumb = activeTargetYear !== null;
 	// Show scroll-to-top button when not at top
@@ -328,20 +347,21 @@ export function YearScrollbar({
 					);
 				})}
 
-				{/* Current scroll position thumb - moves with scroll */}
-				<Box
-					pos="absolute"
-					left="50%"
+				{/* Current scroll position thumb - moves with scroll via direct DOM manipulation */}
+				<div
+					ref={thumbRef}
 					style={{
-						top: `calc(${thumbPosition * 100}% - ${thumbSize / 2}px)`,
+						position: "absolute",
+						left: "50%",
 						transform: CENTER_TRANSFORM,
+						// top is controlled via direct DOM manipulation
 					}}
 				>
-					<Box
-						w={thumbSize}
-						h={thumbSize}
-						bg={showTargetThumb ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)"}
+					<div
 						style={{
+							width: thumbSize,
+							height: thumbSize,
+							backgroundColor: showTargetThumb ? "var(--mantine-color-dark-4)" : "var(--mantine-color-blue-filled)",
 							borderRadius: thumbSize / 2,
 							border: "2px solid white",
 							boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
@@ -349,7 +369,7 @@ export function YearScrollbar({
 							transition: "background-color 150ms ease, opacity 150ms ease",
 						}}
 					/>
-				</Box>
+				</div>
 
 				{/* Target thumb - shows where you're going */}
 				{showTargetThumb && targetPosition !== null && (
