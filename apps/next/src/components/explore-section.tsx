@@ -3,7 +3,7 @@
 import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
 import { Box, Card, Skeleton, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
-import { forwardRef, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import { useVirtualGrid } from "@/hooks/use-virtual-grid";
 
@@ -521,25 +521,51 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 	);
 
 	// Virtual grid for efficient rendering of large item lists
-	const { listRef, virtualRows, totalHeight, columnCount, scrollToIndex } = useVirtualGrid({
+	// High overscan (15 rows) ensures smooth scrolling during year navigation
+	const { listRef, virtualRows, totalHeight, columnCount, rowHeight, scrollToIndex } = useVirtualGrid({
 		items: sortedItems,
 		columns: GRID_COLUMNS,
 		gap: GRID_GAP,
 		fixedCardHeight: FIXED_CARD_HEIGHT,
 		dynamicHeightMultiplier: BADGE_HEIGHT_MULTIPLIER,
-		overscan: 3,
+		overscan: 15,
 	});
+
+	// Scroll to year with teleport + smooth scroll for long distances
+	const scrollToYear = useCallback((year: number) => {
+		const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
+		if (firstIndex === -1) return;
+
+		const targetRowIndex = Math.floor(firstIndex / columnCount);
+		const currentScrollTop = window.scrollY;
+		const targetScrollTop = targetRowIndex * rowHeight;
+		const scrollDistance = Math.abs(targetScrollTop - currentScrollTop);
+
+		// For short distances (< 30 rows worth), just smooth scroll directly
+		const SHORT_DISTANCE_ROWS = 30;
+		const shortDistanceThreshold = SHORT_DISTANCE_ROWS * rowHeight;
+		if (scrollDistance < shortDistanceThreshold) {
+			scrollToIndex(firstIndex);
+			return;
+		}
+
+		// For long distances: teleport close to destination, then smooth scroll the rest
+		// This avoids blank areas during scroll since we're always within overscan range
+		const TELEPORT_BUFFER_ROWS = 20;
+		const teleportRowIndex = targetScrollTop > currentScrollTop
+			? Math.max(0, targetRowIndex - TELEPORT_BUFFER_ROWS) // scrolling down
+			: Math.min(Math.ceil(sortedItems.length / columnCount) - 1, targetRowIndex + TELEPORT_BUFFER_ROWS); // scrolling up
+
+		const teleportPosition = teleportRowIndex * rowHeight;
+
+		// Instantly teleport to near destination, then immediately start smooth scroll
+		window.scrollTo({ top: teleportPosition, behavior: "instant" });
+		scrollToIndex(firstIndex);
+	}, [sortedItems, columnCount, rowHeight, scrollToIndex]);
 
 	// Expose scrollToYear and getYearScrollPosition via ref
 	useImperativeHandle(ref, () => ({
-		scrollToYear: (year: number) => {
-			// Find the index of the first item with this year in the sorted list
-			const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
-			if (firstIndex === -1) return;
-
-			// Scroll to that item using virtual grid
-			scrollToIndex(firstIndex);
-		},
+		scrollToYear,
 		getYearScrollPosition: (year: number) => {
 			// Find the index of the first item with this year
 			const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
@@ -548,7 +574,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			// Return as fraction of total items (approximates scroll position)
 			return sortedItems.length > 0 ? firstIndex / sortedItems.length : null;
 		},
-	}), [sortedItems, scrollToIndex]);
+	}), [sortedItems, scrollToYear]);
 
 	const hasActiveFilters = filters && (
 		filters.categories.length > 0 ||
