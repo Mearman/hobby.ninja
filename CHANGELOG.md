@@ -1,3 +1,59 @@
+## [1.8.0](https://github.com/Mearman/hobby.ninja/compare/v1.7.1...v1.8.0) (2025-12-30)
+
+### Features
+
+- **next:** add CSS transition-based thumb animation ([4b4ac76](https://github.com/Mearman/hobby.ninja/commit/4b4ac76ca89a4d871e0c15647a957a4e4d57d925))
+- **next:** add skeleton loading overlay to item cards ([9a9405d](https://github.com/Mearman/hobby.ninja/commit/9a9405d58c78d7bea25ba7077d1475e2fc1ddd4c))
+- **next:** display badges in 2x2 grid layout ([b71efb6](https://github.com/Mearman/hobby.ninja/commit/b71efb63ee2c5e1fb70b9a899e472b1dff0dc1ae))
+- **next:** implement teleport scroll for fast year navigation ([60be4be](https://github.com/Mearman/hobby.ninja/commit/60be4bedda5256833f9305040476fe3b1e52ca08))
+- **next:** make explore card title and badges share space flexibly ([722a0e6](https://github.com/Mearman/hobby.ninja/commit/722a0e64c6994301b3173680f4a85637fff2c21d))
+- **next:** make YearScrollbar responsive for mobile ([13916cf](https://github.com/Mearman/hobby.ninja/commit/13916cf05257349f831318f1453de01c5916b98c))
+
+### Bug Fixes
+
+- **data:** add 30ML category to 9 uncategorized items ([21f6f41](https://github.com/Mearman/hobby.ninja/commit/21f6f41243adb1bf1b6cc710cc1f62d4fb61d471))
+- **data:** add characterplastic category to 144 uncategorized items ([1c94ff8](https://github.com/Mearman/hobby.ninja/commit/1c94ff8034201fcf35daa8a1b60f41483ed59d4c))
+- **data:** add gunpla category to 74 uncategorized items ([c7ddfa6](https://github.com/Mearman/hobby.ninja/commit/c7ddfa6972613f02101c1fa8d31d4b996ea6d404))
+- **next:** add dynamic height multiplier for badge row scaling ([8d9373e](https://github.com/Mearman/hobby.ninja/commit/8d9373e62f7b3622a9da4153e823050537eca9b4))
+- **next:** add responsive right padding for year scrollbar clearance ([4fdee41](https://github.com/Mearman/hobby.ninja/commit/4fdee41d356d068e42b72ad34ca2753f6a106f50))
+- **next:** align explore card badges to bottom of card ([dcff384](https://github.com/Mearman/hobby.ninja/commit/dcff3840a7814cd6216e377bb0e6955b896e15f8))
+- **next:** allow touch scrolling past YearScrollbar year labels on tablet ([7985876](https://github.com/Mearman/hobby.ninja/commit/798587645116902176642ea641db34487c6938bc))
+- **next:** calculate virtual grid row height dynamically ([5662ab8](https://github.com/Mearman/hobby.ninja/commit/5662ab821e9a16e351a26fa0858cfdd99d8cda0e))
+- **next:** evenly distribute badges horizontally ([f1d7e72](https://github.com/Mearman/hobby.ninja/commit/f1d7e721535b7112bc75f906c7c3ffa683cbfeb3))
+- **next:** fix card image sizing and bottom gap issues ([a7fc6cd](https://github.com/Mearman/hobby.ninja/commit/a7fc6cda50bcd26c4e7633d5b666a60b1a94add1))
+- **next:** improve badge text display for small sizes ([25b79eb](https://github.com/Mearman/hobby.ninja/commit/25b79eb682f41de4e944f8f872cbdf9ccc430cf3))
+- **next:** improve entity badge responsiveness on explore cards ([2ac4f63](https://github.com/Mearman/hobby.ninja/commit/2ac4f63980a9b9e385fff1e97d7b8a0d8a6ffc25))
+- **next:** improve header responsiveness across breakpoints ([9853735](https://github.com/Mearman/hobby.ninja/commit/9853735ebc57ff43b7cd82724fbd8052f350ed5c))
+- **next:** make all explore cards the same height ([a1ac676](https://github.com/Mearman/hobby.ninja/commit/a1ac676b97a68fe0f24441082e2fe5113f7ceed4))
+- **next:** make theme toggle icon same size as other header icons ([e57ad8f](https://github.com/Mearman/hobby.ninja/commit/e57ad8fbae16461062583384d17deebfc77a4a4e))
+- **next:** prevent page scroll interception during YearScrollbar drag ([9fc4e1f](https://github.com/Mearman/hobby.ninja/commit/9fc4e1f6cbddef5fb8fa76ecc485af0930c78046))
+- **next:** properly center scroll-to-top button with track ([202fd2c](https://github.com/Mearman/hobby.ninja/commit/202fd2cfb09e6495624aadbdf7681ce8dd90804b))
+- **next:** reduce badge gaps and increase badge size ([13b3f1f](https://github.com/Mearman/hobby.ninja/commit/13b3f1f795380551a69c27c87335af68dbc6ca78))
+- **next:** reduce bottom padding below card badges ([0385d8a](https://github.com/Mearman/hobby.ninja/commit/0385d8aaa3b2a5450076594ef4194290dba4984e))
+- **next:** reduce YearScrollbar height to 70vh to clear header ([877304e](https://github.com/Mearman/hobby.ninja/commit/877304ecf3d7383862f8ceceb95668cddf21d4b4))
+- **next:** remove fixed height from card containers ([cd2a23f](https://github.com/Mearman/hobby.ninja/commit/cd2a23ff47b5f8c5048682f5253fcf8a9c729e97))
+- **next:** restore vertical gaps between explore card rows ([a35da8b](https://github.com/Mearman/hobby.ninja/commit/a35da8be29a104884de0488b55c1ea5049804180))
+- **next:** set fixed height for badge row to ensure uniform card sizes ([3ca76ef](https://github.com/Mearman/hobby.ninja/commit/3ca76ef7e1783873a95f034484c5eb9ceedd69c5))
+- **next:** skip scroll handler updates during thumb animation ([9e2053d](https://github.com/Mearman/hobby.ninja/commit/9e2053d2861f8412cb0815c439190a52aa388ad6))
+- **next:** stop propagation on scroll-to-top to prevent track click ([5f73c4f](https://github.com/Mearman/hobby.ninja/commit/5f73c4f4d9cfae2201030300e413bf471be00a1e))
+- **next:** uniform badge sizing and remove extra padding ([ba61ddd](https://github.com/Mearman/hobby.ninja/commit/ba61ddd2ef660d41b154a3fc18f3c045aa990533))
+- **next:** use CSS grid for uniform badge sizing across all cards ([1e4cd00](https://github.com/Mearman/hobby.ninja/commit/1e4cd0089f5e13bd40cf68c177bfd097ea90fb7b))
+- **next:** use flexbox wrap for badge layout with centered overflow ([57f21b3](https://github.com/Mearman/hobby.ninja/commit/57f21b38ab559125067f5a17dc5b14654be29201))
+
+### Refactoring
+
+- **next:** change explore card badges to single flexible row ([5ffb4c4](https://github.com/Mearman/hobby.ninja/commit/5ffb4c437b548689e2dd9acaef8aca2476f92510))
+- **next:** convert YearScrollbar thumb to direct DOM manipulation ([d43547a](https://github.com/Mearman/hobby.ninja/commit/d43547a2ade4e436890ee059032ef8e049bb50d1))
+- **next:** integrate scroll-to-top button into YearScrollbar ([6822d16](https://github.com/Mearman/hobby.ninja/commit/6822d16bf8ae350c6b170d3e8bc526b943fb2280))
+- **next:** move explore card title below product image ([acdac4f](https://github.com/Mearman/hobby.ninja/commit/acdac4fbe496b915977719549a58da31efbcf096))
+- **next:** reorder explore card badges with category first ([311702d](https://github.com/Mearman/hobby.ninja/commit/311702d79ae2253c2b1a1523a88b0366d32fe58a))
+- **next:** use virtualizer scrollToIndex and expose row metrics ([4209d36](https://github.com/Mearman/hobby.ninja/commit/4209d3620907b1e320cdc7e9768864066d31c133))
+
+### Styling
+
+- **next:** increase YearScrollbar height to nearly full viewport ([3a3c90e](https://github.com/Mearman/hobby.ninja/commit/3a3c90ef10e9f3bfda7c2b28eb14be6061581e88))
+- **next:** position scroll-to-top as final point below track ([91e6b96](https://github.com/Mearman/hobby.ninja/commit/91e6b964904f2e72cc2004d68044c8864dccc3f8))
+
 ## [1.7.1](https://github.com/Mearman/hobby.ninja/compare/v1.7.0...v1.7.1) (2025-12-29)
 
 ### Bug Fixes
