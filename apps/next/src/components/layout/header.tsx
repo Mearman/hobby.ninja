@@ -5,6 +5,8 @@ import { useDebouncedValue } from "@mantine/hooks";
 import {
 	IconDatabase,
 	IconDeviceDesktop,
+	IconFilterDown,
+	IconFilterUp,
 	IconFolder,
 	IconHome,
 	IconInfoCircle,
@@ -18,6 +20,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
+import { useStickyFilters } from "@/contexts/sticky-filters-context";
 import { TIMING, UI } from "@/lib/constants";
 import { useThemeContext } from "@/providers/mantine-provider";
 import { header, headerContent, logo, nav, navLink } from "@/styles/components.css";
@@ -32,6 +35,10 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [debouncedSearchQuery] = useDebouncedValue(searchQuery, TIMING.DEBOUNCE_DEFAULT);
 	const { colorScheme, cycleTheme } = useThemeContext();
+	const stickyFilters = useStickyFilters();
+
+	// Show filter toggle on homepage (always visible)
+	const showFilterToggle = pathname === "/";
 
 	const getThemeIcon = (): React.ReactNode => {
 		switch (colorScheme) {
@@ -156,6 +163,20 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 							}}
 						/>
 					</Box>
+
+					{/* Sticky filters toggle - always visible on homepage */}
+					{showFilterToggle && (
+						<Tooltip label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}>
+							<ActionIcon
+								size="lg"
+								variant="subtle"
+								onClick={stickyFilters.toggleExpanded}
+								aria-label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}
+							>
+								{stickyFilters.expanded ? <IconFilterUp size={UI.ICON_SIZE_LG} /> : <IconFilterDown size={UI.ICON_SIZE_LG} />}
+							</ActionIcon>
+						</Tooltip>
+					)}
 
 					{/* Mobile search button */}
 					<ActionIcon

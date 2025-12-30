@@ -13,7 +13,7 @@ import {
 	Title,
 	Tooltip,
 } from "@mantine/core";
-import { IconArrowNarrowRight, IconCalendar, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconCalendar, IconChevronDown, IconChevronUp, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -21,6 +21,7 @@ import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
 import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
+import { useStickyFilters } from "@/contexts/sticky-filters-context";
 
 // P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
 const PBANDAI_CHILD_IDS = new Set(["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"]);
@@ -97,8 +98,8 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 
 	// Ref for filter section to detect when scrolled past
 	const filterSectionRef = useRef<HTMLDivElement>(null);
-	// Whether to show sticky filter bar
-	const [showStickyFilters, setShowStickyFilters] = useState(false);
+	// Sticky filters context for shared state with header
+	const stickyFilters = useStickyFilters();
 
 	// Handle year selection from scrollbar - scrolls to that year in the virtual grid
 	const handleYearSelect = useCallback((year: number) => {
@@ -116,13 +117,13 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 			if (!filterSectionRef.current) return;
 			const rect = filterSectionRef.current.getBoundingClientRect();
 			// Show sticky bar when filter section bottom is above viewport top
-			setShowStickyFilters(rect.bottom < 0);
+			stickyFilters.setIsVisible(rect.bottom < 0);
 		};
 
 		handleScroll(); // Check initial state
 		window.addEventListener("scroll", handleScroll, { passive: true });
 		return () => { window.removeEventListener("scroll", handleScroll); };
-	}, []);
+	}, [stickyFilters]);
 
 	// Sort mode per filter type
 	const [sortModes, setSortModes] = useState<FilterSortModes>({
@@ -278,6 +279,11 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		filters.grades.length > 0 ||
 		filters.scales.length > 0 ||
 		filters.years.length > 0;
+
+	// Sync hasActiveFilters to context for header button visibility
+	useEffect(() => {
+		stickyFilters.setHasActiveFilters(hasActiveFilters);
+	}, [hasActiveFilters, stickyFilters]);
 
 	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length + filters.years.length;
 
@@ -494,232 +500,245 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 					zIndex: 100,
 					backgroundColor: "var(--mantine-color-body)",
 					borderBottom: "1px solid var(--mantine-color-default-border)",
-					transform: showStickyFilters && hasActiveFilters ? "translateY(0)" : "translateY(-100%)",
-					opacity: showStickyFilters && hasActiveFilters ? 1 : 0,
+					transform: stickyFilters.isVisible && hasActiveFilters ? "translateY(0)" : "translateY(-100%)",
+					opacity: stickyFilters.isVisible && hasActiveFilters ? 1 : 0,
 					transition: "transform 300ms ease-out, opacity 300ms ease-out",
 					paddingRight: 80, // Account for year scrollbar
 				}}
 			>
 				<Container size="xl" py="xs" w="100%">
-					<Group justify="space-between" align="center" mb="xs">
+					<Group justify="space-between" align="center" mb={stickyFilters.expanded ? "xs" : 0}>
 						<Group gap="sm">
 							<Title order={3} size="h4" fw={600}>
 								Active Filters
 							</Title>
+							<Text size="sm" c="dimmed">
+								({selectedCount})
+							</Text>
 							<Button
 								variant="subtle"
 								size="xs"
 								leftSection={<IconX size={14} />}
 								onClick={clearFilters}
 							>
-								Clear {selectedCount}
+								Clear all
 							</Button>
 						</Group>
+						<ActionIcon
+							variant="subtle"
+							size="sm"
+							onClick={stickyFilters.toggleExpanded}
+							aria-label={stickyFilters.expanded ? "Collapse filters" : "Expand filters"}
+						>
+							{stickyFilters.expanded ? <IconChevronUp size={18} /> : <IconChevronDown size={18} />}
+						</ActionIcon>
 					</Group>
-					<Stack gap={6}>
-						{categoriesSelectedOnly.length > 0 && (
-							<CollapsibleGrid
-								title="Category"
-								totalCount={categoriesSelectedOnly.length + (filters.categories.includes(OTHER_FILTER_ID) ? 1 : 0)}
-								compactMode={true}
-								hideWhenEmpty={true}
-							>
-								{categoriesSelectedOnly.map((category) => (
-									<EntityCard
-										key={category.id}
-										id={category.id}
-										name={category.name}
-										itemIds={category.itemIds}
-										image={category.image}
-										type="category"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("categories", category.id); }}
-									/>
-								))}
-								{filters.categories.includes(OTHER_FILTER_ID) && (
-									<EntityCard
-										key={OTHER_FILTER_ID}
-										id={OTHER_FILTER_ID}
-										name="Other"
-										itemIds={Array.from({ length: otherCounts.categories }, () => "")}
-										type="category"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("categories", OTHER_FILTER_ID); }}
-									/>
-								)}
-							</CollapsibleGrid>
-						)}
-						{(gradesSelectedOnly.length > 0 || filters.grades.includes(OTHER_FILTER_ID)) && (
-							<CollapsibleGrid
-								title="Grade"
-								totalCount={gradesSelectedOnly.length + (filters.grades.includes(OTHER_FILTER_ID) ? 1 : 0)}
-								compactMode={true}
-								hideWhenEmpty={true}
-							>
-								{gradesSelectedOnly.map((grade) => (
-									<EntityCard
-										key={grade.id}
-										id={grade.id}
-										name={grade.name}
-										itemIds={grade.itemIds}
-										image={grade.image}
-										type="grade"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("grades", grade.id); }}
-									/>
-								))}
-								{filters.grades.includes(OTHER_FILTER_ID) && (
-									<EntityCard
-										key={OTHER_FILTER_ID}
-										id={OTHER_FILTER_ID}
-										name="Other"
-										itemIds={Array.from({ length: otherCounts.grades }, () => "")}
-										type="grade"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("grades", OTHER_FILTER_ID); }}
-									/>
-								)}
-							</CollapsibleGrid>
-						)}
-						{(brandsSelectedOnly.length > 0 || filters.brands.includes(OTHER_FILTER_ID)) && (
-							<CollapsibleGrid
-								title="Brand"
-								totalCount={brandsSelectedOnly.length + (filters.brands.includes(OTHER_FILTER_ID) ? 1 : 0)}
-								compactMode={true}
-								hideWhenEmpty={true}
-							>
-								{brandsSelectedOnly.map((brand) => (
-									<EntityCard
-										key={brand.id}
-										id={brand.id}
-										name={brand.name}
-										itemIds={brand.itemIds}
-										image={brand.image}
-										type="brand"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("brands", brand.id); }}
-									/>
-								))}
-								{filters.brands.includes(OTHER_FILTER_ID) && (
-									<EntityCard
-										key={OTHER_FILTER_ID}
-										id={OTHER_FILTER_ID}
-										name="Other"
-										itemIds={Array.from({ length: otherCounts.brands }, () => "")}
-										type="brand"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
-									/>
-								)}
-							</CollapsibleGrid>
-						)}
-						{(seriesSelectedOnly.length > 0 || filters.series.includes(OTHER_FILTER_ID)) && (
-							<CollapsibleGrid
-								title="Series"
-								totalCount={seriesSelectedOnly.length + (filters.series.includes(OTHER_FILTER_ID) ? 1 : 0)}
-								compactMode={true}
-								hideWhenEmpty={true}
-							>
-								{seriesSelectedOnly.map((s) => (
-									<EntityCard
-										key={s.id}
-										id={s.id}
-										name={s.name}
-										itemIds={s.itemIds}
-										image={s.image}
-										type="series"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("series", s.id); }}
-									/>
-								))}
-								{filters.series.includes(OTHER_FILTER_ID) && (
-									<EntityCard
-										key={OTHER_FILTER_ID}
-										id={OTHER_FILTER_ID}
-										name="Other"
-										itemIds={Array.from({ length: otherCounts.series }, () => "")}
-										type="series"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
-									/>
-								)}
-							</CollapsibleGrid>
-						)}
-						{(scalesSelectedOnly.length > 0 || filters.scales.includes(OTHER_FILTER_ID)) && (
-							<CollapsibleGrid
-								title="Scale"
-								totalCount={scalesSelectedOnly.length + (filters.scales.includes(OTHER_FILTER_ID) ? 1 : 0)}
-								compactMode={true}
-								hideWhenEmpty={true}
-							>
-								{scalesSelectedOnly.map((scale) => (
-									<EntityCard
-										key={scale.id}
-										id={scale.id}
-										name={scale.name}
-										itemIds={scale.itemIds}
-										type="scale"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("scales", scale.id); }}
-									/>
-								))}
-								{filters.scales.includes(OTHER_FILTER_ID) && (
-									<EntityCard
-										key={OTHER_FILTER_ID}
-										id={OTHER_FILTER_ID}
-										name="Other"
-										itemIds={Array.from({ length: otherCounts.scales }, () => "")}
-										type="scale"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
-									/>
-								)}
-							</CollapsibleGrid>
-						)}
-						{(yearsSelectedOnly.length > 0 || filters.years.includes(OTHER_FILTER_ID)) && (
-							<CollapsibleGrid
-								title="Year"
-								totalCount={yearsSelectedOnly.length + (filters.years.includes(OTHER_FILTER_ID) ? 1 : 0)}
-								compactMode={true}
-								hideWhenEmpty={true}
-							>
-								{yearsSelectedOnly.map((year) => (
-									<EntityCard
-										key={year.id}
-										id={year.id}
-										name={year.name}
-										itemIds={year.itemIds}
-										type="year"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("years", year.id); }}
-									/>
-								))}
-								{filters.years.includes(OTHER_FILTER_ID) && (
-									<EntityCard
-										key={OTHER_FILTER_ID}
-										id={OTHER_FILTER_ID}
-										name="Other"
-										itemIds={Array.from({ length: otherCounts.years }, () => "")}
-										type="year"
-										asFilter={true}
-										isSelected={true}
-										onToggle={() => { toggleFilter("years", OTHER_FILTER_ID); }}
-									/>
-								)}
-							</CollapsibleGrid>
-						)}
-					</Stack>
+					{stickyFilters.expanded && (
+						<Stack gap={6}>
+							{categoriesSelectedOnly.length > 0 && (
+								<CollapsibleGrid
+									title="Category"
+									totalCount={categoriesSelectedOnly.length + (filters.categories.includes(OTHER_FILTER_ID) ? 1 : 0)}
+									compactMode={true}
+									hideWhenEmpty={true}
+								>
+									{categoriesSelectedOnly.map((category) => (
+										<EntityCard
+											key={category.id}
+											id={category.id}
+											name={category.name}
+											itemIds={category.itemIds}
+											image={category.image}
+											type="category"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("categories", category.id); }}
+										/>
+									))}
+									{filters.categories.includes(OTHER_FILTER_ID) && (
+										<EntityCard
+											key={OTHER_FILTER_ID}
+											id={OTHER_FILTER_ID}
+											name="Other"
+											itemIds={Array.from({ length: otherCounts.categories }, () => "")}
+											type="category"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("categories", OTHER_FILTER_ID); }}
+										/>
+									)}
+								</CollapsibleGrid>
+							)}
+							{(gradesSelectedOnly.length > 0 || filters.grades.includes(OTHER_FILTER_ID)) && (
+								<CollapsibleGrid
+									title="Grade"
+									totalCount={gradesSelectedOnly.length + (filters.grades.includes(OTHER_FILTER_ID) ? 1 : 0)}
+									compactMode={true}
+									hideWhenEmpty={true}
+								>
+									{gradesSelectedOnly.map((grade) => (
+										<EntityCard
+											key={grade.id}
+											id={grade.id}
+											name={grade.name}
+											itemIds={grade.itemIds}
+											image={grade.image}
+											type="grade"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("grades", grade.id); }}
+										/>
+									))}
+									{filters.grades.includes(OTHER_FILTER_ID) && (
+										<EntityCard
+											key={OTHER_FILTER_ID}
+											id={OTHER_FILTER_ID}
+											name="Other"
+											itemIds={Array.from({ length: otherCounts.grades }, () => "")}
+											type="grade"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("grades", OTHER_FILTER_ID); }}
+										/>
+									)}
+								</CollapsibleGrid>
+							)}
+							{(brandsSelectedOnly.length > 0 || filters.brands.includes(OTHER_FILTER_ID)) && (
+								<CollapsibleGrid
+									title="Brand"
+									totalCount={brandsSelectedOnly.length + (filters.brands.includes(OTHER_FILTER_ID) ? 1 : 0)}
+									compactMode={true}
+									hideWhenEmpty={true}
+								>
+									{brandsSelectedOnly.map((brand) => (
+										<EntityCard
+											key={brand.id}
+											id={brand.id}
+											name={brand.name}
+											itemIds={brand.itemIds}
+											image={brand.image}
+											type="brand"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("brands", brand.id); }}
+										/>
+									))}
+									{filters.brands.includes(OTHER_FILTER_ID) && (
+										<EntityCard
+											key={OTHER_FILTER_ID}
+											id={OTHER_FILTER_ID}
+											name="Other"
+											itemIds={Array.from({ length: otherCounts.brands }, () => "")}
+											type="brand"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("brands", OTHER_FILTER_ID); }}
+										/>
+									)}
+								</CollapsibleGrid>
+							)}
+							{(seriesSelectedOnly.length > 0 || filters.series.includes(OTHER_FILTER_ID)) && (
+								<CollapsibleGrid
+									title="Series"
+									totalCount={seriesSelectedOnly.length + (filters.series.includes(OTHER_FILTER_ID) ? 1 : 0)}
+									compactMode={true}
+									hideWhenEmpty={true}
+								>
+									{seriesSelectedOnly.map((s) => (
+										<EntityCard
+											key={s.id}
+											id={s.id}
+											name={s.name}
+											itemIds={s.itemIds}
+											image={s.image}
+											type="series"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("series", s.id); }}
+										/>
+									))}
+									{filters.series.includes(OTHER_FILTER_ID) && (
+										<EntityCard
+											key={OTHER_FILTER_ID}
+											id={OTHER_FILTER_ID}
+											name="Other"
+											itemIds={Array.from({ length: otherCounts.series }, () => "")}
+											type="series"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("series", OTHER_FILTER_ID); }}
+										/>
+									)}
+								</CollapsibleGrid>
+							)}
+							{(scalesSelectedOnly.length > 0 || filters.scales.includes(OTHER_FILTER_ID)) && (
+								<CollapsibleGrid
+									title="Scale"
+									totalCount={scalesSelectedOnly.length + (filters.scales.includes(OTHER_FILTER_ID) ? 1 : 0)}
+									compactMode={true}
+									hideWhenEmpty={true}
+								>
+									{scalesSelectedOnly.map((scale) => (
+										<EntityCard
+											key={scale.id}
+											id={scale.id}
+											name={scale.name}
+											itemIds={scale.itemIds}
+											type="scale"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("scales", scale.id); }}
+										/>
+									))}
+									{filters.scales.includes(OTHER_FILTER_ID) && (
+										<EntityCard
+											key={OTHER_FILTER_ID}
+											id={OTHER_FILTER_ID}
+											name="Other"
+											itemIds={Array.from({ length: otherCounts.scales }, () => "")}
+											type="scale"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("scales", OTHER_FILTER_ID); }}
+										/>
+									)}
+								</CollapsibleGrid>
+							)}
+							{(yearsSelectedOnly.length > 0 || filters.years.includes(OTHER_FILTER_ID)) && (
+								<CollapsibleGrid
+									title="Year"
+									totalCount={yearsSelectedOnly.length + (filters.years.includes(OTHER_FILTER_ID) ? 1 : 0)}
+									compactMode={true}
+									hideWhenEmpty={true}
+								>
+									{yearsSelectedOnly.map((year) => (
+										<EntityCard
+											key={year.id}
+											id={year.id}
+											name={year.name}
+											itemIds={year.itemIds}
+											type="year"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("years", year.id); }}
+										/>
+									))}
+									{filters.years.includes(OTHER_FILTER_ID) && (
+										<EntityCard
+											key={OTHER_FILTER_ID}
+											id={OTHER_FILTER_ID}
+											name="Other"
+											itemIds={Array.from({ length: otherCounts.years }, () => "")}
+											type="year"
+											asFilter={true}
+											isSelected={true}
+											onToggle={() => { toggleFilter("years", OTHER_FILTER_ID); }}
+										/>
+									)}
+								</CollapsibleGrid>
+							)}
+						</Stack>
+					)}
 				</Container>
 			</Box>
 
