@@ -1,3 +1,14 @@
+## [1.9.0](https://github.com/Mearman/hobby.ninja/compare/v1.8.0...v1.9.0) (2025-12-30)
+
+### Features
+
+- **next:** add filter toggle button to header ([7cade79](https://github.com/Mearman/hobby.ninja/commit/7cade79cbd832ab4f54d757386344c883b6ef12b))
+- **next:** add sticky filter bar when scrolled past filters ([c3e4898](https://github.com/Mearman/hobby.ninja/commit/c3e4898d7105204f5086f44c0eedd42477facd76))
+
+### Bug Fixes
+
+- **next:** update year scrollbar to reflect filtered items ([5bb9527](https://github.com/Mearman/hobby.ninja/commit/5bb9527d23296cab8b909e45a55ef09d53d68c4f))
+
 ## [1.8.0](https://github.com/Mearman/hobby.ninja/compare/v1.7.1...v1.8.0) (2025-12-30)
 
 ### Features
