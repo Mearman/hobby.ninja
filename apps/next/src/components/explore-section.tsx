@@ -411,6 +411,8 @@ export interface ExploreSectionHandle {
 	scrollToYear: (year: number) => void;
 	/** Get the scroll position (0-1) where a year's items start */
 	getYearScrollPosition: (year: number) => number | null;
+	/** Get array of years that have items in the current filtered set (sorted newest first) */
+	getFilteredYears: () => number[];
 }
 
 export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionProps>(function ExploreSection({ items, filters, totalCount, onFilterToggle }, ref) {
@@ -520,6 +522,17 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		[filteredItems],
 	);
 
+	// Get unique years from filtered items (sorted newest first)
+	const filteredYears = useMemo(() => {
+		const years = new Set<number>();
+		for (const item of sortedItems) {
+			if (item.releaseDate?.year && item.releaseDate.year > 0) {
+				years.add(item.releaseDate.year);
+			}
+		}
+		return [...years].toSorted((a, b) => b - a);
+	}, [sortedItems]);
+
 	// Virtual grid for efficient rendering of large item lists
 	// High overscan (15 rows) ensures smooth scrolling during year navigation
 	const { listRef, virtualRows, totalHeight, columnCount, rowHeight, scrollToIndex } = useVirtualGrid({
@@ -563,7 +576,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		scrollToIndex(firstIndex);
 	}, [sortedItems, columnCount, rowHeight, scrollToIndex]);
 
-	// Expose scrollToYear and getYearScrollPosition via ref
+	// Expose scrollToYear, getYearScrollPosition, and getFilteredYears via ref
 	useImperativeHandle(ref, () => ({
 		scrollToYear,
 		getYearScrollPosition: (year: number) => {
@@ -574,7 +587,8 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			// Return as fraction of total items (approximates scroll position)
 			return sortedItems.length > 0 ? firstIndex / sortedItems.length : null;
 		},
-	}), [sortedItems, scrollToYear]);
+		getFilteredYears: () => filteredYears,
+	}), [sortedItems, scrollToYear, filteredYears]);
 
 	const hasActiveFilters = filters && (
 		filters.categories.length > 0 ||

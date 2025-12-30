@@ -87,11 +87,13 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		years: [],
 	});
 
-	// Year scrollbar data
-	const yearNumbers = useMemo(
+	// Year scrollbar data - all years for initial render
+	const allYearNumbers = useMemo(
 		() => years.map((y) => y.year).toSorted((a, b) => b - a),
 		[years],
 	);
+	// Filtered years from ExploreSection (updated when filters change)
+	const [filteredYearNumbers, setFilteredYearNumbers] = useState<number[]>([]);
 
 	// Ref for ExploreSection to call scrollToYear
 	const exploreSectionRef = useRef<ExploreSectionHandle>(null);
@@ -110,6 +112,21 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 	const getYearScrollPosition = useCallback((year: number) => {
 		return exploreSectionRef.current?.getYearScrollPosition(year) ?? null;
 	}, []);
+
+	// Update filtered years when filters change
+	useEffect(() => {
+		// Use setTimeout to ensure ref is populated after render
+		const timeoutId = setTimeout(() => {
+			const years = exploreSectionRef.current?.getFilteredYears();
+			if (years) {
+				setFilteredYearNumbers(years);
+			}
+		}, 0);
+		return () => { clearTimeout(timeoutId); };
+	}, [filters]);
+
+	// Use filtered years if available, otherwise all years
+	const yearNumbers = filteredYearNumbers.length > 0 ? filteredYearNumbers : allYearNumbers;
 
 	// Track scroll to show/hide sticky filter bar
 	useEffect(() => {
