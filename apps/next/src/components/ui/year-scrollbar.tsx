@@ -318,6 +318,7 @@ export function YearScrollbar({
 										transform: "translateY(-50%)",
 										whiteSpace: "nowrap",
 										fontSize: 10,
+										pointerEvents: "none",
 									}}
 								>
 									{year}
