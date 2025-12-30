@@ -287,7 +287,6 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 						paddingLeft: 4,
 						paddingRight: 4,
 						marginTop: "auto",
-						marginBottom: "auto",
 					}}
 				>
 					{primaryCategory && (
