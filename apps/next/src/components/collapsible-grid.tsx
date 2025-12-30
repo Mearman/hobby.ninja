@@ -25,6 +25,10 @@ interface CollapsibleGridProps {
 	onSelectAll?: () => void;
 	/** Optional element to render in the header (e.g., sort toggle) */
 	headerRight?: React.ReactNode;
+	/** When true, section hides completely if totalCount is 0 */
+	hideWhenEmpty?: boolean;
+	/** Compact mode: hide header, smaller cards, always horizontal row */
+	compactMode?: boolean;
 }
 
 const GAP = 16; // var(--mantine-spacing-md) in pixels
@@ -32,6 +36,7 @@ const CARD_IMAGE_ASPECT_RATIO = 170 / 300; // From EntityCard's image aspectRati
 const CARD_COUNT_HEIGHT = 24; // Height of the count section below the image
 const COLLAPSE_DURATION = 300; // ms
 const ROW_STAGGER_DELAY = 50; // ms delay between each row
+const COMPACT_CARD_WIDTH = 100; // Smaller cards for compact mode
 
 export function CollapsibleGrid({
 	title,
@@ -45,7 +50,9 @@ export function CollapsibleGrid({
 	onClear,
 	onSelectAll,
 	headerRight,
-}: CollapsibleGridProps): React.ReactElement {
+	hideWhenEmpty = false,
+	compactMode = false,
+}: CollapsibleGridProps): React.ReactElement | null {
 	const [internalExpanded, { toggle: internalToggle }] = useDisclosure(false);
 	const { ref: containerRef, width: containerWidth } = useElementSize();
 	const gridRef = useRef<HTMLDivElement>(null);
@@ -80,6 +87,32 @@ export function CollapsibleGrid({
 
 	// Show expand button if more items than fit in one row
 	const showExpandButton = totalCount > numCols;
+
+	// Hide entire section when empty and hideWhenEmpty is true
+	// (placed after all hooks to comply with React rules of hooks)
+	if (hideWhenEmpty && totalCount === 0) {
+		return null;
+	}
+
+	// In compact mode, render simplified horizontal row without header
+	if (compactMode) {
+		return (
+			<Box
+				style={{
+					display: "flex",
+					gap: 12,
+					overflowX: "auto",
+					paddingBottom: 4,
+				}}
+			>
+				{React.Children.map(children, (child, index) => (
+					<Box key={index} style={{ flexShrink: 0, width: COMPACT_CARD_WIDTH }}>
+						{child}
+					</Box>
+				))}
+			</Box>
+		);
+	}
 
 	const toggle = () => {
 		const toExpanded = !expanded;
