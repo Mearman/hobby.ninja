@@ -142,21 +142,35 @@ export function YearScrollbar({
 			const progress = window.scrollY / scrollHeight;
 			const clampedProgress = Math.max(0, Math.min(1, progress));
 
+			// Check if thumb animation is still running (800ms CSS transition)
+			const animationElapsed = animationStartTimeRef.current
+				? Date.now() - animationStartTimeRef.current
+				: Infinity;
+			const thumbAnimationRunning = animationElapsed < THUMB_TRANSITION_MS;
+
+			// During thumb animation, skip ALL scroll handler updates
+			// The CSS transition has exclusive control of thumb position
+			if (thumbAnimationRunning) {
+				return;
+			}
+
+			// Animation complete - update state and thumb position
 			setScrollProgress(clampedProgress);
 
-			// Update thumb position via DOM
 			if (thumbRef.current) {
 				const size = window.innerWidth >= 768 ? THUMB_SIZE : THUMB_SIZE_MOBILE;
 				thumbRef.current.style.transition = "none";
 				thumbRef.current.style.top = `calc(${clampedProgress * 100}% - ${size / 2}px)`;
 			}
 
-			// Clear target when scroll position is close to target
+			// Clear target indicator when scroll reaches destination
 			const currentTarget = targetYearRef.current;
 			if (currentTarget !== null) {
 				const targetPos = yearToPositionRef.current(currentTarget);
 				if (Math.abs(clampedProgress - targetPos) < SCROLL_ARRIVAL_THRESHOLD) {
 					setTargetYear(null);
+					isAnimatingRef.current = false;
+					animationStartTimeRef.current = null;
 				}
 			}
 		};
