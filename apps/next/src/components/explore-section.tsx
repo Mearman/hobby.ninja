@@ -37,23 +37,38 @@ const FIXED_CARD_HEIGHT = TITLE_CONTAINER_HEIGHT + CARD_FIXED_PADDING;
 // Badges: increased height for better visibility
 const BADGE_HEIGHT_MULTIPLIER = 0.18;
 
-/** Title text that auto-scales to fit within a fixed-height container */
+/** Title text that auto-scales to fit within a flexible container */
 function FittedTitle({ text }: { text: string }): React.ReactElement {
-	const measureRef = useRef<HTMLDivElement>(null);
+	const containerRef = useRef<HTMLDivElement>(null);
 	const textRef = useRef<HTMLDivElement>(null);
 
+	// Resize text to fit container - runs on mount and when container resizes
 	useLayoutEffect(() => {
-		const measureEl = measureRef.current;
+		const containerEl = containerRef.current;
 		const textEl = textRef.current;
-		if (!measureEl || !textEl) return;
+		if (!containerEl || !textEl) return;
 
-		// Find the largest font size that fits within the content area (excluding padding)
-		for (const size of TITLE_FONT_SIZES_PX) {
-			textEl.style.fontSize = `${size}px`;
-			if (textEl.scrollHeight <= measureEl.clientHeight) {
-				break;
+		const fitText = () => {
+			const containerHeight = containerEl.clientHeight;
+			if (containerHeight === 0) return;
+
+			// Find the largest font size that fits
+			for (const size of TITLE_FONT_SIZES_PX) {
+				textEl.style.fontSize = `${size}px`;
+				if (textEl.scrollHeight <= containerHeight) {
+					break;
+				}
 			}
-		}
+		};
+
+		// Initial fit
+		fitText();
+
+		// Re-fit when container size changes (flex layout updates)
+		const observer = new ResizeObserver(fitText);
+		observer.observe(containerEl);
+
+		return () => { observer.disconnect(); };
 	}, [text]);
 
 	return (
@@ -62,18 +77,20 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 			pt="xs"
 			pb={4}
 			style={{
-				height: TITLE_CONTAINER_HEIGHT,
+				flex: "1 1 auto",
+				minHeight: TITLE_CONTAINER_HEIGHT,
 				overflow: "hidden",
+				display: "flex",
+				alignItems: "center",
 			}}
 		>
-			{/* Inner wrapper for accurate height measurement (excludes parent padding) */}
+			{/* Inner wrapper for text measurement */}
 			<Box
-				ref={measureRef}
+				ref={containerRef}
 				style={{
-					height: "100%",
+					width: "100%",
+					maxHeight: "100%",
 					overflow: "hidden",
-					display: "flex",
-					alignItems: "center",
 				}}
 			>
 				<Text
@@ -286,7 +303,6 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 						gap: 4,
 						paddingLeft: 4,
 						paddingRight: 4,
-						marginTop: "auto",
 					}}
 				>
 					{primaryCategory && (
