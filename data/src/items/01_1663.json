@@ -14,7 +14,14 @@
 			"en": "TURN A GUNDAM"
 		}
 	],
-	"categories": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ",
+			"en": "Gunpla"
+		}
+	],
 	"relatedItems": [
 		{
 			"id": "item-1000135920",
@@ -104,7 +111,5 @@
 		"id": "550",
 		"url": "https://manual.bandai-hobby.net/menus/detail/550/"
 	},
-	"scales": [
-		"1/100"
-	]
+	"scales": ["1/100"]
 }

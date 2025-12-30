@@ -14,7 +14,14 @@
 			"en": "MOBILE SUIT GUNDAM OO"
 		}
 	],
-	"categories": [],
+	"categories": [
+		{
+			"id": "gunpla",
+			"url": "https://bandai-hobby.net/gunpla/",
+			"ja": "ガンプラ",
+			"en": "Gunpla"
+		}
+	],
 	"relatedItems": [
 		{
 			"id": "01_2057",
@@ -173,7 +180,5 @@
 	"globalSiteUrls": {
 		"enUs": "https://global.bandai-hobby.net/en-us/item/01_1203/"
 	},
-	"scales": [
-		"1/60"
-	]
+	"scales": ["1/60"]
 }
