@@ -33,6 +33,10 @@ export interface VirtualGridReturn<T> {
 	totalHeight: number;
 	/** Current column count based on viewport */
 	columnCount: number;
+	/** Height of each row in pixels */
+	rowHeight: number;
+	/** Total number of rows */
+	rowCount: number;
 	/** Scroll to a specific item index */
 	scrollToIndex: (index: number) => void;
 	/** Get the row index for a given item index */
@@ -160,15 +164,14 @@ export function useVirtualGrid<T>({
 		});
 	}, [virtualItems, columnCount, items, computedScrollMargin]);
 
-	// Scroll to a specific item index - positions the row at top of window
+	// Scroll to a specific item index - uses virtualizer's scrollToIndex for proper pre-rendering
 	const scrollToIndex = useCallback(
 		(index: number) => {
 			const rowIndex = Math.floor(index / columnCount);
-			// Calculate exact pixel position: row position + container offset from top of document
-			const scrollPosition = rowIndex * rowHeight + computedScrollMargin;
-			window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+			// Use virtualizer's scrollToIndex which handles measurement and pre-rendering
+			virtualizer.scrollToIndex(rowIndex, { align: "start", behavior: "smooth" });
 		},
-		[columnCount, rowHeight, computedScrollMargin],
+		[columnCount, virtualizer],
 	);
 
 	// Get row index for item index
@@ -182,6 +185,8 @@ export function useVirtualGrid<T>({
 		virtualRows,
 		totalHeight: virtualizer.getTotalSize(),
 		columnCount,
+		rowHeight,
+		rowCount,
 		scrollToIndex,
 		getRowForIndex,
 		isScrolling: virtualizer.isScrolling,
