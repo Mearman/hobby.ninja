@@ -23,6 +23,8 @@ const MARK_SIZE = 8;
 const CENTER_TRANSFORM = "translateX(-50%)";
 // Threshold for considering scroll "arrived" at target (2% of scroll height)
 const SCROLL_ARRIVAL_THRESHOLD = 0.02;
+// Transition duration for thumb animation during year navigation
+const THUMB_TRANSITION_MS = 800;
 
 // Responsive dimensions
 const CONTAINER_WIDTH_DESKTOP = 60;
@@ -52,6 +54,10 @@ export function YearScrollbar({
 	const yearToPositionRef = useRef<(year: number) => number>(() => 0);
 	// Scroll progress (0-1) for smooth thumb movement
 	const [scrollProgress, setScrollProgress] = useState(0);
+	// Whether we're currently animating the thumb (don't update from scroll)
+	const isAnimatingRef = useRef(false);
+	// Timestamp when animation started (to ensure minimum animation time)
+	const animationStartTimeRef = useRef<number | null>(null);
 
 	// Responsive: detect if we're on desktop (md+)
 	const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -198,18 +204,38 @@ export function YearScrollbar({
 		[isDragging, getPositionFromEvent, positionToYear],
 	);
 
+	// Start thumb animation using CSS transition
+	const startThumbAnimation = useCallback((targetPos: number) => {
+		if (!thumbRef.current) return;
+
+		const thumb = thumbRef.current;
+		const thumbSize = isDesktop ? THUMB_SIZE : THUMB_SIZE_MOBILE;
+
+		// Use CSS transition - browser's native animation is smoothest
+		thumb.style.transition = `top ${THUMB_TRANSITION_MS}ms ease-out`;
+		thumb.style.top = `calc(${targetPos * 100}% - ${thumbSize / 2}px)`;
+	}, [isDesktop]);
+
 	const handlePointerUp = useCallback(
 		(e: React.PointerEvent) => {
 			if (!isDragging) return;
 			(e.target as HTMLElement).releasePointerCapture(e.pointerId);
 			setIsDragging(false);
 			if (dragYear !== null) {
+				const targetPos = yearToPosition(dragYear);
+
+				// Set animating flag and start time
+				isAnimatingRef.current = true;
+				animationStartTimeRef.current = Date.now();
+
+				// Start CSS transition animation
+				startThumbAnimation(targetPos);
 				setTargetYear(dragYear);
 				onYearSelect?.(dragYear);
 			}
 			setDragYear(null);
 		},
-		[isDragging, dragYear, onYearSelect],
+		[isDragging, dragYear, onYearSelect, yearToPosition, startThumbAnimation],
 	);
 
 	const handleClick = useCallback(
@@ -221,10 +247,18 @@ export function YearScrollbar({
 			const y = e.clientY - rect.top;
 			const position = y / rect.height;
 			const year = positionToYear(position);
+			const targetPos = yearToPosition(year);
+
+			// Set animating flag and start time
+			isAnimatingRef.current = true;
+			animationStartTimeRef.current = Date.now();
+
+			// Start CSS transition animation
+			startThumbAnimation(targetPos);
 			setTargetYear(year);
 			onYearSelect?.(year);
 		},
-		[isDragging, positionToYear, onYearSelect],
+		[isDragging, positionToYear, onYearSelect, yearToPosition, startThumbAnimation],
 	);
 
 	const scrollToTop = useCallback((e: React.MouseEvent) => {
