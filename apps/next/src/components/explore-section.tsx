@@ -125,6 +125,9 @@ const THUMBNAIL_BG_COLOR = "light-dark(var(--mantine-color-gray-1), var(--mantin
 // Page body background color (theme-aware)
 const BODY_BG_COLOR = "var(--mantine-color-body)";
 
+// Table view grid template columns (8 columns: Name, Released, Series, Grade, Scale, Brand, Manual, Site)
+const TABLE_GRID_COLUMNS = "minmax(250px, 2fr) 100px minmax(120px, 1fr) 80px 80px minmax(100px, 1fr) 50px 50px";
+
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
 function EntityBadge({ image, name, onClick, isSelected }: { image?: string; name: string; onClick?: () => void; isSelected?: boolean }): React.ReactElement {
 	const handleClick = (e: React.MouseEvent) => {
@@ -241,8 +244,6 @@ function VirtualTableRowCells({ item }: { item: Item }): React.ReactElement {
 						<Text size="sm" fw={500} lineClamp={1} style={{ flex: 1, minWidth: 0 }}>
 							{displayName}
 						</Text>
-						{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="table" />}
-						{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="table" />}
 					</Group>
 				</Link>
 			</Box>
@@ -267,6 +268,14 @@ function VirtualTableRowCells({ item }: { item: Item }): React.ReactElement {
 						{typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
 					</Text>
 				) : <Text size="sm" c="dimmed">{EMPTY_PLACEHOLDER}</Text>}
+			</Box>
+			{/* Manual cell */}
+			<Box p="xs" style={{ display: "flex", justifyContent: "center" }}>
+				{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="table" />}
+			</Box>
+			{/* Global Site cell */}
+			<Box p="xs" style={{ display: "flex", justifyContent: "center" }}>
+				{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="table" />}
 			</Box>
 		</>
 	);
@@ -1078,7 +1087,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 					<Box
 						style={{
 							display: "grid",
-							gridTemplateColumns: "minmax(250px, 2fr) 100px minmax(120px, 1fr) 80px 80px minmax(100px, 1fr)",
+							gridTemplateColumns: TABLE_GRID_COLUMNS,
 							gap: 0,
 							borderBottom: "2px solid var(--mantine-color-default-border)",
 							backgroundColor: BODY_BG_COLOR,
@@ -1093,6 +1102,8 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 						<Text fw={600} size="sm" p="xs">Grade</Text>
 						<Text fw={600} size="sm" p="xs">Scale</Text>
 						<Text fw={600} size="sm" p="xs">Brand</Text>
+						<Text fw={600} size="sm" p="xs" ta="center">Manual</Text>
+						<Text fw={600} size="sm" p="xs" ta="center">Global</Text>
 					</Box>
 					{/* Virtualized rows */}
 					<Box
@@ -1118,7 +1129,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 										height: virtualItem.size,
 										transform: `translateY(${virtualItem.start - tableScrollMargin}px)`,
 										display: "grid",
-										gridTemplateColumns: "minmax(250px, 2fr) 100px minmax(120px, 1fr) 80px 80px minmax(100px, 1fr)",
+										gridTemplateColumns: TABLE_GRID_COLUMNS,
 										gap: 0,
 										alignItems: "center",
 										backgroundColor: isEven ? "var(--table-striped-color)" : "transparent",
