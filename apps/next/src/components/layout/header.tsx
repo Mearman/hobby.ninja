@@ -80,9 +80,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 		return pathname.startsWith(path);
 	};
 
-	const navigationItems = [
-		{ href: "/collection", label: "Collection", icon: IconFolder },
-	];
+	const navigationItems: Array<{ href: string; label: string }> = [];
 
 	return (
 		<header className={header}>
