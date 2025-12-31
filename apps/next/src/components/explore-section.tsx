@@ -1,7 +1,7 @@
 "use client";
 
 import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getNodePrimaryGrade, getNodeReleaseDate, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Badge, Box, Card, Group, Skeleton, Table, Text, Tooltip } from "@mantine/core";
+import { Badge, Box, Card, Group, Skeleton, Text, Tooltip } from "@mantine/core";
 import { useWindowVirtualizer } from "@tanstack/react-virtual";
 import Link from "next/link";
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
@@ -182,8 +182,8 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 	);
 }
 
-/** Table row cells component for virtualized table view - renders just the cells, not the row */
-function TableRowCells({ item, onFilterToggle: _onFilterToggle, filters: _filters }: { item: Item; onFilterToggle?: (type: ArrayFilterType, id: string) => void; filters?: FilterState }): React.ReactElement {
+/** Virtual table row cells component - uses divs for CSS grid layout */
+function VirtualTableRowCells({ item }: { item: Item }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
 	const [imageLoaded, setImageLoaded] = useState(false);
 	const images = getNodeImages(item);
@@ -205,12 +205,13 @@ function TableRowCells({ item, onFilterToggle: _onFilterToggle, filters: _filter
 
 	return (
 		<>
-			<Table.Td>
+			{/* Name cell */}
+			<Box p="xs" style={{ overflow: "hidden" }}>
 				<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-					<Group gap="sm" align="center">
-						<Box w={40} h={40} style={{ flexShrink: 0, borderRadius: 4, overflow: "hidden", backgroundColor: THUMBNAIL_BG_COLOR, position: "relative" }}>
+					<Group gap="sm" align="center" wrap="nowrap">
+						<Box w={36} h={36} style={{ flexShrink: 0, borderRadius: 4, overflow: "hidden", backgroundColor: THUMBNAIL_BG_COLOR, position: "relative" }}>
 							{!imageLoaded && hasValidImage && (
-								<Skeleton width={40} height={40} radius={4} animate={true} style={{ position: "absolute", inset: 0 }} />
+								<Skeleton width={36} height={36} radius={4} animate={true} style={{ position: "absolute", inset: 0 }} />
 							)}
 							{hasValidImage ? (
 								<img
@@ -229,36 +230,41 @@ function TableRowCells({ item, onFilterToggle: _onFilterToggle, filters: _filter
 									}}
 								/>
 							) : (
-								<Box w={40} h={40} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+								<Box w={36} h={36} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
 									<Text size="xs" c="dimmed">{EMPTY_PLACEHOLDER}</Text>
 								</Box>
 							)}
 						</Box>
-						<Text size="sm" fw={500} lineClamp={1}>
+						<Text size="sm" fw={500} lineClamp={1} style={{ flex: 1, minWidth: 0 }}>
 							{displayName}
 						</Text>
 						{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="table" />}
 						{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="table" />}
 					</Group>
 				</Link>
-			</Table.Td>
-			<Table.Td c="dimmed">{releaseDate ?? EMPTY_PLACEHOLDER}</Table.Td>
-			<Table.Td>
+			</Box>
+			{/* Released cell */}
+			<Text size="sm" c="dimmed" p="xs">{releaseDate ?? EMPTY_PLACEHOLDER}</Text>
+			{/* Series cell */}
+			<Box p="xs" style={{ overflow: "hidden" }}>
 				{primarySeries ? (
 					<Text size="sm" lineClamp={1}>
 						{typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
 					</Text>
-				) : EMPTY_PLACEHOLDER}
-			</Table.Td>
-			<Table.Td>{gradeName ?? EMPTY_PLACEHOLDER}</Table.Td>
-			<Table.Td>{item.scales.length > 0 ? item.scales.join(", ") : EMPTY_PLACEHOLDER}</Table.Td>
-			<Table.Td>
+				) : <Text size="sm" c="dimmed">{EMPTY_PLACEHOLDER}</Text>}
+			</Box>
+			{/* Grade cell */}
+			<Text size="sm" p="xs">{gradeName ?? EMPTY_PLACEHOLDER}</Text>
+			{/* Scale cell */}
+			<Text size="sm" p="xs">{item.scales.length > 0 ? item.scales.join(", ") : EMPTY_PLACEHOLDER}</Text>
+			{/* Brand cell */}
+			<Box p="xs" style={{ overflow: "hidden" }}>
 				{primaryBrand ? (
 					<Text size="sm" lineClamp={1}>
 						{typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
 					</Text>
-				) : EMPTY_PLACEHOLDER}
-			</Table.Td>
+				) : <Text size="sm" c="dimmed">{EMPTY_PLACEHOLDER}</Text>}
+			</Box>
 		</>
 	);
 }
@@ -306,69 +312,6 @@ function ItemCard({ item, index, onFilterToggle, filters, viewMode = "grid" }: {
 
 	const releaseDate = getNodeReleaseDate(item);
 	const gradeName = getNodePrimaryGrade(item);
-
-	// Table view: table row with structured data
-	if (viewMode === "table") {
-		return (
-			<Table.Tr>
-				<Table.Td>
-					<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-						<Group gap="sm" align="center">
-							<Box w={40} h={40} style={{ flexShrink: 0, borderRadius: 4, overflow: "hidden", backgroundColor: THUMBNAIL_BG_COLOR, position: "relative" }}>
-								{/* Skeleton for table view image */}
-								{!imageLoaded && hasValidImage && (
-									<Skeleton width={40} height={40} radius={4} animate={true} style={{ position: "absolute", inset: 0 }} />
-								)}
-								{hasValidImage ? (
-									<img
-										src={resolveCdnUrl(images[0])}
-										alt={displayName}
-										loading="eager"
-										decoding="async"
-										onLoad={() => { setImageLoaded(true); }}
-										onError={() => { setHasImageError(true); }}
-										style={{
-											width: "100%",
-											height: "100%",
-											objectFit: "cover",
-											opacity: imageLoaded ? 1 : 0,
-											transition: IMAGE_FADE_TRANSITION,
-										}}
-									/>
-								) : (
-									<Box w={40} h={40} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-										<Text size="xs" c="dimmed">{EMPTY_PLACEHOLDER}</Text>
-									</Box>
-								)}
-							</Box>
-							<Text size="sm" fw={500} lineClamp={1}>
-								{displayName}
-							</Text>
-							{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="table" />}
-							{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="table" />}
-						</Group>
-					</Link>
-				</Table.Td>
-				<Table.Td c="dimmed">{releaseDate ?? EMPTY_PLACEHOLDER}</Table.Td>
-				<Table.Td>
-					{primarySeries ? (
-						<Text size="sm" lineClamp={1}>
-							{typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
-						</Text>
-					) : EMPTY_PLACEHOLDER}
-				</Table.Td>
-				<Table.Td>{gradeName ?? EMPTY_PLACEHOLDER}</Table.Td>
-				<Table.Td>{item.scales.length > 0 ? item.scales.join(", ") : EMPTY_PLACEHOLDER}</Table.Td>
-				<Table.Td>
-					{primaryBrand ? (
-						<Text size="sm" lineClamp={1}>
-							{typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
-						</Text>
-					) : EMPTY_PLACEHOLDER}
-				</Table.Td>
-			</Table.Tr>
-		);
-	}
 
 	// List view: horizontal card with more details
 	if (viewMode === "list") {
@@ -1126,50 +1069,66 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 				</Box>
 			)}
 
-			{/* Table view: Virtualized table for efficient rendering */}
+			{/* Table view: Virtualized grid-based table for efficient rendering */}
 			{viewMode === "table" && (
 				<Box ref={tableContainerRef} style={{ overflowX: "auto" }}>
-					<Table striped={true} highlightOnHover={true}>
-						<Table.Thead>
-							<Table.Tr>
-								<Table.Th>Name</Table.Th>
-								<Table.Th>Released</Table.Th>
-								<Table.Th>Series</Table.Th>
-								<Table.Th>Grade</Table.Th>
-								<Table.Th>Scale</Table.Th>
-								<Table.Th>Brand</Table.Th>
-							</Table.Tr>
-						</Table.Thead>
-						<Table.Tbody
-							style={{
-								height: tableVirtualizer.getTotalSize(),
-								position: "relative",
-							}}
-						>
-							{tableVirtualizer.getVirtualItems().map((virtualItem) => {
-								const item = sortedItems[virtualItem.index];
-								return (
-									<Table.Tr
-										key={item.id}
-										data-year={item.releaseDate?.year}
-										data-item-id={item.id}
-										style={{
-											position: "absolute",
-											top: 0,
-											left: 0,
-											width: "100%",
-											height: virtualItem.size,
-											transform: `translateY(${virtualItem.start - tableScrollMargin}px)`,
-											display: "table-row",
-										}}
-									>
-										{/* Render table cells inline instead of using ItemCard for table rows */}
-										<TableRowCells item={item} onFilterToggle={onFilterToggle} filters={filters} />
-									</Table.Tr>
-								);
-							})}
-						</Table.Tbody>
-					</Table>
+					{/* CSS Grid header row */}
+					<Box
+						style={{
+							display: "grid",
+							gridTemplateColumns: "minmax(250px, 2fr) 100px minmax(120px, 1fr) 80px 80px minmax(100px, 1fr)",
+							gap: 0,
+							borderBottom: "2px solid var(--mantine-color-gray-3)",
+							backgroundColor: "var(--mantine-color-gray-0)",
+							position: "sticky",
+							top: 0,
+							zIndex: 10,
+						}}
+					>
+						<Text fw={600} size="sm" p="xs">Name</Text>
+						<Text fw={600} size="sm" p="xs">Released</Text>
+						<Text fw={600} size="sm" p="xs">Series</Text>
+						<Text fw={600} size="sm" p="xs">Grade</Text>
+						<Text fw={600} size="sm" p="xs">Scale</Text>
+						<Text fw={600} size="sm" p="xs">Brand</Text>
+					</Box>
+					{/* Virtualized rows */}
+					<Box
+						style={{
+							height: tableVirtualizer.getTotalSize(),
+							width: "100%",
+							position: "relative",
+						}}
+					>
+						{tableVirtualizer.getVirtualItems().map((virtualItem) => {
+							const item = sortedItems[virtualItem.index];
+							const isEven = virtualItem.index % 2 === 0;
+							return (
+								<Box
+									key={item.id}
+									data-year={item.releaseDate?.year}
+									data-item-id={item.id}
+									style={{
+										position: "absolute",
+										top: 0,
+										left: 0,
+										width: "100%",
+										height: virtualItem.size,
+										transform: `translateY(${virtualItem.start - tableScrollMargin}px)`,
+										display: "grid",
+										gridTemplateColumns: "minmax(250px, 2fr) 100px minmax(120px, 1fr) 80px 80px minmax(100px, 1fr)",
+										gap: 0,
+										alignItems: "center",
+										backgroundColor: isEven ? "var(--mantine-color-gray-0)" : "transparent",
+										borderBottom: "1px solid var(--mantine-color-gray-2)",
+									}}
+									className="table-row-hover"
+								>
+									<VirtualTableRowCells item={item} />
+								</Box>
+							);
+						})}
+					</Box>
 				</Box>
 			)}
 		</>
