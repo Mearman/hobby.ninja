@@ -1,11 +1,13 @@
 "use client";
 
-import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
-import { Box, Card, Skeleton, Text, Tooltip } from "@mantine/core";
+import { getBrandById, getCategoryById, getGradeById, getNodeDisplayName, getNodeImages, getNodePrimaryGrade, getNodeReleaseDate, getSeriesById, itemHasGrade, resolveCdnUrl, type Item } from "@hobby-ninja/data";
+import { Badge, Box, Card, Group, Skeleton, Table, Text, Tooltip } from "@mantine/core";
+import { useWindowVirtualizer } from "@tanstack/react-virtual";
 import Link from "next/link";
-import { forwardRef, useCallback, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 import { RelationshipBadge } from "@/components/ui/relationship-badge";
+import { useViewMode, ViewSwitcher, type ViewMode } from "@/components/view/view-switcher";
 import { useVirtualGrid } from "@/hooks/use-virtual-grid";
 import { itemHasGlobalSite, itemHasManual } from "@/lib/relationship-utils";
 
@@ -111,6 +113,15 @@ function FittedTitle({ text }: { text: string }): React.ReactElement {
 // Badge aspect ratio (same as filter cards)
 const BADGE_ASPECT_RATIO = "300 / 170";
 
+// Empty value placeholder for table cells
+const EMPTY_PLACEHOLDER = "—";
+
+// Image fade-in transition style
+const IMAGE_FADE_TRANSITION = "opacity 0.2s ease-in-out";
+
+// Thumbnail background color
+const THUMBNAIL_BG_COLOR = "var(--mantine-color-gray-1)";
+
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
 function EntityBadge({ image, name, onClick, isSelected }: { image?: string; name: string; onClick?: () => void; isSelected?: boolean }): React.ReactElement {
 	const handleClick = (e: React.MouseEvent) => {
@@ -171,7 +182,88 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 	);
 }
 
-function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index: number; onFilterToggle?: (type: ArrayFilterType, id: string) => void; filters?: FilterState }): React.ReactElement {
+/** Table row cells component for virtualized table view - renders just the cells, not the row */
+function TableRowCells({ item, onFilterToggle: _onFilterToggle, filters: _filters }: { item: Item; onFilterToggle?: (type: ArrayFilterType, id: string) => void; filters?: FilterState }): React.ReactElement {
+	const [hasImageError, setHasImageError] = useState(false);
+	const [imageLoaded, setImageLoaded] = useState(false);
+	const images = getNodeImages(item);
+	const displayName = getNodeDisplayName(item);
+	const hasValidImage = !hasImageError && images.length > 0;
+	const releaseDate = getNodeReleaseDate(item);
+	const gradeName = getNodePrimaryGrade(item);
+
+	const primaryBrand = useMemo(() => {
+		const brand = item.brands
+			.map(b => getBrandById(b.id))
+			.find(b => b && b.type !== "grade");
+		if (brand?.id.startsWith("pb_")) {
+			return getBrandById("pb") ?? brand;
+		}
+		return brand;
+	}, [item.brands]);
+	const primarySeries = item.series.length > 0 ? getSeriesById(item.series[0].id) : undefined;
+
+	return (
+		<>
+			<Table.Td>
+				<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+					<Group gap="sm" align="center">
+						<Box w={40} h={40} style={{ flexShrink: 0, borderRadius: 4, overflow: "hidden", backgroundColor: THUMBNAIL_BG_COLOR, position: "relative" }}>
+							{!imageLoaded && hasValidImage && (
+								<Skeleton width={40} height={40} radius={4} animate={true} style={{ position: "absolute", inset: 0 }} />
+							)}
+							{hasValidImage ? (
+								<img
+									src={resolveCdnUrl(images[0])}
+									alt={displayName}
+									loading="eager"
+									decoding="async"
+									onLoad={() => { setImageLoaded(true); }}
+									onError={() => { setHasImageError(true); }}
+									style={{
+										width: "100%",
+										height: "100%",
+										objectFit: "cover",
+										opacity: imageLoaded ? 1 : 0,
+										transition: IMAGE_FADE_TRANSITION,
+									}}
+								/>
+							) : (
+								<Box w={40} h={40} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+									<Text size="xs" c="dimmed">{EMPTY_PLACEHOLDER}</Text>
+								</Box>
+							)}
+						</Box>
+						<Text size="sm" fw={500} lineClamp={1}>
+							{displayName}
+						</Text>
+						{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="table" />}
+						{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="table" />}
+					</Group>
+				</Link>
+			</Table.Td>
+			<Table.Td c="dimmed">{releaseDate ?? EMPTY_PLACEHOLDER}</Table.Td>
+			<Table.Td>
+				{primarySeries ? (
+					<Text size="sm" lineClamp={1}>
+						{typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
+					</Text>
+				) : EMPTY_PLACEHOLDER}
+			</Table.Td>
+			<Table.Td>{gradeName ?? EMPTY_PLACEHOLDER}</Table.Td>
+			<Table.Td>{item.scales.length > 0 ? item.scales.join(", ") : EMPTY_PLACEHOLDER}</Table.Td>
+			<Table.Td>
+				{primaryBrand ? (
+					<Text size="sm" lineClamp={1}>
+						{typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
+					</Text>
+				) : EMPTY_PLACEHOLDER}
+			</Table.Td>
+		</>
+	);
+}
+
+function ItemCard({ item, index, onFilterToggle, filters, viewMode = "grid" }: { item: Item; index: number; onFilterToggle?: (type: ArrayFilterType, id: string) => void; filters?: FilterState; viewMode?: ViewMode }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
 	// First batch loads eagerly for fastest initial paint
 	// Subsequent batches still use eager loading since native lazy doesn't work reliably
@@ -212,6 +304,170 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 	const primarySeries = item.series.length > 0 ? getSeriesById(item.series[0].id) : undefined;
 	const primaryCategory = item.categories.length > 0 ? getCategoryById(item.categories[0].id) : undefined;
 
+	const releaseDate = getNodeReleaseDate(item);
+	const gradeName = getNodePrimaryGrade(item);
+
+	// Table view: table row with structured data
+	if (viewMode === "table") {
+		return (
+			<Table.Tr>
+				<Table.Td>
+					<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+						<Group gap="sm" align="center">
+							<Box w={40} h={40} style={{ flexShrink: 0, borderRadius: 4, overflow: "hidden", backgroundColor: THUMBNAIL_BG_COLOR, position: "relative" }}>
+								{/* Skeleton for table view image */}
+								{!imageLoaded && hasValidImage && (
+									<Skeleton width={40} height={40} radius={4} animate={true} style={{ position: "absolute", inset: 0 }} />
+								)}
+								{hasValidImage ? (
+									<img
+										src={resolveCdnUrl(images[0])}
+										alt={displayName}
+										loading="eager"
+										decoding="async"
+										onLoad={() => { setImageLoaded(true); }}
+										onError={() => { setHasImageError(true); }}
+										style={{
+											width: "100%",
+											height: "100%",
+											objectFit: "cover",
+											opacity: imageLoaded ? 1 : 0,
+											transition: IMAGE_FADE_TRANSITION,
+										}}
+									/>
+								) : (
+									<Box w={40} h={40} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+										<Text size="xs" c="dimmed">{EMPTY_PLACEHOLDER}</Text>
+									</Box>
+								)}
+							</Box>
+							<Text size="sm" fw={500} lineClamp={1}>
+								{displayName}
+							</Text>
+							{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="table" />}
+							{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="table" />}
+						</Group>
+					</Link>
+				</Table.Td>
+				<Table.Td c="dimmed">{releaseDate ?? EMPTY_PLACEHOLDER}</Table.Td>
+				<Table.Td>
+					{primarySeries ? (
+						<Text size="sm" lineClamp={1}>
+							{typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
+						</Text>
+					) : EMPTY_PLACEHOLDER}
+				</Table.Td>
+				<Table.Td>{gradeName ?? EMPTY_PLACEHOLDER}</Table.Td>
+				<Table.Td>{item.scales.length > 0 ? item.scales.join(", ") : EMPTY_PLACEHOLDER}</Table.Td>
+				<Table.Td>
+					{primaryBrand ? (
+						<Text size="sm" lineClamp={1}>
+							{typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
+						</Text>
+					) : EMPTY_PLACEHOLDER}
+				</Table.Td>
+			</Table.Tr>
+		);
+	}
+
+	// List view: horizontal card with more details
+	if (viewMode === "list") {
+		return (
+			<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+				<Card p="md" radius="md" withBorder={true} className="item-card-hover" style={{ position: "relative" }}>
+					{/* Skeleton overlay for list view */}
+					{!imageLoaded && hasValidImage && (
+						<Box
+							style={{
+								position: "absolute",
+								inset: 0,
+								zIndex: 10,
+								display: "flex",
+								gap: 16,
+								padding: 16,
+								backgroundColor: "var(--mantine-color-body)",
+								borderRadius: "inherit",
+							}}
+						>
+							<Skeleton width={80} height={80} radius={8} animate={true} />
+							<Box flex={1}>
+								<Skeleton height={20} radius="sm" mb={8} />
+								<Skeleton height={14} radius="sm" width="60%" mb={12} />
+								<Group gap="xs">
+									<Skeleton height={22} width={60} radius="xl" />
+									<Skeleton height={22} width={50} radius="xl" />
+									<Skeleton height={22} width={70} radius="xl" />
+								</Group>
+							</Box>
+						</Box>
+					)}
+					<Group gap="md" align="flex-start" wrap="nowrap">
+						<Box w={80} h={80} style={{ flexShrink: 0, borderRadius: 8, overflow: "hidden", backgroundColor: THUMBNAIL_BG_COLOR }}>
+							{hasValidImage ? (
+								<img
+									src={resolveCdnUrl(images[0])}
+									alt={displayName}
+									loading="eager"
+									decoding="async"
+									onLoad={() => { setImageLoaded(true); }}
+									onError={() => { setHasImageError(true); }}
+									style={{
+										width: "100%",
+										height: "100%",
+										objectFit: "cover",
+										opacity: imageLoaded ? 1 : 0,
+										transition: IMAGE_FADE_TRANSITION,
+									}}
+								/>
+							) : (
+								<Box w={80} h={80} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+									<Text size="sm" c="dimmed" ta="center" p="xs" style={{ wordBreak: WORD_BREAK_STYLE }}>
+										{displayName}
+									</Text>
+								</Box>
+							)}
+						</Box>
+						<Box flex={1} style={{ minWidth: 0 }}>
+							<Text fw={600} mb={4} lineClamp={2}>
+								{displayName}
+							</Text>
+							{primarySeries && (
+								<Text size="sm" c="dimmed" mb="xs" lineClamp={1}>
+									{typeof primarySeries.name === "string" ? primarySeries.name : primarySeries.name.en ?? primarySeries.name.ja}
+								</Text>
+							)}
+							<Group gap="xs" wrap="wrap">
+								{releaseDate && (
+									<Badge variant="light" size="sm" color="gray">
+										{releaseDate}
+									</Badge>
+								)}
+								{gradeName && (
+									<Badge variant="light" size="sm">
+										{gradeName}
+									</Badge>
+								)}
+								{item.scales.map(scale => (
+									<Badge key={scale} variant="light" size="sm">
+										{scale}
+									</Badge>
+								))}
+								{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="list" />}
+								{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="list" />}
+								{primaryBrand && (
+									<Badge variant="outline" size="sm">
+										{typeof primaryBrand.name === "string" ? primaryBrand.name : primaryBrand.name.en ?? primaryBrand.name.ja}
+									</Badge>
+								)}
+							</Group>
+						</Box>
+					</Group>
+				</Card>
+			</Link>
+		);
+	}
+
+	// Grid view (default): compact card with image on top
 	return (
 		<Link href={`/items/${item.id}`} style={{ textDecoration: "none", color: "inherit", display: "block", height: "100%" }}>
 			<Card
@@ -299,7 +555,7 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 								top: 0,
 								left: 0,
 								opacity: imageLoaded ? 1 : 0,
-								transition: "opacity 0.2s ease-in-out",
+								transition: IMAGE_FADE_TRANSITION,
 								zIndex: 1,
 							}}
 						/>
@@ -435,6 +691,9 @@ export interface ExploreSectionHandle {
 }
 
 export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionProps>(function ExploreSection({ items, filters, totalCount, onFilterToggle }, ref) {
+	// View mode state with URL persistence
+	const { viewMode, setViewMode } = useViewMode("grid");
+
 	// Filter items based on selected filters
 	const filteredItems = useMemo(() => {
 		if (!filters) return items;
@@ -564,9 +823,9 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		return [...years].toSorted((a, b) => b - a);
 	}, [sortedItems]);
 
-	// Virtual grid for efficient rendering of large item lists
+	// Virtual grid for efficient rendering of large item lists (grid view)
 	// High overscan (15 rows) ensures smooth scrolling during year navigation
-	const { listRef, virtualRows, totalHeight, columnCount, rowHeight, scrollToIndex } = useVirtualGrid({
+	const { listRef: gridListRef, virtualRows: gridVirtualRows, totalHeight: gridTotalHeight, columnCount, rowHeight: gridRowHeight, scrollToIndex: gridScrollToIndex } = useVirtualGrid({
 		items: sortedItems,
 		columns: GRID_COLUMNS,
 		gap: GRID_GAP,
@@ -575,19 +834,96 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		overscan: 15,
 	});
 
-	// Scroll to year with teleport + smooth scroll for long distances
+	// Fixed item heights for list/table views
+	const LIST_ITEM_HEIGHT = 118; // Card height (110px) + gap (8px)
+	const TABLE_ROW_HEIGHT = 57; // Row height (~49px) + gap (8px)
+
+	// Container refs for list/table views
+	const listContainerRef = useRef<HTMLDivElement>(null);
+	const tableContainerRef = useRef<HTMLDivElement>(null);
+
+	// Compute scroll margins for list/table virtualizers
+	const [listScrollMargin, setListScrollMargin] = useState(0);
+	const [tableScrollMargin, setTableScrollMargin] = useState(0);
+
+	useEffect(() => {
+		const updateMargins = () => {
+			if (listContainerRef.current) {
+				setListScrollMargin(listContainerRef.current.offsetTop);
+			}
+			if (tableContainerRef.current) {
+				setTableScrollMargin(tableContainerRef.current.offsetTop);
+			}
+		};
+		updateMargins();
+		window.addEventListener("resize", updateMargins);
+		return () => { window.removeEventListener("resize", updateMargins); };
+	}, [viewMode]);
+
+	// Window virtualizer for list view (single column)
+	const listVirtualizer = useWindowVirtualizer({
+		count: sortedItems.length,
+		estimateSize: () => LIST_ITEM_HEIGHT,
+		overscan: 15,
+		scrollMargin: listScrollMargin,
+	});
+
+	// Window virtualizer for table view (single column)
+	const tableVirtualizer = useWindowVirtualizer({
+		count: sortedItems.length,
+		estimateSize: () => TABLE_ROW_HEIGHT,
+		overscan: 15,
+		scrollMargin: tableScrollMargin,
+	});
+
+	// Get the appropriate container ref based on view mode
+	const getContainerRef = useCallback(() => {
+		if (viewMode === "grid") return gridListRef.current;
+		if (viewMode === "list") return listContainerRef.current;
+		return tableContainerRef.current;
+	}, [viewMode, gridListRef]);
+
+	// Get effective row height based on view mode
+	const getEffectiveRowHeight = useCallback(() => {
+		if (viewMode === "grid") return gridRowHeight;
+		if (viewMode === "list") return LIST_ITEM_HEIGHT;
+		return TABLE_ROW_HEIGHT;
+	}, [viewMode, gridRowHeight]);
+
+	// Get effective column count based on view mode (list/table = 1 column)
+	const getEffectiveColumnCount = useCallback(() => {
+		if (viewMode === "grid") return columnCount;
+		return 1;
+	}, [viewMode, columnCount]);
+
+	// Unified scrollToIndex that works for all view modes
+	const scrollToIndex = useCallback((index: number) => {
+		if (viewMode === "grid") {
+			gridScrollToIndex(index);
+		} else if (viewMode === "list") {
+			listVirtualizer.scrollToIndex(index, { align: "start", behavior: "smooth" });
+		} else {
+			tableVirtualizer.scrollToIndex(index, { align: "start", behavior: "smooth" });
+		}
+	}, [viewMode, gridScrollToIndex, listVirtualizer, tableVirtualizer]);
+
+	// Scroll to year - uses teleport + smooth scroll pattern for all view modes
 	const scrollToYear = useCallback((year: number) => {
 		const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
 		if (firstIndex === -1) return;
 
-		const targetRowIndex = Math.floor(firstIndex / columnCount);
+		const effectiveRowHeight = getEffectiveRowHeight();
+		const effectiveColumnCount = getEffectiveColumnCount();
+
+		// Calculate target row (for grid, accounts for columns; for list/table, same as index)
+		const targetRowIndex = Math.floor(firstIndex / effectiveColumnCount);
 		const currentScrollTop = window.scrollY;
-		const targetScrollTop = targetRowIndex * rowHeight;
+		const targetScrollTop = targetRowIndex * effectiveRowHeight;
 		const scrollDistance = Math.abs(targetScrollTop - currentScrollTop);
 
 		// For short distances (< 30 rows worth), just smooth scroll directly
 		const SHORT_DISTANCE_ROWS = 30;
-		const shortDistanceThreshold = SHORT_DISTANCE_ROWS * rowHeight;
+		const shortDistanceThreshold = SHORT_DISTANCE_ROWS * effectiveRowHeight;
 		if (scrollDistance < shortDistanceThreshold) {
 			scrollToIndex(firstIndex);
 			return;
@@ -596,22 +932,21 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		// For long distances: teleport close to destination, then smooth scroll the rest
 		// This avoids blank areas during scroll since we're always within overscan range
 		const TELEPORT_BUFFER_ROWS = 20;
+		const totalRows = Math.ceil(sortedItems.length / effectiveColumnCount);
 		const teleportRowIndex = targetScrollTop > currentScrollTop
 			? Math.max(0, targetRowIndex - TELEPORT_BUFFER_ROWS) // scrolling down
-			: Math.min(Math.ceil(sortedItems.length / columnCount) - 1, targetRowIndex + TELEPORT_BUFFER_ROWS); // scrolling up
+			: Math.min(totalRows - 1, targetRowIndex + TELEPORT_BUFFER_ROWS); // scrolling up
 
-		const teleportPosition = teleportRowIndex * rowHeight;
+		const teleportPosition = teleportRowIndex * effectiveRowHeight;
 
 		// Instantly teleport to near destination, then immediately start smooth scroll
 		window.scrollTo({ top: teleportPosition, behavior: "instant" });
 		scrollToIndex(firstIndex);
-	}, [sortedItems, columnCount, rowHeight, scrollToIndex]);
+	}, [sortedItems, getEffectiveColumnCount, getEffectiveRowHeight, scrollToIndex]);
 
 	// Scroll to the item with the closest release date, positioning it at viewport center
 	const scrollToNearestDate = useCallback((targetDate: number) => {
 		if (sortedItems.length === 0) return;
-		const listElement = listRef.current;
-		if (!listElement) return;
 
 		// Find the item with the closest date (early exit since items are sorted by date desc)
 		let closestIndex = 0;
@@ -629,16 +964,22 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			}
 		}
 
-		// Calculate scroll position to put item at viewport center (not top)
-		const targetRowIndex = Math.floor(closestIndex / columnCount);
-		const rowPositionInList = targetRowIndex * rowHeight;
-		const listTop = listElement.getBoundingClientRect().top + window.scrollY;
+		// Calculate scroll position to put item at viewport center (same for all view modes)
+		const containerElement = getContainerRef();
+		if (!containerElement) return;
+
+		const effectiveRowHeight = getEffectiveRowHeight();
+		const effectiveColumnCount = getEffectiveColumnCount();
+
+		const targetRowIndex = Math.floor(closestIndex / effectiveColumnCount);
+		const rowPositionInList = targetRowIndex * effectiveRowHeight;
+		const listTop = containerElement.getBoundingClientRect().top + window.scrollY;
 		const viewportCenter = window.innerHeight / 2;
 		// Target scroll = list top + row position - offset to center it in viewport
-		const targetScrollTop = listTop + rowPositionInList - viewportCenter + rowHeight / 2;
+		const targetScrollTop = listTop + rowPositionInList - viewportCenter + effectiveRowHeight / 2;
 
 		window.scrollTo({ top: Math.max(0, targetScrollTop), behavior: "instant" });
-	}, [sortedItems, columnCount, rowHeight, listRef]);
+	}, [sortedItems, getContainerRef, getEffectiveColumnCount, getEffectiveRowHeight]);
 
 	// Expose scrollToYear, scrollToNearestDate, getYearScrollPosition, getFilteredYears, and getCenterItemDate via ref
 	useImperativeHandle(ref, () => ({
@@ -655,32 +996,35 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		getFilteredYears: () => filteredYears,
 		getCenterItemDate: () => {
 			if (sortedItems.length === 0) return null;
-			const listElement = listRef.current;
-			if (!listElement) return null;
+			const containerElement = getContainerRef();
+			if (!containerElement) return null;
+
+			const effectiveRowHeight = getEffectiveRowHeight();
+			const effectiveColumnCount = getEffectiveColumnCount();
 
 			// Calculate which item is at the center of the viewport
-			const listRect = listElement.getBoundingClientRect();
+			const containerRect = containerElement.getBoundingClientRect();
 			const viewportCenter = window.innerHeight / 2;
-			const scrollIntoList = viewportCenter - listRect.top;
+			const scrollIntoList = viewportCenter - containerRect.top;
 
 			if (scrollIntoList < 0) {
 				// Viewport center is above the list - don't restore position
 				// (user is at top of page, no need to scroll)
 				return null;
 			}
-			if (scrollIntoList > listRect.height) {
+			if (scrollIntoList > containerRect.height) {
 				// Viewport center is below the list, return last item's date
 				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- length already checked above
 				return releaseDateToNumber(sortedItems.at(-1)!.releaseDate);
 			}
 
 			// Calculate which row is at viewport center
-			const rowIndex = Math.floor(scrollIntoList / rowHeight);
-			const itemIndex = Math.min(rowIndex * columnCount, sortedItems.length - 1);
+			const rowIndex = Math.floor(scrollIntoList / effectiveRowHeight);
+			const itemIndex = Math.min(rowIndex * effectiveColumnCount, sortedItems.length - 1);
 
 			return releaseDateToNumber(sortedItems[itemIndex].releaseDate);
 		},
-	}), [sortedItems, scrollToYear, scrollToNearestDate, filteredYears, rowHeight, columnCount, listRef]);
+	}), [sortedItems, scrollToYear, scrollToNearestDate, filteredYears, getEffectiveRowHeight, getEffectiveColumnCount, getContainerRef]);
 
 	const hasActiveFilters = filters && (
 		filters.categories.length > 0 ||
@@ -693,53 +1037,141 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 
 	return (
 		<>
-			{hasActiveFilters && (
-				<Text size="sm" c="dimmed" mb="md">
-					Showing {filteredItems.length.toLocaleString()} of {(totalCount ?? items.length).toLocaleString()} items
+			{/* Header with count and view switcher */}
+			<Group justify="space-between" align="center" mb="md">
+				<Text size="sm" c="dimmed">
+					{hasActiveFilters
+						? `Showing ${filteredItems.length.toLocaleString()} of ${(totalCount ?? items.length).toLocaleString()} items`
+						: `${filteredItems.length.toLocaleString()} items`}
 				</Text>
+				<ViewSwitcher value={viewMode} onChange={setViewMode} size="sm" />
+			</Group>
+
+			{/* Grid view: Virtual grid for efficient rendering */}
+			{viewMode === "grid" && (
+				<Box
+					ref={gridListRef}
+					style={{
+						height: gridTotalHeight,
+						width: "100%",
+						position: "relative",
+					}}
+				>
+					{gridVirtualRows.map((virtualRow) => (
+						<Box
+							key={virtualRow.index}
+							style={{
+								position: "absolute",
+								top: 0,
+								left: 0,
+								width: "100%",
+								height: virtualRow.size,
+								transform: `translateY(${virtualRow.start}px)`,
+								display: "grid",
+								gridTemplateColumns: `repeat(${columnCount}, 1fr)`,
+								gridTemplateRows: `calc(100% - ${GRID_GAP}px)`,
+								gap: GRID_GAP,
+								alignContent: "start",
+							}}
+						>
+							{virtualRow.items.map((item, itemIndex) => {
+								const globalIndex = virtualRow.index * columnCount + itemIndex;
+								return (
+									<Box
+										key={item.id}
+										data-year={item.releaseDate?.year}
+										data-item-id={item.id}
+										h="100%"
+									>
+										<ItemCard item={item} index={globalIndex} onFilterToggle={onFilterToggle} filters={filters} viewMode="grid" />
+									</Box>
+								);
+							})}
+						</Box>
+					))}
+				</Box>
 			)}
-			{/* Virtual grid container - height matches total virtualized content */}
-			<Box
-				ref={listRef}
-				style={{
-					height: totalHeight,
-					width: "100%",
-					position: "relative",
-				}}
-			>
-				{virtualRows.map((virtualRow) => (
-					<Box
-						key={virtualRow.index}
-						style={{
-							position: "absolute",
-							top: 0,
-							left: 0,
-							width: "100%",
-							height: virtualRow.size,
-							transform: `translateY(${virtualRow.start}px)`,
-							display: "grid",
-							gridTemplateColumns: `repeat(${columnCount}, 1fr)`,
-							gridTemplateRows: `calc(100% - ${GRID_GAP}px)`,
-							gap: GRID_GAP,
-							alignContent: "start",
-						}}
-					>
-						{virtualRow.items.map((item, itemIndex) => {
-							const globalIndex = virtualRow.index * columnCount + itemIndex;
-							return (
-								<Box
-									key={item.id}
-									data-year={item.releaseDate?.year}
-									data-item-id={item.id}
-									h="100%"
-								>
-									<ItemCard item={item} index={globalIndex} onFilterToggle={onFilterToggle} filters={filters} />
-								</Box>
-							);
-						})}
-					</Box>
-				))}
-			</Box>
+
+			{/* List view: Virtualized list for efficient rendering */}
+			{viewMode === "list" && (
+				<Box
+					ref={listContainerRef}
+					style={{
+						height: listVirtualizer.getTotalSize(),
+						width: "100%",
+						position: "relative",
+					}}
+				>
+					{listVirtualizer.getVirtualItems().map((virtualItem) => {
+						const item = sortedItems[virtualItem.index];
+						return (
+							<Box
+								key={item.id}
+								data-year={item.releaseDate?.year}
+								data-item-id={item.id}
+								style={{
+									position: "absolute",
+									top: 0,
+									left: 0,
+									width: "100%",
+									height: virtualItem.size,
+									transform: `translateY(${virtualItem.start - listScrollMargin}px)`,
+									paddingBottom: 8,
+								}}
+							>
+								<ItemCard item={item} index={virtualItem.index} onFilterToggle={onFilterToggle} filters={filters} viewMode="list" />
+							</Box>
+						);
+					})}
+				</Box>
+			)}
+
+			{/* Table view: Virtualized table for efficient rendering */}
+			{viewMode === "table" && (
+				<Box ref={tableContainerRef} style={{ overflowX: "auto" }}>
+					<Table striped={true} highlightOnHover={true}>
+						<Table.Thead>
+							<Table.Tr>
+								<Table.Th>Name</Table.Th>
+								<Table.Th>Released</Table.Th>
+								<Table.Th>Series</Table.Th>
+								<Table.Th>Grade</Table.Th>
+								<Table.Th>Scale</Table.Th>
+								<Table.Th>Brand</Table.Th>
+							</Table.Tr>
+						</Table.Thead>
+						<Table.Tbody
+							style={{
+								height: tableVirtualizer.getTotalSize(),
+								position: "relative",
+							}}
+						>
+							{tableVirtualizer.getVirtualItems().map((virtualItem) => {
+								const item = sortedItems[virtualItem.index];
+								return (
+									<Table.Tr
+										key={item.id}
+										data-year={item.releaseDate?.year}
+										data-item-id={item.id}
+										style={{
+											position: "absolute",
+											top: 0,
+											left: 0,
+											width: "100%",
+											height: virtualItem.size,
+											transform: `translateY(${virtualItem.start - tableScrollMargin}px)`,
+											display: "table-row",
+										}}
+									>
+										{/* Render table cells inline instead of using ItemCard for table rows */}
+										<TableRowCells item={item} onFilterToggle={onFilterToggle} filters={filters} />
+									</Table.Tr>
+								);
+							})}
+						</Table.Tbody>
+					</Table>
+				</Box>
+			)}
 		</>
 	);
 });
