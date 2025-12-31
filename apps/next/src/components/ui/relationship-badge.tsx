@@ -1,11 +1,17 @@
 import { ActionIcon } from "@mantine/core";
-import { IconFileText, IconPackage } from "@tabler/icons-react";
+import { IconFileText, IconPackage, IconWorld } from "@tabler/icons-react";
 
 interface RelationshipBadgeProps {
-  type: "manual" | "product";
+  type: "manual" | "product" | "globalSite";
   size?: "xs" | "sm";
   viewMode?: "grid" | "list" | "table";
 }
+
+const badgeConfig = {
+	manual: { Icon: IconFileText, color: "blue", label: "Has manual available" },
+	product: { Icon: IconPackage, color: "green", label: "Has associated product" },
+	globalSite: { Icon: IconWorld, color: "teal", label: "Has global site link" },
+} as const;
 
 /**
  * A small icon badge indicating relationship between products and manuals
@@ -19,22 +25,17 @@ export function RelationshipBadge({
 	size = "xs",
 	viewMode = "grid",
 }: RelationshipBadgeProps) {
-	const Icon = type === "manual" ? IconFileText : IconPackage;
-	const color = type === "manual" ? "blue" : "green";
+	const { Icon, color, label } = badgeConfig[type];
 	const sizeMap = { grid: 16, list: 18, table: 14 };
 	const iconSize = sizeMap[viewMode];
-
-	const ariaLabel = type === "manual"
-		? "Has manual available"
-		: "Has associated product";
 
 	return (
 		<ActionIcon
 			variant="light"
 			color={color}
 			size={size}
-			aria-label={ariaLabel}
-			title={ariaLabel}
+			aria-label={label}
+			title={label}
 		>
 			<Icon size={iconSize} />
 		</ActionIcon>
