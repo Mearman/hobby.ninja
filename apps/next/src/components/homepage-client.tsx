@@ -9,17 +9,18 @@ import {
 	Container,
 	Group,
 	Stack,
+	Switch,
 	Text,
 	Title,
 	Tooltip,
 } from "@mantine/core";
-import { IconArrowNarrowRight, IconCalendar, IconChevronDown, IconChevronUp, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBook, IconCalendar, IconChevronDown, IconChevronUp, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
-import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
+import { ExploreSection, OTHER_FILTER_ID, type ArrayFilterType, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
 
@@ -85,6 +86,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		grades: [],
 		scales: [],
 		years: [],
+		hasManual: false,
 	});
 
 	// Year scrollbar data - all years for initial render
@@ -198,7 +200,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		}
 	}, [filters]);
 
-	const toggleFilter = useCallback((type: keyof FilterState, id: string) => {
+	const toggleFilter = useCallback((type: ArrayFilterType, id: string) => {
 		captureViewPosition();
 		setFilters((prev) => {
 			const current = prev[type];
@@ -214,7 +216,12 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 
 	const clearFilters = useCallback(() => {
 		captureViewPosition();
-		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [], years: [] });
+		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [], years: [], hasManual: false });
+	}, [captureViewPosition]);
+
+	const toggleHasManual = useCallback(() => {
+		captureViewPosition();
+		setFilters((prev) => ({ ...prev, hasManual: !prev.hasManual }));
 	}, [captureViewPosition]);
 
 	const clearCategories = useCallback(() => {
@@ -334,14 +341,15 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		filters.brands.length > 0 ||
 		filters.grades.length > 0 ||
 		filters.scales.length > 0 ||
-		filters.years.length > 0;
+		filters.years.length > 0 ||
+		filters.hasManual;
 
 	// Sync hasActiveFilters to context for header button visibility
 	useEffect(() => {
 		stickyFilters.setHasActiveFilters(hasActiveFilters);
 	}, [hasActiveFilters, stickyFilters]);
 
-	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length + filters.years.length;
+	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length + filters.years.length + (filters.hasManual ? 1 : 0);
 
 	// Sort categories by mode
 	const categoriesSorted = useMemo(() => {
@@ -1195,6 +1203,24 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 								/>
 							)}
 						</CollapsibleGrid>
+
+						{/* Has Manual filter */}
+						<Group gap="sm" py="xs">
+							<Switch
+								checked={filters.hasManual}
+								onChange={toggleHasManual}
+								label={
+									<Group gap="xs">
+										<IconBook size={16} />
+										<Text size="sm" fw={500}>Has Manual</Text>
+									</Group>
+								}
+								styles={{
+									track: { cursor: "pointer" },
+									label: { cursor: "pointer" },
+								}}
+							/>
+						</Group>
 					</Stack>
 				</Container>
 

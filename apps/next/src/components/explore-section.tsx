@@ -171,7 +171,7 @@ function EntityBadge({ image, name, onClick, isSelected }: { image?: string; nam
 	);
 }
 
-function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index: number; onFilterToggle?: (type: keyof FilterState, id: string) => void; filters?: FilterState }): React.ReactElement {
+function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index: number; onFilterToggle?: (type: ArrayFilterType, id: string) => void; filters?: FilterState }): React.ReactElement {
 	const [hasImageError, setHasImageError] = useState(false);
 	// First batch loads eagerly for fastest initial paint
 	// Subsequent batches still use eager loading since native lazy doesn't work reliably
@@ -395,6 +395,9 @@ export const OTHER_FILTER_ID = "__other__";
 /** P-Bandai child brand IDs - "pb" filter matches any of these */
 const PBANDAI_CHILD_IDS = ["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"];
 
+/** Array-based filter types that can be toggled */
+export type ArrayFilterType = "categories" | "series" | "brands" | "grades" | "scales" | "years";
+
 export interface FilterState {
 	categories: string[];
 	series: string[];
@@ -402,14 +405,16 @@ export interface FilterState {
 	grades: string[];
 	scales: string[];
 	years: string[];
+	/** Filter to only show items that have manuals */
+	hasManual: boolean;
 }
 
 interface ExploreSectionProps {
 	items: Item[];
 	filters?: FilterState;
 	totalCount?: number;
-	/** Callback to toggle a filter - type is "categories" | "series" | "brands" | "grades" */
-	onFilterToggle?: (type: keyof FilterState, id: string) => void;
+	/** Callback to toggle a filter - type is one of the array-based filter types */
+	onFilterToggle?: (type: ArrayFilterType, id: string) => void;
 }
 
 /** Ref handle for ExploreSection - exposes year navigation */
@@ -437,7 +442,8 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			filters.brands.length > 0 ||
 			filters.grades.length > 0 ||
 			filters.scales.length > 0 ||
-			filters.years.length > 0;
+			filters.years.length > 0 ||
+			filters.hasManual;
 
 		if (!hasActiveFilters) return items;
 
@@ -521,6 +527,11 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 				if (!matchesYear && !(hasOther && hasNoYear)) {
 					return false;
 				}
+			}
+
+			// Check if item has manual
+			if (filters.hasManual && !itemHasManual(item)) {
+				return false;
 			}
 
 			return true;
@@ -650,7 +661,8 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			}
 			if (scrollIntoList > listRect.height) {
 				// Viewport center is below the list, return last item's date
-				return releaseDateToNumber(sortedItems.at(-1).releaseDate);
+				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- length already checked above
+				return releaseDateToNumber(sortedItems.at(-1)!.releaseDate);
 			}
 
 			// Calculate which row is at viewport center
