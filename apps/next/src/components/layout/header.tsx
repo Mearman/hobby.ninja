@@ -3,8 +3,8 @@
 import { ActionIcon, Box, Container, Group, TextInput, Tooltip } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import {
+	IconArrowsDiagonal,
 	IconArrowsDiagonalMinimize2,
-	IconArrowsHorizontal,
 	IconDeviceDesktop,
 	IconFilterDown,
 	IconFilterUp,
@@ -237,7 +237,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 									onClick={toggleFullWidth}
 									aria-label={fullWidth ? "Use constrained width" : "Use full width"}
 								>
-									{fullWidth ? <IconArrowsDiagonalMinimize2 size={UI.ICON_SIZE_LG} style={{ transform: "rotate(-45deg)" }} /> : <IconArrowsHorizontal size={UI.ICON_SIZE_LG} />}
+									{fullWidth ? <IconArrowsDiagonalMinimize2 size={UI.ICON_SIZE_LG} style={{ transform: "rotate(-45deg)" }} /> : <IconArrowsDiagonal size={UI.ICON_SIZE_LG} style={{ transform: "rotate(45deg)" }} />}
 								</ActionIcon>
 							</Tooltip>
 						</Box>
