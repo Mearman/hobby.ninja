@@ -3,12 +3,10 @@
 import { ActionIcon, Box, Group, TextInput, Tooltip } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import {
-	IconDatabase,
 	IconDeviceDesktop,
 	IconFilterDown,
 	IconFilterUp,
 	IconFolder,
-	IconHome,
 	IconInfoCircle,
 	IconMenu2,
 	IconMoon,
@@ -83,10 +81,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	};
 
 	const navigationItems = [
-		{ href: "/", label: "Home", icon: IconHome },
-		{ href: "/database", label: "Database", icon: IconDatabase },
 		{ href: "/collection", label: "Collection", icon: IconFolder },
-		{ href: "/search", label: "Search", icon: IconSearch },
 	];
 
 	return (
