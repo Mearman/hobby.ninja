@@ -596,10 +596,6 @@ export default function CollectionPage() {
 		setSortOrder(newSortOrder);
 	};
 
-	React.useEffect(() => {
-		void actions.loadCollections();
-	}, [actions]);
-
 	const handleCreateCollection = async () => {
 		try {
 			await actions.createCollection(formData.name, formData.description);
