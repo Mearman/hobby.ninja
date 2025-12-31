@@ -2,506 +2,313 @@
 
 import React, { createContext, useContext, useReducer, useEffect, ReactNode, useCallback } from "react";
 
-import type { CollectionItem, CollectionStats, Collection, CollectionListResponse } from "@/lib/collection-storage";
+import type { List, ListMembership, SyntheticList } from "@/lib/collection-storage";
 import {
-	addItem,
-	updateItem,
-	removeItem,
-	getCollectionItems,
-	getCollection,
-	getCollections,
-	createCollection,
-	updateCollection,
-	deleteCollection,
-	getStats,
-	bulkAddItems,
-	bulkUpdateItems,
-	bulkRemoveItems,
+	getLists,
+	getList,
+	createList,
+	updateList,
+	deleteList,
+	getListItems,
+	getItemLists,
+	addToList,
+	removeFromList,
+	getSyntheticListItems,
+	initializeDatabase,
+	SYNTHETIC_LISTS,
 } from "@/lib/collection-storage";
 
-// State interface for collection context
-interface CollectionState {
-  collections: CollectionListResponse["collections"];
-  currentCollection: Collection | null;
-  items: CollectionItem[];
-  stats: CollectionStats | null;
-  loading: boolean;
-  error: string | null;
-  searchQuery: string;
-  filters: {
-    status?: string;
-    brand?: string;
-    category?: string;
-    series?: string;
-    grade?: string;
-    scale?: string;
-  };
-  sortBy: "name" | "dateAdded" | "price" | "releaseDate";
-  sortOrder: "asc" | "desc";
-  viewMode: "grid" | "list";
+// ============================================================================
+// State
+// ============================================================================
+
+interface ListState {
+	lists: List[];
+	syntheticLists: SyntheticList[];
+	currentList: List | null;
+	currentListItems: ListMembership[];
+	loading: boolean;
+	error: string | null;
 }
 
-// Action types for collection reducer
-type CollectionAction =
-  | { type: "SET_LOADING"; payload: boolean }
-  | { type: "SET_ERROR"; payload: string | null }
-  | { type: "SET_COLLECTIONS"; payload: CollectionListResponse["collections"] }
-  | { type: "SET_CURRENT_COLLECTION"; payload: Collection | null }
-  | { type: "SET_ITEMS"; payload: CollectionItem[] }
-  | { type: "SET_STATS"; payload: CollectionStats | null }
-  | { type: "SET_SEARCH_QUERY"; payload: string }
-  | { type: "SET_FILTERS"; payload: Partial<CollectionState["filters"]> }
-  | { type: "SET_SORT_BY"; payload: CollectionState["sortBy"] }
-  | { type: "SET_SORT_ORDER"; payload: CollectionState["sortOrder"] }
-  | { type: "SET_VIEW_MODE"; payload: CollectionState["viewMode"] }
-  | { type: "ADD_ITEM"; payload: CollectionItem }
-  | { type: "UPDATE_ITEM"; payload: { id: string; updates: Partial<CollectionItem> } }
-  | { type: "REMOVE_ITEM"; payload: string }
-  | { type: "BULK_UPDATE_ITEMS"; payload: CollectionItem[] }
-  | { type: "CLEAR_FILTERS" }
-  | { type: "RESET_STATE" };
-
-// Initial state
-const initialState: CollectionState = {
-	collections: [],
-	currentCollection: null,
-	items: [],
-	stats: null,
+const initialState: ListState = {
+	lists: [],
+	syntheticLists: SYNTHETIC_LISTS,
+	currentList: null,
+	currentListItems: [],
 	loading: false,
 	error: null,
-	searchQuery: "",
-	filters: {},
-	sortBy: "dateAdded",
-	sortOrder: "desc",
-	viewMode: "grid",
 };
 
-// Collection reducer
-function collectionReducer(state: CollectionState, action: CollectionAction): CollectionState {
+// ============================================================================
+// Actions
+// ============================================================================
+
+type ListAction =
+	| { type: "SET_LOADING"; payload: boolean }
+	| { type: "SET_ERROR"; payload: string | null }
+	| { type: "SET_LISTS"; payload: List[] }
+	| { type: "SET_CURRENT_LIST"; payload: List | null }
+	| { type: "SET_CURRENT_LIST_ITEMS"; payload: ListMembership[] }
+	| { type: "ADD_LIST"; payload: List }
+	| { type: "UPDATE_LIST"; payload: { id: string; updates: Partial<List> } }
+	| { type: "REMOVE_LIST"; payload: string };
+
+function listReducer(state: ListState, action: ListAction): ListState {
 	switch (action.type) {
 		case "SET_LOADING": {
 			return { ...state, loading: action.payload };
 		}
-
 		case "SET_ERROR": {
 			return { ...state, error: action.payload, loading: false };
 		}
-
-		case "SET_COLLECTIONS": {
-			return { ...state, collections: action.payload };
+		case "SET_LISTS": {
+			return { ...state, lists: action.payload, loading: false };
 		}
-
-		case "SET_CURRENT_COLLECTION": {
-			return { ...state, currentCollection: action.payload };
+		case "SET_CURRENT_LIST": {
+			return { ...state, currentList: action.payload };
 		}
-
-		case "SET_ITEMS": {
-			return { ...state, items: action.payload, loading: false };
+		case "SET_CURRENT_LIST_ITEMS": {
+			return { ...state, currentListItems: action.payload };
 		}
-
-		case "SET_STATS": {
-			return { ...state, stats: action.payload };
+		case "ADD_LIST": {
+			return { ...state, lists: [...state.lists, action.payload] };
 		}
-
-		case "SET_SEARCH_QUERY": {
-			return { ...state, searchQuery: action.payload };
-		}
-
-		case "SET_FILTERS": {
-			return { ...state, filters: { ...state.filters, ...action.payload } };
-		}
-
-		case "SET_SORT_BY": {
-			return { ...state, sortBy: action.payload };
-		}
-
-		case "SET_SORT_ORDER": {
-			return { ...state, sortOrder: action.payload };
-		}
-
-		case "SET_VIEW_MODE": {
-			return { ...state, viewMode: action.payload };
-		}
-
-		case "ADD_ITEM": {
-			return { ...state, items: [...state.items, action.payload] };
-		}
-
-		case "UPDATE_ITEM": {
+		case "UPDATE_LIST": {
 			return {
 				...state,
-				items: state.items.map(item =>
-					item.id === action.payload.id ? { ...item, ...action.payload.updates } : item,
+				lists: state.lists.map(list =>
+					list.id === action.payload.id
+						? { ...list, ...action.payload.updates }
+						: list,
 				),
+				currentList: state.currentList?.id === action.payload.id
+					? { ...state.currentList, ...action.payload.updates }
+					: state.currentList,
 			};
 		}
-
-		case "REMOVE_ITEM": {
+		case "REMOVE_LIST": {
 			return {
 				...state,
-				items: state.items.filter(item => item.id !== action.payload),
+				lists: state.lists.filter(list => list.id !== action.payload),
+				currentList: state.currentList?.id === action.payload ? null : state.currentList,
 			};
 		}
-
-		case "BULK_UPDATE_ITEMS": {
-			return {
-				...state,
-				items: state.items.map(item => {
-					const updatedItem = action.payload.find(updated => updated.id === item.id);
-					return updatedItem ?? item;
-				}),
-			};
-		}
-
-		case "CLEAR_FILTERS": {
-			return { ...state, filters: {}, searchQuery: "" };
-		}
-
-		case "RESET_STATE": {
-			return { ...initialState };
-		}
-
 		default: {
 			return state;
 		}
 	}
 }
 
-// Context interface
-interface CollectionContextType {
-  state: CollectionState;
-  actions: {
-    // Collection management
-    loadCollections: () => Promise<void>;
-    loadCollection: (collectionId: string) => Promise<void>;
-    createCollection: (name: string, description?: string) => Promise<Collection>;
-    updateCollection: (collectionId: string, updates: Partial<Collection>) => Promise<void>;
-    deleteCollection: (collectionId: string) => Promise<void>;
-    setCurrentCollection: (collection: Collection | null) => void;
+// ============================================================================
+// Context
+// ============================================================================
 
-    // Item management
-    loadItems: (collectionId?: string) => Promise<void>;
-    addItem: (itemId: string, item: Omit<CollectionItem, "id" | "dateAdded" | "lastModified">) => Promise<void>;
-    updateItem: (itemId: string, updates: Partial<CollectionItem>) => Promise<void>;
-    removeItem: (itemId: string) => Promise<void>;
-    bulkAddItems: (items: Array<Omit<CollectionItem, "id" | "dateAdded" | "lastModified">>) => Promise<void>;
-    bulkUpdateItems: (updates: Array<{ id: string; updates: Partial<CollectionItem> }>) => Promise<void>;
-    bulkRemoveItems: (itemIds: string[]) => Promise<void>;
+interface ListContextType {
+	state: ListState;
+	actions: {
+		// List management
+		loadLists: () => Promise<void>;
+		loadList: (listId: string) => Promise<void>;
+		createList: (name: string, description?: string, icon?: string) => Promise<List>;
+		updateList: (listId: string, updates: Partial<List>) => Promise<void>;
+		deleteList: (listId: string) => Promise<void>;
 
-    // Stats and filtering
-    loadStats: (collectionId?: string) => Promise<void>;
-    setSearchQuery: (query: string) => void;
-    setFilters: (filters: Partial<CollectionState["filters"]>) => void;
-    clearFilters: () => void;
-    setSorting: (sortBy: CollectionState["sortBy"], order: CollectionState["sortOrder"]) => void;
-    setViewMode: (mode: CollectionState["viewMode"]) => void;
+		// Membership management
+		addItemToList: (listId: string, itemId: string, notes?: string) => Promise<void>;
+		removeItemFromList: (listId: string, itemId: string) => Promise<void>;
+		getItemLists: (itemId: string) => Promise<List[]>;
+		isItemInList: (listId: string, itemId: string) => Promise<boolean>;
 
-    // Utility
-    refreshData: () => Promise<void>;
-    resetState: () => void;
-  };
+		// Synthetic lists
+		getSyntheticListItems: (listId: string) => Promise<string[]>;
+
+		// Utility
+		refreshLists: () => Promise<void>;
+	};
 }
 
-// Create context
-const CollectionContext = createContext<CollectionContextType | null>(null);
+const ListContext = createContext<ListContextType | null>(null);
 
-// Provider component
-interface CollectionProviderProps {
-  children: ReactNode;
-  defaultCollectionId?: string;
+// ============================================================================
+// Provider
+// ============================================================================
+
+interface ListProviderProps {
+	children: ReactNode;
 }
 
-export function CollectionProvider({ children, defaultCollectionId }: CollectionProviderProps) {
-	const [state, dispatch] = useReducer(collectionReducer, initialState);
+export function ListProvider({ children }: ListProviderProps) {
+	const [state, dispatch] = useReducer(listReducer, initialState);
 
-	// Action implementations
-	const loadItems = useCallback(async (collectionId?: string) => {
-		try {
-			const targetCollectionId = collectionId ?? state.currentCollection?.id;
-			if (!targetCollectionId) return;
-
-			dispatch({ type: "SET_LOADING", payload: true });
-			const items = await getCollectionItems(targetCollectionId);
-			dispatch({ type: "SET_ITEMS", payload: items });
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load items" });
-		}
-	}, [state.currentCollection]);
-
-	const loadStats = useCallback(async (collectionId?: string) => {
-		try {
-			const targetCollectionId = collectionId ?? state.currentCollection?.id;
-			if (!targetCollectionId) return;
-
-			const stats = await getStats(targetCollectionId);
-			dispatch({ type: "SET_STATS", payload: stats });
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load stats" });
-		}
-	}, [state.currentCollection]);
-
-	const loadCollections = useCallback(async () => {
+	// Load all lists
+	const loadLists = useCallback(async () => {
 		try {
 			dispatch({ type: "SET_LOADING", payload: true });
-			const result = await getCollections();
-			dispatch({ type: "SET_COLLECTIONS", payload: result.collections });
+			await initializeDatabase();
+			const lists = await getLists();
+			dispatch({ type: "SET_LISTS", payload: lists });
 		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load collections" });
+			dispatch({
+				type: "SET_ERROR",
+				payload: error instanceof Error ? error.message : "Failed to load lists",
+			});
 		}
 	}, []);
 
-	const loadCollection = useCallback(async (collectionId: string) => {
+	// Load a specific list with its items
+	const loadList = useCallback(async (listId: string) => {
 		try {
 			dispatch({ type: "SET_LOADING", payload: true });
-			const collection = await getCollection(collectionId);
-			dispatch({ type: "SET_CURRENT_COLLECTION", payload: collection ?? null });
-			await loadItems(collectionId);
-			await loadStats(collectionId);
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to load collection" });
-		}
-	}, [loadItems, loadStats]);
+			const list = await getList(listId);
+			dispatch({ type: "SET_CURRENT_LIST", payload: list ?? null });
 
-	// Load collections on mount
-	useEffect(() => {
-		void loadCollections();
-
-		if (defaultCollectionId) {
-			void loadCollection(defaultCollectionId);
-		}
-	}, [defaultCollectionId, loadCollections, loadCollection]);
-
-	const createCollectionAction = async (name: string, description?: string): Promise<Collection> => {
-		try {
-			const collectionData: Omit<Collection, "id"> = {
-				name,
-				description: description ?? "",
-				category: "general",
-				isPublic: false,
-				itemCount: 0,
-				totalValue: 0,
-				currency: "JPY" as const,
-				createdAt: new Date(),
-				modifiedAt: new Date(),
-				settings: {
-					defaultStatus: "owned",
-					defaultCondition: "new",
-					autoBackup: false,
-				},
-			};
-			const collectionId = await createCollection(collectionData);
-			const collection: Collection = {
-				...collectionData,
-				id: collectionId,
-			};
-			dispatch({ type: "SET_COLLECTIONS", payload: [...state.collections, collection] });
-			return collection;
-		} catch (error) {
-			const errorMessage = error instanceof Error ? error.message : "Failed to create collection";
-			dispatch({ type: "SET_ERROR", payload: errorMessage });
-			throw new Error(errorMessage);
-		}
-	};
-
-	const updateCollectionAction = async (collectionId: string, updates: Partial<Collection>) => {
-		try {
-			await updateCollection(collectionId, updates);
-			if (state.currentCollection?.id === collectionId) {
-				const updatedCollection = { ...state.currentCollection, ...updates };
-				dispatch({ type: "SET_CURRENT_COLLECTION", payload: updatedCollection });
+			if (list) {
+				const items = await getListItems(listId);
+				dispatch({ type: "SET_CURRENT_LIST_ITEMS", payload: items });
 			}
-
-			const updatedCollections = state.collections.map(col =>
-				col.id === collectionId ? { ...col, ...updates } : col,
-			);
-			dispatch({ type: "SET_COLLECTIONS", payload: updatedCollections });
+			dispatch({ type: "SET_LOADING", payload: false });
 		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to update collection" });
-		}
-	};
-
-	const deleteCollectionAction = async (collectionId: string) => {
-		try {
-			await deleteCollection(collectionId);
-			const updatedCollections = state.collections.filter(col => col.id !== collectionId);
-			dispatch({ type: "SET_COLLECTIONS", payload: updatedCollections });
-
-			if (state.currentCollection?.id === collectionId) {
-				dispatch({ type: "SET_CURRENT_COLLECTION", payload: null });
-				dispatch({ type: "SET_ITEMS", payload: [] });
-				dispatch({ type: "SET_STATS", payload: null });
-			}
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to delete collection" });
-		}
-	};
-
-	const addItemAction = async (itemId: string, itemData: Omit<CollectionItem, "id" | "dateAdded" | "lastModified">) => {
-		try {
-			const generatedId = await addItem(itemData);
-			const item: CollectionItem = {
-				...itemData,
-				id: generatedId,
-				dateAdded: new Date().toISOString(),
-				lastModified: new Date().toISOString(),
-			};
-			dispatch({ type: "ADD_ITEM", payload: item });
-			if (state.currentCollection?.id) {
-				await loadStats(state.currentCollection.id);
-			}
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to add item" });
-		}
-	};
-
-	const updateItemAction = async (itemId: string, updates: Partial<CollectionItem>) => {
-		try {
-			await updateItem(itemId, updates);
-			dispatch({ type: "UPDATE_ITEM", payload: { id: itemId, updates } });
-			if (state.currentCollection?.id) {
-				await loadStats(state.currentCollection.id);
-			}
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to update item" });
-		}
-	};
-
-	const removeItemAction = async (itemId: string) => {
-		try {
-			await removeItem(itemId);
-			dispatch({ type: "REMOVE_ITEM", payload: itemId });
-			if (state.currentCollection?.id) {
-				await loadStats(state.currentCollection.id);
-			}
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to remove item" });
-		}
-	};
-
-	const bulkAddItemsAction = async (items: Array<Omit<CollectionItem, "id" | "dateAdded" | "lastModified">>) => {
-		try {
-			const addedItems = await bulkAddItems(items);
-			dispatch({ type: "SET_ITEMS", payload: [...state.items, ...addedItems] });
-			if (state.currentCollection?.id) {
-				await loadStats(state.currentCollection.id);
-			}
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to add items" });
-		}
-	};
-
-	const bulkUpdateItemsAction = async (updates: Array<{ id: string; updates: Partial<CollectionItem> }>) => {
-		try {
-			await bulkUpdateItems(updates);
-			// Update local state
-			const updatedItems = updates.map(update => {
-				const existingItem = state.items.find(item => item.id === update.id);
-				if (!existingItem) {
-					throw new Error(`Item with id ${update.id} not found`);
-				}
-				return {
-					...existingItem,
-					...update.updates,
-				};
+			dispatch({
+				type: "SET_ERROR",
+				payload: error instanceof Error ? error.message : "Failed to load list",
 			});
-
-			dispatch({ type: "BULK_UPDATE_ITEMS", payload: updatedItems });
-			if (state.currentCollection?.id) {
-				await loadStats(state.currentCollection.id);
-			}
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to update items" });
 		}
-	};
+	}, []);
 
-	const bulkRemoveItemsAction = async (itemIds: string[]) => {
-		try {
-			await bulkRemoveItems(itemIds);
-			const remainingItems = state.items.filter(item => !itemIds.includes(item.id));
-			dispatch({ type: "SET_ITEMS", payload: remainingItems });
-			if (state.currentCollection?.id) {
-				await loadStats(state.currentCollection.id);
-			}
-		} catch (error) {
-			dispatch({ type: "SET_ERROR", payload: error instanceof Error ? error.message : "Failed to remove items" });
+	// Create a new list
+	const createListAction = useCallback(async (
+		name: string,
+		description?: string,
+		icon?: string,
+	): Promise<List> => {
+		const id = await createList({ name, description, icon });
+		const newList = await getList(id);
+		if (!newList) {
+			throw new Error("Failed to create list");
 		}
-	};
+		dispatch({ type: "ADD_LIST", payload: newList });
+		return newList;
+	}, []);
 
-	const setSearchQuery = (query: string) => {
-		dispatch({ type: "SET_SEARCH_QUERY", payload: query });
-	};
+	// Update a list
+	const updateListAction = useCallback(async (
+		listId: string,
+		updates: Partial<List>,
+	): Promise<void> => {
+		await updateList(listId, updates);
+		dispatch({ type: "UPDATE_LIST", payload: { id: listId, updates } });
+	}, []);
 
-	const setFilters = (filters: Partial<CollectionState["filters"]>) => {
-		dispatch({ type: "SET_FILTERS", payload: filters });
-	};
+	// Delete a list
+	const deleteListAction = useCallback(async (listId: string): Promise<void> => {
+		await deleteList(listId);
+		dispatch({ type: "REMOVE_LIST", payload: listId });
+	}, []);
 
-	const clearFilters = () => {
-		dispatch({ type: "CLEAR_FILTERS" });
-	};
+	// Add item to list
+	const addItemToListAction = useCallback(async (
+		listId: string,
+		itemId: string,
+		notes?: string,
+	): Promise<void> => {
+		await addToList(listId, itemId, notes ? { notes } : undefined);
 
-	const setSorting = (sortBy: CollectionState["sortBy"], order: CollectionState["sortOrder"]) => {
-		dispatch({ type: "SET_SORT_BY", payload: sortBy });
-		dispatch({ type: "SET_SORT_ORDER", payload: order });
-	};
+		// Update list modified timestamp
+		dispatch({
+			type: "UPDATE_LIST",
+			payload: { id: listId, updates: { modifiedAt: new Date() } },
+		});
 
-	const setViewMode = (mode: CollectionState["viewMode"]) => {
-		dispatch({ type: "SET_VIEW_MODE", payload: mode });
-	};
+		// If viewing this list, refresh items
+		if (state.currentList?.id === listId) {
+			const items = await getListItems(listId);
+			dispatch({ type: "SET_CURRENT_LIST_ITEMS", payload: items });
+		}
+	}, [state.currentList?.id]);
 
-	const setCurrentCollection = (collection: Collection | null) => {
-		dispatch({ type: "SET_CURRENT_COLLECTION", payload: collection });
-	};
+	// Remove item from list
+	const removeItemFromListAction = useCallback(async (
+		listId: string,
+		itemId: string,
+	): Promise<void> => {
+		await removeFromList(listId, itemId);
 
-	const refreshData = async () => {
-		await (state.currentCollection?.id ? loadCollection(state.currentCollection.id) : loadCollections());
-	};
+		// Update state
+		dispatch({
+			type: "UPDATE_LIST",
+			payload: { id: listId, updates: { modifiedAt: new Date() } },
+		});
 
-	const resetState = () => {
-		dispatch({ type: "RESET_STATE" });
-	};
+		// If viewing this list, refresh items
+		if (state.currentList?.id === listId) {
+			const items = await getListItems(listId);
+			dispatch({ type: "SET_CURRENT_LIST_ITEMS", payload: items });
+		}
+	}, [state.currentList?.id]);
+
+	// Get all lists an item belongs to
+	const getItemListsAction = useCallback(async (itemId: string): Promise<List[]> => {
+		return getItemLists(itemId);
+	}, []);
+
+	// Check if item is in a list
+	const isItemInListAction = useCallback(async (
+		listId: string,
+		itemId: string,
+	): Promise<boolean> => {
+		const lists = await getItemLists(itemId);
+		return lists.some(l => l.id === listId);
+	}, []);
+
+	// Get synthetic list items
+	const getSyntheticListItemsAction = useCallback(async (listId: string): Promise<string[]> => {
+		return getSyntheticListItems(listId);
+	}, []);
+
+	// Refresh all lists
+	const refreshLists = useCallback(async () => {
+		await loadLists();
+	}, [loadLists]);
+
+	// Load lists on mount
+	useEffect(() => {
+		void loadLists();
+	}, [loadLists]);
 
 	const actions = {
-		loadCollections,
-		loadCollection,
-		createCollection: createCollectionAction,
-		updateCollection: updateCollectionAction,
-		deleteCollection: deleteCollectionAction,
-		setCurrentCollection,
-		loadItems,
-		addItem: addItemAction,
-		updateItem: updateItemAction,
-		removeItem: removeItemAction,
-		bulkAddItems: bulkAddItemsAction,
-		bulkUpdateItems: bulkUpdateItemsAction,
-		bulkRemoveItems: bulkRemoveItemsAction,
-		loadStats,
-		setSearchQuery,
-		setFilters,
-		clearFilters,
-		setSorting,
-		setViewMode,
-		refreshData,
-		resetState,
+		loadLists,
+		loadList,
+		createList: createListAction,
+		updateList: updateListAction,
+		deleteList: deleteListAction,
+		addItemToList: addItemToListAction,
+		removeItemFromList: removeItemFromListAction,
+		getItemLists: getItemListsAction,
+		isItemInList: isItemInListAction,
+		getSyntheticListItems: getSyntheticListItemsAction,
+		refreshLists,
 	};
 
 	return (
-		<CollectionContext.Provider value={{ state, actions }}>
+		<ListContext.Provider value={{ state, actions }}>
 			{children}
-		</CollectionContext.Provider>
+		</ListContext.Provider>
 	);
 }
 
-// Export the state interface for components to use
-export type { CollectionState };
+// ============================================================================
+// Hook
+// ============================================================================
 
-// Hook to use collection context
-export function useCollection() {
-	const context = useContext(CollectionContext);
+export function useList() {
+	const context = useContext(ListContext);
 	if (!context) {
-		throw new Error("useCollection must be used within a CollectionProvider");
+		throw new Error("useList must be used within a ListProvider");
 	}
 	return context;
 }
 
-// Export context for testing purposes
-export { CollectionContext };
+// Legacy alias for backwards compatibility during migration
+export const CollectionProvider = ListProvider;
+export const useCollection = useList;
