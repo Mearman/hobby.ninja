@@ -405,25 +405,18 @@ interface ExploreSectionProps {
 	onFilterToggle?: (type: keyof FilterState, id: string) => void;
 }
 
-/** Position within a year - year plus ratio (0 = start of year's items, 1 = end) */
-export interface YearPosition {
-	year: number;
-	/** Ratio through the year's items (0 = first item, 1 = last item) */
-	ratio: number;
-}
-
 /** Ref handle for ExploreSection - exposes year navigation */
 export interface ExploreSectionHandle {
 	/** Scroll to the first item of the given year, loading items if needed */
 	scrollToYear: (year: number) => void;
-	/** Scroll to a specific position within a year (ratio 0-1) */
-	scrollToYearPosition: (year: number, ratio: number) => void;
+	/** Scroll to the item with closest release date to the given date number (YYYYMMDD) */
+	scrollToNearestDate: (dateNumber: number) => void;
 	/** Get the scroll position (0-1) where a year's items start */
 	getYearScrollPosition: (year: number) => number | null;
 	/** Get array of years that have items in the current filtered set (sorted newest first) */
 	getFilteredYears: () => number[];
-	/** Get the current view position (year + ratio within that year) */
-	getCurrentViewPosition: () => YearPosition | null;
+	/** Get the release date (as YYYYMMDD number) of the item at viewport center */
+	getCenterItemDate: () => number | null;
 }
 
 export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionProps>(function ExploreSection({ items, filters, totalCount, onFilterToggle }, ref) {
@@ -587,25 +580,27 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		scrollToIndex(firstIndex);
 	}, [sortedItems, columnCount, rowHeight, scrollToIndex]);
 
-	// Scroll to a specific position within a year (ratio 0 = first item, 1 = last item of year)
-	const scrollToYearPosition = useCallback((year: number, ratio: number) => {
-		// Find first and last index for this year
-		const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
-		if (firstIndex === -1) return;
+	// Scroll to the item with the closest release date to the given date number
+	const scrollToNearestDate = useCallback((targetDate: number) => {
+		if (sortedItems.length === 0) return;
 
-		// Find the last item of this year
-		let lastIndex = firstIndex;
-		for (let i = firstIndex + 1; i < sortedItems.length; i++) {
-			if (sortedItems[i].releaseDate?.year === year) {
-				lastIndex = i;
-			} else {
+		// Find the item with the closest date (binary search since items are sorted by date desc)
+		let closestIndex = 0;
+		let closestDiff = Math.abs(releaseDateToNumber(sortedItems[0].releaseDate) - targetDate);
+
+		for (let i = 1; i < sortedItems.length; i++) {
+			const itemDate = releaseDateToNumber(sortedItems[i].releaseDate);
+			const diff = Math.abs(itemDate - targetDate);
+			if (diff < closestDiff) {
+				closestDiff = diff;
+				closestIndex = i;
+			} else if (itemDate < targetDate) {
+				// Since sorted descending, if we've passed the target date and diff is increasing, stop
 				break;
 			}
 		}
 
-		// Calculate target index based on ratio
-		const targetIndex = Math.round(firstIndex + (lastIndex - firstIndex) * Math.max(0, Math.min(1, ratio)));
-		const targetRowIndex = Math.floor(targetIndex / columnCount);
+		const targetRowIndex = Math.floor(closestIndex / columnCount);
 		const currentScrollTop = window.scrollY;
 		const targetScrollTop = targetRowIndex * rowHeight;
 		const scrollDistance = Math.abs(targetScrollTop - currentScrollTop);
@@ -614,7 +609,7 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		const SHORT_DISTANCE_ROWS = 30;
 		const shortDistanceThreshold = SHORT_DISTANCE_ROWS * rowHeight;
 		if (scrollDistance < shortDistanceThreshold) {
-			scrollToIndex(targetIndex);
+			scrollToIndex(closestIndex);
 			return;
 		}
 
@@ -626,13 +621,13 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 
 		const teleportPosition = teleportRowIndex * rowHeight;
 		window.scrollTo({ top: teleportPosition, behavior: "instant" });
-		scrollToIndex(targetIndex);
+		scrollToIndex(closestIndex);
 	}, [sortedItems, columnCount, rowHeight, scrollToIndex]);
 
-	// Expose scrollToYear, scrollToYearPosition, getYearScrollPosition, getFilteredYears, and getCurrentViewPosition via ref
+	// Expose scrollToYear, scrollToNearestDate, getYearScrollPosition, getFilteredYears, and getCenterItemDate via ref
 	useImperativeHandle(ref, () => ({
 		scrollToYear,
-		scrollToYearPosition,
+		scrollToNearestDate,
 		getYearScrollPosition: (year: number) => {
 			// Find the index of the first item with this year
 			const firstIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
@@ -642,52 +637,32 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			return sortedItems.length > 0 ? firstIndex / sortedItems.length : null;
 		},
 		getFilteredYears: () => filteredYears,
-		getCurrentViewPosition: (): YearPosition | null => {
+		getCenterItemDate: () => {
 			if (sortedItems.length === 0) return null;
-			// Calculate which row is at the top of the viewport
 			const listElement = listRef.current;
 			if (!listElement) return null;
-			const listTop = listElement.getBoundingClientRect().top;
-			const viewportTop = 0;
-			// How far into the list we've scrolled
-			const scrollIntoList = viewportTop - listTop;
 
-			// Calculate which item index is at the top
-			let itemIndex: number;
+			// Calculate which item is at the center of the viewport
+			const listRect = listElement.getBoundingClientRect();
+			const viewportCenter = window.innerHeight / 2;
+			const scrollIntoList = viewportCenter - listRect.top;
+
 			if (scrollIntoList < 0) {
-				// Haven't scrolled to the list yet
-				itemIndex = 0;
-			} else {
-				const rowIndex = Math.floor(scrollIntoList / rowHeight);
-				itemIndex = Math.min(rowIndex * columnCount, sortedItems.length - 1);
+				// Viewport center is above the list, return first item's date
+				return releaseDateToNumber(sortedItems[0].releaseDate);
+			}
+			if (scrollIntoList > listRect.height) {
+				// Viewport center is below the list, return last item's date
+				return releaseDateToNumber(sortedItems.at(-1).releaseDate);
 			}
 
-			const currentItem = sortedItems[itemIndex];
-			const year = currentItem.releaseDate?.year;
-			if (!year || year <= 0) {
-				// Item has no year, return first available year
-				const firstYearItem = sortedItems.find((item) => item.releaseDate?.year && item.releaseDate.year > 0);
-				return firstYearItem?.releaseDate?.year ? { year: firstYearItem.releaseDate.year, ratio: 0 } : null;
-			}
+			// Calculate which row is at viewport center
+			const rowIndex = Math.floor(scrollIntoList / rowHeight);
+			const itemIndex = Math.min(rowIndex * columnCount, sortedItems.length - 1);
 
-			// Find first and last index for this year to calculate ratio
-			const firstYearIndex = sortedItems.findIndex((item) => item.releaseDate?.year === year);
-			let lastYearIndex = firstYearIndex;
-			for (let i = firstYearIndex + 1; i < sortedItems.length; i++) {
-				if (sortedItems[i].releaseDate?.year === year) {
-					lastYearIndex = i;
-				} else {
-					break;
-				}
-			}
-
-			// Calculate ratio within the year (0 = first item, 1 = last item)
-			const yearItemCount = lastYearIndex - firstYearIndex;
-			const ratio = yearItemCount > 0 ? (itemIndex - firstYearIndex) / yearItemCount : 0;
-
-			return { year, ratio: Math.max(0, Math.min(1, ratio)) };
+			return releaseDateToNumber(sortedItems[itemIndex].releaseDate);
 		},
-	}), [sortedItems, scrollToYear, scrollToYearPosition, filteredYears, rowHeight, columnCount, listRef]);
+	}), [sortedItems, scrollToYear, scrollToNearestDate, filteredYears, rowHeight, columnCount, listRef]);
 
 	const hasActiveFilters = filters && (
 		filters.categories.length > 0 ||

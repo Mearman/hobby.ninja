@@ -19,7 +19,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
-import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState, type YearPosition } from "@/components/explore-section";
+import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
 
@@ -174,25 +174,25 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		[brands],
 	);
 
-	// Track position to restore after filter changes (year + ratio within year)
-	const positionToRestoreRef = useRef<YearPosition | null>(null);
+	// Track release date (as YYYYMMDD number) of center item to restore after filter changes
+	const dateToRestoreRef = useRef<number | null>(null);
 
-	// Helper to capture current view position before filter changes
+	// Helper to capture current center item's date before filter changes
 	const captureViewPosition = useCallback(() => {
-		const currentPosition = exploreSectionRef.current?.getCurrentViewPosition();
-		if (currentPosition) {
-			positionToRestoreRef.current = currentPosition;
+		const centerDate = exploreSectionRef.current?.getCenterItemDate();
+		if (centerDate !== null && centerDate !== undefined) {
+			dateToRestoreRef.current = centerDate;
 		}
 	}, []);
 
-	// Restore scroll position to same relative position after filter changes
+	// Restore scroll position to item with closest date after filter changes
 	useEffect(() => {
-		if (positionToRestoreRef.current !== null) {
-			const positionToRestore = positionToRestoreRef.current;
-			positionToRestoreRef.current = null;
+		if (dateToRestoreRef.current !== null) {
+			const dateToRestore = dateToRestoreRef.current;
+			dateToRestoreRef.current = null;
 			// Small delay to let filtered items render
 			const timeoutId = setTimeout(() => {
-				exploreSectionRef.current?.scrollToYearPosition(positionToRestore.year, positionToRestore.ratio);
+				exploreSectionRef.current?.scrollToNearestDate(dateToRestore);
 			}, 50);
 			return () => { clearTimeout(timeoutId); };
 		}
