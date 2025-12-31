@@ -637,8 +637,9 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			const scrollIntoList = viewportCenter - listRect.top;
 
 			if (scrollIntoList < 0) {
-				// Viewport center is above the list, return first item's date
-				return releaseDateToNumber(sortedItems[0].releaseDate);
+				// Viewport center is above the list - don't restore position
+				// (user is at top of page, no need to scroll)
+				return null;
 			}
 			if (scrollIntoList > listRect.height) {
 				// Viewport center is below the list, return last item's date
