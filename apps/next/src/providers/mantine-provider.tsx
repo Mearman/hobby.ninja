@@ -8,11 +8,17 @@ import React, { createContext, useContext } from "react";
 import { Z_INDEX, UI } from "../lib/constants";
 import { theme } from "../lib/theme";
 
+// LocalStorage keys for preferences
+const STORAGE_KEY_COLOR_SCHEME = "hobby-ninja-color-scheme";
+const STORAGE_KEY_FULL_WIDTH = "hobby-ninja-full-width";
+
 // Create context for theme functions
 const ThemeContext = createContext<{
 	colorScheme: "light" | "dark" | "system";
 	effectiveColorScheme: "light" | "dark";
 	cycleTheme: () => void;
+	fullWidth: boolean;
+	toggleFullWidth: () => void;
 		} | null>(null);
 
 interface MantineThemeProviderProps {
@@ -32,12 +38,36 @@ export function useThemeContext() {
 function useTheme() {
 	// Initialize with system preference but allow client-side switching
 	const [colorScheme, setColorScheme] = React.useState<"light" | "dark" | "system">("system");
+	const [fullWidth, setFullWidth] = React.useState(false);
 	const [mounted, setMounted] = React.useState(false);
 
-	// Mark when component is mounted on client
+	// Mark when component is mounted on client and restore preferences
 	React.useEffect(() => {
 		setMounted(true);
+		// Restore preferences from localStorage
+		const savedColorScheme = localStorage.getItem(STORAGE_KEY_COLOR_SCHEME);
+		if (savedColorScheme === "light" || savedColorScheme === "dark" || savedColorScheme === "system") {
+			setColorScheme(savedColorScheme);
+		}
+		const savedFullWidth = localStorage.getItem(STORAGE_KEY_FULL_WIDTH);
+		if (savedFullWidth === "true") {
+			setFullWidth(true);
+		}
 	}, []);
+
+	// Persist color scheme to localStorage
+	React.useEffect(() => {
+		if (mounted) {
+			localStorage.setItem(STORAGE_KEY_COLOR_SCHEME, colorScheme);
+		}
+	}, [mounted, colorScheme]);
+
+	// Persist full width preference to localStorage
+	React.useEffect(() => {
+		if (mounted) {
+			localStorage.setItem(STORAGE_KEY_FULL_WIDTH, String(fullWidth));
+		}
+	}, [mounted, fullWidth]);
 
 	const getEffectiveColorScheme = (): "light" | "dark" => {
 		if (!mounted) return "light"; // Default for SSR
@@ -58,6 +88,10 @@ function useTheme() {
 		});
 	};
 
+	const toggleFullWidth = () => {
+		setFullWidth(prev => !prev);
+	};
+
 	// Listen for system preference changes when in "system" mode
 	React.useEffect(() => {
 		if (!mounted || colorScheme !== "system") return;
@@ -76,14 +110,16 @@ function useTheme() {
 		colorScheme,
 		effectiveColorScheme: getEffectiveColorScheme(),
 		cycleTheme,
+		fullWidth,
+		toggleFullWidth,
 	};
 }
 
 export function MantineThemeProvider({ children }: MantineThemeProviderProps) {
-	const { colorScheme, effectiveColorScheme, cycleTheme } = useTheme();
+	const { colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth } = useTheme();
 
 	return (
-		<ThemeContext.Provider value={{ colorScheme, effectiveColorScheme, cycleTheme }}>
+		<ThemeContext.Provider value={{ colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth }}>
 			<MantineProvider
 				theme={theme}
 				defaultColorScheme={effectiveColorScheme}

@@ -3,11 +3,13 @@
 import { ActionIcon, Box, Container, Group, TextInput, Tooltip } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import {
+	IconArrowsHorizontal,
 	IconDeviceDesktop,
 	IconFilterDown,
 	IconFilterUp,
 	IconFolder,
 	IconInfoCircle,
+	IconLayoutSidebarRightCollapse,
 	IconMenu2,
 	IconMoon,
 	IconSearch,
@@ -32,7 +34,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const pathname = usePathname();
 	const [searchQuery, setSearchQuery] = useState("");
 	const [debouncedSearchQuery] = useDebouncedValue(searchQuery, TIMING.DEBOUNCE_DEFAULT);
-	const { colorScheme, cycleTheme } = useThemeContext();
+	const { colorScheme, cycleTheme, fullWidth, toggleFullWidth } = useThemeContext();
 	const stickyFilters = useStickyFilters();
 
 	// Show filter toggle on homepage (always visible)
@@ -82,14 +84,15 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 
 	const navigationItems: Array<{ href: string; label: string }> = [];
 
-	// Homepage has year scrollbar that requires right padding
+	// Homepage has year scrollbar that requires right padding (only when not full width)
 	const isHomepage = pathname === "/";
+	const needsScrollbarPadding = isHomepage && !fullWidth;
 
 	return (
 		<header className={header}>
-			<Box pr={isHomepage ? { base: 48, md: 80 } : 0}>
+			<Box pr={needsScrollbarPadding ? { base: 48, md: 80 } : 0}>
 				<Container
-					size="xl"
+					size={fullWidth ? "100%" : "xl"}
 					style={{
 						display: "flex",
 						alignItems: "center",
@@ -221,6 +224,20 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 									aria-label="About"
 								>
 									<IconInfoCircle size={UI.ICON_SIZE_LG} />
+								</ActionIcon>
+							</Tooltip>
+						</Box>
+
+						{/* Full width toggle - desktop only */}
+						<Box visibleFrom="lg">
+							<Tooltip label={fullWidth ? "Use constrained width" : "Use full width"}>
+								<ActionIcon
+									size="lg"
+									variant="subtle"
+									onClick={toggleFullWidth}
+									aria-label={fullWidth ? "Use constrained width" : "Use full width"}
+								>
+									{fullWidth ? <IconLayoutSidebarRightCollapse size={UI.ICON_SIZE_LG} /> : <IconArrowsHorizontal size={UI.ICON_SIZE_LG} />}
 								</ActionIcon>
 							</Tooltip>
 						</Box>

@@ -23,6 +23,7 @@ import { EntityCard } from "@/components/entity-card";
 import { ExploreSection, OTHER_FILTER_ID, type ArrayFilterType, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
+import { useThemeContext } from "@/providers/mantine-provider";
 
 // P-Bandai child brand IDs - these are hidden from the UI, replaced by "pb"
 const PBANDAI_CHILD_IDS = new Set(["pb_gunpla", "pb_hg", "pb_mg", "pb_rg", "pb_pg", "pb_bb", "pb_others", "pb_charapla"]);
@@ -105,6 +106,8 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 	const filterSectionRef = useRef<HTMLDivElement>(null);
 	// Sticky filters context for shared state with header
 	const stickyFilters = useStickyFilters();
+	// Full width preference from theme context
+	const { fullWidth } = useThemeContext();
 
 	// Handle year selection from scrollbar - scrolls to that year in the virtual grid
 	const handleYearSelect = useCallback((year: number) => {
@@ -559,6 +562,9 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		[years, filters.years],
 	);
 
+	// Container size based on fullWidth preference
+	const containerSize = fullWidth ? "100%" : "xl";
+
 	return (
 		<>
 			{/* Sticky filter bar - appears when scrolled past filter section */}
@@ -574,10 +580,10 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 					transform: stickyFilters.isVisible && hasActiveFilters ? "translateY(0)" : "translateY(-100%)",
 					opacity: stickyFilters.isVisible && hasActiveFilters ? 1 : 0,
 					transition: "transform 300ms ease-out, opacity 300ms ease-out",
-					paddingRight: 80, // Account for year scrollbar
+					paddingRight: fullWidth ? 0 : 80, // Account for year scrollbar when not full width
 				}}
 			>
-				<Container size="xl" py="xs" w="100%">
+				<Container size={containerSize} py="xs" w="100%">
 					<Group justify="space-between" align="center" mb={stickyFilters.expanded ? "xs" : 0}>
 						<Group gap="sm">
 							<Title order={3} size="h4" fw={600}>
@@ -813,10 +819,10 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 				</Container>
 			</Box>
 
-			{/* Main content with right padding for year scrollbar */}
-			<Box pr={{ base: 48, md: 80 }}>
+			{/* Main content with right padding for year scrollbar (when not full width) */}
+			<Box pr={fullWidth ? 0 : { base: 48, md: 80 }}>
 				{/* Categories, Grades, Brands & Series */}
-				<Container ref={filterSectionRef} size="xl" py="xs" w="100%">
+				<Container ref={filterSectionRef} size={containerSize} py="xs" w="100%">
 					<Stack gap="xs">
 						<CollapsibleGrid
 							title="Category"
@@ -1246,7 +1252,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 				</Container>
 
 				{/* Explore */}
-				<Container size="xl" py="xl" w="100%">
+				<Container size={containerSize} py="xl" w="100%">
 					<Stack gap="xl">
 						<Group justify="space-between" align="center">
 							<Group gap="md">
