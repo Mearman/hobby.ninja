@@ -119,8 +119,11 @@ const EMPTY_PLACEHOLDER = "—";
 // Image fade-in transition style
 const IMAGE_FADE_TRANSITION = "opacity 0.2s ease-in-out";
 
-// Thumbnail background color
-const THUMBNAIL_BG_COLOR = "var(--mantine-color-gray-1)";
+// Thumbnail background color - uses light-dark for theme support
+const THUMBNAIL_BG_COLOR = "light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5))";
+
+// Page body background color (theme-aware)
+const BODY_BG_COLOR = "var(--mantine-color-body)";
 
 /** Small image badge for brand/series/grade - same 300:170 ratio as filter cards */
 function EntityBadge({ image, name, onClick, isSelected }: { image?: string; name: string; onClick?: () => void; isSelected?: boolean }): React.ReactElement {
@@ -328,7 +331,7 @@ function ItemCard({ item, index, onFilterToggle, filters, viewMode = "grid" }: {
 								display: "flex",
 								gap: 16,
 								padding: 16,
-								backgroundColor: "var(--mantine-color-body)",
+								backgroundColor: BODY_BG_COLOR,
 								borderRadius: "inherit",
 							}}
 						>
@@ -431,7 +434,7 @@ function ItemCard({ item, index, onFilterToggle, filters, viewMode = "grid" }: {
 							zIndex: 10,
 							display: "flex",
 							flexDirection: "column",
-							backgroundColor: "var(--mantine-color-body)",
+							backgroundColor: BODY_BG_COLOR,
 							borderRadius: "inherit",
 						}}
 					>
@@ -453,12 +456,11 @@ function ItemCard({ item, index, onFilterToggle, filters, viewMode = "grid" }: {
 				)}
 
 				<Box
-					bg="gray.1"
 					style={{
 						aspectRatio: "1 / 1",
 						width: "100%",
 						flexShrink: 0,
-						background: "linear-gradient(135deg, var(--mantine-color-gray-1) 0%, var(--mantine-color-gray-2) 100%)",
+						background: "light-dark(linear-gradient(135deg, var(--mantine-color-gray-1) 0%, var(--mantine-color-gray-2) 100%), linear-gradient(135deg, var(--mantine-color-dark-6) 0%, var(--mantine-color-dark-5) 100%))",
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "center",
@@ -1078,8 +1080,8 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 							display: "grid",
 							gridTemplateColumns: "minmax(250px, 2fr) 100px minmax(120px, 1fr) 80px 80px minmax(100px, 1fr)",
 							gap: 0,
-							borderBottom: "2px solid var(--mantine-color-gray-3)",
-							backgroundColor: "var(--mantine-color-gray-0)",
+							borderBottom: "2px solid var(--mantine-color-default-border)",
+							backgroundColor: BODY_BG_COLOR,
 							position: "sticky",
 							top: 0,
 							zIndex: 10,
@@ -1119,8 +1121,8 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 										gridTemplateColumns: "minmax(250px, 2fr) 100px minmax(120px, 1fr) 80px 80px minmax(100px, 1fr)",
 										gap: 0,
 										alignItems: "center",
-										backgroundColor: isEven ? "var(--mantine-color-gray-0)" : "transparent",
-										borderBottom: "1px solid var(--mantine-color-gray-2)",
+										backgroundColor: isEven ? "var(--table-striped-color)" : "transparent",
+										borderBottom: "1px solid var(--mantine-color-default-border)",
 									}}
 									className="table-row-hover"
 								>
