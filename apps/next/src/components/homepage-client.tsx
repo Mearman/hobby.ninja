@@ -19,7 +19,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
-import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
+import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle, type FilterState, type YearPosition } from "@/components/explore-section";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
 
@@ -174,7 +174,32 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		[brands],
 	);
 
+	// Track position to restore after filter changes (year + ratio within year)
+	const positionToRestoreRef = useRef<YearPosition | null>(null);
+
+	// Helper to capture current view position before filter changes
+	const captureViewPosition = useCallback(() => {
+		const currentPosition = exploreSectionRef.current?.getCurrentViewPosition();
+		if (currentPosition) {
+			positionToRestoreRef.current = currentPosition;
+		}
+	}, []);
+
+	// Restore scroll position to same relative position after filter changes
+	useEffect(() => {
+		if (positionToRestoreRef.current !== null) {
+			const positionToRestore = positionToRestoreRef.current;
+			positionToRestoreRef.current = null;
+			// Small delay to let filtered items render
+			const timeoutId = setTimeout(() => {
+				exploreSectionRef.current?.scrollToYearPosition(positionToRestore.year, positionToRestore.ratio);
+			}, 50);
+			return () => { clearTimeout(timeoutId); };
+		}
+	}, [filters]);
+
 	const toggleFilter = useCallback((type: keyof FilterState, id: string) => {
+		captureViewPosition();
 		setFilters((prev) => {
 			const current = prev[type];
 			const isSelected = current.includes(id);
@@ -185,76 +210,90 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 					: [...current, id],
 			};
 		});
-	}, []);
+	}, [captureViewPosition]);
 
 	const clearFilters = useCallback(() => {
+		captureViewPosition();
 		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [], years: [] });
-	}, []);
+	}, [captureViewPosition]);
 
 	const clearCategories = useCallback(() => {
+		captureViewPosition();
 		setFilters((prev) => ({ ...prev, categories: [] }));
-	}, []);
+	}, [captureViewPosition]);
 
 	const clearSeries = useCallback(() => {
+		captureViewPosition();
 		setFilters((prev) => ({ ...prev, series: [] }));
-	}, []);
+	}, [captureViewPosition]);
 
 	const clearBrands = useCallback(() => {
+		captureViewPosition();
 		setFilters((prev) => ({ ...prev, brands: [] }));
-	}, []);
+	}, [captureViewPosition]);
 
 	const clearGrades = useCallback(() => {
+		captureViewPosition();
 		setFilters((prev) => ({ ...prev, grades: [] }));
 		setExpandedFamilies(new Set());
-	}, []);
+	}, [captureViewPosition]);
 
 	const clearScales = useCallback(() => {
+		captureViewPosition();
 		setFilters((prev) => ({ ...prev, scales: [] }));
-	}, []);
+	}, [captureViewPosition]);
 
 	const clearYears = useCallback(() => {
+		captureViewPosition();
 		setFilters((prev) => ({ ...prev, years: [] }));
-	}, []);
+	}, [captureViewPosition]);
 
 	// Select all callbacks
 	const selectAllCategories = useCallback(() => {
+		captureViewPosition();
 		const allIds = categories.map((c) => c.id);
 		setFilters((prev) => ({ ...prev, categories: [...allIds, OTHER_FILTER_ID] }));
-	}, [categories]);
+	}, [categories, captureViewPosition]);
 
 	const selectAllSeries = useCallback(() => {
+		captureViewPosition();
 		const allIds = series.map((s) => s.id);
 		setFilters((prev) => ({ ...prev, series: [...allIds, OTHER_FILTER_ID] }));
-	}, [series]);
+	}, [series, captureViewPosition]);
 
 	const selectAllBrands = useCallback(() => {
+		captureViewPosition();
 		const allIds = displayBrands.map((b) => b.id);
 		setFilters((prev) => ({ ...prev, brands: [...allIds, OTHER_FILTER_ID] }));
-	}, [displayBrands]);
+	}, [displayBrands, captureViewPosition]);
 
 	const selectAllGrades = useCallback(() => {
+		captureViewPosition();
 		const allIds = grades.map((g) => g.id);
 		setFilters((prev) => ({ ...prev, grades: [...allIds, OTHER_FILTER_ID] }));
 		// Expand all grade families that have children
 		const familyRoots = gradeHierarchy.filter((entry) => entry.children.length > 0).map((entry) => entry.root.id);
 		setExpandedFamilies(new Set(familyRoots));
-	}, [grades, gradeHierarchy]);
+	}, [grades, gradeHierarchy, captureViewPosition]);
 
 	const selectAllScales = useCallback(() => {
+		captureViewPosition();
 		const allIds = scales.map((s) => s.id);
 		setFilters((prev) => ({ ...prev, scales: [...allIds, OTHER_FILTER_ID] }));
-	}, [scales]);
+	}, [scales, captureViewPosition]);
 
 	const selectAllYears = useCallback(() => {
+		captureViewPosition();
 		const allIds = years.map((y) => y.id);
 		// Only include OTHER_FILTER_ID if there are items without years
 		const hasOther = items.some((item) => !item.releaseDate?.year || item.releaseDate.year <= 0);
 		setFilters((prev) => ({ ...prev, years: hasOther ? [...allIds, OTHER_FILTER_ID] : allIds }));
-	}, [years, items]);
+	}, [years, items, captureViewPosition]);
 
 	// Toggle all grades in a family (select/deselect entire family)
 	// Also handles auto-expand when selecting, auto-collapse when deselecting
 	const toggleGradeFamily = useCallback((rootId: string) => {
+		captureViewPosition();
 		const familyIds = getGradeFamilyIds(rootId);
 		setFilters((prev) => {
 			const currentGrades = prev.grades;
@@ -287,7 +326,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 				return { ...prev, grades: newGrades };
 			}
 		});
-	}, []);
+	}, [captureViewPosition]);
 
 	const hasActiveFilters =
 		filters.categories.length > 0 ||
