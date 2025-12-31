@@ -1,6 +1,6 @@
 "use client";
 
-import { ActionIcon, Box, Group, TextInput, Tooltip } from "@mantine/core";
+import { ActionIcon, Box, Container, Group, TextInput, Tooltip } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import {
 	IconDeviceDesktop,
@@ -21,7 +21,7 @@ import React, { useEffect, useState } from "react";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
 import { TIMING, UI } from "@/lib/constants";
 import { useThemeContext } from "@/providers/mantine-provider";
-import { header, headerContent, logo, nav, navLink } from "@/styles/components.css";
+import { header, logo, nav, navLink } from "@/styles/components.css";
 
 interface HeaderProps {
   onMenuToggle?: () => void;
@@ -84,7 +84,15 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 
 	return (
 		<header className={header}>
-			<div className={headerContent}>
+			<Container
+				size="xl"
+				style={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "space-between",
+					height: 60,
+				}}
+			>
 				{/* Logo */}
 				<Group gap="lg" align="center">
 					{/* Mobile menu toggle */}
@@ -226,7 +234,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 					</Tooltip>
 
 				</Group>
-			</div>
+			</Container>
 		</header>
 	);
 }
