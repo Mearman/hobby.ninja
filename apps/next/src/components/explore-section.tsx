@@ -5,7 +5,9 @@ import { Box, Card, Skeleton, Text, Tooltip } from "@mantine/core";
 import Link from "next/link";
 import { forwardRef, useCallback, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState } from "react";
 
+import { RelationshipBadge } from "@/components/ui/relationship-badge";
 import { useVirtualGrid } from "@/hooks/use-virtual-grid";
+import { itemHasManual } from "@/lib/relationship-utils";
 
 function formatReleaseDate(releaseDate?: { year?: number | null; month?: number | null; day?: number | null }): string {
 	if (!releaseDate?.year) return "";
@@ -301,6 +303,11 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 								zIndex: 1,
 							}}
 						/>
+					)}
+					{itemHasManual(item) && (
+						<div style={{ position: "absolute", top: 8, left: 8, zIndex: 2 }}>
+							<RelationshipBadge type="manual" viewMode="grid" />
+						</div>
 					)}
 					{item.releaseDate?.year && (
 						<Text
