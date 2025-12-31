@@ -24,16 +24,21 @@ export function CollectionPageClient() {
 	const params = useParams<{ id: string }>();
 	const collectionId = params.id;
 
-	const { state } = useCollection();
+	const { state, actions } = useCollection();
 	const [dbItemsMap, setDbItemsMap] = useState<Map<string, Item>>(new Map());
 	const [loading, setLoading] = useState(true);
 
-	// Load only the database items that are in the user's collection
+	// Load the list when component mounts
+	useEffect(() => {
+		void actions.loadList(collectionId);
+	}, [collectionId, actions.loadList]);
+
+	// Load only the database items that are in the user's list
 	// This uses sync data access from @hobby-ninja/data
 	useEffect(() => {
 		try {
-			// Get unique item IDs from the collection
-			const itemIds = [...new Set(state.items.map(item => item.itemId))];
+			// Get unique item IDs from the list memberships
+			const itemIds = [...new Set(state.currentListItems.map(membership => membership.itemId))];
 
 			if (itemIds.length > 0) {
 				// Build items map synchronously
@@ -46,14 +51,12 @@ export function CollectionPageClient() {
 				}
 				setDbItemsMap(itemsMap);
 			}
-		} catch (error) {
-			console.error("Failed to load items:", error);
 		} finally {
 			setLoading(false);
 		}
-	}, [state.items]);
+	}, [state.currentListItems]);
 
-	if (loading) {
+	if (loading || state.loading) {
 		return (
 			<Container size="xl" py="xl">
 				<Breadcrumbs mb="md">
@@ -64,7 +67,7 @@ export function CollectionPageClient() {
 						</Group>
 					</Anchor>
 					<Anchor href="/collection" size="sm">
-						Collections
+						Lists
 					</Anchor>
 					<Text size="sm">Loading...</Text>
 				</Breadcrumbs>
@@ -86,9 +89,9 @@ export function CollectionPageClient() {
 					</Group>
 				</Anchor>
 				<Anchor href="/collection" size="sm">
-					Collections
+					Lists
 				</Anchor>
-				<Text size="sm">Collection {collectionId}</Text>
+				<Text size="sm">{state.currentList?.name ?? `List ${collectionId}`}</Text>
 			</Breadcrumbs>
 
 			<CollectionDetailClient

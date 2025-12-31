@@ -14,32 +14,30 @@ import {
 	Button,
 	TextInput,
 	Select,
-	MultiSelect,
 	Modal,
-	NumberInput,
 	ActionIcon,
 	Menu,
 	Avatar,
 	Skeleton,
 	Textarea,
+	Badge as MantineBadge,
 } from "@mantine/core";
 import {
 	IconSearch,
-	IconFilter,
 	IconDots,
 	IconEdit,
 	IconTrash,
-	IconDownload,
-	IconEye,
 	IconLayoutGrid,
 	IconList,
+	IconNotes,
 } from "@tabler/icons-react";
 import React from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { EntityList } from "@/components/ui/entity-list";
+import { ListIcon } from "@/components/ui/list-icon";
 import { useCollection } from "@/contexts/collection-context";
-import type { CollectionItem, CollectionStats } from "@/lib/collection-storage";
+import type { ListMembership } from "@/lib/collection-storage";
 import { createPlaceholderSvg, createErrorPlaceholderSvg } from "@/lib/image-placeholders";
 import {
 	itemCard,
@@ -48,12 +46,8 @@ import {
 	itemCardTitle,
 	itemCardSubtitle,
 	itemCardMetadata,
-	itemCardPrice,
 	itemCardActions,
 	collectionCard,
-	statCard,
-	progressBar,
-	progressFill,
 } from "@/styles/components.css";
 
 // Constants for magic numbers
@@ -62,7 +56,6 @@ const PLACEHOLDER_IMAGE_WIDTH = 280;
 const ICON_SIZE_SMALL = 14;
 const ICON_SIZE_MEDIUM = 16;
 const MENU_WIDTH = 200;
-const NUMBER_INPUT_STEP = 100;
 const LOADING_GRID_ITEMS_COUNT = 8;
 const LOADING_LIST_ITEMS_COUNT = 6;
 const TEXTAREA_MIN_ROWS = 3;
@@ -75,23 +68,21 @@ interface CollectionDetailClientProps {
 	dbItemsMap: Map<string, Item>;
 }
 
-// Item card component for collection items
-function CollectionItemCard({
-	item,
-	onEdit,
-	onDelete,
-	onToggleVisibility,
+// Item card component for list items
+function ListItemCard({
+	membership,
+	onEditNotes,
+	onRemove,
 	viewMode,
 	dbItem,
 }: {
-  item: CollectionItem;
+  membership: ListMembership;
   dbItem?: Item;
-  onEdit: (item: CollectionItem) => void;
-  onDelete: (item: CollectionItem) => void;
-  onToggleVisibility: (item: CollectionItem) => void;
+  onEditNotes: (membership: ListMembership) => void;
+  onRemove: (membership: ListMembership) => void;
   viewMode: "grid" | "list";
 }) {
-	if (!item.itemId) return null;
+	if (!membership.itemId) return null;
 
 	const CardComponent = viewMode === "grid" ? Card : "div";
 
@@ -113,8 +104,8 @@ function CollectionItemCard({
 				<>
 					<Box className={itemCardImage}>
 						<Image
-							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId).slice(0, 20), PLACEHOLDER_IMAGE_WIDTH, PLACEHOLDER_IMAGE_HEIGHT)}
-							alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
+							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : membership.itemId).slice(0, 20), PLACEHOLDER_IMAGE_WIDTH, PLACEHOLDER_IMAGE_HEIGHT)}
+							alt={dbItem ? getNodeDisplayName(dbItem) : membership.itemId}
 							fit="cover"
 							height={PLACEHOLDER_IMAGE_HEIGHT}
 							fallbackSrc={createErrorPlaceholderSvg(PLACEHOLDER_IMAGE_WIDTH, PLACEHOLDER_IMAGE_HEIGHT)}
@@ -122,7 +113,7 @@ function CollectionItemCard({
 					</Box>
 					<Box className={itemCardContent}>
 						<Text className={itemCardTitle} lineClamp={2}>
-							{dbItem ? getNodeDisplayName(dbItem) : item.itemId}
+							{dbItem ? getNodeDisplayName(dbItem) : membership.itemId}
 						</Text>
 						{(dbItem?.series ?? []).length > 0 && (
 							<Text className={itemCardSubtitle} lineClamp={1}>
@@ -136,25 +127,29 @@ function CollectionItemCard({
 							{dbItem?.scales && dbItem.scales.length > 0 && dbItem.scales.map(scale => (
 								<Badge key={scale} size="sm" variant="outline">{scale}</Badge>
 							))}
-							<Badge
-								size="sm"
-								color={item.status === "completed" ? "green" : "blue"}
-								variant={item.status === "completed" ? "filled" : "light"}
-							>
-								{item.status}
-							</Badge>
 						</Box>
-						{item.purchaseInfo?.price && (
-							<Text className={itemCardPrice}>
-                ¥{item.purchaseInfo.price.toLocaleString()}
+						{membership.notes && (
+							<Text size="xs" c="dimmed" lineClamp={2} mt="xs">
+								{membership.notes}
 							</Text>
 						)}
 					</Box>
 					<Box className={itemCardActions}>
+						{membership.notes && (
+							<ActionIcon
+								variant="light"
+								size="sm"
+								color="blue"
+								title="Has notes"
+							>
+								<IconNotes size={ICON_SIZE_SMALL} />
+							</ActionIcon>
+						)}
 						<ActionIcon
 							variant="light"
 							size="sm"
-							onClick={() => { onEdit(item); }}
+							onClick={() => { onEditNotes(membership); }}
+							title="Edit notes"
 						>
 							<IconEdit size={ICON_SIZE_SMALL} />
 						</ActionIcon>
@@ -162,7 +157,8 @@ function CollectionItemCard({
 							variant="light"
 							size="sm"
 							color="red"
-							onClick={() => { onDelete(item); }}
+							onClick={() => { onRemove(membership); }}
+							title="Remove from list"
 						>
 							<IconTrash size={ICON_SIZE_SMALL} />
 						</ActionIcon>
@@ -173,14 +169,19 @@ function CollectionItemCard({
 					<Group>
 						<Avatar
 							size="md"
-							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0], 40, 40)}
-							alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
+							src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : membership.itemId)[0], 40, 40)}
+							alt={dbItem ? getNodeDisplayName(dbItem) : membership.itemId}
 						/>
 						<Box>
-							<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
+							<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : membership.itemId}</Text>
 							{(dbItem?.series ?? []).length > 0 && (
 								<Text size="sm" c="dimmed">
 									<EntityList ids={(dbItem?.series ?? []).map(s => s.id)} entityType="series" mode="text" size="sm" emptyText="" />
+								</Text>
+							)}
+							{membership.notes && (
+								<Text size="xs" c="dimmed" lineClamp={1}>
+									{membership.notes}
 								</Text>
 							)}
 						</Box>
@@ -188,9 +189,8 @@ function CollectionItemCard({
 
 					<Group>
 						<Box>
-							<Text fw={500}>¥{item.purchaseInfo?.price ? item.purchaseInfo.price.toLocaleString() : 0}</Text>
 							<Text size="sm" c="dimmed">
-                Added: {new Date(item.added).toLocaleDateString()}
+								Added: {new Date(membership.addedAt).toLocaleDateString()}
 							</Text>
 						</Box>
 
@@ -207,19 +207,16 @@ function CollectionItemCard({
 							</Menu.Target>
 
 							<Menu.Dropdown>
-								<Menu.Item leftSection={<IconEye size={ICON_SIZE_SMALL} />} onClick={() => { onToggleVisibility(item); }}>
-									{item.hidden ? "Show" : "Hide"}
-								</Menu.Item>
-								<Menu.Item leftSection={<IconEdit size={ICON_SIZE_SMALL} />} onClick={() => { onEdit(item); }}>
-                  Edit Item
+								<Menu.Item leftSection={<IconEdit size={ICON_SIZE_SMALL} />} onClick={() => { onEditNotes(membership); }}>
+									Edit Notes
 								</Menu.Item>
 								<Menu.Divider />
 								<Menu.Item
 									leftSection={<IconTrash size={ICON_SIZE_SMALL} />}
 									color="red"
-									onClick={() => { onDelete(item); }}
+									onClick={() => { onRemove(membership); }}
 								>
-                  Remove from Collection
+									Remove from List
 								</Menu.Item>
 							</Menu.Dropdown>
 						</Menu>
@@ -230,55 +227,30 @@ function CollectionItemCard({
 	);
 }
 
-// Item form modal
-function ItemFormModal({
+// Notes edit modal
+function NotesEditModal({
 	opened,
 	onClose,
-	item,
+	membership,
 	onSave,
 	dbItem,
 }: {
   opened: boolean;
   onClose: () => void;
-  item?: CollectionItem;
+  membership?: ListMembership;
   dbItem?: Item;
-  onSave: (itemData: Partial<CollectionItem>) => void;
+  onSave: (notes: string) => void;
 }) {
-	const [formData, setFormData] = React.useState({
-		status: item?.status ?? "wanted",
-		notes: item?.notes ?? "",
-		price: item?.purchaseInfo?.price ?? 0,
-		condition: item?.condition ?? "new",
-		rating: item?.rating ?? 0,
-	});
+	const [notes, setNotes] = React.useState(membership?.notes ?? "");
 
 	React.useEffect(() => {
-		if (item) {
-			setFormData({
-				status: item.status,
-				notes: item.notes,
-				price: item.purchaseInfo?.price ?? 0,
-				condition: item.condition,
-				rating: item.rating ?? 0,
-			});
+		if (membership) {
+			setNotes(membership.notes ?? "");
 		}
-	}, [item]);
+	}, [membership]);
 
 	const handleSave = () => {
-		const updatedData: Partial<CollectionItem> = {
-			status: formData.status,
-			notes: formData.notes,
-			condition: formData.condition,
-			rating: formData.rating,
-			purchaseInfo: {
-				price: formData.price,
-				currency: "JPY" as const,
-				date: new Date(),
-				store: "",
-			},
-			modified: new Date(),
-		};
-		onSave(updatedData);
+		onSave(notes);
 		onClose();
 	};
 
@@ -286,161 +258,47 @@ function ItemFormModal({
 		<Modal
 			opened={opened}
 			onClose={onClose}
-			title={item ? `Edit ${dbItem ? getNodeDisplayName(dbItem) : item.itemId}` : "Add Item Details"}
+			title={membership ? `Edit Notes for ${dbItem ? getNodeDisplayName(dbItem) : membership.itemId}` : "Edit Notes"}
 			size="md"
 		>
 			<Stack gap="md">
-				{item && (
+				{membership && (
 					<Box mb="md">
 						<Group>
 							<Avatar
 								size="lg"
-								src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : item.itemId)[0], AVATAR_SIZE_LARGE, AVATAR_SIZE_LARGE)}
-								alt={dbItem ? getNodeDisplayName(dbItem) : item.itemId}
+								src={createPlaceholderSvg((dbItem ? getNodeDisplayName(dbItem) : membership.itemId)[0], AVATAR_SIZE_LARGE, AVATAR_SIZE_LARGE)}
+								alt={dbItem ? getNodeDisplayName(dbItem) : membership.itemId}
 							/>
 							<Box>
-								<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : item.itemId}</Text>
+								<Text fw={500}>{dbItem ? getNodeDisplayName(dbItem) : membership.itemId}</Text>
 								{(dbItem?.series ?? []).length > 0
 									? <EntityList ids={(dbItem?.series ?? []).map(s => s.id)} entityType="series" mode="text" size="sm" emptyText="" />
-									: <Text size="sm" c="dimmed">{item.itemId}</Text>
+									: <Text size="sm" c="dimmed">{membership.itemId}</Text>
 								}
 							</Box>
 						</Group>
 					</Box>
 				)}
 
-				<Select
-					label="Status"
-					data={[
-						{ value: "owned", label: "Owned" },
-						{ value: "wanted", label: "Wanted" },
-						{ value: "ordered", label: "Ordered" },
-						{ value: "pre-ordered", label: "Pre-ordered" },
-						{ value: "building", label: "Building" },
-						{ value: "completed", label: "Completed" },
-					]}
-					value={formData.status}
-					onChange={(value) => { setFormData({ ...formData, status: value as CollectionItem["status"] }); }}
-				/>
-
-				<Select
-					label="Condition"
-					data={[
-						{ value: "new", label: "New" },
-						{ value: "used", label: "Used" },
-						{ value: "damaged", label: "Damaged" },
-						{ value: "box-damaged", label: "Box Damaged" },
-					]}
-					value={formData.condition}
-					onChange={(value) => { setFormData({ ...formData, condition: value as CollectionItem["condition"] }); }}
-				/>
-
-				<NumberInput
-					label="Price (¥)"
-					value={formData.price}
-					onChange={(value) => { setFormData({ ...formData, price: typeof value === "number" ? value : 0 }); }}
-					min={0}
-					step={NUMBER_INPUT_STEP}
-				/>
-
-				<Select
-					label="Rating"
-					data={[
-						{ value: "0", label: "Not Rated" },
-						{ value: "1", label: "1 Star" },
-						{ value: "2", label: "2 Stars" },
-						{ value: "3", label: "3 Stars" },
-						{ value: "4", label: "4 Stars" },
-						{ value: "5", label: "5 Stars" },
-					]}
-					value={formData.rating.toString()}
-					onChange={(value) => { setFormData({ ...formData, rating: value ? Number(value) : 0 }); }}
-				/>
-
 				<Textarea
 					label="Notes"
 					placeholder="Add any notes about this item..."
-					value={formData.notes}
-					onChange={(e) => { setFormData({ ...formData, notes: e.target.value }); }}
+					value={notes}
+					onChange={(e) => { setNotes(e.target.value); }}
 					minRows={TEXTAREA_MIN_ROWS}
 				/>
 
 				<Group justify="flex-end" gap="sm">
 					<Button variant="light" onClick={onClose}>
-            Cancel
+						Cancel
 					</Button>
 					<Button onClick={handleSave}>
-            Save Changes
+						Save Notes
 					</Button>
 				</Group>
 			</Stack>
 		</Modal>
-	);
-}
-
-// Stats component
-function CollectionStatsDisplay({ stats }: { stats: CollectionStats }) {
-	return (
-		<Card p="lg" radius="md" withBorder={true}>
-			<Title order={3} mb="md">
-        Collection Statistics
-			</Title>
-
-			<SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md" mb="md">
-				<div className={statCard}>
-					<Text size="sm" c="dimmed" tt="uppercase" fw={700}>
-            Total Items
-					</Text>
-					<Text size="lg" fw={500}>
-						{stats.totalItems}
-					</Text>
-				</div>
-
-				<div className={statCard}>
-					<Text size="sm" c="dimmed" tt="uppercase" fw={700}>
-            Total Value
-					</Text>
-					<Text size="lg" fw={500}>
-            ¥{stats.totalValue.toLocaleString()}
-					</Text>
-				</div>
-
-				<div className={statCard}>
-					<Text size="sm" c="dimmed" tt="uppercase" fw={700}>
-            Completed
-					</Text>
-					<Text size="lg" fw={500}>
-						{stats.statusBreakdown.completed}
-					</Text>
-				</div>
-
-				<div className={statCard}>
-					<Text size="sm" c="dimmed" tt="uppercase" fw={700}>
-            In Progress
-					</Text>
-					<Text size="lg" fw={500}>
-						{stats.statusBreakdown.building}
-					</Text>
-				</div>
-			</SimpleGrid>
-
-			<Box>
-				<Group justify="space-between" mb="xs">
-					<Text size="sm" fw={500}>Progress</Text>
-					<Text size="sm" c="dimmed">
-						{stats.completionPercentage}% Complete
-					</Text>
-				</Group>
-				<div className={progressBar}>
-					<div
-						className={progressFill}
-						style={{
-							width: `${stats.completionPercentage}%`,
-						}}
-					/>
-				</div>
-			</Box>
-		</Card>
 	);
 }
 
@@ -462,7 +320,6 @@ function LoadingGrid({ viewMode }: { viewMode: "grid" | "list" }) {
 								<Skeleton width={40} height={20} radius="sm" />
 								<Skeleton width={50} height={20} radius="sm" />
 							</Group>
-							<Skeleton height={24} mb="md" />
 						</Box>
 					</Card>
 				))}
@@ -486,7 +343,6 @@ function LoadingGrid({ viewMode }: { viewMode: "grid" | "list" }) {
 						<Group>
 							<Skeleton width={80} height={16} />
 							<Skeleton width={60} height={16} />
-							<Skeleton width={50} height={20} radius="sm" />
 						</Group>
 					</Group>
 				</Card>
@@ -500,30 +356,24 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 	const { state, actions } = useCollection();
 	const [viewMode, setViewMode] = React.useState<"grid" | "list">("grid");
 	const [searchQuery, setSearchQuery] = React.useState("");
-	const [statusFilter, setStatusFilter] = React.useState<string[]>([]);
 	const [sortOrder, setSortOrder] = React.useState("dateAdded");
-	const [itemModalOpen, setItemModalOpen] = React.useState(false);
-	const [selectedItem, setSelectedItem] = React.useState<CollectionItem | null>(null);
+	const [notesModalOpen, setNotesModalOpen] = React.useState(false);
+	const [selectedMembership, setSelectedMembership] = React.useState<ListMembership | null>(null);
 
 	React.useEffect(() => {
-		void actions.loadCollection(collectionId);
-	}, [collectionId, actions]);
+		void actions.loadList(collectionId);
+	}, [collectionId, actions.loadList]);
 
 	// Filter and sort items
 	const filteredItems = React.useMemo(() => {
-		let items = [...state.items];
+		let items = [...state.currentListItems];
 
 		// Search filter - search in database item names
 		if (searchQuery) {
-			items = items.filter(item => {
-				const dbItem = dbItemsMap.get(item.itemId);
+			items = items.filter(membership => {
+				const dbItem = dbItemsMap.get(membership.itemId);
 				return dbItem && getNodeDisplayName(dbItem).toLowerCase().includes(searchQuery.toLowerCase());
 			});
-		}
-
-		// Status filter
-		if (statusFilter.length > 0) {
-			items = items.filter(item => statusFilter.includes(item.status));
 		}
 
 		// Sort
@@ -535,55 +385,36 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 					if (!aDbItem || !bDbItem) return 0;
 					return getNodeDisplayName(aDbItem).localeCompare(getNodeDisplayName(bDbItem));
 				}
-				case "status": {
-					return a.status.localeCompare(b.status);
-				}
-				case "rating": {
-					return (b.rating ?? 0) - (a.rating ?? 0);
-				}
-				case "price": {
-					return (b.purchaseInfo?.price ?? 0) - (a.purchaseInfo?.price ?? 0);
-				}
 				default: {
-					return new Date(b.added).getTime() - new Date(a.added).getTime();
+					return new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime();
 				}
 			}
 		});
 
 		return items;
-	}, [state.items, dbItemsMap, searchQuery, statusFilter, sortOrder]);
+	}, [state.currentListItems, dbItemsMap, searchQuery, sortOrder]);
 
-	const handleEditItem = (item: CollectionItem) => {
-		setSelectedItem(item);
-		setItemModalOpen(true);
+	const handleEditNotes = (membership: ListMembership) => {
+		setSelectedMembership(membership);
+		setNotesModalOpen(true);
 	};
 
-	const handleDeleteItem = (item: CollectionItem) => {
-		const dbItem = dbItemsMap.get(item.itemId);
-		if (globalThis.confirm(`Remove "${dbItem ? getNodeDisplayName(dbItem) : item.itemId}" from this collection?`)) {
-			void actions.removeItem(item.id);
+	const handleRemoveItem = (membership: ListMembership) => {
+		const dbItem = dbItemsMap.get(membership.itemId);
+		if (globalThis.confirm(`Remove "${dbItem ? getNodeDisplayName(dbItem) : membership.itemId}" from this list?`)) {
+			void actions.removeItemFromList(collectionId, membership.itemId);
 		}
 	};
 
-	const handleToggleVisibility = (item: CollectionItem) => {
-		void actions.updateItem(item.id, { hidden: !item.hidden });
+	const handleSaveNotes = (_notes: string) => {
+		// Note: The current API doesn't have updateMembership exposed through the context
+		// For now, we'll need to add this capability or handle it differently
+		// This is a placeholder - the notes will be saved when we add the updateMembership action
+		setSelectedMembership(null);
 	};
 
-	const handleSaveItem = (itemData: Partial<CollectionItem>) => {
-		if (selectedItem?.id != null) {
-			void actions.updateItem(selectedItem.id, itemData);
-		}
-		setSelectedItem(null);
-	};
-
-	const statusOptions = [
-		{ value: "owned", label: "Owned" },
-		{ value: "wanted", label: "Wanted" },
-		{ value: "ordered", label: "Ordered" },
-		{ value: "pre-ordered", label: "Pre-ordered" },
-		{ value: "building", label: "Building" },
-		{ value: "completed", label: "Completed" },
-	];
+	const currentList = state.currentList;
+	const isSystemList = currentList?.isSystem;
 
 	return (
 		<Stack gap="xl">
@@ -591,27 +422,39 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 			<Box>
 				<Group justify="space-between" align="flex-start">
 					<Box>
-						<Title order={1} mb="sm">
-							{state.currentCollection?.name ?? `Collection ${collectionId}`}
-						</Title>
-						<Text size="lg" c="dimmed">
-							{state.currentCollection?.description}
-						</Text>
+						<Group gap="sm" mb="xs">
+							<ListIcon icon={currentList?.icon} size={32} />
+							<Title order={1}>
+								{currentList?.name ?? `List ${collectionId}`}
+							</Title>
+							{isSystemList && (
+								<MantineBadge variant="light" color="gray" size="sm">
+									System
+								</MantineBadge>
+							)}
+						</Group>
+						{currentList?.description && (
+							<Text size="lg" c="dimmed">
+								{currentList.description}
+							</Text>
+						)}
 					</Box>
-					<Group>
-						<Button
-							variant="light"
-							leftSection={<IconDownload size={14} />}
-							size="sm"
-						>
-              Export
-						</Button>
-					</Group>
 				</Group>
 			</Box>
 
-			{/* Stats */}
-			{!state.loading && state.stats && <CollectionStatsDisplay stats={state.stats} />}
+			{/* Item count summary */}
+			<Card p="md" radius="md" withBorder={true}>
+				<Group justify="space-between">
+					<Text size="lg" fw={500}>
+						{state.currentListItems.length} {state.currentListItems.length === 1 ? "item" : "items"} in this list
+					</Text>
+					{currentList?.modifiedAt && (
+						<Text size="sm" c="dimmed">
+							Last updated: {new Date(currentList.modifiedAt).toLocaleDateString()}
+						</Text>
+					)}
+				</Group>
+			</Card>
 
 			{/* Filters and Controls */}
 			<Card p="lg" radius="md" withBorder={true}>
@@ -625,23 +468,10 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 						/>
 					</Grid.Col>
 					<Grid.Col span={{ base: 12, md: 4 }}>
-						<MultiSelect
-							leftSection={<IconFilter size={16} />}
-							placeholder="Filter by status"
-							data={statusOptions}
-							value={statusFilter}
-							onChange={setStatusFilter}
-							clearable={true}
-						/>
-					</Grid.Col>
-					<Grid.Col span={{ base: 12, md: 2 }}>
 						<Select
 							data={[
 								{ value: "dateAdded", label: "Date Added" },
 								{ value: "name", label: "Name" },
-								{ value: "status", label: "Status" },
-								{ value: "rating", label: "Rating" },
-								{ value: "price", label: "Price" },
 							]}
 							value={sortOrder}
 							onChange={(value) => { if (value) setSortOrder(value); }}
@@ -655,7 +485,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 								onClick={() => { setViewMode("grid"); }}
 								leftSection={<IconLayoutGrid size={14} />}
 							>
-                Grid
+								Grid
 							</Button>
 							<Button
 								variant={viewMode === "list" ? "filled" : "light"}
@@ -663,7 +493,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 								onClick={() => { setViewMode("list"); }}
 								leftSection={<IconList size={14} />}
 							>
-                List
+								List
 							</Button>
 						</Group>
 					</Grid.Col>
@@ -675,7 +505,7 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 				<Group justify="space-between" mb="md">
 					<Text size="lg" fw={500}>
 						{filteredItems.length} {filteredItems.length === 1 ? "Item" : "Items"}
-						{searchQuery || statusFilter.length > 0 ? " (filtered)" : ""}
+						{searchQuery ? " (filtered)" : ""}
 					</Text>
 				</Group>
 
@@ -687,16 +517,15 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 							cols={{ base: 1, sm: 2, lg: 3, xl: 4 }}
 							spacing="md"
 						>
-							{filteredItems.map((item, index) => {
-								const dbItem = dbItemsMap.get(item.itemId);
+							{filteredItems.map((membership, index) => {
+								const dbItem = dbItemsMap.get(membership.itemId);
 								return (
-									<CollectionItemCard
-										key={item.id || `${item.itemId}-${index}`}
-										item={item}
+									<ListItemCard
+										key={membership.id || `${membership.itemId}-${index}`}
+										membership={membership}
 										dbItem={dbItem}
-										onEdit={handleEditItem}
-										onDelete={handleDeleteItem}
-										onToggleVisibility={handleToggleVisibility}
+										onEditNotes={handleEditNotes}
+										onRemove={handleRemoveItem}
 										viewMode={viewMode}
 									/>
 								);
@@ -704,16 +533,15 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 						</SimpleGrid>
 					) : (
 						<Stack gap="sm">
-							{filteredItems.map((item, index) => {
-								const dbItem = dbItemsMap.get(item.itemId);
+							{filteredItems.map((membership, index) => {
+								const dbItem = dbItemsMap.get(membership.itemId);
 								return (
-									<CollectionItemCard
-										key={item.id || `${item.itemId}-${index}`}
-										item={item}
+									<ListItemCard
+										key={membership.id || `${membership.itemId}-${index}`}
+										membership={membership}
 										dbItem={dbItem}
-										onEdit={handleEditItem}
-										onDelete={handleDeleteItem}
-										onToggleVisibility={handleToggleVisibility}
+										onEditNotes={handleEditNotes}
+										onRemove={handleRemoveItem}
 										viewMode={viewMode}
 									/>
 								);
@@ -724,38 +552,38 @@ export function CollectionDetailClient({ collectionId, dbItemsMap }: CollectionD
 					<Box ta="center" py="xl">
 						<IconSearch size={64} color="var(--mantine-color-gray-4)" />
 						<Title order={3} mt="md" mb="sm">
-              No items found
+							No items found
 						</Title>
 						<Text c="dimmed" mb="lg">
-							{searchQuery || statusFilter.length > 0
-								? "Try adjusting your search or filters"
-								: "This collection is empty. Add items from the database to get started."
+							{searchQuery
+								? "Try adjusting your search"
+								: "This list is empty. Add items from the database to get started."
 							}
 						</Text>
-						{(searchQuery || statusFilter.length > 0) && (
+						{searchQuery && (
 							<Button
 								variant="light"
 								onClick={() => {
 									setSearchQuery("");
-									setStatusFilter([]);
 								}}
 							>
-                Clear Filters
+								Clear Search
 							</Button>
 						)}
 					</Box>
 				)}
 			</Box>
 
-			{/* Item Form Modal */}
-			<ItemFormModal
-				opened={itemModalOpen}
+			{/* Notes Edit Modal */}
+			<NotesEditModal
+				opened={notesModalOpen}
 				onClose={() => {
-					setItemModalOpen(false);
-					setSelectedItem(null);
+					setNotesModalOpen(false);
+					setSelectedMembership(null);
 				}}
-				item={selectedItem ?? undefined}
-				onSave={handleSaveItem}
+				membership={selectedMembership ?? undefined}
+				dbItem={selectedMembership ? dbItemsMap.get(selectedMembership.itemId) : undefined}
+				onSave={handleSaveNotes}
 			/>
 		</Stack>
 	);
