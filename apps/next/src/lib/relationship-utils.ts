@@ -11,6 +11,15 @@ export function itemHasManual(item: Item): boolean {
 }
 
 /**
+ * Check if an item has a global site link (English US version)
+ * @param item - The product item to check
+ * @returns true if the item has a global site URL, false otherwise
+ */
+export function itemHasGlobalSite(item: Item): boolean {
+	return Boolean(item.globalSiteUrls?.enUs);
+}
+
+/**
  * Check if a manual has an associated product
  * @param manual - The manual to check
  * @returns true if the manual has a productNumber, false otherwise
