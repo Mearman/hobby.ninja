@@ -1,3 +1,49 @@
+## [1.10.0](https://github.com/Mearman/hobby.ninja/compare/v1.9.0...v1.10.0) (2025-12-31)
+
+### Features
+
+- **next:** add dedicated Manual and Global columns to table view ([747e883](https://github.com/Mearman/hobby.ninja/commit/747e88336a0e1f0da31ed7260188d5493723a1dc))
+- **next:** add filter for items with manuals ([9dd1c2c](https://github.com/Mearman/hobby.ninja/commit/9dd1c2c2d5ad3e05eaa34e101a2cf21799aa67dd))
+- **next:** add full width toggle for desktop view ([f9a7305](https://github.com/Mearman/hobby.ninja/commit/f9a73054a8566aa40b85a4ac8259147211b27aaf))
+- **next:** add global site badge and filter for items ([13c9cf4](https://github.com/Mearman/hobby.ninja/commit/13c9cf48f78891334489834c19a130312695057b))
+- **next:** add globalSite type to RelationshipBadge ([8cae747](https://github.com/Mearman/hobby.ninja/commit/8cae747d9af05f096a0898fc8c142ebe5fd324ef))
+- **next:** add itemHasGlobalSite helper function ([c4f64f3](https://github.com/Mearman/hobby.ninja/commit/c4f64f3fc1dd6e48fd776eaf3d6f0a33517b5f21))
+- **next:** add ListIcon component for rendering Tabler icons ([d17b7ca](https://github.com/Mearman/hobby.ninja/commit/d17b7ca6432c811468916ad69a5987ace118c630))
+- **next:** show manual badge on item cards in explore grid ([73d0462](https://github.com/Mearman/hobby.ninja/commit/73d0462ec4eaab1a82e1af262f57de1f29212a5d))
+- **next:** virtualize list and table views in ExploreSection ([474f247](https://github.com/Mearman/hobby.ninja/commit/474f247c8133560128677f10fbe61d95391c13f5))
+
+### Bug Fixes
+
+- **next:** align header content width with page using Mantine Container ([8aa8b27](https://github.com/Mearman/hobby.ninja/commit/8aa8b273e98027d13d765bce7054d639079455e4))
+- **next:** align header with homepage content accounting for year scrollbar ([b53099a](https://github.com/Mearman/hobby.ninja/commit/b53099a234ba9ec585d8488f9bac4d9f88377890))
+- **next:** don't restore scroll position when at top of page ([db8e1ba](https://github.com/Mearman/hobby.ninja/commit/db8e1baff4a01f6dde0dc274fd796087eae4b6bf))
+- **next:** position restored item at viewport center, not top ([3dc239b](https://github.com/Mearman/hobby.ninja/commit/3dc239be1dbf02042ab18fd508aa297d87baaf25))
+- **next:** preserve exact scroll position when adjusting filters ([d2a6d83](https://github.com/Mearman/hobby.ninja/commit/d2a6d8342983631099f5715ba6d90697ce9436c9))
+- **next:** remove redundant useEffect causing infinite loop on collection page ([b7b6f0a](https://github.com/Mearman/hobby.ninja/commit/b7b6f0a62766c1b9ae3545e7b615f69eb8dca1b0))
+- **next:** set global tooltip z-index to prevent display behind other elements ([8e07d85](https://github.com/Mearman/hobby.ninja/commit/8e07d85484afe1b324f50fd7f78b4e582977eeb2))
+- **next:** use CSS grid layout for virtualized table view ([0d25c78](https://github.com/Mearman/hobby.ninja/commit/0d25c7807fa8065b22bc82b4585c7f01724a6b6a))
+- **next:** use theme-aware colors in ExploreSection table view ([343e293](https://github.com/Mearman/hobby.ninja/commit/343e293e266898eff5ddfd5e26fc719cb5ab2725))
+
+### Refactoring
+
+- **next:** remove text navigation links from header ([edf1c13](https://github.com/Mearman/hobby.ninja/commit/edf1c13cccc36c6836a6fcdc4c975ffe69f518c7))
+- **next:** rewrite collection context with List-based API ([0fdeb88](https://github.com/Mearman/hobby.ninja/commit/0fdeb88e4d472f485dce000c57e892cb5eb3e4ef))
+- **next:** rewrite collection-storage with List/ListMembership schema ([f6f6cfc](https://github.com/Mearman/hobby.ninja/commit/f6f6cfc518824304eaecf6bb990c65a8ff97d9cd))
+- **next:** simplify collection page UI with new list model ([bced907](https://github.com/Mearman/hobby.ninja/commit/bced907046b9109500e2075496e34790894cf17a))
+- **next:** simplify header navigation to only show Collection ([e45a110](https://github.com/Mearman/hobby.ninja/commit/e45a11052f3565480a16207d40a507defd639850))
+- **next:** update collection detail pages for new list model ([1bb9904](https://github.com/Mearman/hobby.ninja/commit/1bb99047696a55e6ea082e4a8db6d770e54072c5))
+- **next:** use release date for scroll position preservation ([f755f31](https://github.com/Mearman/hobby.ninja/commit/f755f314bce5a244a19424a7bb2b532a0d2d066c))
+
+### Styling
+
+- **next:** use diagonal arrows icon for full width toggle expand button ([db73f19](https://github.com/Mearman/hobby.ninja/commit/db73f19705a9cb3a2238d16cf609c72a3b1900e2))
+- **next:** use diagonal minimize icon for full width toggle shrink button ([256b5ba](https://github.com/Mearman/hobby.ninja/commit/256b5bafc428228649d2b1cfc0305e475d8022aa))
+- **next:** use IconArrowsDiagonalMinimize for consistency ([44bbc31](https://github.com/Mearman/hobby.ninja/commit/44bbc3187917dc66418ea4e6950f2c4ec1d6a29b))
+
+### Chores
+
+- **next:** remove unused collection files ([f684ed7](https://github.com/Mearman/hobby.ninja/commit/f684ed7fe200f1d0f0f46353c2120a2f834a7e82))
+
 ## [1.9.0](https://github.com/Mearman/hobby.ninja/compare/v1.8.0...v1.9.0) (2025-12-30)
 
 ### Features
