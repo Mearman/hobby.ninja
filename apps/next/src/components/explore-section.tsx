@@ -7,7 +7,7 @@ import { forwardRef, useCallback, useImperativeHandle, useLayoutEffect, useMemo,
 
 import { RelationshipBadge } from "@/components/ui/relationship-badge";
 import { useVirtualGrid } from "@/hooks/use-virtual-grid";
-import { itemHasManual } from "@/lib/relationship-utils";
+import { itemHasGlobalSite, itemHasManual } from "@/lib/relationship-utils";
 
 function formatReleaseDate(releaseDate?: { year?: number | null; month?: number | null; day?: number | null }): string {
 	if (!releaseDate?.year) return "";
@@ -304,9 +304,10 @@ function ItemCard({ item, index, onFilterToggle, filters }: { item: Item; index:
 							}}
 						/>
 					)}
-					{itemHasManual(item) && (
-						<div style={{ position: "absolute", top: 8, left: 8, zIndex: 2 }}>
-							<RelationshipBadge type="manual" viewMode="grid" />
+					{(itemHasManual(item) || itemHasGlobalSite(item)) && (
+						<div style={{ position: "absolute", top: 8, left: 8, zIndex: 2, display: "flex", gap: 4 }}>
+							{itemHasManual(item) && <RelationshipBadge type="manual" viewMode="grid" />}
+							{itemHasGlobalSite(item) && <RelationshipBadge type="globalSite" viewMode="grid" />}
 						</div>
 					)}
 					{item.releaseDate?.year && (
@@ -407,6 +408,8 @@ export interface FilterState {
 	years: string[];
 	/** Filter to only show items that have manuals */
 	hasManual: boolean;
+	/** Filter to only show items that have global site links */
+	hasGlobalSite: boolean;
 }
 
 interface ExploreSectionProps {
@@ -443,7 +446,8 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			filters.grades.length > 0 ||
 			filters.scales.length > 0 ||
 			filters.years.length > 0 ||
-			filters.hasManual;
+			filters.hasManual ||
+			filters.hasGlobalSite;
 
 		if (!hasActiveFilters) return items;
 
@@ -531,6 +535,11 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 
 			// Check if item has manual
 			if (filters.hasManual && !itemHasManual(item)) {
+				return false;
+			}
+
+			// Check if item has global site link
+			if (filters.hasGlobalSite && !itemHasGlobalSite(item)) {
 				return false;
 			}
 

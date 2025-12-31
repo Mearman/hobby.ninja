@@ -14,7 +14,7 @@ import {
 	Title,
 	Tooltip,
 } from "@mantine/core";
-import { IconArrowNarrowRight, IconBook, IconCalendar, IconChevronDown, IconChevronUp, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconX } from "@tabler/icons-react";
+import { IconArrowNarrowRight, IconBook, IconCalendar, IconChevronDown, IconChevronUp, IconRuler2, IconSortAscendingLetters, IconSortDescendingNumbers, IconWorld, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -87,6 +87,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		scales: [],
 		years: [],
 		hasManual: false,
+		hasGlobalSite: false,
 	});
 
 	// Year scrollbar data - all years for initial render
@@ -216,12 +217,17 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 
 	const clearFilters = useCallback(() => {
 		captureViewPosition();
-		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [], years: [], hasManual: false });
+		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [], years: [], hasManual: false, hasGlobalSite: false });
 	}, [captureViewPosition]);
 
 	const toggleHasManual = useCallback(() => {
 		captureViewPosition();
 		setFilters((prev) => ({ ...prev, hasManual: !prev.hasManual }));
+	}, [captureViewPosition]);
+
+	const toggleHasGlobalSite = useCallback(() => {
+		captureViewPosition();
+		setFilters((prev) => ({ ...prev, hasGlobalSite: !prev.hasGlobalSite }));
 	}, [captureViewPosition]);
 
 	const clearCategories = useCallback(() => {
@@ -342,14 +348,15 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		filters.grades.length > 0 ||
 		filters.scales.length > 0 ||
 		filters.years.length > 0 ||
-		filters.hasManual;
+		filters.hasManual ||
+		filters.hasGlobalSite;
 
 	// Sync hasActiveFilters to context for header button visibility
 	useEffect(() => {
 		stickyFilters.setHasActiveFilters(hasActiveFilters);
 	}, [hasActiveFilters, stickyFilters]);
 
-	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length + filters.years.length + (filters.hasManual ? 1 : 0);
+	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length + filters.years.length + (filters.hasManual ? 1 : 0) + (filters.hasGlobalSite ? 1 : 0);
 
 	// Sort categories by mode
 	const categoriesSorted = useMemo(() => {
@@ -1204,8 +1211,8 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 							)}
 						</CollapsibleGrid>
 
-						{/* Has Manual filter */}
-						<Group gap="sm" py="xs">
+						{/* Boolean filters */}
+						<Group gap="lg" py="xs">
 							<Switch
 								checked={filters.hasManual}
 								onChange={toggleHasManual}
@@ -1213,6 +1220,20 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 									<Group gap="xs">
 										<IconBook size={16} />
 										<Text size="sm" fw={500}>Has Manual</Text>
+									</Group>
+								}
+								styles={{
+									track: { cursor: "pointer" },
+									label: { cursor: "pointer" },
+								}}
+							/>
+							<Switch
+								checked={filters.hasGlobalSite}
+								onChange={toggleHasGlobalSite}
+								label={
+									<Group gap="xs">
+										<IconWorld size={16} />
+										<Text size="sm" fw={500}>Has Global Site</Text>
 									</Group>
 								}
 								styles={{
