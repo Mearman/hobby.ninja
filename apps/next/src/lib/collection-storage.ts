@@ -1,251 +1,363 @@
 import Dexie, { type EntityTable } from "dexie";
 
-import { PAGINATION } from "./constants";
+// ============================================================================
+// Types
+// ============================================================================
 
-export interface CollectionItem {
-  id: string;
-  collectionId: string;
-  itemId: string;
-  categories: string[];
-  status: "owned" | "wanted" | "ordered" | "pre-ordered" | "building" | "completed";
-  condition: "new" | "used" | "damaged" | "box-damaged";
-  purchaseInfo?: {
-    price: number;
-    currency: "JPY" | "USD" | "EUR";
-    date: Date;
-    store: string;
-    url?: string;
-  };
-  photos: string[];
-  notes: string;
-  rating?: number;
-  tags: string[];
-  added: Date;
-  modified: Date;
-  hidden?: boolean;
-  dateAdded?: string;
-  lastModified?: string;
-  price?: number;
-  location?: string;
-  metadata?: Record<string, unknown>;
+/** A user's list of items */
+export interface List {
+	// Identity
+	id: string;
+	name: string;
+	description?: string;
+
+	// Display
+	icon?: string;              // Emoji or icon name
+	color?: string;             // Accent color (hex or CSS)
+
+	// Behavior
+	isSystem?: boolean;         // true = can't delete (Starred/Owned/Built/Wishlist)
+
+	// Timestamps
+	createdAt: Date;
+	modifiedAt: Date;
+
+	// Future extensibility
+	attributes?: Record<string, unknown>;
 }
 
-export interface Collection {
-  id: string;
-  name: string;
-  category: string;
-  description: string;
-  isPublic: boolean;
-  itemCount: number;
-  totalValue: number;
-  currency: "JPY" | "USD" | "EUR";
-  createdAt: Date;
-  modifiedAt: Date;
-  settings: {
-    defaultStatus: CollectionItem["status"];
-    defaultCondition: CollectionItem["condition"];
-    autoBackup: boolean;
-  };
+/** Many-to-many: item membership in a list */
+export interface ListMembership {
+	id: string;
+	listId: string;
+	itemId: string;             // Catalog item ID
+	addedAt: Date;
+
+	// Per-membership data
+	notes?: string;
+
+	// Future extensibility (e.g., wishlist priority, purchase info)
+	attributes?: Record<string, unknown>;
 }
 
+/** User preferences */
 export interface UserPreferences {
-  id: string;
-  theme: "light" | "dark" | "auto";
-  language: "en" | "ja";
-  defaultCurrency: "JPY" | "USD" | "EUR";
-  gridView: "grid" | "list";
-  itemsPerPage: number;
-  showAdvancedFilters: boolean;
-  autoSaveSearch: boolean;
+	id: string;
+	theme: "light" | "dark" | "auto";
+	language: "en" | "ja";
+	defaultCurrency: "JPY" | "USD" | "EUR";
+	gridView: "grid" | "list";
+	itemsPerPage: number;
+	showAdvancedFilters: boolean;
+	autoSaveSearch: boolean;
 }
 
-export interface CollectionStats {
-  totalItems: number;
-  totalValue: number;
-  statusBreakdown: Record<CollectionItem["status"], number>;
-  conditionBreakdown: Record<CollectionItem["condition"], number>;
-  completionPercentage: number;
+/** Synthetic list definition (computed, not stored) */
+export interface SyntheticList {
+	id: string;
+	name: string;
+	description?: string;
+	icon?: string;
+	expression: {
+		op: "difference" | "intersection" | "union";
+		left: string;   // list ID
+		right: string;  // list ID
+	};
 }
 
-export interface CollectionListResponse {
-  collections: Collection[];
-  total: number;
-  page: number;
-  pageSize: number;
-}
+// ============================================================================
+// System Lists
+// ============================================================================
 
-export class CollectionDatabase extends Dexie {
-	collections!: EntityTable<Collection, "id">;
-	collectionItems!: EntityTable<CollectionItem, "id">;
+/** Default system lists created for all users */
+export const SYSTEM_LISTS: Array<Omit<List, "createdAt" | "modifiedAt">> = [
+	{ id: "bookmarked", name: "Bookmarked", description: "Your favorite items", icon: "bookmark", isSystem: true },
+	{ id: "owned", name: "Owned", description: "Items you currently own", icon: "package", isSystem: true },
+	{ id: "built", name: "Built", description: "Items you have completed building", icon: "hammer", isSystem: true },
+	{ id: "wishlist", name: "Wishlist", description: "Items you want to acquire", icon: "sparkles", isSystem: true },
+];
+
+/** Synthetic lists (computed from set operations) */
+export const SYNTHETIC_LISTS: SyntheticList[] = [
+	{
+		id: "backlog",
+		name: "Backlog",
+		description: "Owned items not yet built",
+		icon: "clipboard-list",
+		expression: { op: "difference", left: "owned", right: "built" },
+	},
+];
+
+// ============================================================================
+// Database
+// ============================================================================
+
+const DEFAULT_ITEMS_PER_PAGE = 24;
+const ID_RANDOM_BASE = 36;
+const ID_SLICE_START = 2;
+const ID_SLICE_END = 9;
+const LIST_ITEM_COMPOUND_INDEX = "[listId+itemId]";
+
+export class ListDatabase extends Dexie {
+	lists!: EntityTable<List, "id">;
+	listMemberships!: EntityTable<ListMembership, "id">;
 	userPreferences!: EntityTable<UserPreferences, "id">;
 
 	constructor() {
-		super("hobby-ninja-collection-db");
+		super("hobby-ninja-lists-db");
 
 		this.version(1).stores({
-			collections: "id, category, name, isPublic, createdAt, modifiedAt",
-			collectionItems: "id, collectionId, itemId, category, status, added, modified",
-			userPreferences: "++id, theme, language, defaultCurrency",
+			lists: "id, name, isSystem, createdAt, modifiedAt",
+			listMemberships: "id, listId, itemId, [listId+itemId], addedAt",
+			userPreferences: "id",
 		});
 	}
 
-	// Simple wrapper functions to avoid Dexie complexity for now
-	getAllCollections(): Promise<Collection[]> {
-		// Temporary implementation - can be enhanced later
-		return Promise.resolve([]);
+	// ========================================================================
+	// List Operations
+	// ========================================================================
+
+	async getAllLists(): Promise<List[]> {
+		return this.lists.toArray();
 	}
 
-	getItemsByCollection(_collectionId: string): Promise<CollectionItem[]> {
-		// Temporary implementation - can be enhanced later
-		return Promise.resolve([]);
+	async getList(id: string): Promise<List | undefined> {
+		return this.lists.get(id);
 	}
 
-	createCollection(_collection: Omit<Collection, "id">): Promise<string> {
-		// Temporary implementation - can be enhanced later
-		return Promise.resolve(`collection-id-${Date.now()}`);
+	async createList(list: Omit<List, "id" | "createdAt" | "modifiedAt">): Promise<string> {
+		const now = new Date();
+		const id = `list-${Date.now()}-${Math.random().toString(ID_RANDOM_BASE).slice(ID_SLICE_START, ID_SLICE_END)}`;
+		await this.lists.add({
+			...list,
+			id,
+			createdAt: now,
+			modifiedAt: now,
+		});
+		return id;
 	}
 
-	addItemToCollection(_item: Omit<CollectionItem, "id">): Promise<string> {
-		// Temporary implementation - can be enhanced later
-		return Promise.resolve(`item-id-${Date.now()}`);
+	async updateList(id: string, updates: Partial<Omit<List, "id" | "createdAt">>): Promise<void> {
+		await this.lists.update(id, { ...updates, modifiedAt: new Date() });
 	}
 
-	getPreferences(): Promise<UserPreferences> {
-		// Return default preferences
-		return Promise.resolve({
-			id: "default-user-preferences",
+	async deleteList(id: string): Promise<void> {
+		const list = await this.lists.get(id);
+		if (list?.isSystem) {
+			throw new Error("Cannot delete system list");
+		}
+		// Delete all memberships first
+		await this.listMemberships.where("listId").equals(id).delete();
+		// Then delete the list
+		await this.lists.delete(id);
+	}
+
+	// ========================================================================
+	// Membership Operations
+	// ========================================================================
+
+	async getListItems(listId: string): Promise<ListMembership[]> {
+		return this.listMemberships.where("listId").equals(listId).toArray();
+	}
+
+	async getItemLists(itemId: string): Promise<List[]> {
+		const memberships = await this.listMemberships.where("itemId").equals(itemId).toArray();
+		const listIds = memberships.map(m => m.listId);
+		return this.lists.where("id").anyOf(listIds).toArray();
+	}
+
+	async isInList(listId: string, itemId: string): Promise<boolean> {
+		const count = await this.listMemberships
+			.where(LIST_ITEM_COMPOUND_INDEX)
+			.equals([listId, itemId])
+			.count();
+		return count > 0;
+	}
+
+	async addToList(
+		listId: string,
+		itemId: string,
+		data?: { notes?: string; attributes?: Record<string, unknown> },
+	): Promise<string> {
+		// Check if already in list
+		const existing = await this.listMemberships
+			.where(LIST_ITEM_COMPOUND_INDEX)
+			.equals([listId, itemId])
+			.first();
+
+		if (existing) {
+			return existing.id;
+		}
+
+		const id = `mem-${Date.now()}-${Math.random().toString(ID_RANDOM_BASE).slice(ID_SLICE_START, ID_SLICE_END)}`;
+		await this.listMemberships.add({
+			id,
+			listId,
+			itemId,
+			addedAt: new Date(),
+			notes: data?.notes,
+			attributes: data?.attributes,
+		});
+
+		// Update list modifiedAt
+		await this.lists.update(listId, { modifiedAt: new Date() });
+
+		return id;
+	}
+
+	async removeFromList(listId: string, itemId: string): Promise<void> {
+		await this.listMemberships
+			.where(LIST_ITEM_COMPOUND_INDEX)
+			.equals([listId, itemId])
+			.delete();
+
+		// Update list modifiedAt
+		await this.lists.update(listId, { modifiedAt: new Date() });
+	}
+
+	async updateMembership(
+		listId: string,
+		itemId: string,
+		updates: Partial<Pick<ListMembership, "notes" | "attributes">>,
+	): Promise<void> {
+		const membership = await this.listMemberships
+			.where(LIST_ITEM_COMPOUND_INDEX)
+			.equals([listId, itemId])
+			.first();
+
+		if (membership) {
+			await this.listMemberships.update(membership.id, updates);
+		}
+	}
+
+	async getListItemCount(listId: string): Promise<number> {
+		return this.listMemberships.where("listId").equals(listId).count();
+	}
+
+	// ========================================================================
+	// Synthetic List Operations
+	// ========================================================================
+
+	async getSyntheticListItems(syntheticListId: string): Promise<string[]> {
+		const definition = SYNTHETIC_LISTS.find(s => s.id === syntheticListId);
+		if (!definition) {
+			return [];
+		}
+
+		const { op, left, right } = definition.expression;
+
+		const leftMemberships = await this.listMemberships.where("listId").equals(left).toArray();
+		const leftItems = new Set(leftMemberships.map(m => m.itemId));
+
+		const rightMemberships = await this.listMemberships.where("listId").equals(right).toArray();
+		const rightItems = new Set(rightMemberships.map(m => m.itemId));
+
+		switch (op) {
+			case "difference": {
+				return [...leftItems].filter(id => !rightItems.has(id));
+			}
+			case "intersection": {
+				return [...leftItems].filter(id => rightItems.has(id));
+			}
+			case "union": {
+				return [...new Set([...leftItems, ...rightItems])];
+			}
+		}
+	}
+
+	// ========================================================================
+	// Preferences
+	// ========================================================================
+
+	async getPreferences(): Promise<UserPreferences> {
+		const prefs = await this.userPreferences.get("default");
+		return prefs ?? {
+			id: "default",
 			theme: "auto",
 			language: "en",
 			defaultCurrency: "JPY",
 			gridView: "grid",
-			itemsPerPage: PAGINATION.ITEMS_PER_PAGE,
+			itemsPerPage: DEFAULT_ITEMS_PER_PAGE,
 			showAdvancedFilters: false,
 			autoSaveSearch: true,
-		});
+		};
 	}
 
-	// Placeholder for other methods - will be implemented as needed
-	getCollection(_id: string): Promise<Collection | undefined> {
-		// eslint-disable-next-line unicorn/no-useless-undefined
-		return Promise.resolve(undefined);
+	async updatePreferences(updates: Partial<Omit<UserPreferences, "id">>): Promise<void> {
+		const existing = await this.userPreferences.get("default");
+		await (existing
+			? this.userPreferences.update("default", updates)
+			: this.userPreferences.add({
+				id: "default",
+				theme: "auto",
+				language: "en",
+				defaultCurrency: "JPY",
+				gridView: "grid",
+				itemsPerPage: DEFAULT_ITEMS_PER_PAGE,
+				showAdvancedFilters: false,
+				autoSaveSearch: true,
+				...updates,
+			}));
 	}
 
-	updateCollection(id: string, _updates: Partial<Collection>): Promise<string> {
-		return Promise.resolve(id);
-	}
+	// ========================================================================
+	// Initialization
+	// ========================================================================
 
-	deleteCollection(_id: string): Promise<void> {
-		// Placeholder
-		return Promise.resolve();
-	}
+	async ensureSystemLists(): Promise<void> {
+		const existingLists = await this.lists.toArray();
+		const now = new Date();
 
-	updateCollectionItem(id: string, _updates: Partial<CollectionItem>): Promise<string> {
-		return Promise.resolve(id);
-	}
-
-	removeItemFromCollection(_id: string): Promise<void> {
-		// Placeholder
-		return Promise.resolve();
-	}
-
-	getCollectionStats(_collectionId: string): Promise<CollectionStats> {
-		return Promise.resolve({
-			totalItems: 0,
-			totalValue: 0,
-			statusBreakdown: {
-				owned: 0,
-				wanted: 0,
-				ordered: 0,
-				"pre-ordered": 0,
-				building: 0,
-				completed: 0,
-			},
-			conditionBreakdown: {
-				new: 0,
-				used: 0,
-				damaged: 0,
-				"box-damaged": 0,
-			},
-			completionPercentage: 0,
-		});
-	}
-
-	searchItems(_query: string, _category?: string): Promise<CollectionItem[]> {
-		return Promise.resolve([]);
-	}
-
-	updatePreferences(_updates: Partial<UserPreferences>): Promise<void> {
-		// Placeholder
-		return Promise.resolve();
-	}
-
-	exportCollection(_collectionId: string): Promise<Record<string, never>> {
-		return Promise.resolve({});
-	}
-
-	importCollection(_data: Record<string, unknown>): Promise<void> {
-		// Placeholder
-		return Promise.resolve();
-	}
-
-	exportAllData(): Promise<Record<string, never>> {
-		return Promise.resolve({});
-	}
-
-	importAllData(_data: Record<string, never>): Promise<void> {
-		// Placeholder
-		return Promise.resolve();
-	}
-
-	restoreAllData(_data: Record<string, unknown>): Promise<void> {
-		// Placeholder
-		return Promise.resolve();
+		for (const systemList of SYSTEM_LISTS) {
+			const exists = existingLists.some(l => l.id === systemList.id);
+			if (!exists) {
+				await this.lists.add({
+					...systemList,
+					createdAt: now,
+					modifiedAt: now,
+				});
+			}
+		}
 	}
 }
 
-export const db = new CollectionDatabase();
+// ============================================================================
+// Singleton & Initialization
+// ============================================================================
 
-export async function initializeDatabase() {
+export const db = new ListDatabase();
+
+export async function initializeDatabase(): Promise<void> {
 	await db.open();
-	// Database initialized successfully
+	await db.ensureSystemLists();
 }
 
-// Export functions for context provider
-export const getCollections = async (): Promise<CollectionListResponse> => {
-	const collections = await db.getAllCollections();
-	return {
-		collections,
-		total: collections.length,
-		page: 1,
-		pageSize: collections.length,
-	};
-};
+// ============================================================================
+// Convenience Exports
+// ============================================================================
 
-export const getCollection = db.getCollection.bind(db);
-export const createCollection = db.createCollection.bind(db);
-export const updateCollection = db.updateCollection.bind(db);
-export const deleteCollection = db.deleteCollection.bind(db);
-export const getStats = db.getCollectionStats.bind(db);
-export const addItem = db.addItemToCollection.bind(db);
-export const updateItem = db.updateCollectionItem.bind(db);
-export const removeItem = db.removeItemFromCollection.bind(db);
+// List operations
+export const getLists = () => db.getAllLists();
+export const getList = (id: string) => db.getList(id);
+export const createList = (list: Omit<List, "id" | "createdAt" | "modifiedAt">) => db.createList(list);
+export const updateList = (id: string, updates: Partial<Omit<List, "id" | "createdAt">>) => db.updateList(id, updates);
+export const deleteList = (id: string) => db.deleteList(id);
 
-// Add missing functions that context expects
-export const getCollectionItems = db.getItemsByCollection.bind(db);
+// Membership operations
+export const getListItems = (listId: string) => db.getListItems(listId);
+export const getItemLists = (itemId: string) => db.getItemLists(itemId);
+export const isInList = (listId: string, itemId: string) => db.isInList(listId, itemId);
+export const addToList = (
+	listId: string,
+	itemId: string,
+	data?: { notes?: string; attributes?: Record<string, unknown> },
+) => db.addToList(listId, itemId, data);
+export const removeFromList = (listId: string, itemId: string) => db.removeFromList(listId, itemId);
+export const getListItemCount = (listId: string) => db.getListItemCount(listId);
 
-export const bulkAddItems = (items: Array<Omit<CollectionItem, "id">>): Promise<CollectionItem[]> => {
-	// Placeholder implementation that returns items with generated IDs
-	return Promise.resolve(items.map((item, index) => ({
-		...item,
-		id: `bulk-item-id-${Date.now()}-${index}`,
-	})));
-};
+// Synthetic lists
+export const getSyntheticListItems = (syntheticListId: string) => db.getSyntheticListItems(syntheticListId);
 
-export const bulkUpdateItems = (items: Array<{ id: string; updates: Partial<CollectionItem> }>): Promise<string[]> => {
-	// Placeholder implementation
-	return Promise.resolve(items.map(() => "updated"));
-};
-
-export const bulkRemoveItems = async (_ids: string[]): Promise<void> => {
-	// Placeholder implementation
-};
+// Preferences
+export const getPreferences = () => db.getPreferences();
+export const updatePreferences = (updates: Partial<Omit<UserPreferences, "id">>) => db.updatePreferences(updates);
