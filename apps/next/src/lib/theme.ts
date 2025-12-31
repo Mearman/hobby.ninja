@@ -1,4 +1,6 @@
-import { createTheme, MantineColorsTuple } from "@mantine/core";
+import { createTheme, MantineColorsTuple, Tooltip } from "@mantine/core";
+
+import { Z_INDEX } from "./constants";
 
 export const gunplaBlue: MantineColorsTuple = [
 	"#e3f2fd",
@@ -47,4 +49,11 @@ export const theme = createTheme({
 	},
 	fontFamily: "var(--font-inter), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
 	defaultRadius: "md",
+	components: {
+		Tooltip: Tooltip.extend({
+			defaultProps: {
+				zIndex: Z_INDEX.TOOLTIP,
+			},
+		}),
+	},
 });

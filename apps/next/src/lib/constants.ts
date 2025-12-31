@@ -123,6 +123,7 @@ export const LEGACY_MAX_YEAR = 2025;
 // Z-Index layers
 export const Z_INDEX = {
 	MODAL: 9999,
+	TOOLTIP: 1100,
 	DROPDOWN: 1000,
 	STICKY: 100,
 } as const;
