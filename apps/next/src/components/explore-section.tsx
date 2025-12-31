@@ -580,11 +580,13 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 		scrollToIndex(firstIndex);
 	}, [sortedItems, columnCount, rowHeight, scrollToIndex]);
 
-	// Scroll to the item with the closest release date to the given date number
+	// Scroll to the item with the closest release date, positioning it at viewport center
 	const scrollToNearestDate = useCallback((targetDate: number) => {
 		if (sortedItems.length === 0) return;
+		const listElement = listRef.current;
+		if (!listElement) return;
 
-		// Find the item with the closest date (binary search since items are sorted by date desc)
+		// Find the item with the closest date (early exit since items are sorted by date desc)
 		let closestIndex = 0;
 		let closestDiff = Math.abs(releaseDateToNumber(sortedItems[0].releaseDate) - targetDate);
 
@@ -600,29 +602,16 @@ export const ExploreSection = forwardRef<ExploreSectionHandle, ExploreSectionPro
 			}
 		}
 
+		// Calculate scroll position to put item at viewport center (not top)
 		const targetRowIndex = Math.floor(closestIndex / columnCount);
-		const currentScrollTop = window.scrollY;
-		const targetScrollTop = targetRowIndex * rowHeight;
-		const scrollDistance = Math.abs(targetScrollTop - currentScrollTop);
+		const rowPositionInList = targetRowIndex * rowHeight;
+		const listTop = listElement.getBoundingClientRect().top + window.scrollY;
+		const viewportCenter = window.innerHeight / 2;
+		// Target scroll = list top + row position - offset to center it in viewport
+		const targetScrollTop = listTop + rowPositionInList - viewportCenter + rowHeight / 2;
 
-		// For short distances, just smooth scroll directly
-		const SHORT_DISTANCE_ROWS = 30;
-		const shortDistanceThreshold = SHORT_DISTANCE_ROWS * rowHeight;
-		if (scrollDistance < shortDistanceThreshold) {
-			scrollToIndex(closestIndex);
-			return;
-		}
-
-		// For long distances: teleport close then smooth scroll
-		const TELEPORT_BUFFER_ROWS = 20;
-		const teleportRowIndex = targetScrollTop > currentScrollTop
-			? Math.max(0, targetRowIndex - TELEPORT_BUFFER_ROWS)
-			: Math.min(Math.ceil(sortedItems.length / columnCount) - 1, targetRowIndex + TELEPORT_BUFFER_ROWS);
-
-		const teleportPosition = teleportRowIndex * rowHeight;
-		window.scrollTo({ top: teleportPosition, behavior: "instant" });
-		scrollToIndex(closestIndex);
-	}, [sortedItems, columnCount, rowHeight, scrollToIndex]);
+		window.scrollTo({ top: Math.max(0, targetScrollTop), behavior: "instant" });
+	}, [sortedItems, columnCount, rowHeight, listRef]);
 
 	// Expose scrollToYear, scrollToNearestDate, getYearScrollPosition, getFilteredYears, and getCenterItemDate via ref
 	useImperativeHandle(ref, () => ({
