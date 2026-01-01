@@ -85,13 +85,14 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const navigationItems: Array<{ href: string; label: string }> = [];
 
 	// Homepage has year scrollbar that requires right padding (only when not full width)
-	// Matches YearScrollbar: RIGHT_OFFSET + CONTAINER_WIDTH (16+60=76 desktop, 8+36=44 mobile)
+	// Only apply padding from sm+ breakpoint; on mobile the scrollbar overlays content
+	// Matches YearScrollbar: RIGHT_OFFSET + CONTAINER_WIDTH (16+60=76 desktop, 8+36=44 tablet)
 	const isHomepage = pathname === "/";
 	const needsScrollbarPadding = isHomepage && !fullWidth;
 
 	return (
 		<header className={header}>
-			<Box pr={needsScrollbarPadding ? { base: 44, md: 76 } : 0}>
+			<Box pr={needsScrollbarPadding ? { base: 0, sm: 44, md: 76 } : 0}>
 				<Container
 					size={fullWidth ? "100%" : "xl"}
 					style={{
@@ -99,8 +100,13 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 						alignItems: "center",
 						justifyContent: "space-between",
 						height: 60,
-						// Remove right padding when scrollbar padding is applied to avoid double gap
-						paddingRight: needsScrollbarPadding ? 0 : undefined,
+					}}
+					styles={{
+						root: {
+							// Remove right padding when scrollbar padding is applied to avoid double gap
+							// Use CSS media query to match the responsive Box padding
+							"@media (min-width: 48em)": needsScrollbarPadding ? { paddingRight: 0 } : {},
+						},
 					}}
 				>
 					{/* Logo */}
