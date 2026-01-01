@@ -30,12 +30,17 @@ function ThemeColumn({ colorScheme, children }: ThemeColumnProps) {
 	const scopeClass = `mantine-scope-${colorScheme}`;
 
 	return (
-		<div className={scopeClass} style={{ flex: 1, minWidth: 0 }}>
+		<div
+			className={scopeClass}
+			data-mantine-color-scheme={colorScheme}
+			style={{ flex: 1, minWidth: 0 }}
+		>
 			<ThemeContext.Provider value={themeValue}>
 				<MantineProvider
 					theme={theme}
 					forceColorScheme={colorScheme}
 					cssVariablesSelector={`.${scopeClass}`}
+					getRootElement={() => document.querySelector(`.${scopeClass}`) as HTMLElement}
 				>
 					<ModalsProvider>
 						<Box
