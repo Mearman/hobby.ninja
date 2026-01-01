@@ -24,7 +24,7 @@
 		}
 	},
 	"include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"],
-	"exclude": ["node_modules", "src/data/**/*.json", "public/data/**/*.json", "public/data/**"],
+	"exclude": ["node_modules", "src/data/**/*.json", "public/data/**/*.json", "public/data/**", ".storybook", "stories"],
 	"references": [
 		{
 			"path": "../../packages/utils"
