@@ -1288,12 +1288,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 				</Container>
 			</>
 
-			{/* Year navigation with integrated scroll-to-top */}
-			<YearScrollbar
-				years={yearNumbers}
-				onYearSelect={handleYearSelect}
-				getYearPosition={getYearScrollPosition}
-			/>
+			{/* Year navigation with integrated scroll-to-top - hidden in full width mode */}
+			{!fullWidth && (
+				<YearScrollbar
+					years={yearNumbers}
+					onYearSelect={handleYearSelect}
+					getYearPosition={getYearScrollPosition}
+				/>
+			)}
 		</>
 	);
 }
