@@ -818,8 +818,9 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 				</Container>
 			</Box>
 
-			{/* Main content */}
-			<>
+			{/* Main content - add right padding in full width mode to avoid scrollbar overlap */}
+			{/* Scrollbar dimensions: RIGHT_OFFSET + CONTAINER_WIDTH (8+36=44 mobile, 16+60=76 desktop) */}
+			<Box pr={fullWidth ? { base: 44, md: 76 } : 0}>
 				{/* Categories, Grades, Brands & Series */}
 				<Container ref={filterSectionRef} size={containerSize} py="xs" w="100%">
 					<Stack gap="xs">
@@ -1286,16 +1287,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						/>
 					</Stack>
 				</Container>
-			</>
+			</Box>
 
-			{/* Year navigation with integrated scroll-to-top - hidden in full width mode */}
-			{!fullWidth && (
-				<YearScrollbar
-					years={yearNumbers}
-					onYearSelect={handleYearSelect}
-					getYearPosition={getYearScrollPosition}
-				/>
-			)}
+			{/* Year navigation with integrated scroll-to-top */}
+			<YearScrollbar
+				years={yearNumbers}
+				onYearSelect={handleYearSelect}
+				getYearPosition={getYearScrollPosition}
+			/>
 		</>
 	);
 }
