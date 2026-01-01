@@ -1,52 +1,53 @@
 import { MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import type { Decorator, Meta, StoryObj } from "@storybook/react";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import { HomepageClient } from "../src/components/homepage-client";
 import { StickyFiltersProvider } from "../src/contexts/sticky-filters-context";
 import { theme } from "../src/lib/theme";
 import { ThemeContext, type ThemeContextValue } from "../src/providers/mantine-provider";
 import { MultiDevice } from "../.storybook/decorators/MultiDevice";
+import { SideBySideThemes } from "../.storybook/decorators/SideBySideThemes";
 import { defaultSample, largeSample, minimalSample } from "./utils/sample-homepage-data";
 
 // ============================================================================
-// Theme Provider Decorator Factory
+// Theme Provider Decorator for Homepage
 // ============================================================================
 
-function createThemeDecorator(forcedScheme?: "light" | "dark"): Decorator {
+/**
+ * Creates a decorator that wraps the story with theme context and providers.
+ * Uses cssVariablesSelector to scope Mantine styles to the wrapper element.
+ */
+function createThemeDecorator(colorScheme: "light" | "dark"): Decorator {
 	return (Story) => {
 		const [fullWidth, setFullWidth] = useState(false);
 
-		const effectiveScheme = forcedScheme ?? "light";
-
-		// Set the data-mantine-color-scheme attribute on the html element
-		useEffect(() => {
-			document.documentElement.setAttribute("data-mantine-color-scheme", effectiveScheme);
-		}, [effectiveScheme]);
-
 		const themeValue = useMemo<ThemeContextValue>(() => ({
-			colorScheme: forcedScheme ?? "system",
-			effectiveColorScheme: effectiveScheme,
+			colorScheme,
+			effectiveColorScheme: colorScheme,
 			cycleTheme: () => { /* no-op in stories */ },
 			fullWidth,
 			toggleFullWidth: () => { setFullWidth(prev => !prev); },
-		}), [fullWidth, effectiveScheme]);
+		}), [fullWidth]);
 
 		return (
-			<ThemeContext.Provider value={themeValue}>
-				<MantineProvider
-					theme={theme}
-					defaultColorScheme={effectiveScheme}
-					forceColorScheme={effectiveScheme}
-				>
-					<ModalsProvider>
-						<StickyFiltersProvider>
-							<Story />
-						</StickyFiltersProvider>
-					</ModalsProvider>
-				</MantineProvider>
-			</ThemeContext.Provider>
+			<div data-mantine-color-scheme={colorScheme}>
+				<ThemeContext.Provider value={themeValue}>
+					<MantineProvider
+						theme={theme}
+						defaultColorScheme={colorScheme}
+						forceColorScheme={colorScheme}
+						cssVariablesSelector={`[data-mantine-color-scheme="${colorScheme}"]`}
+					>
+						<ModalsProvider>
+							<StickyFiltersProvider>
+								<Story />
+							</StickyFiltersProvider>
+						</ModalsProvider>
+					</MantineProvider>
+				</ThemeContext.Provider>
+			</div>
 		);
 	};
 }
@@ -55,43 +56,15 @@ function createThemeDecorator(forcedScheme?: "light" | "dark"): Decorator {
 const WithLightTheme = createThemeDecorator("light");
 const WithDarkTheme = createThemeDecorator("dark");
 
-// For system theme, detect at render time
-const WithSystemTheme: Decorator = (Story) => {
-	const [fullWidth, setFullWidth] = useState(false);
-	const prefersDark = typeof window !== "undefined"
-		? window.matchMedia("(prefers-color-scheme: dark)").matches
-		: false;
-	const effectiveScheme = prefersDark ? "dark" : "light";
-
-	// Set the data-mantine-color-scheme attribute on the html element
-	useEffect(() => {
-		document.documentElement.setAttribute("data-mantine-color-scheme", effectiveScheme);
-	}, [effectiveScheme]);
-
-	const themeValue = useMemo<ThemeContextValue>(() => ({
-		colorScheme: "system",
-		effectiveColorScheme: effectiveScheme,
-		cycleTheme: () => { /* no-op */ },
-		fullWidth,
-		toggleFullWidth: () => { setFullWidth(prev => !prev); },
-	}), [fullWidth, effectiveScheme]);
-
-	return (
-		<ThemeContext.Provider value={themeValue}>
-			<MantineProvider
-				theme={theme}
-				defaultColorScheme={effectiveScheme}
-				forceColorScheme={effectiveScheme}
-			>
-				<ModalsProvider>
-					<StickyFiltersProvider>
-						<Story />
-					</StickyFiltersProvider>
-				</ModalsProvider>
-			</MantineProvider>
-		</ThemeContext.Provider>
-	);
-};
+/**
+ * Wraps story with StickyFiltersProvider for use with SideBySideThemes.
+ * The theme context is provided by SideBySideThemes decorator.
+ */
+const WithStickyFilters: Decorator = (Story) => (
+	<StickyFiltersProvider>
+		<Story />
+	</StickyFiltersProvider>
+);
 
 // ============================================================================
 // Story Configuration
@@ -140,11 +113,11 @@ export const DarkTheme: Story = {
 };
 
 /**
- * Homepage following system preference.
+ * Light and dark themes side-by-side for visual comparison.
  */
-export const SystemTheme: Story = {
-	args: defaultSample,
-	decorators: [WithSystemTheme],
+export const ThemeComparison: Story = {
+	args: minimalSample,
+	decorators: [WithStickyFilters, SideBySideThemes],
 };
 
 /**
