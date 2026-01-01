@@ -6,7 +6,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const config: StorybookConfig = {
 	// Stories are outside src/ to avoid Next.js bundling them
-	stories: ["../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+	stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+
+	addons: ["@storybook/addon-docs"],
 
 	framework: {
 		name: "@storybook/nextjs-vite",
