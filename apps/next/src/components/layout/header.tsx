@@ -99,6 +99,8 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 						alignItems: "center",
 						justifyContent: "space-between",
 						height: 60,
+						// Remove right padding when scrollbar padding is applied to avoid double gap
+						paddingRight: needsScrollbarPadding ? 0 : undefined,
 					}}
 				>
 					{/* Logo */}
