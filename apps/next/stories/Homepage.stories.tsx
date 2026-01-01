@@ -4,6 +4,7 @@ import type { Decorator, Meta, StoryObj } from "@storybook/react";
 import React, { useMemo, useState } from "react";
 
 import { HomepageClient } from "../src/components/homepage-client";
+import { Header } from "../src/components/layout/header";
 import { StickyFiltersProvider } from "../src/contexts/sticky-filters-context";
 import { theme } from "../src/lib/theme";
 import { ThemeContext, type ThemeContextValue } from "../src/providers/mantine-provider";
@@ -17,6 +18,7 @@ import { defaultSample, largeSample, minimalSample } from "./utils/sample-homepa
 
 /**
  * Creates a decorator that wraps the story with theme context and providers.
+ * Uses CSS variable scoping to ensure theme applies even when nested in global ThemeWrapper.
  */
 function createThemeDecorator(colorScheme: "light" | "dark"): Decorator {
 	return (Story) => {
@@ -30,21 +32,32 @@ function createThemeDecorator(colorScheme: "light" | "dark"): Decorator {
 			toggleFullWidth: () => { setFullWidth(prev => !prev); },
 		}), [fullWidth]);
 
+		// Use scoped class to isolate CSS variables from global ThemeWrapper
+		const scopeClass = `mantine-story-scope-${colorScheme}`;
+
 		return (
-			<ThemeContext.Provider value={themeValue}>
-				<MantineProvider
-					theme={theme}
-					forceColorScheme={colorScheme}
-				>
-					<ModalsProvider>
-						<Box bg="var(--mantine-color-body)" c="var(--mantine-color-text)" mih="100vh">
-							<StickyFiltersProvider>
-								<Story />
-							</StickyFiltersProvider>
-						</Box>
-					</ModalsProvider>
-				</MantineProvider>
-			</ThemeContext.Provider>
+			<div
+				className={scopeClass}
+				data-mantine-color-scheme={colorScheme}
+				style={{ minHeight: "100vh" }}
+			>
+				<ThemeContext.Provider value={themeValue}>
+					<MantineProvider
+						theme={theme}
+						forceColorScheme={colorScheme}
+						cssVariablesSelector={`.${scopeClass}`}
+						getRootElement={() => document.querySelector(`.${scopeClass}`) as HTMLElement}
+					>
+						<ModalsProvider>
+							<Box bg="var(--mantine-color-body)" c="var(--mantine-color-text)" mih="100vh">
+								<StickyFiltersProvider>
+									<Story />
+								</StickyFiltersProvider>
+							</Box>
+						</ModalsProvider>
+					</MantineProvider>
+				</ThemeContext.Provider>
+			</div>
 		);
 	};
 }
@@ -155,4 +168,49 @@ export const MultiDevicePreview: Story = {
 export const MultiDevicePreviewDark: Story = {
 	args: minimalSample,
 	decorators: [WithDarkTheme, MultiDevice],
+};
+
+// ============================================================================
+// Stories with Header
+// ============================================================================
+
+/**
+ * Component that renders Homepage with Header for full-page stories.
+ */
+function HomepageWithHeader(props: React.ComponentProps<typeof HomepageClient>) {
+	return (
+		<>
+			<Header />
+			<HomepageClient {...props} />
+		</>
+	);
+}
+
+/**
+ * Homepage with header bar - light theme at multiple device sizes.
+ * Shows responsive header behavior: hamburger menu on mobile,
+ * full navigation on desktop.
+ */
+export const WithHeaderMultiDevice: Story = {
+	args: minimalSample,
+	decorators: [WithLightTheme, MultiDevice],
+	render: (args) => <HomepageWithHeader {...args} />,
+};
+
+/**
+ * Homepage with header bar - dark theme at multiple device sizes.
+ */
+export const WithHeaderMultiDeviceDark: Story = {
+	args: minimalSample,
+	decorators: [WithDarkTheme, MultiDevice],
+	render: (args) => <HomepageWithHeader {...args} />,
+};
+
+/**
+ * Homepage with header - side-by-side theme comparison.
+ */
+export const WithHeaderThemeComparison: Story = {
+	args: minimalSample,
+	decorators: [WithStickyFilters, SideBySideThemes],
+	render: (args) => <HomepageWithHeader {...args} />,
 };

@@ -1,5 +1,6 @@
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
+import "../src/styles/components-placeholder.css";
 
 import type { Preview } from "@storybook/react";
 import { Inter } from "next/font/google";
@@ -16,6 +17,12 @@ const inter = Inter({
 
 const preview: Preview = {
 	parameters: {
+		nextjs: {
+			appDirectory: true,
+			navigation: {
+				pathname: "/",
+			},
+		},
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
