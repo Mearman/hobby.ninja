@@ -12,14 +12,17 @@ import { theme } from "../lib/theme";
 const STORAGE_KEY_COLOR_SCHEME = "hobby-ninja-color-scheme";
 const STORAGE_KEY_FULL_WIDTH = "hobby-ninja-full-width";
 
-// Create context for theme functions
-const ThemeContext = createContext<{
+// Theme context value type
+export interface ThemeContextValue {
 	colorScheme: "light" | "dark" | "system";
 	effectiveColorScheme: "light" | "dark";
 	cycleTheme: () => void;
 	fullWidth: boolean;
 	toggleFullWidth: () => void;
-		} | null>(null);
+}
+
+// Create context for theme functions (exported for Storybook)
+export const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 interface MantineThemeProviderProps {
 	children: React.ReactNode;
