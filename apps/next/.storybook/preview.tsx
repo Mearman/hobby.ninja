@@ -2,11 +2,10 @@ import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 
 import type { Preview } from "@storybook/react";
-import { MantineProvider } from "@mantine/core";
 import { Inter } from "next/font/google";
 import React from "react";
 
-import { theme } from "../src/lib/theme";
+import { ThemeWrapper } from "./decorators/ThemeWrapper";
 
 // Load Inter font - same as layout.tsx
 const inter = Inter({
@@ -40,14 +39,29 @@ const preview: Preview = {
 			},
 		},
 	},
+	globalTypes: {
+		theme: {
+			name: "Theme",
+			description: "Color scheme for components",
+			defaultValue: "light",
+			toolbar: {
+				icon: "paintbrush",
+				items: [
+					{ value: "light", title: "Light", icon: "sun" },
+					{ value: "dark", title: "Dark", icon: "moon" },
+					{ value: "system", title: "System", icon: "browser" },
+				],
+				dynamicTitle: true,
+			},
+		},
+	},
 	decorators: [
 		(Story) => (
 			<div className={`${inter.variable} ${inter.className}`}>
-				<MantineProvider theme={theme}>
-					<Story />
-				</MantineProvider>
+				<Story />
 			</div>
 		),
+		ThemeWrapper,
 	],
 };
 
