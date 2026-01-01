@@ -17,7 +17,6 @@ import { defaultSample, largeSample, minimalSample } from "./utils/sample-homepa
 
 /**
  * Creates a decorator that wraps the story with theme context and providers.
- * Uses cssVariablesSelector to scope Mantine styles to the wrapper element.
  */
 function createThemeDecorator(colorScheme: "light" | "dark"): Decorator {
 	return (Story) => {
@@ -32,24 +31,20 @@ function createThemeDecorator(colorScheme: "light" | "dark"): Decorator {
 		}), [fullWidth]);
 
 		return (
-			<div data-mantine-color-scheme={colorScheme}>
-				<ThemeContext.Provider value={themeValue}>
-					<MantineProvider
-						theme={theme}
-						defaultColorScheme={colorScheme}
-						forceColorScheme={colorScheme}
-						cssVariablesSelector={`[data-mantine-color-scheme="${colorScheme}"]`}
-					>
-						<ModalsProvider>
-							<Box bg="var(--mantine-color-body)" mih="100vh">
-								<StickyFiltersProvider>
-									<Story />
-								</StickyFiltersProvider>
-							</Box>
-						</ModalsProvider>
-					</MantineProvider>
-				</ThemeContext.Provider>
-			</div>
+			<ThemeContext.Provider value={themeValue}>
+				<MantineProvider
+					theme={theme}
+					forceColorScheme={colorScheme}
+				>
+					<ModalsProvider>
+						<Box bg="var(--mantine-color-body)" c="var(--mantine-color-text)" mih="100vh">
+							<StickyFiltersProvider>
+								<Story />
+							</StickyFiltersProvider>
+						</Box>
+					</ModalsProvider>
+				</MantineProvider>
+			</ThemeContext.Provider>
 		);
 	};
 }

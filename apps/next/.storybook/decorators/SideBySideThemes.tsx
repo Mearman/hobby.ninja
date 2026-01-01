@@ -13,7 +13,7 @@ interface ThemeColumnProps {
 
 /**
  * Wraps content in a themed column with proper Mantine context.
- * Sets data-mantine-color-scheme on the wrapper div to scope CSS variables.
+ * Uses cssVariablesSelector with a unique class to scope CSS variables per column.
  */
 function ThemeColumn({ colorScheme, children }: ThemeColumnProps) {
 	const [fullWidth, setFullWidth] = useState(false);
@@ -26,25 +26,24 @@ function ThemeColumn({ colorScheme, children }: ThemeColumnProps) {
 		toggleFullWidth: () => { setFullWidth(prev => !prev); },
 	}), [colorScheme, fullWidth]);
 
+	// Use a unique class selector to scope CSS variables for this column
+	const scopeClass = `mantine-scope-${colorScheme}`;
+
 	return (
-		<div
-			data-mantine-color-scheme={colorScheme}
-			style={{
-				flex: 1,
-				minWidth: 0,
-				borderRadius: 8,
-				overflow: "hidden",
-			}}
-		>
+		<div className={scopeClass} style={{ flex: 1, minWidth: 0 }}>
 			<ThemeContext.Provider value={themeValue}>
 				<MantineProvider
 					theme={theme}
-					defaultColorScheme={colorScheme}
 					forceColorScheme={colorScheme}
-					cssVariablesSelector={`[data-mantine-color-scheme="${colorScheme}"]`}
+					cssVariablesSelector={`.${scopeClass}`}
 				>
 					<ModalsProvider>
-						<Box bg="var(--mantine-color-body)" mih="100%">
+						<Box
+							bg="var(--mantine-color-body)"
+							c="var(--mantine-color-text)"
+							mih="100%"
+							style={{ borderRadius: 8, overflow: "hidden" }}
+						>
 							{children}
 						</Box>
 					</ModalsProvider>
@@ -56,7 +55,7 @@ function ThemeColumn({ colorScheme, children }: ThemeColumnProps) {
 
 /**
  * Decorator that renders the story twice side-by-side: once in light mode, once in dark mode.
- * Useful for visual comparison of theme implementations.
+ * Each side has its own MantineProvider with scoped CSS variables.
  */
 export const SideBySideThemes: Decorator = (Story) => {
 	return (
@@ -64,13 +63,14 @@ export const SideBySideThemes: Decorator = (Story) => {
 			display: "flex",
 			gap: "1rem",
 			padding: "1rem",
-			backgroundColor: "#f0f0f0",
+			backgroundColor: "#808080",
 			minHeight: "100vh",
 		}}>
-			<div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+			<div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
 				<div style={{
 					padding: "0.5rem 1rem",
-					backgroundColor: "#e0e0e0",
+					backgroundColor: "#f0f0f0",
+					color: "#333",
 					borderRadius: "8px 8px 0 0",
 					fontWeight: 600,
 					fontSize: 14,
@@ -81,7 +81,7 @@ export const SideBySideThemes: Decorator = (Story) => {
 					<Story />
 				</ThemeColumn>
 			</div>
-			<div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+			<div style={{ flex: 1, display: "flex", flexDirection: "column", minWidth: 0 }}>
 				<div style={{
 					padding: "0.5rem 1rem",
 					backgroundColor: "#333",

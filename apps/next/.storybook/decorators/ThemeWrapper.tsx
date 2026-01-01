@@ -11,7 +11,6 @@ type ColorScheme = "light" | "dark" | "system";
 /**
  * Decorator that wraps stories with MantineProvider and theme support.
  * Reads the theme from Storybook's globals (set via toolbar).
- * Uses cssVariablesSelector to scope styles to the wrapper element.
  */
 export const ThemeWrapper: Decorator = (Story, context) => {
 	const storybookTheme = (context.globals.theme as ColorScheme) || "light";
@@ -32,7 +31,6 @@ export const ThemeWrapper: Decorator = (Story, context) => {
 		colorScheme: storybookTheme,
 		effectiveColorScheme,
 		cycleTheme: () => {
-			// In Storybook, theme is controlled via toolbar
 			console.log("Theme cycling is controlled via Storybook toolbar");
 		},
 		fullWidth,
@@ -40,21 +38,17 @@ export const ThemeWrapper: Decorator = (Story, context) => {
 	}), [storybookTheme, effectiveColorScheme, fullWidth]);
 
 	return (
-		<div data-mantine-color-scheme={effectiveColorScheme}>
-			<ThemeContext.Provider value={themeContextValue}>
-				<MantineProvider
-					theme={theme}
-					defaultColorScheme={effectiveColorScheme}
-					forceColorScheme={effectiveColorScheme}
-					cssVariablesSelector={`[data-mantine-color-scheme="${effectiveColorScheme}"]`}
-				>
-					<ModalsProvider>
-						<Box bg="var(--mantine-color-body)" mih="100vh">
-							<Story />
-						</Box>
-					</ModalsProvider>
-				</MantineProvider>
-			</ThemeContext.Provider>
-		</div>
+		<ThemeContext.Provider value={themeContextValue}>
+			<MantineProvider
+				theme={theme}
+				forceColorScheme={effectiveColorScheme}
+			>
+				<ModalsProvider>
+					<Box bg="var(--mantine-color-body)" c="var(--mantine-color-text)" mih="100vh">
+						<Story />
+					</Box>
+				</ModalsProvider>
+			</MantineProvider>
+		</ThemeContext.Provider>
 	);
 };
