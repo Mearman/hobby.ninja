@@ -819,8 +819,9 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 			</Box>
 
 			{/* Main content - add right padding to avoid scrollbar overlap */}
+			{/* In constrained mode on large screens, Container is centered with margins so no padding needed */}
 			{/* Scrollbar dimensions: RIGHT_OFFSET + CONTAINER_WIDTH (8+36=44 mobile, 16+60=76 desktop) */}
-			<Box pr={{ base: 44, md: 76 }}>
+			<Box pr={fullWidth ? { base: 44, md: 76 } : { base: 44, md: 76, xl: 0 }}>
 				{/* Categories, Grades, Brands & Series */}
 				<Container ref={filterSectionRef} size={containerSize} py="xs" w="100%">
 					<Stack gap="xs">
