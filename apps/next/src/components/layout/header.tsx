@@ -90,188 +90,184 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const isHomepage = pathname === "/";
 	const needsScrollbarPadding = isHomepage && !fullWidth;
 
+	// Scrollbar dimensions: RIGHT_OFFSET + CONTAINER_WIDTH
+	// Desktop (md+): 16 + 60 = 76px, Tablet (sm): 8 + 36 = 44px
+	const scrollbarPadding = { base: 0, sm: 44, md: 76 };
+
 	return (
 		<header className={header}>
-			<Box pr={needsScrollbarPadding ? { base: 0, sm: 44, md: 76 } : 0}>
-				<Container
-					size={fullWidth ? "100%" : "xl"}
-					style={{
-						display: "flex",
-						alignItems: "center",
-						justifyContent: "space-between",
-						height: 60,
-					}}
-					styles={{
-						root: {
-							// Remove right padding when scrollbar padding is applied to avoid double gap
-							// Use CSS media query to match the responsive Box padding
-							"@media (min-width: 48em)": needsScrollbarPadding ? { paddingRight: 0 } : {},
-						},
-					}}
-				>
-					{/* Logo */}
-					<Group gap="lg" align="center">
-						{/* Mobile menu toggle */}
-						<ActionIcon
-							size="lg"
-							variant="subtle"
-							onClick={onMenuToggle}
-							hiddenFrom="lg"
-							aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-						>
-							{mobileMenuOpen ? <IconX size={UI.ICON_SIZE_LG} /> : <IconMenu2 size={UI.ICON_SIZE_LG} />}
-						</ActionIcon>
+			<Container
+				size={fullWidth ? "100%" : "xl"}
+				style={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "space-between",
+					height: 60,
+				}}
+				pr={needsScrollbarPadding ? scrollbarPadding : undefined}
+			>
+				{/* Logo */}
+				<Group gap="lg" align="center">
+					{/* Mobile menu toggle */}
+					<ActionIcon
+						size="lg"
+						variant="subtle"
+						onClick={onMenuToggle}
+						hiddenFrom="lg"
+						aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+					>
+						{mobileMenuOpen ? <IconX size={UI.ICON_SIZE_LG} /> : <IconMenu2 size={UI.ICON_SIZE_LG} />}
+					</ActionIcon>
 
-						<Link href="/" className={logo}>
+					<Link href="/" className={logo}>
 							hobby.ninja
-						</Link>
-						{/* Version - hidden on mobile */}
-						<Box
-							component="a"
-							href={`https://github.com/Mearman/hobby.ninja/releases/tag/v${process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.1"}`}
-							target="_blank"
-							rel="noopener noreferrer"
-							c="dimmed"
-							fz="xs"
-							ml={4}
-							style={{ textDecoration: "none" }}
-							visibleFrom="sm"
-						>
+					</Link>
+					{/* Version - hidden on mobile */}
+					<Box
+						component="a"
+						href={`https://github.com/Mearman/hobby.ninja/releases/tag/v${process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.1"}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						c="dimmed"
+						fz="xs"
+						ml={4}
+						style={{ textDecoration: "none" }}
+						visibleFrom="sm"
+					>
 							v{process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.1"}
-						</Box>
+					</Box>
 
-						{/* Desktop navigation */}
-						<Box component="nav" className={nav} visibleFrom="lg">
-							{navigationItems.map(({ href, label }) => (
-								<Link
-									key={href}
-									href={href}
-									className={navLink}
-									data-active={isActive(href)}
-								>
-									{label}
-								</Link>
-							))}
-						</Box>
-					</Group>
+					{/* Desktop navigation */}
+					<Box component="nav" className={nav} visibleFrom="lg">
+						{navigationItems.map(({ href, label }) => (
+							<Link
+								key={href}
+								href={href}
+								className={navLink}
+								data-active={isActive(href)}
+							>
+								{label}
+							</Link>
+						))}
+					</Box>
+				</Group>
 
-					{/* Search and actions */}
-					<Group gap="md" align="center">
-						{/* Search bar */}
-						<Box visibleFrom="lg" style={{ flex: 1, maxWidth: "400px" }}>
-							<TextInput
-								placeholder="Search items, brands, series..."
-								leftSection={<IconSearch size={UI.ICON_SIZE_SM} />}
-								value={searchQuery}
-								onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
-								rightSection={
-									searchQuery && (
-										<ActionIcon
-											size="sm"
-											variant="subtle"
-											onClick={() => { setSearchQuery(""); }}
-										>
-											<IconX size={UI.ICON_SIZE_XS} />
-										</ActionIcon>
-									)
-								}
-								styles={{
-									input: {
-										height: "36px",
-									},
-								}}
-							/>
-						</Box>
-
-						{/* Sticky filters toggle - hidden on mobile, accessible via menu */}
-						{showFilterToggle && (
-							<Box visibleFrom="sm">
-								<Tooltip label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}>
+				{/* Search and actions */}
+				<Group gap="md" align="center">
+					{/* Search bar */}
+					<Box visibleFrom="lg" style={{ flex: 1, maxWidth: "400px" }}>
+						<TextInput
+							placeholder="Search items, brands, series..."
+							leftSection={<IconSearch size={UI.ICON_SIZE_SM} />}
+							value={searchQuery}
+							onChange={(event) => { setSearchQuery(event.currentTarget.value); }}
+							rightSection={
+								searchQuery && (
 									<ActionIcon
-										size="lg"
+										size="sm"
 										variant="subtle"
-										onClick={stickyFilters.toggleExpanded}
-										aria-label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}
+										onClick={() => { setSearchQuery(""); }}
 									>
-										{stickyFilters.expanded ? <IconFilterUp size={UI.ICON_SIZE_LG} /> : <IconFilterDown size={UI.ICON_SIZE_LG} />}
+										<IconX size={UI.ICON_SIZE_XS} />
 									</ActionIcon>
-								</Tooltip>
-							</Box>
-						)}
+								)
+							}
+							styles={{
+								input: {
+									height: "36px",
+								},
+							}}
+						/>
+					</Box>
 
-						{/* Mobile search button */}
-						<ActionIcon
-							size="lg"
-							variant="subtle"
-							onClick={() => globalThis.location.href = "/search"}
-							hiddenFrom="lg"
-							aria-label="Search"
-						>
-							<IconSearch size={UI.ICON_SIZE_LG} />
-						</ActionIcon>
-
-						{/* Collection badge - hidden on mobile, accessible via menu */}
+					{/* Sticky filters toggle - hidden on mobile, accessible via menu */}
+					{showFilterToggle && (
 						<Box visibleFrom="sm">
-							<Tooltip label="View collections">
-								<ActionIcon
-									size="lg"
-									variant={isActive("/collection") ? "filled" : "subtle"}
-									color="blue"
-									component={Link}
-									href="/collection"
-									aria-label="Collections"
-								>
-									<IconFolder size={UI.ICON_SIZE_LG} />
-								</ActionIcon>
-							</Tooltip>
-						</Box>
-
-						{/* About - hidden on mobile, accessible via menu */}
-						<Box visibleFrom="sm">
-							<Tooltip label="About hobby.ninja">
-								<ActionIcon
-									size="lg"
-									variant={isActive("/about") ? "filled" : "subtle"}
-									component={Link}
-									href="/about"
-									aria-label="About"
-								>
-									<IconInfoCircle size={UI.ICON_SIZE_LG} />
-								</ActionIcon>
-							</Tooltip>
-						</Box>
-
-						{/* Full width toggle - desktop only */}
-						<Box visibleFrom="lg">
-							<Tooltip label={fullWidth ? "Use constrained width" : "Use full width"}>
+							<Tooltip label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}>
 								<ActionIcon
 									size="lg"
 									variant="subtle"
-									onClick={toggleFullWidth}
-									aria-label={fullWidth ? "Use constrained width" : "Use full width"}
+									onClick={stickyFilters.toggleExpanded}
+									aria-label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}
 								>
-									{fullWidth ? <IconArrowsDiagonalMinimize size={UI.ICON_SIZE_LG} style={{ transform: "rotate(-45deg)" }} /> : <IconArrowsDiagonal size={UI.ICON_SIZE_LG} style={{ transform: "rotate(45deg)" }} />}
+									{stickyFilters.expanded ? <IconFilterUp size={UI.ICON_SIZE_LG} /> : <IconFilterDown size={UI.ICON_SIZE_LG} />}
 								</ActionIcon>
 							</Tooltip>
 						</Box>
+					)}
 
-						{/* Theme toggle - hidden on mobile, accessible via menu */}
-						<Box visibleFrom="sm">
-							<Tooltip label={getThemeLabel()}>
-								<ActionIcon
-									size="lg"
-									variant="subtle"
-									onClick={cycleTheme}
-									aria-label="Toggle theme"
-								>
-									{getThemeIcon()}
-								</ActionIcon>
-							</Tooltip>
-						</Box>
+					{/* Mobile search button */}
+					<ActionIcon
+						size="lg"
+						variant="subtle"
+						onClick={() => globalThis.location.href = "/search"}
+						hiddenFrom="lg"
+						aria-label="Search"
+					>
+						<IconSearch size={UI.ICON_SIZE_LG} />
+					</ActionIcon>
 
-					</Group>
-				</Container>
-			</Box>
+					{/* Collection badge - hidden on mobile, accessible via menu */}
+					<Box visibleFrom="sm">
+						<Tooltip label="View collections">
+							<ActionIcon
+								size="lg"
+								variant={isActive("/collection") ? "filled" : "subtle"}
+								color="blue"
+								component={Link}
+								href="/collection"
+								aria-label="Collections"
+							>
+								<IconFolder size={UI.ICON_SIZE_LG} />
+							</ActionIcon>
+						</Tooltip>
+					</Box>
+
+					{/* About - hidden on mobile, accessible via menu */}
+					<Box visibleFrom="sm">
+						<Tooltip label="About hobby.ninja">
+							<ActionIcon
+								size="lg"
+								variant={isActive("/about") ? "filled" : "subtle"}
+								component={Link}
+								href="/about"
+								aria-label="About"
+							>
+								<IconInfoCircle size={UI.ICON_SIZE_LG} />
+							</ActionIcon>
+						</Tooltip>
+					</Box>
+
+					{/* Full width toggle - desktop only */}
+					<Box visibleFrom="lg">
+						<Tooltip label={fullWidth ? "Use constrained width" : "Use full width"}>
+							<ActionIcon
+								size="lg"
+								variant="subtle"
+								onClick={toggleFullWidth}
+								aria-label={fullWidth ? "Use constrained width" : "Use full width"}
+							>
+								{fullWidth ? <IconArrowsDiagonalMinimize size={UI.ICON_SIZE_LG} style={{ transform: "rotate(-45deg)" }} /> : <IconArrowsDiagonal size={UI.ICON_SIZE_LG} style={{ transform: "rotate(45deg)" }} />}
+							</ActionIcon>
+						</Tooltip>
+					</Box>
+
+					{/* Theme toggle - hidden on mobile, accessible via menu */}
+					<Box visibleFrom="sm">
+						<Tooltip label={getThemeLabel()}>
+							<ActionIcon
+								size="lg"
+								variant="subtle"
+								onClick={cycleTheme}
+								aria-label="Toggle theme"
+							>
+								{getThemeIcon()}
+							</ActionIcon>
+						</Tooltip>
+					</Box>
+
+				</Group>
+			</Container>
 		</header>
 	);
 }
