@@ -84,16 +84,6 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 
 	const navigationItems: Array<{ href: string; label: string }> = [];
 
-	// Homepage has year scrollbar that requires right padding (only when not full width)
-	// Only apply padding from sm+ breakpoint; on mobile the scrollbar overlays content
-	// Matches YearScrollbar: RIGHT_OFFSET + CONTAINER_WIDTH (16+60=76 desktop, 8+36=44 tablet)
-	const isHomepage = pathname === "/";
-	const needsScrollbarPadding = isHomepage && !fullWidth;
-
-	// Scrollbar dimensions: RIGHT_OFFSET + CONTAINER_WIDTH
-	// Desktop (md+): 16 + 60 = 76px, Tablet (sm): 8 + 36 = 44px
-	const scrollbarPadding = { base: 0, sm: 44, md: 76 };
-
 	return (
 		<header className={header}>
 			<Container
@@ -104,7 +94,6 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 					justifyContent: "space-between",
 					height: 60,
 				}}
-				pr={needsScrollbarPadding ? scrollbarPadding : undefined}
 			>
 				{/* Logo */}
 				<Group gap="lg" align="center">
