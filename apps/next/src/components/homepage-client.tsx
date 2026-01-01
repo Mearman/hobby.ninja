@@ -580,7 +580,6 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 					transform: stickyFilters.isVisible && hasActiveFilters ? "translateY(0)" : "translateY(-100%)",
 					opacity: stickyFilters.isVisible && hasActiveFilters ? 1 : 0,
 					transition: "transform 300ms ease-out, opacity 300ms ease-out",
-					paddingRight: fullWidth ? 0 : 76, // Account for year scrollbar (16+60) when not full width
 				}}
 			>
 				<Container size={containerSize} py="xs" w="100%">
@@ -819,9 +818,8 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 				</Container>
 			</Box>
 
-			{/* Main content with right padding for year scrollbar (when not full width) */}
-			{/* Matches YearScrollbar: RIGHT_OFFSET + CONTAINER_WIDTH (8+36=44 mobile, 16+60=76 desktop) */}
-			<Box pr={fullWidth ? 0 : { base: 44, md: 76 }}>
+			{/* Main content */}
+			<>
 				{/* Categories, Grades, Brands & Series */}
 				<Container ref={filterSectionRef} size={containerSize} py="xs" w="100%">
 					<Stack gap="xs">
@@ -1288,7 +1286,7 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 						/>
 					</Stack>
 				</Container>
-			</Box>
+			</>
 
 			{/* Year navigation with integrated scroll-to-top */}
 			<YearScrollbar
