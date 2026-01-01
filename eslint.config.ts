@@ -2,6 +2,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
 import nx from "@nx/eslint-plugin";
 import typescript from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
@@ -19,6 +20,8 @@ import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import sonarjs from "eslint-plugin-sonarjs";
+// @ts-expect-error - no types available
+import storybook from "eslint-plugin-storybook";
 import unicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
 
@@ -177,6 +180,7 @@ export default [
 		plugins: {
 			"@typescript-eslint": typescript,
 			"@nx": nx,
+			"@next/next": nextPlugin,
 			react: react,
 			"react-hooks": reactHooks,
 			"react-refresh": reactRefresh,
@@ -376,6 +380,29 @@ export default [
 					allowExportNames: ["router", "Route", "AppRouter"],
 				},
 			],
+
+			// Next.js rules - enforce best practices for Next.js apps
+			"@next/next/no-html-link-for-pages": ["error", "apps/next/src/app"],
+			"@next/next/no-img-element": "warn",
+			"@next/next/no-head-element": "error",
+			"@next/next/no-page-custom-font": "warn",
+			"@next/next/no-sync-scripts": "error",
+			"@next/next/no-title-in-document-head": "error",
+			"@next/next/no-typos": "error",
+			"@next/next/no-unwanted-polyfillio": "error",
+			"@next/next/no-duplicate-head": "error",
+			"@next/next/google-font-display": "warn",
+			"@next/next/google-font-preconnect": "warn",
+			"@next/next/inline-script-id": "error",
+			"@next/next/next-script-for-ga": "warn",
+			"@next/next/no-assign-module-variable": "error",
+			"@next/next/no-async-client-component": "warn",
+			"@next/next/no-before-interactive-script-outside-document": "error",
+			"@next/next/no-css-tags": "warn",
+			"@next/next/no-document-import-in-page": "error",
+			"@next/next/no-head-import-in-document": "error",
+			"@next/next/no-script-component-in-head": "error",
+			"@next/next/no-styled-jsx-in-document": "error",
 
 			// Import rules (enhanced from Nx flat/react-base)
 			"import/order": [
@@ -776,6 +803,7 @@ export default [
 	},
 	{
 		// Next.js App Router requires default exports for pages, layouts, etc.
+		// Also exports metadata/generateMetadata which triggers react-refresh warnings
 		files: [
 			"**/app/**/page.tsx",
 			"**/app/**/layout.tsx",
@@ -789,6 +817,8 @@ export default [
 		],
 		rules: {
 			"import/no-default-export": "off",
+			// Next.js App Router exports metadata/generateMetadata alongside components
+			"react-refresh/only-export-components": "off",
 		},
 	},
 	{
@@ -846,6 +876,26 @@ export default [
 			"unicorn/filename-case": "off",
 			// Allow irregular whitespace in data (Japanese text has special spaces)
 			"no-irregular-whitespace": "off",
+		},
+	},
+	// Storybook files configuration
+	{
+		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
+		plugins: {
+			storybook: storybook as unknown as ESLint.Plugin,
+		},
+		rules: {
+			// Storybook best practices
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- storybook plugin lacks proper types
+			...(storybook.configs.recommended.rules as Record<string, unknown>),
+			"storybook/story-exports": "error",
+			"storybook/csf-component": "warn",
+			"storybook/no-redundant-story-name": "warn",
+			"storybook/prefer-pascal-case": "warn",
+			// Allow default exports in stories (required by CSF format)
+			"import/no-default-export": "off",
+			// Disable react-refresh for stories (they're not HMR components)
+			"react-refresh/only-export-components": "off",
 		},
 	},
 	];
