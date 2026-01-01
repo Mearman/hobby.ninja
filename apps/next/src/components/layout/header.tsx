@@ -119,6 +119,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 						<Link href="/" className={logo}>
 							hobby.ninja
 						</Link>
+						{/* Version - hidden on mobile */}
 						<Box
 							component="a"
 							href={`https://github.com/Mearman/hobby.ninja/releases/tag/v${process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.1"}`}
@@ -128,6 +129,7 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 							fz="xs"
 							ml={4}
 							style={{ textDecoration: "none" }}
+							visibleFrom="sm"
 						>
 							v{process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.1"}
 						</Box>
@@ -175,18 +177,20 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 							/>
 						</Box>
 
-						{/* Sticky filters toggle - always visible on homepage */}
+						{/* Sticky filters toggle - hidden on mobile, accessible via menu */}
 						{showFilterToggle && (
-							<Tooltip label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}>
-								<ActionIcon
-									size="lg"
-									variant="subtle"
-									onClick={stickyFilters.toggleExpanded}
-									aria-label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}
-								>
-									{stickyFilters.expanded ? <IconFilterUp size={UI.ICON_SIZE_LG} /> : <IconFilterDown size={UI.ICON_SIZE_LG} />}
-								</ActionIcon>
-							</Tooltip>
+							<Box visibleFrom="sm">
+								<Tooltip label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}>
+									<ActionIcon
+										size="lg"
+										variant="subtle"
+										onClick={stickyFilters.toggleExpanded}
+										aria-label={stickyFilters.expanded ? "Hide active filters" : "Show active filters"}
+									>
+										{stickyFilters.expanded ? <IconFilterUp size={UI.ICON_SIZE_LG} /> : <IconFilterDown size={UI.ICON_SIZE_LG} />}
+									</ActionIcon>
+								</Tooltip>
+							</Box>
 						)}
 
 						{/* Mobile search button */}
@@ -245,17 +249,19 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 							</Tooltip>
 						</Box>
 
-						{/* Theme toggle */}
-						<Tooltip label={getThemeLabel()}>
-							<ActionIcon
-								size="lg"
-								variant="subtle"
-								onClick={cycleTheme}
-								aria-label="Toggle theme"
-							>
-								{getThemeIcon()}
-							</ActionIcon>
-						</Tooltip>
+						{/* Theme toggle - hidden on mobile, accessible via menu */}
+						<Box visibleFrom="sm">
+							<Tooltip label={getThemeLabel()}>
+								<ActionIcon
+									size="lg"
+									variant="subtle"
+									onClick={cycleTheme}
+									aria-label="Toggle theme"
+								>
+									{getThemeIcon()}
+								</ActionIcon>
+							</Tooltip>
+						</Box>
 
 					</Group>
 				</Container>
