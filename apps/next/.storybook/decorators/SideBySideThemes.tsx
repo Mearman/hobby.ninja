@@ -1,4 +1,4 @@
-import { MantineProvider } from "@mantine/core";
+import { Box, MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import type { Decorator } from "@storybook/react";
 import React, { useMemo, useState } from "react";
@@ -32,7 +32,6 @@ function ThemeColumn({ colorScheme, children }: ThemeColumnProps) {
 			style={{
 				flex: 1,
 				minWidth: 0,
-				backgroundColor: colorScheme === "dark" ? "#1a1b1e" : "#ffffff",
 				borderRadius: 8,
 				overflow: "hidden",
 			}}
@@ -45,7 +44,9 @@ function ThemeColumn({ colorScheme, children }: ThemeColumnProps) {
 					cssVariablesSelector={`[data-mantine-color-scheme="${colorScheme}"]`}
 				>
 					<ModalsProvider>
-						{children}
+						<Box bg="var(--mantine-color-body)" mih="100%">
+							{children}
+						</Box>
 					</ModalsProvider>
 				</MantineProvider>
 			</ThemeContext.Provider>

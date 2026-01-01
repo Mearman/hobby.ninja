@@ -1,4 +1,4 @@
-import { MantineProvider } from "@mantine/core";
+import { Box, MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import type { Decorator, Meta, StoryObj } from "@storybook/react";
 import React, { useMemo, useState } from "react";
@@ -41,9 +41,11 @@ function createThemeDecorator(colorScheme: "light" | "dark"): Decorator {
 						cssVariablesSelector={`[data-mantine-color-scheme="${colorScheme}"]`}
 					>
 						<ModalsProvider>
-							<StickyFiltersProvider>
-								<Story />
-							</StickyFiltersProvider>
+							<Box bg="var(--mantine-color-body)" mih="100vh">
+								<StickyFiltersProvider>
+									<Story />
+								</StickyFiltersProvider>
+							</Box>
 						</ModalsProvider>
 					</MantineProvider>
 				</ThemeContext.Provider>

@@ -1,4 +1,4 @@
-import { MantineProvider } from "@mantine/core";
+import { Box, MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import type { Decorator } from "@storybook/react";
 import React, { useMemo, useState } from "react";
@@ -49,7 +49,9 @@ export const ThemeWrapper: Decorator = (Story, context) => {
 					cssVariablesSelector={`[data-mantine-color-scheme="${effectiveColorScheme}"]`}
 				>
 					<ModalsProvider>
-						<Story />
+						<Box bg="var(--mantine-color-body)" mih="100vh">
+							<Story />
+						</Box>
 					</ModalsProvider>
 				</MantineProvider>
 			</ThemeContext.Provider>
