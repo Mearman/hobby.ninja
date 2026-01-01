@@ -3,9 +3,17 @@ import "@mantine/carousel/styles.css";
 
 import type { Preview } from "@storybook/react";
 import { MantineProvider } from "@mantine/core";
+import { Inter } from "next/font/google";
 import React from "react";
 
 import { theme } from "../src/lib/theme";
+
+// Load Inter font - same as layout.tsx
+const inter = Inter({
+	subsets: ["latin"],
+	variable: "--font-inter",
+	display: "swap",
+});
 
 const preview: Preview = {
 	parameters: {
@@ -34,9 +42,11 @@ const preview: Preview = {
 	},
 	decorators: [
 		(Story) => (
-			<MantineProvider theme={theme}>
-				<Story />
-			</MantineProvider>
+			<div className={`${inter.variable} ${inter.className}`}>
+				<MantineProvider theme={theme}>
+					<Story />
+				</MantineProvider>
+			</div>
 		),
 	],
 };
