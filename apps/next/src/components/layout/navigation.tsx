@@ -17,7 +17,6 @@ import {
 } from "@mantine/core";
 import {
 	IconHome,
-	IconDatabase,
 	IconFolder,
 	IconSearch,
 	IconHeart,
@@ -93,24 +92,6 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 			label: "Home",
 			href: "/",
 			icon: IconHome,
-		},
-		{
-			label: "Database",
-			href: "/database",
-			icon: IconDatabase,
-			children: [
-				{
-					label: "All Items",
-					href: "/database",
-					icon: IconDatabase,
-				},
-				{
-					label: "Gunpla",
-					href: "/database/gunpla",
-					icon: IconDatabase,
-				},
-				// This will be dynamically populated based on available categories
-			],
 		},
 		{
 			label: "Search",
