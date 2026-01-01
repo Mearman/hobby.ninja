@@ -77,7 +77,7 @@ export function YearScrollbar({
 
 	// Helper to get scroll target element
 	const getScrollTarget = useCallback((): HTMLElement | Window => {
-		return scrollContainerRefStable.current?.current ?? globalThis;
+		return scrollContainerRefStable.current?.current ?? globalThis.window;
 	}, []);
 	const [isDragging, setIsDragging] = useState(false);
 	const [dragYear, setDragYear] = useState<number | null>(null);
