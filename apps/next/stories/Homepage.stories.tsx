@@ -1,7 +1,7 @@
 import { MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import type { Decorator, Meta, StoryObj } from "@storybook/react";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import { HomepageClient } from "../src/components/homepage-client";
 import { StickyFiltersProvider } from "../src/contexts/sticky-filters-context";
@@ -19,6 +19,11 @@ function createThemeDecorator(forcedScheme?: "light" | "dark"): Decorator {
 		const [fullWidth, setFullWidth] = useState(false);
 
 		const effectiveScheme = forcedScheme ?? "light";
+
+		// Set the data-mantine-color-scheme attribute on the html element
+		useEffect(() => {
+			document.documentElement.setAttribute("data-mantine-color-scheme", effectiveScheme);
+		}, [effectiveScheme]);
 
 		const themeValue = useMemo<ThemeContextValue>(() => ({
 			colorScheme: forcedScheme ?? "system",
@@ -57,6 +62,11 @@ const WithSystemTheme: Decorator = (Story) => {
 		? window.matchMedia("(prefers-color-scheme: dark)").matches
 		: false;
 	const effectiveScheme = prefersDark ? "dark" : "light";
+
+	// Set the data-mantine-color-scheme attribute on the html element
+	useEffect(() => {
+		document.documentElement.setAttribute("data-mantine-color-scheme", effectiveScheme);
+	}, [effectiveScheme]);
 
 	const themeValue = useMemo<ThemeContextValue>(() => ({
 		colorScheme: "system",

@@ -1,7 +1,7 @@
 import { MantineProvider } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
 import type { Decorator } from "@storybook/react";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import { theme } from "../../src/lib/theme";
 import { ThemeContext, type ThemeContextValue } from "../../src/providers/mantine-provider";
@@ -26,6 +26,12 @@ export const ThemeWrapper: Decorator = (Story, context) => {
 		}
 		return storybookTheme;
 	}, [storybookTheme]);
+
+	// Set the data-mantine-color-scheme attribute on the html element
+	// This is normally done by ColorSchemeScript in Next.js
+	useEffect(() => {
+		document.documentElement.setAttribute("data-mantine-color-scheme", effectiveColorScheme);
+	}, [effectiveColorScheme]);
 
 	// Create context value matching MantineThemeProvider
 	const themeContextValue = useMemo<ThemeContextValue>(() => ({
