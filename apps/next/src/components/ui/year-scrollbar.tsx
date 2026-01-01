@@ -4,6 +4,9 @@ import { ActionIcon, Box, rem, Text, Transition } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconArrowUp } from "@tabler/icons-react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+
+import { useScrollContainer } from "@/contexts/scroll-container-context";
 
 interface YearScrollbarProps {
 	/** All available years sorted newest first */
@@ -12,6 +15,8 @@ interface YearScrollbarProps {
 	onYearSelect?: (year: number) => void;
 	/** Get scroll position (0-1) for a year based on actual item distribution */
 	getYearPosition?: (year: number) => number | null;
+	/** Optional scroll container ref - if not provided, uses window scroll */
+	scrollContainerRef?: React.RefObject<HTMLElement | null>;
 }
 
 // Track dimensions
@@ -41,9 +46,39 @@ export function YearScrollbar({
 	years,
 	onYearSelect,
 	getYearPosition,
+	scrollContainerRef,
 }: YearScrollbarProps): React.ReactElement | null {
 	const trackRef = useRef<HTMLDivElement>(null);
 	const thumbRef = useRef<HTMLDivElement>(null);
+
+	// Use prop if provided, otherwise fall back to context
+	const scrollContainerContext = useScrollContainer();
+	const effectiveScrollContainerRef = scrollContainerRef ?? scrollContainerContext?.scrollRef ?? null;
+	const portalTarget = scrollContainerContext?.fixedRef.current ?? null;
+
+	// Store ref in a mutable ref to avoid stale closures in callbacks
+	const scrollContainerRefStable = useRef(effectiveScrollContainerRef);
+	useEffect(() => {
+		scrollContainerRefStable.current = effectiveScrollContainerRef;
+	}, [effectiveScrollContainerRef]);
+
+	// Helper to get scroll metrics from container or window
+	const getScrollMetrics = useCallback(() => {
+		const container = scrollContainerRefStable.current?.current;
+		if (container) {
+			const scrollHeight = container.scrollHeight - container.clientHeight;
+			const scrollTop = container.scrollTop;
+			return { scrollHeight, scrollTop };
+		}
+		const scrollHeight = document.documentElement.scrollHeight - globalThis.innerHeight;
+		const scrollTop = globalThis.scrollY;
+		return { scrollHeight, scrollTop };
+	}, []);
+
+	// Helper to get scroll target element
+	const getScrollTarget = useCallback((): HTMLElement | Window => {
+		return scrollContainerRefStable.current?.current ?? globalThis;
+	}, []);
 	const [isDragging, setIsDragging] = useState(false);
 	const [dragYear, setDragYear] = useState<number | null>(null);
 	// Target year persists after release until scroll completes
@@ -124,22 +159,25 @@ export function YearScrollbar({
 	// Set initial thumb position before first paint (prevents flash at wrong position)
 	useLayoutEffect(() => {
 		if (thumbRef.current) {
-			const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-			const progress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
+			const { scrollHeight, scrollTop } = getScrollMetrics();
+			const progress = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
 			const clampedProgress = Math.max(0, Math.min(1, progress));
 			const size = window.innerWidth >= 768 ? THUMB_SIZE : THUMB_SIZE_MOBILE;
 			thumbRef.current.style.transition = "none";
 			thumbRef.current.style.top = `calc(${clampedProgress * 100}% - ${size / 2}px)`;
 		}
-	}, []); // Run once on mount only
+	}, [getScrollMetrics]); // Run on mount and when scroll container changes
 
 	// Track scroll position and update thumb via direct DOM manipulation
 	useEffect(() => {
+		const scrollTarget = getScrollTarget();
+
 		const updateScrollProgress = () => {
-			const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+			const { scrollHeight, scrollTop } = getScrollMetrics();
+
 			if (scrollHeight <= 0) return;
 
-			const progress = window.scrollY / scrollHeight;
+			const progress = scrollTop / scrollHeight;
 			const clampedProgress = Math.max(0, Math.min(1, progress));
 
 			// Check if thumb animation is still running (800ms CSS transition)
@@ -176,14 +214,14 @@ export function YearScrollbar({
 		};
 
 		updateScrollProgress();
-		window.addEventListener("scroll", updateScrollProgress, { passive: true });
+		scrollTarget.addEventListener("scroll", updateScrollProgress, { passive: true });
 		window.addEventListener("resize", updateScrollProgress, { passive: true });
 
 		return () => {
-			window.removeEventListener("scroll", updateScrollProgress);
+			scrollTarget.removeEventListener("scroll", updateScrollProgress);
 			window.removeEventListener("resize", updateScrollProgress);
 		};
-	}, []);
+	}, [getScrollMetrics, getScrollTarget]);
 
 	// Get position from pointer event
 	const getPositionFromEvent = useCallback(
@@ -277,7 +315,12 @@ export function YearScrollbar({
 
 	const scrollToTop = useCallback((e: React.MouseEvent) => {
 		e.stopPropagation(); // Prevent track click handler from firing
-		window.scrollTo({ top: 0, behavior: "smooth" });
+		const container = scrollContainerRefStable.current?.current;
+		if (container) {
+			container.scrollTo({ top: 0, behavior: "smooth" });
+		} else {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		}
 	}, []);
 
 	// Compute active target for display
@@ -291,9 +334,9 @@ export function YearScrollbar({
 	// Show scroll-to-top button when not at top
 	const showScrollToTop = scrollProgress > 0;
 
-	return (
+	const scrollbarElement = (
 		<Box
-			pos="fixed"
+			pos={portalTarget ? "absolute" : "fixed"}
 			right={rem(rightOffset)}
 			top="50%"
 			style={{
@@ -302,8 +345,10 @@ export function YearScrollbar({
 				zIndex: 900,
 				display: "flex",
 				alignItems: "center",
+				pointerEvents: "auto",
 			}}
 		>
+
 			{/* Year label when navigating */}
 			{showTargetThumb && targetPosition !== null && (
 				<Box
@@ -470,4 +515,11 @@ export function YearScrollbar({
 			</Box>
 		</Box>
 	);
+
+	// Portal to fixed layer when inside a scroll container, otherwise render inline
+	if (portalTarget) {
+		return createPortal(scrollbarElement, portalTarget);
+	}
+
+	return scrollbarElement;
 }
