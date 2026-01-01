@@ -85,12 +85,13 @@ export function Header({ onMenuToggle, mobileMenuOpen = false }: HeaderProps) {
 	const navigationItems: Array<{ href: string; label: string }> = [];
 
 	// Homepage has year scrollbar that requires right padding (only when not full width)
+	// Matches YearScrollbar: RIGHT_OFFSET + CONTAINER_WIDTH (16+60=76 desktop, 8+36=44 mobile)
 	const isHomepage = pathname === "/";
 	const needsScrollbarPadding = isHomepage && !fullWidth;
 
 	return (
 		<header className={header}>
-			<Box pr={needsScrollbarPadding ? { base: 48, md: 80 } : 0}>
+			<Box pr={needsScrollbarPadding ? { base: 44, md: 76 } : 0}>
 				<Container
 					size={fullWidth ? "100%" : "xl"}
 					style={{
