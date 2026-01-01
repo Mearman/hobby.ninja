@@ -5,6 +5,7 @@ import React, { useMemo, useState } from "react";
 
 import { HomepageClient } from "../src/components/homepage-client";
 import { Header } from "../src/components/layout/header";
+import { Navigation } from "../src/components/layout/navigation";
 import { StickyFiltersProvider } from "../src/contexts/sticky-filters-context";
 import { theme } from "../src/lib/theme";
 import { ThemeContext, type ThemeContextValue } from "../src/providers/mantine-provider";
@@ -177,11 +178,21 @@ export const MultiDevicePreviewDark: Story = {
 
 /**
  * Component that renders Homepage with Header for full-page stories.
+ * Manages mobile menu state internally.
  */
 function HomepageWithHeader(props: React.ComponentProps<typeof HomepageClient>) {
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 	return (
 		<>
-			<Header />
+			<Header
+				mobileMenuOpen={mobileMenuOpen}
+				onMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+			/>
+			<Navigation
+				opened={mobileMenuOpen}
+				onClose={() => setMobileMenuOpen(false)}
+			/>
 			<HomepageClient {...props} />
 		</>
 	);
