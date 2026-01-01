@@ -5,6 +5,7 @@ import "../src/styles/components-placeholder.css";
 import type { Preview } from "@storybook/react";
 import { Inter } from "next/font/google";
 import React from "react";
+import { MINIMAL_VIEWPORTS } from "storybook/viewport";
 
 import { ThemeWrapper } from "./decorators/ThemeWrapper";
 
@@ -30,7 +31,8 @@ const preview: Preview = {
 			},
 		},
 		viewport: {
-			viewports: {
+			options: {
+				...MINIMAL_VIEWPORTS,
 				mobile: {
 					name: "Mobile",
 					styles: { width: "375px", height: "667px" },
