@@ -10,6 +10,7 @@ import { theme } from "../src/lib/theme";
 import { ThemeContext, type ThemeContextValue } from "../src/providers/mantine-provider";
 import { MultiDevice } from "../.storybook/decorators/MultiDevice";
 import { SideBySideThemes } from "../.storybook/decorators/SideBySideThemes";
+import { SingleViewContainer } from "../.storybook/decorators/SingleViewContainer";
 import { defaultSample, largeSample, minimalSample } from "./utils/sample-homepage-data";
 
 // ============================================================================
@@ -185,6 +186,26 @@ function HomepageWithHeader(props: React.ComponentProps<typeof HomepageClient>) 
 		</>
 	);
 }
+
+/**
+ * Homepage with header bar - single view for inspecting layout.
+ * Uses SingleViewContainer to provide scroll container context for YearScrollbar.
+ */
+export const WithHeader: Story = {
+	args: minimalSample,
+	decorators: [WithLightTheme, SingleViewContainer],
+	render: (args) => <HomepageWithHeader {...args} />,
+};
+
+/**
+ * Homepage with header bar - dark theme single view.
+ * Uses SingleViewContainer to provide scroll container context for YearScrollbar.
+ */
+export const WithHeaderDark: Story = {
+	args: minimalSample,
+	decorators: [WithDarkTheme, SingleViewContainer],
+	render: (args) => <HomepageWithHeader {...args} />,
+};
 
 /**
  * Homepage with header bar - light theme at multiple device sizes.
