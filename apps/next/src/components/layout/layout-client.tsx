@@ -8,6 +8,7 @@ import { Navigation } from "@/components/layout/navigation";
 import { PWAInstall } from "@/components/pwa/pwa-install";
 import { SearchProvider } from "@/components/search/search-provider";
 import { CollectionProvider } from "@/contexts/collection-context";
+import { FilterProvider } from "@/contexts/filter-context";
 import { StickyFiltersProvider } from "@/contexts/sticky-filters-context";
 import { MantineThemeProvider } from "@/providers/mantine-provider";
 // Import the placeholder Vanilla Extract file for static export compatibility
@@ -29,23 +30,25 @@ export function LayoutClient({ children }: LayoutClientProps) {
 		<MantineThemeProvider>
 			<SearchProvider>
 				<CollectionProvider>
-					<StickyFiltersProvider>
-						<div className={appShell} style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
-							<Header
-								onMenuToggle={handleMenuToggle}
-								mobileMenuOpen={mobileMenuOpen}
-							/>
-							<Navigation
-								opened={mobileMenuOpen}
-								onClose={() => { setMobileMenuOpen(false); }}
-							/>
-							<main className={mainContent} style={{ flex: 1 }}>
-								{children}
-							</main>
-							<Footer />
-						</div>
-						<PWAInstall />
-					</StickyFiltersProvider>
+					<FilterProvider>
+						<StickyFiltersProvider>
+							<div className={appShell} style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+								<Header
+									onMenuToggle={handleMenuToggle}
+									mobileMenuOpen={mobileMenuOpen}
+								/>
+								<Navigation
+									opened={mobileMenuOpen}
+									onClose={() => { setMobileMenuOpen(false); }}
+								/>
+								<main className={mainContent} style={{ flex: 1 }}>
+									{children}
+								</main>
+								<Footer />
+							</div>
+							<PWAInstall />
+						</StickyFiltersProvider>
+					</FilterProvider>
 				</CollectionProvider>
 			</SearchProvider>
 		</MantineThemeProvider>
