@@ -25,6 +25,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { SidebarFilters } from "@/components/sidebar-filters";
 import { headerActions } from "@/config/navigation";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
 import { isPathActive } from "@/lib/navigation-utils";
@@ -201,6 +202,14 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 						);
 					})}
 				</Stack>
+
+				{/* Filters section - only on homepage */}
+				{pathname === "/" && (
+					<>
+						<Divider />
+						<SidebarFilters onClose={onClose} />
+					</>
+				)}
 			</ScrollArea>
 
 			{/* Legal footer */}
