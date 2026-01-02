@@ -22,6 +22,7 @@ import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
 import { ExploreSection, OTHER_FILTER_ID, type ArrayFilterType, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
+import { useFilters, type FilterEntityData } from "@/contexts/filter-context";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
 import { useThemeContext } from "@/providers/mantine-provider";
 
@@ -79,7 +80,49 @@ interface HomepageClientProps {
 	items: Item[];
 }
 
+/**
+ * Main homepage component that registers entity data with the filter context
+ */
 export function HomepageClient({ categories, series, grades, brands, scales, years, items }: HomepageClientProps): React.ReactElement {
+	// Get filter context (provided by layout) and register entity data
+	const { registerEntityData } = useFilters();
+
+	// Create entity data for the filter context
+	const entityData: FilterEntityData = useMemo(() => ({
+		categories,
+		series,
+		brands,
+		grades,
+		scales,
+		years,
+		items,
+	}), [categories, series, brands, grades, scales, years, items]);
+
+	// Register entity data with the filter context when homepage mounts
+	useEffect(() => {
+		registerEntityData(entityData);
+	}, [registerEntityData, entityData]);
+
+	return (
+		<HomepageClientContent
+			categories={categories}
+			series={series}
+			grades={grades}
+			brands={brands}
+			scales={scales}
+			years={years}
+			items={items}
+		/>
+	);
+}
+
+/**
+ * Inner component that contains the homepage logic
+ */
+function HomepageClientContent({ categories, series, grades, brands, scales, years, items }: HomepageClientProps): React.ReactElement {
+	// Get filter context for syncing with sidebar
+	const filterContext = useFilters();
+
 	const [filters, setFilters] = useState<FilterState>({
 		categories: [],
 		series: [],
@@ -90,6 +133,58 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
 		hasManual: false,
 		hasGlobalSite: false,
 	});
+
+	// Track if we're updating from context to avoid loops
+	const isUpdatingFromContext = useRef(false);
+	const prevContextFiltersRef = useRef(filterContext.filters);
+
+	// Sync local filters to context (for sidebar to read)
+	useEffect(() => {
+		if (!isUpdatingFromContext.current) {
+			filterContext.setFilters(filters);
+		}
+	}, [filters, filterContext]);
+
+	// Sync context filters to local state (when sidebar changes filters)
+	// Using layout effect to ensure state sync happens before paint
+	useEffect(() => {
+		const contextFilters = filterContext.filters;
+		const prevContextFilters = prevContextFiltersRef.current;
+
+		// Only update if context changed from external source (not from our own sync)
+		const contextChanged =
+			contextFilters.categories.join(",") !== prevContextFilters.categories.join(",") ||
+			contextFilters.series.join(",") !== prevContextFilters.series.join(",") ||
+			contextFilters.brands.join(",") !== prevContextFilters.brands.join(",") ||
+			contextFilters.grades.join(",") !== prevContextFilters.grades.join(",") ||
+			contextFilters.scales.join(",") !== prevContextFilters.scales.join(",") ||
+			contextFilters.years.join(",") !== prevContextFilters.years.join(",") ||
+			contextFilters.hasManual !== prevContextFilters.hasManual ||
+			contextFilters.hasGlobalSite !== prevContextFilters.hasGlobalSite;
+
+		prevContextFiltersRef.current = contextFilters;
+
+		if (contextChanged && !isUpdatingFromContext.current) {
+			const localDifferent =
+				contextFilters.categories.join(",") !== filters.categories.join(",") ||
+				contextFilters.series.join(",") !== filters.series.join(",") ||
+				contextFilters.brands.join(",") !== filters.brands.join(",") ||
+				contextFilters.grades.join(",") !== filters.grades.join(",") ||
+				contextFilters.scales.join(",") !== filters.scales.join(",") ||
+				contextFilters.years.join(",") !== filters.years.join(",") ||
+				contextFilters.hasManual !== filters.hasManual ||
+				contextFilters.hasGlobalSite !== filters.hasGlobalSite;
+
+			if (localDifferent) {
+				isUpdatingFromContext.current = true;
+				// eslint-disable-next-line react-hooks/set-state-in-effect -- Intentional sync from context
+				setFilters(contextFilters);
+				requestAnimationFrame(() => {
+					isUpdatingFromContext.current = false;
+				});
+			}
+		}
+	}, [filterContext.filters, filters]);
 
 	// Year scrollbar data - all years for initial render
 	const allYearNumbers = useMemo(
