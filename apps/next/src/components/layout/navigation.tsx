@@ -97,7 +97,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 			<Divider />
 
 			{/* Navigation */}
-			<ScrollArea flex={1} offsetScrollbars={true}>
+			<ScrollArea flex={1} offsetScrollbars={true} style={{ minHeight: 0 }}>
 				{/* Actions */}
 				<Stack p="md" gap="xs">
 					{headerActions.map((action) => {
