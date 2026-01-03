@@ -11,7 +11,7 @@ interface ImageWithFallbackProps {
 	maxFontSize?: number;
 }
 
-const FONT_SIZES_PX = [20, 18, 16, 14, 12];
+const FONT_SIZES_PX = [20, 18, 16, 14, 12, 11, 10, 9, 8];
 
 interface FittedTextProps {
 	text: string;
