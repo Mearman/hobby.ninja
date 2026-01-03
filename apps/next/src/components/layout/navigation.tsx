@@ -30,16 +30,22 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 import { SidebarFilters } from "@/components/sidebar-filters";
 import { headerActions } from "@/config/navigation";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
 import { isPathActive } from "@/lib/navigation-utils";
-import { useThemeContext } from "@/providers/mantine-provider";
+import {
+	DEFAULT_SIDEBAR_WIDTH,
+	MIN_SIDEBAR_WIDTH,
+	MAX_SIDEBAR_WIDTH,
+	useThemeContext,
+} from "@/providers/mantine-provider";
 import { fadeIn } from "@/styles/components.css";
 
-/** Sidebar width when pinned */
-export const SIDEBAR_WIDTH = 300;
+/** Default sidebar width - re-exported for backwards compatibility */
+
 
 interface NavigationProps {
 	opened: boolean;
@@ -70,6 +76,80 @@ const THEME_COLORS = {
 	// Dimmed text for inactive items
 	DIMMED: "var(--mantine-color-dimmed)",
 } as const;
+
+/** Creates resize handlers that track state in refs */
+function createResizeHandlers(onResize: (width: number) => void) {
+	let isResizing = false;
+
+	const handleMouseMove = (moveEvent: MouseEvent) => {
+		if (!isResizing) return;
+		const newWidth = moveEvent.clientX;
+		const clampedWidth = Math.max(MIN_SIDEBAR_WIDTH, Math.min(MAX_SIDEBAR_WIDTH, newWidth));
+		onResize(clampedWidth);
+	};
+
+	const handleMouseUp = () => {
+		isResizing = false;
+		document.removeEventListener("mousemove", handleMouseMove);
+		document.removeEventListener("mouseup", handleMouseUp);
+		document.body.style.cursor = "";
+		document.body.style.userSelect = "";
+	};
+
+	const handleMouseDown = (e: React.MouseEvent) => {
+		e.preventDefault();
+		isResizing = true;
+		document.addEventListener("mousemove", handleMouseMove);
+		document.addEventListener("mouseup", handleMouseUp);
+		document.body.style.cursor = "col-resize";
+		document.body.style.userSelect = "none";
+	};
+
+	return { handleMouseDown };
+}
+
+/** Resize handle for the pinned sidebar */
+function ResizeHandle({ onResize }: { onResize: (width: number) => void }) {
+	const { handleMouseDown } = React.useMemo(() => createResizeHandlers(onResize), [onResize]);
+
+	return (
+		<Box
+			onMouseDown={handleMouseDown}
+			style={{
+				position: "absolute",
+				top: 0,
+				right: -4,
+				width: 8,
+				height: "100%",
+				cursor: "col-resize",
+				zIndex: 101,
+			}}
+		>
+			{/* Visual indicator on hover */}
+			<Box
+				style={{
+					position: "absolute",
+					top: 0,
+					left: 3,
+					width: 2,
+					height: "100%",
+					backgroundColor: "transparent",
+					transition: "background-color 0.15s ease",
+				}}
+				__vars={{
+					"--hover-bg": "var(--mantine-color-blue-5)",
+				}}
+				className="resize-handle-indicator"
+			/>
+			<style>{`
+				.resize-handle-indicator:hover,
+				*:has(.resize-handle-indicator):active .resize-handle-indicator {
+					background-color: var(--mantine-color-blue-5) !important;
+				}
+			`}</style>
+		</Box>
+	);
+}
 
 /** Shared navigation content used in both drawer and pinned sidebar modes */
 function NavigationContent({ onClose, isPinned, isDesktop }: { onClose: () => void; isPinned: boolean; isDesktop: boolean }) {
@@ -241,13 +321,13 @@ function NavigationContent({ onClose, isPinned, isDesktop }: { onClose: () => vo
 }
 
 export function Navigation({ opened, onClose }: NavigationProps) {
-	const { sidebarPinned } = useThemeContext();
+	const { sidebarPinned, sidebarWidth, setSidebarWidth } = useThemeContext();
 	// Desktop breakpoint (lg = 992px) - use default behavior for reliability
 	const isDesktopQuery = useMediaQuery("(min-width: 992px)");
 	const isDesktop = isDesktopQuery;
 	const isPinned = isDesktop && sidebarPinned;
 
-	// When pinned on desktop, render as fixed sidebar
+	// When pinned on desktop, render as fixed sidebar with resize handle
 	if (isPinned) {
 		return (
 			<Box
@@ -256,7 +336,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 					position: "fixed",
 					top: 0,
 					left: 0,
-					width: SIDEBAR_WIDTH,
+					width: sidebarWidth,
 					height: "100vh",
 					display: "flex",
 					flexDirection: "column",
@@ -266,16 +346,17 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 				}}
 			>
 				<NavigationContent onClose={onClose} isPinned={true} isDesktop={true} />
+				<ResizeHandle onResize={setSidebarWidth} />
 			</Box>
 		);
 	}
 
-	// Otherwise, render as drawer
+	// Otherwise, render as drawer (uses default width)
 	return (
 		<Drawer
 			opened={opened}
 			onClose={onClose}
-			size={SIDEBAR_WIDTH}
+			size={DEFAULT_SIDEBAR_WIDTH}
 			padding={0}
 			withCloseButton={false}
 			className={fadeIn}
@@ -295,3 +376,5 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 		</Drawer>
 	);
 }
+
+export {DEFAULT_SIDEBAR_WIDTH as SIDEBAR_WIDTH} from "@/providers/mantine-provider";
