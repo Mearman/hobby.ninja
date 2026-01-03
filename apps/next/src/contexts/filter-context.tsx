@@ -4,7 +4,7 @@ import type { Brand, Category, GradeData, Item, ScaleData, Series } from "@hobby
 import { getGradeFamilyIds, getGradesHierarchy } from "@hobby-ninja/data";
 import { debounce } from "lodash-es";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, Suspense, type ReactNode } from "react";
 
 import type { YearData } from "@/components/homepage-client";
 import { incrementFilterUsage, type FilterType } from "@/lib/collection-storage";
@@ -658,7 +658,9 @@ export function FilterProvider({ children, entityData: initialEntityData }: Filt
 
 	return (
 		<FilterContext.Provider value={value}>
-			{children}
+			<Suspense fallback={null}>
+				{children}
+			</Suspense>
 		</FilterContext.Provider>
 	);
 }
