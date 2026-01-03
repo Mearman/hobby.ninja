@@ -36,6 +36,8 @@ export function FittedText({ text, maxFontSize = 20 }: FittedTextProps): React.R
 		// Find the largest font size that fits by measuring at each size
 		for (const size of availableSizes) {
 			textEl.style.fontSize = `${size}px`;
+			// Force reflow to ensure scrollHeight is recalculated
+			void textEl.offsetHeight;
 			if (textEl.scrollHeight <= container.clientHeight) {
 				break;
 			}
@@ -57,7 +59,6 @@ export function FittedText({ text, maxFontSize = 20 }: FittedTextProps): React.R
 		>
 			<Text
 				ref={textRef}
-				size="xl"
 				fw={600}
 				c="dimmed"
 				ta="center"
