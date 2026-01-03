@@ -14,15 +14,6 @@ import {
 	TranslationServiceError,
 } from "./mod";
 
-declare const require: {
-	main: {
-		module: unknown;
-	} | undefined;
-};
-declare const module: {
-	exports: unknown;
-} | undefined;
-
 // Configure logger for examples - always enabled for demo purposes
 logger.updateConfig({
 	enabled: true,

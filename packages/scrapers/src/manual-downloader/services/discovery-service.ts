@@ -25,7 +25,7 @@ export interface DiscoveryOptions {
 }
 
 export interface GapDetectionOptions {
-  strategy: "sequential" | "sampling" | "adaptive" | "statistical";
+  strategy?: "sequential" | "sampling" | "adaptive" | "statistical";
   sampleSize?: number;
   minGapSize?: number;
   confidenceThreshold?: number;
@@ -261,9 +261,9 @@ export class DiscoveryService {
 	async expandRange(baseUrl: string, startId: number, options: ExpansionOptions): Promise<RangeExpansionResult> {
 		const DEFAULT_MAX_STEPS = 50;
 		const {
-			direction = "both",
+			direction,
 			maxSteps = DEFAULT_MAX_STEPS,
-			stepStrategy = "adaptive",
+			stepStrategy,
 			baseStepSize = 1,
 		} = options;
 

@@ -48,7 +48,7 @@ async function extractBrandSeries(page: Page, itemId: string): Promise<{
 			timeout: 15_000,
 		});
 
-		if (!response || response.status() !== 200) {
+		if (!response?.ok) {
 			return {};
 		}
 
