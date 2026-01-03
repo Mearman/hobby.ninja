@@ -242,8 +242,8 @@ function NavigationContent({ onClose, isPinned, isDesktop }: { onClose: () => vo
 
 export function Navigation({ opened, onClose }: NavigationProps) {
 	const { sidebarPinned } = useThemeContext();
-	// Desktop breakpoint (md = 768px in Mantine default)
-	const isDesktop = useMediaQuery("(min-width: 992px)");
+	// Desktop breakpoint (lg = 992px) - use initialValue for SSR
+	const isDesktop = useMediaQuery("(min-width: 992px)", false, { getInitialValueInEffect: false });
 	const isPinned = isDesktop && sidebarPinned;
 
 	// When pinned on desktop, render as fixed sidebar

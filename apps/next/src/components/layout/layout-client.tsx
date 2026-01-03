@@ -24,7 +24,7 @@ interface LayoutClientProps {
 function LayoutInner({ children }: LayoutClientProps) {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const { sidebarPinned } = useThemeContext();
-	const isDesktop = useMediaQuery("(min-width: 992px)");
+	const isDesktop = useMediaQuery("(min-width: 992px)", false, { getInitialValueInEffect: false });
 	const isPinned = isDesktop && sidebarPinned;
 
 	const handleMenuToggle = () => {
