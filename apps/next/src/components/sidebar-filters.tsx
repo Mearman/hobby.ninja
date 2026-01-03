@@ -45,11 +45,20 @@ type FilterableEntity = Category | Series | Brand | GradeData | ScaleData | Year
 // Constants
 // ============================================================================
 
-/** Mini card width in pixels */
-const MINI_CARD_WIDTH = 75;
+/** Minimum card width for auto-sizing - cards will grow to fill available space */
+const MIN_CARD_WIDTH = 100;
+
+/** Grid template for auto-sizing columns */
+const AUTO_FIT_GRID_TEMPLATE = "repeat(auto-fit, minmax(100px, 1fr))";
 
 /** Card aspect ratio (image area only): 300/170 ≈ 1.76 */
 const CARD_ASPECT_RATIO_STRING = "300 / 170";
+
+/** Max font size for short labels (years like "1980" or ratios like "1/144") */
+const MAX_FONT_SIZE_SHORT_LABEL = 14;
+
+/** Max font size for regular labels */
+const MAX_FONT_SIZE_REGULAR = 20;
 
 /** Padding for count section */
 const COUNT_PADDING = "2px 4px";
@@ -85,8 +94,6 @@ function getEntityName(entity: FilterableEntity): string {
 // Preset Chip (Quick filter with optional image)
 // ============================================================================
 
-/** Preset chip width - same as MiniEntityCard for visual consistency */
-const PRESET_CHIP_WIDTH = MINI_CARD_WIDTH;
 
 interface PresetChipProps {
 	label: string;
@@ -99,13 +106,13 @@ interface PresetChipProps {
 function PresetChip({ label, image, itemCount, isActive, onClick }: PresetChipProps) {
 	// Determine max font size based on label type
 	const isShortLabel = /^\d{4}$/.test(label) || /^\d+\/\d+$/.test(label);
-	const maxFontSize = isShortLabel ? 14 : 20;
+	const maxFontSize = isShortLabel ? MAX_FONT_SIZE_SHORT_LABEL : MAX_FONT_SIZE_REGULAR;
 	return (
 		<UnstyledButton
 			onClick={onClick}
 			style={{
-				width: PRESET_CHIP_WIDTH,
-				flexShrink: 0,
+				flex: "1 1 0",
+				minWidth: `${MIN_CARD_WIDTH}px`,
 			}}
 		>
 			<Box
@@ -201,14 +208,14 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }:
 
 	// Determine max font size based on label type
 	const isShortLabel = /^\d{4}$/.test(displayName) || /^\d+\/\d+$/.test(displayName);
-	const maxFontSize = isShortLabel ? 14 : 20;
+	const maxFontSize = isShortLabel ? MAX_FONT_SIZE_SHORT_LABEL : MAX_FONT_SIZE_REGULAR;
 
 	return (
 		<UnstyledButton
 			onClick={onToggle}
 			style={{
-				width: MINI_CARD_WIDTH,
-				flexShrink: 0,
+				flex: "1 1 0",
+				minWidth: `${MIN_CARD_WIDTH}px`,
 			}}
 		>
 			<Box
@@ -464,8 +471,8 @@ function FilterSection({
 					{/* Entity cards grid */}
 					<Box
 						style={{
-							display: "flex",
-							flexWrap: "wrap",
+							display: "grid",
+							gridTemplateColumns: AUTO_FIT_GRID_TEMPLATE,
 							gap: 8,
 						}}
 					>
@@ -613,8 +620,8 @@ function GradeSection({ selectedIds, onToggle, onClear, onSelectAll, otherCount 
 					{/* Grades grid - parents with children inline after them */}
 					<Box
 						style={{
-							display: "flex",
-							flexWrap: "wrap",
+							display: "grid",
+							gridTemplateColumns: AUTO_FIT_GRID_TEMPLATE,
 							gap: 8,
 						}}
 					>
@@ -832,7 +839,13 @@ function SidebarFiltersContent() {
 						<Text size="xs" c="dimmed" mb="xs">
 							{dynamicPresets.length > 0 ? "Quick Access" : "Quick filters"}
 						</Text>
-						<Group gap="xs">
+						<Box
+							style={{
+								display: "grid",
+								gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+								gap: 8,
+							}}
+						>
 							{quickFilterPresets.map((preset) => {
 								// Look up image and item count based on filter type
 								const gradeId = preset.filters.grades?.[0];
@@ -873,7 +886,7 @@ function SidebarFiltersContent() {
 									/>
 								);
 							})}
-						</Group>
+						</Box>
 					</Box>
 
 					<Divider />
