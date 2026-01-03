@@ -788,7 +788,7 @@ function SidebarFiltersContent() {
 					{/* Quick presets */}
 					<Box py="xs">
 						<Text size="xs" c="dimmed" mb="xs">
-							{dynamicPresets.length > 0 ? "Frequently used" : "Quick filters"}
+							{dynamicPresets.length > 0 ? "Quick Access" : "Quick filters"}
 						</Text>
 						<Group gap="xs">
 							{quickFilterPresets.map((preset) => {
