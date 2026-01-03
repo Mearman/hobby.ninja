@@ -370,8 +370,8 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 			</UnstyledButton>
 
 			<Collapse in={isExpanded}>
-				<Stack gap="xs" pb="sm">
-					{/* Parent grades grid */}
+				<Box pb="sm">
+					{/* Grades grid - parents with children inline after them */}
 					<Box
 						style={{
 							display: "flex",
@@ -379,15 +379,16 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 							gap: 8,
 						}}
 					>
-						{sortedHierarchy.map((entry) => {
+						{sortedHierarchy.flatMap((entry) => {
 							const { root, children } = entry;
 							const hasChildren = children.length > 0;
+							const isFamilyExpanded = expandedFamilies.has(root.id);
 							const familyIds = getGradeFamilyIds(root.id);
 							const selectedInFamily = familyIds.filter((id) => selectedIds.includes(id));
 							const isAnySelected = selectedInFamily.length > 0;
 							const totalFamilyItems = root.itemIds.length + children.reduce((sum, c) => sum + c.itemIds.length, 0);
 
-							return (
+							const items = [
 								<MiniEntityCard
 									key={root.id}
 									id={root.id}
@@ -402,9 +403,28 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 											onToggle(root.id);
 										}
 									}}
-									badge={hasChildren ? (expandedFamilies.has(root.id) ? "▾" : "▸") : undefined}
-								/>
-							);
+									badge={hasChildren ? (isFamilyExpanded ? "▾" : "▸") : undefined}
+								/>,
+							];
+
+							// Add children inline right after parent when expanded
+							if (hasChildren && isFamilyExpanded) {
+								for (const child of children) {
+									items.push(
+										<MiniEntityCard
+											key={child.id}
+											id={child.id}
+											name={child.name}
+											itemCount={child.itemIds.length}
+											image={child.image}
+											isSelected={selectedIds.includes(child.id)}
+											onToggle={() => { onToggle(child.id); }}
+										/>,
+									);
+								}
+							}
+
+							return items;
 						})}
 
 						{/* "Other" card */}
@@ -418,46 +438,7 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 							/>
 						)}
 					</Box>
-
-					{/* Expanded children sections */}
-					{sortedHierarchy.map((entry) => {
-						const { root, children } = entry;
-						if (children.length === 0) return null;
-						const isFamilyExpanded = expandedFamilies.has(root.id);
-
-						return (
-							<Collapse key={`${root.id}-children`} in={isFamilyExpanded}>
-								<Box
-									pl="xs"
-									style={{
-										borderLeft: "2px solid var(--mantine-color-blue-light)",
-									}}
-								>
-									<Text size="xs" c="dimmed" mb={4}>{root.name.en} variants</Text>
-									<Box
-										style={{
-											display: "flex",
-											flexWrap: "wrap",
-											gap: 8,
-										}}
-									>
-										{children.map((child) => (
-											<MiniEntityCard
-												key={child.id}
-												id={child.id}
-												name={child.name}
-												itemCount={child.itemIds.length}
-												image={child.image}
-												isSelected={selectedIds.includes(child.id)}
-												onToggle={() => { onToggle(child.id); }}
-											/>
-										))}
-									</Box>
-								</Box>
-							</Collapse>
-						);
-					})}
-				</Stack>
+				</Box>
 			</Collapse>
 		</Box>
 	);
