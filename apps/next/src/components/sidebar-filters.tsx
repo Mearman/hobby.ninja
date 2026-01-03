@@ -1,7 +1,7 @@
 "use client";
 
 import type { Brand, Category, GradeData, ScaleData, Series } from "@hobby-ninja/data";
-import { getGradesHierarchy, resolveCdnUrl } from "@hobby-ninja/data";
+import { getGradeFamilyIds, getGradesHierarchy, resolveCdnUrl } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -18,6 +18,7 @@ import {
 import {
 	IconBook,
 	IconChevronDown,
+	IconChevronRight,
 	IconChevronUp,
 	IconSearch,
 	IconWorld,
@@ -48,9 +49,6 @@ const CARD_ASPECT_RATIO_STRING = "300 / 170";
 /** Padding for count section */
 const COUNT_PADDING = "2px 4px";
 
-/** Threshold for showing search input in filter sections */
-const SEARCH_THRESHOLD = 15;
-
 /** Default hover background color */
 const BG_HOVER = "var(--mantine-color-default-hover)";
 
@@ -65,9 +63,11 @@ interface MiniEntityCardProps {
 	image?: string;
 	isSelected: boolean;
 	onToggle: () => void;
+	/** Optional badge to show (e.g., "2/5" for selection counts) */
+	badge?: string;
 }
 
-function MiniEntityCard({ name, itemCount, image, isSelected, onToggle }: MiniEntityCardProps) {
+function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }: MiniEntityCardProps) {
 	const displayName = typeof name === "string"
 		? name
 		: (name?.en ?? name?.ja ?? "");
@@ -122,6 +122,24 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle }: MiniEn
 								pointerEvents: "none",
 							}}
 						/>
+					)}
+
+					{/* Selection count badge */}
+					{badge && (
+						<Badge
+							size="xs"
+							variant="filled"
+							style={{
+								position: "absolute",
+								top: 2,
+								right: 2,
+								fontSize: 9,
+								padding: "0 4px",
+								minWidth: "auto",
+							}}
+						>
+							{badge}
+						</Badge>
 					)}
 				</Box>
 
@@ -297,49 +315,70 @@ interface GradeSectionProps {
 	otherCount: number;
 }
 
-function GradeSection({ selectedIds, onToggle, onToggleFamily: _onToggleFamily, otherCount }: GradeSectionProps) {
+function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: GradeSectionProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
 
 	const gradeHierarchy = useMemo(() => getGradesHierarchy(), []);
 
-	// Flatten hierarchy to show all grades (root + children)
-	const allGrades = useMemo(() => {
-		const grades: Array<{ grade: GradeData; isChild: boolean; parentId: string | null }> = [];
-		for (const entry of gradeHierarchy) {
-			// Add root grade
-			grades.push({ grade: entry.root, isChild: false, parentId: null });
-			// Add child grades
-			for (const child of entry.children) {
-				grades.push({ grade: child, isChild: true, parentId: entry.root.id });
-			}
-		}
-		return grades;
-	}, [gradeHierarchy]);
-
-	// Filter by search
-	const filteredGrades = useMemo(() => {
-		if (!searchQuery.trim()) return allGrades;
-		const query = searchQuery.toLowerCase();
-		return allGrades.filter(({ grade }) => {
-			const name = typeof grade.name === "string" ? grade.name : grade.name.en;
-			return name.toLowerCase().includes(query);
+	// Sort hierarchy: families with selections first, then by total item count
+	const sortedHierarchy = useMemo(() => {
+		return gradeHierarchy.toSorted((a, b) => {
+			const aFamilyIds = getGradeFamilyIds(a.root.id);
+			const bFamilyIds = getGradeFamilyIds(b.root.id);
+			const aHasSelection = aFamilyIds.some((id) => selectedIds.includes(id));
+			const bHasSelection = bFamilyIds.some((id) => selectedIds.includes(id));
+			if (aHasSelection !== bHasSelection) return aHasSelection ? -1 : 1;
+			// Sort by total item count in family
+			const aTotalItems = a.root.itemIds.length + a.children.reduce((sum, c) => sum + c.itemIds.length, 0);
+			const bTotalItems = b.root.itemIds.length + b.children.reduce((sum, c) => sum + c.itemIds.length, 0);
+			return bTotalItems - aTotalItems;
 		});
-	}, [allGrades, searchQuery]);
-
-	// Sort: selected first, then by item count
-	const sortedGrades = useMemo(() => {
-		return filteredGrades.toSorted((a, b) => {
-			const aSelected = selectedIds.includes(a.grade.id);
-			const bSelected = selectedIds.includes(b.grade.id);
-			if (aSelected !== bSelected) return aSelected ? -1 : 1;
-			return b.grade.itemIds.length - a.grade.itemIds.length;
-		});
-	}, [filteredGrades, selectedIds]);
+	}, [gradeHierarchy, selectedIds]);
 
 	const selectedCount = selectedIds.filter((id) => id !== OTHER_FILTER_ID).length;
 	const isOtherSelected = selectedIds.includes(OTHER_FILTER_ID);
-	const showSearch = allGrades.length > SEARCH_THRESHOLD;
+
+	const toggleFamilyExpand = (rootId: string) => {
+		setExpandedFamilies((prev) => {
+			const next = new Set(prev);
+			if (next.has(rootId)) {
+				next.delete(rootId);
+			} else {
+				next.add(rootId);
+			}
+			return next;
+		});
+	};
+
+	// Handle clicking on a parent grade
+	const handleParentClick = (rootId: string, hasChildren: boolean) => {
+		if (!hasChildren) {
+			// Simple grade without children - just toggle it
+			onToggle(rootId);
+			return;
+		}
+
+		// Grade with children - toggle family selection and expand
+		const familyIds = getGradeFamilyIds(rootId);
+		const selectedInFamily = familyIds.filter((id) => selectedIds.includes(id));
+
+		// Toggle family selection
+		onToggleFamily(rootId);
+
+		// Auto-expand when selecting, auto-collapse when deselecting all
+		if (selectedInFamily.length === 0) {
+			// Was empty, now selecting - expand
+			setExpandedFamilies((prev) => new Set(prev).add(rootId));
+		} else if (selectedInFamily.length === familyIds.length) {
+			// Was fully selected, now deselecting - collapse
+			setExpandedFamilies((prev) => {
+				const next = new Set(prev);
+				next.delete(rootId);
+				return next;
+			});
+		}
+	};
 
 	return (
 		<Box>
@@ -363,61 +402,108 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily: _onToggleFamily, 
 
 			<Collapse in={isExpanded}>
 				<Stack gap="xs" pb="sm">
-					{/* Search input */}
-					{showSearch && (
-						<TextInput
-							placeholder="Search grades..."
-							size="xs"
-							leftSection={<IconSearch size={14} />}
-							value={searchQuery}
-							onChange={(e) => { setSearchQuery(e.currentTarget.value); }}
-							rightSection={
-								searchQuery ? (
-									<UnstyledButton onClick={() => { setSearchQuery(""); }}>
-										<IconX size={14} />
-									</UnstyledButton>
-								) : null
-							}
-						/>
+					{sortedHierarchy.map((entry) => {
+						const { root, children } = entry;
+						const hasChildren = children.length > 0;
+						const isFamilyExpanded = expandedFamilies.has(root.id);
+						const familyIds = getGradeFamilyIds(root.id);
+						const selectedInFamily = familyIds.filter((id) => selectedIds.includes(id));
+						const isAnySelected = selectedInFamily.length > 0;
+						const totalFamilyItems = root.itemIds.length + children.reduce((sum, c) => sum + c.itemIds.length, 0);
+
+						return (
+							<Box key={root.id}>
+								{/* Parent grade row */}
+								<Group gap="xs" wrap="nowrap">
+									{/* Expand/collapse button for grades with children */}
+									{hasChildren ? (
+										<UnstyledButton
+											onClick={() => { toggleFamilyExpand(root.id); }}
+											style={{
+												display: "flex",
+												alignItems: "center",
+												justifyContent: "center",
+												width: 20,
+												height: 20,
+												borderRadius: 4,
+												flexShrink: 0,
+											}}
+										>
+											{isFamilyExpanded
+												? <IconChevronDown size={14} />
+												: <IconChevronRight size={14} />
+											}
+										</UnstyledButton>
+									) : (
+										<Box style={{ width: 20, flexShrink: 0 }} />
+									)}
+
+									{/* Parent grade card */}
+									<Box style={{ flex: 1, minWidth: 0 }}>
+										<MiniEntityCard
+											id={root.id}
+											name={root.name}
+											itemCount={totalFamilyItems}
+											image={root.image}
+											isSelected={isAnySelected}
+											onToggle={() => { handleParentClick(root.id, hasChildren); }}
+											badge={hasChildren && isAnySelected ? `${selectedInFamily.length}/${familyIds.length}` : undefined}
+										/>
+									</Box>
+								</Group>
+
+								{/* Child grades (when expanded) */}
+								{hasChildren && (
+									<Collapse in={isFamilyExpanded}>
+										<Box
+											mt="xs"
+											ml={28}
+											pl="xs"
+											style={{
+												borderLeft: "2px solid var(--mantine-color-blue-light)",
+											}}
+										>
+											<Box
+												style={{
+													display: "flex",
+													flexWrap: "wrap",
+													gap: 8,
+												}}
+											>
+												{children.map((child) => (
+													<MiniEntityCard
+														key={child.id}
+														id={child.id}
+														name={child.name}
+														itemCount={child.itemIds.length}
+														image={child.image}
+														isSelected={selectedIds.includes(child.id)}
+														onToggle={() => { onToggle(child.id); }}
+													/>
+												))}
+											</Box>
+										</Box>
+									</Collapse>
+								)}
+							</Box>
+						);
+					})}
+
+					{/* "Other" card */}
+					{otherCount > 0 && (
+						<Group gap="xs" wrap="nowrap">
+							<Box style={{ width: 20, flexShrink: 0 }} />
+							<Box style={{ flex: 1, minWidth: 0 }}>
+								<MiniEntityCard
+									id={OTHER_FILTER_ID}
+									name="Other"
+									itemCount={otherCount}
+									isSelected={isOtherSelected}
+									onToggle={() => { onToggle(OTHER_FILTER_ID); }}
+								/>
+							</Box>
+						</Group>
 					)}
-
-					{/* Search results count */}
-					{showSearch && searchQuery && (
-						<Text size="xs" c="dimmed">
-							{filteredGrades.length} of {allGrades.length} shown
-						</Text>
-					)}
-
-					<Box
-						style={{
-							display: "flex",
-							flexWrap: "wrap",
-							gap: 8,
-						}}
-					>
-						{sortedGrades.map(({ grade }) => (
-							<MiniEntityCard
-								key={grade.id}
-								id={grade.id}
-								name={grade.name}
-								itemCount={grade.itemIds.length}
-								image={grade.image}
-								isSelected={selectedIds.includes(grade.id)}
-								onToggle={() => { onToggle(grade.id); }}
-							/>
-						))}
-
-						{/* "Other" card */}
-						{otherCount > 0 && (
-							<MiniEntityCard
-								id={OTHER_FILTER_ID}
-								name="Other"
-								itemCount={otherCount}
-								isSelected={isOtherSelected}
-								onToggle={() => { onToggle(OTHER_FILTER_ID); }}
-							/>
-						)}
-					</Box>
 				</Stack>
 			</Collapse>
 		</Box>
