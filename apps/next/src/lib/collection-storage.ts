@@ -52,6 +52,18 @@ export interface UserPreferences {
 	autoSaveSearch: boolean;
 }
 
+/** Filter types that can be tracked */
+export type FilterType = "grades" | "categories" | "series" | "brands" | "scales" | "years";
+
+/** Tracks usage of individual filters for dynamic quick filters */
+export interface FilterUsage {
+	id: string;                 // Compound: `${filterType}:${filterId}`
+	filterType: FilterType;
+	filterId: string;           // e.g., "hg", "mg", "2024"
+	usageCount: number;
+	lastUsedAt: Date;
+}
+
 /** Synthetic list definition (computed, not stored) */
 export interface SyntheticList {
 	id: string;
@@ -102,6 +114,7 @@ export class ListDatabase extends Dexie {
 	lists!: EntityTable<List, "id">;
 	listMemberships!: EntityTable<ListMembership, "id">;
 	userPreferences!: EntityTable<UserPreferences, "id">;
+	filterUsage!: EntityTable<FilterUsage, "id">;
 
 	constructor() {
 		super("hobby-ninja-lists-db");
@@ -110,6 +123,14 @@ export class ListDatabase extends Dexie {
 			lists: "id, name, isSystem, createdAt, modifiedAt",
 			listMemberships: "id, listId, itemId, [listId+itemId], addedAt",
 			userPreferences: "id",
+		});
+
+		// Version 2: Add filter usage tracking
+		this.version(2).stores({
+			lists: "id, name, isSystem, createdAt, modifiedAt",
+			listMemberships: "id, listId, itemId, [listId+itemId], addedAt",
+			userPreferences: "id",
+			filterUsage: "id, filterType, usageCount, lastUsedAt",
 		});
 	}
 
@@ -301,6 +322,67 @@ export class ListDatabase extends Dexie {
 	}
 
 	// ========================================================================
+	// Filter Usage Tracking
+	// ========================================================================
+
+	/**
+	 * Increment usage count for a filter.
+	 * Call this when a filter is toggled ON (not when toggled off).
+	 */
+	async incrementFilterUsage(filterType: FilterType, filterId: string): Promise<void> {
+		const id = `${filterType}:${filterId}`;
+		const existing = await this.filterUsage.get(id);
+
+		await (existing ? this.filterUsage.update(id, {
+			usageCount: existing.usageCount + 1,
+			lastUsedAt: new Date(),
+		}) : this.filterUsage.add({
+			id,
+			filterType,
+			filterId,
+			usageCount: 1,
+			lastUsedAt: new Date(),
+		}));
+	}
+
+	/**
+	 * Get the most frequently used filters.
+	 * @param limit Maximum number of filters to return
+	 * @param filterTypes Optional array of filter types to include
+	 */
+	async getTopUsedFilters(limit = 10, filterTypes?: FilterType[]): Promise<FilterUsage[]> {
+		// Get all and sort descending by usageCount (Dexie orderBy only supports ascending)
+		const allFilters = await this.filterUsage.toArray();
+		const sorted = allFilters.toSorted((a, b) => b.usageCount - a.usageCount);
+
+		if (filterTypes && filterTypes.length > 0) {
+			return sorted
+				.filter(f => filterTypes.includes(f.filterType))
+				.slice(0, limit);
+		}
+
+		return sorted.slice(0, limit);
+	}
+
+	/**
+	 * Get filter usage for a specific filter type.
+	 */
+	async getFilterUsageByType(filterType: FilterType): Promise<FilterUsage[]> {
+		const filters = await this.filterUsage
+			.where("filterType")
+			.equals(filterType)
+			.toArray();
+		return filters.toSorted((a, b) => b.usageCount - a.usageCount);
+	}
+
+	/**
+	 * Clear all filter usage data (for testing/reset).
+	 */
+	async clearFilterUsage(): Promise<void> {
+		await this.filterUsage.clear();
+	}
+
+	// ========================================================================
 	// Initialization
 	// ========================================================================
 
@@ -361,3 +443,12 @@ export const getSyntheticListItems = (syntheticListId: string) => db.getSyntheti
 // Preferences
 export const getPreferences = () => db.getPreferences();
 export const updatePreferences = (updates: Partial<Omit<UserPreferences, "id">>) => db.updatePreferences(updates);
+
+// Filter usage tracking
+export const incrementFilterUsage = (filterType: FilterType, filterId: string) =>
+	db.incrementFilterUsage(filterType, filterId);
+export const getTopUsedFilters = (limit?: number, filterTypes?: FilterType[]) =>
+	db.getTopUsedFilters(limit, filterTypes);
+export const getFilterUsageByType = (filterType: FilterType) =>
+	db.getFilterUsageByType(filterType);
+export const clearFilterUsage = () => db.clearFilterUsage();
