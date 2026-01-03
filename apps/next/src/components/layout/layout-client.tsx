@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { Navigation, SIDEBAR_WIDTH } from "@/components/layout/navigation";
+import { Navigation } from "@/components/layout/navigation";
 import { PWAInstall } from "@/components/pwa/pwa-install";
 import { SearchProvider } from "@/components/search/search-provider";
 import { CollectionProvider } from "@/contexts/collection-context";
@@ -23,7 +23,7 @@ interface LayoutClientProps {
 /** Inner layout that has access to theme context */
 function LayoutInner({ children }: LayoutClientProps) {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const { sidebarPinned } = useThemeContext();
+	const { sidebarPinned, sidebarWidth } = useThemeContext();
 	// Desktop breakpoint (lg = 992px) - use default behavior for reliability
 	const isDesktopQuery = useMediaQuery("(min-width: 992px)");
 	const isDesktop = isDesktopQuery;
@@ -41,7 +41,7 @@ function LayoutInner({ children }: LayoutClientProps) {
 					display: "flex",
 					flexDirection: "column",
 					minHeight: "100vh",
-					marginLeft: isPinned ? SIDEBAR_WIDTH : 0,
+					marginLeft: isPinned ? sidebarWidth : 0,
 					transition: "margin-left 0.2s ease",
 				}}
 			>
