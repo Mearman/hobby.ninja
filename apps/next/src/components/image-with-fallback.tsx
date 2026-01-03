@@ -41,7 +41,7 @@ export function FittedText({ text }: { text: string }): React.ReactElement {
 				display: "flex",
 				alignItems: "center",
 				justifyContent: "center",
-				padding: "var(--mantine-spacing-sm)",
+				padding: "4px",
 				overflow: "hidden",
 			}}
 		>
