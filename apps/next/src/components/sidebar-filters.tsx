@@ -18,7 +18,6 @@ import {
 import {
 	IconBook,
 	IconChevronDown,
-	IconChevronRight,
 	IconChevronUp,
 	IconSearch,
 	IconWorld,
@@ -311,11 +310,10 @@ function FilterSection({
 interface GradeSectionProps {
 	selectedIds: string[];
 	onToggle: (id: string) => void;
-	onToggleFamily: (rootId: string) => void;
 	otherCount: number;
 }
 
-function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: GradeSectionProps) {
+function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
 
@@ -351,35 +349,6 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 		});
 	};
 
-	// Handle clicking on a parent grade
-	const handleParentClick = (rootId: string, hasChildren: boolean) => {
-		if (!hasChildren) {
-			// Simple grade without children - just toggle it
-			onToggle(rootId);
-			return;
-		}
-
-		// Grade with children - toggle family selection and expand
-		const familyIds = getGradeFamilyIds(rootId);
-		const selectedInFamily = familyIds.filter((id) => selectedIds.includes(id));
-
-		// Toggle family selection
-		onToggleFamily(rootId);
-
-		// Auto-expand when selecting, auto-collapse when deselecting all
-		if (selectedInFamily.length === 0) {
-			// Was empty, now selecting - expand
-			setExpandedFamilies((prev) => new Set(prev).add(rootId));
-		} else if (selectedInFamily.length === familyIds.length) {
-			// Was fully selected, now deselecting - collapse
-			setExpandedFamilies((prev) => {
-				const next = new Set(prev);
-				next.delete(rootId);
-				return next;
-			});
-		}
-	};
-
 	return (
 		<Box>
 			<UnstyledButton
@@ -413,44 +382,22 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 
 						return (
 							<Box key={root.id}>
-								{/* Parent grade row */}
-								<Group gap="xs" wrap="nowrap">
-									{/* Expand/collapse button for grades with children */}
-									{hasChildren ? (
-										<UnstyledButton
-											onClick={() => { toggleFamilyExpand(root.id); }}
-											style={{
-												display: "flex",
-												alignItems: "center",
-												justifyContent: "center",
-												width: 20,
-												height: 20,
-												borderRadius: 4,
-												flexShrink: 0,
-											}}
-										>
-											{isFamilyExpanded
-												? <IconChevronDown size={14} />
-												: <IconChevronRight size={14} />
-											}
-										</UnstyledButton>
-									) : (
-										<Box style={{ width: 20, flexShrink: 0 }} />
-									)}
-
-									{/* Parent grade card */}
-									<Box style={{ flex: 1, minWidth: 0 }}>
-										<MiniEntityCard
-											id={root.id}
-											name={root.name}
-											itemCount={totalFamilyItems}
-											image={root.image}
-											isSelected={isAnySelected}
-											onToggle={() => { handleParentClick(root.id, hasChildren); }}
-											badge={hasChildren && isAnySelected ? `${selectedInFamily.length}/${familyIds.length}` : undefined}
-										/>
-									</Box>
-								</Group>
+								{/* Parent grade card - click to expand/collapse if has children, or toggle if no children */}
+								<MiniEntityCard
+									id={root.id}
+									name={root.name}
+									itemCount={totalFamilyItems}
+									image={root.image}
+									isSelected={isAnySelected}
+									onToggle={() => {
+										if (hasChildren) {
+											toggleFamilyExpand(root.id);
+										} else {
+											onToggle(root.id);
+										}
+									}}
+									badge={hasChildren ? (isFamilyExpanded ? "▾" : "▸") : undefined}
+								/>
 
 								{/* Child grades (when expanded) */}
 								{hasChildren && (
@@ -491,18 +438,13 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 
 					{/* "Other" card */}
 					{otherCount > 0 && (
-						<Group gap="xs" wrap="nowrap">
-							<Box style={{ width: 20, flexShrink: 0 }} />
-							<Box style={{ flex: 1, minWidth: 0 }}>
-								<MiniEntityCard
-									id={OTHER_FILTER_ID}
-									name="Other"
-									itemCount={otherCount}
-									isSelected={isOtherSelected}
-									onToggle={() => { onToggle(OTHER_FILTER_ID); }}
-								/>
-							</Box>
-						</Group>
+						<MiniEntityCard
+							id={OTHER_FILTER_ID}
+							name="Other"
+							itemCount={otherCount}
+							isSelected={isOtherSelected}
+							onToggle={() => { onToggle(OTHER_FILTER_ID); }}
+						/>
 					)}
 				</Stack>
 			</Collapse>
@@ -522,7 +464,6 @@ function SidebarFiltersContent() {
 		clearFilters,
 		toggleHasManual,
 		toggleHasGlobalSite,
-		toggleGradeFamily,
 		hasActiveFilters,
 		selectedCount,
 		filteredItemCount,
@@ -610,7 +551,6 @@ function SidebarFiltersContent() {
 					<GradeSection
 						selectedIds={filters.grades}
 						onToggle={(id) => { toggleFilter("grades", id); }}
-						onToggleFamily={toggleGradeFamily}
 						otherCount={otherCounts.grades}
 					/>
 
