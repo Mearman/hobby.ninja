@@ -1,7 +1,7 @@
 "use client";
 
 import { useMediaQuery } from "@mantine/hooks";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -68,11 +68,13 @@ export function LayoutClient({ children }: LayoutClientProps) {
 		<MantineThemeProvider>
 			<SearchProvider>
 				<CollectionProvider>
-					<FilterProvider>
-						<StickyFiltersProvider>
-							<LayoutInner>{children}</LayoutInner>
-						</StickyFiltersProvider>
-					</FilterProvider>
+					<Suspense fallback={null}>
+						<FilterProvider>
+							<StickyFiltersProvider>
+								<LayoutInner>{children}</LayoutInner>
+							</StickyFiltersProvider>
+						</FilterProvider>
+					</Suspense>
 				</CollectionProvider>
 			</SearchProvider>
 		</MantineThemeProvider>
