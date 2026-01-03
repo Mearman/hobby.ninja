@@ -383,10 +383,8 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 							const { root, children } = entry;
 							const hasChildren = children.length > 0;
 							const isFamilyExpanded = expandedFamilies.has(root.id);
-							const familyIds = getGradeFamilyIds(root.id);
-							const selectedInFamily = familyIds.filter((id) => selectedIds.includes(id));
-							const isAnySelected = selectedInFamily.length > 0;
 							const totalFamilyItems = root.itemIds.length + children.reduce((sum, c) => sum + c.itemIds.length, 0);
+							const isRootSelected = selectedIds.includes(root.id);
 
 							const items = [
 								<MiniEntityCard
@@ -395,12 +393,13 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 									name={root.name}
 									itemCount={totalFamilyItems}
 									image={root.image}
-									isSelected={isAnySelected}
+									isSelected={isRootSelected}
 									onToggle={() => {
+										// Always toggle selection
+										onToggle(root.id);
+										// Also expand/collapse if has children
 										if (hasChildren) {
 											toggleFamilyExpand(root.id);
-										} else {
-											onToggle(root.id);
 										}
 									}}
 									badge={hasChildren ? (isFamilyExpanded ? "▾" : "▸") : undefined}
