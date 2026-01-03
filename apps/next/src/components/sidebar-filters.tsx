@@ -39,9 +39,6 @@ type FilterableEntity = Category | Series | Brand | GradeData | ScaleData | Year
 // Constants
 // ============================================================================
 
-/** Number of items to show before "+N more" button */
-const INITIAL_VISIBLE_COUNT = 6;
-
 /** Mini card width in pixels */
 const MINI_CARD_WIDTH = 75;
 
@@ -144,47 +141,6 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle }: MiniEn
 }
 
 // ============================================================================
-// "+N More" Button
-// ============================================================================
-
-interface MoreButtonProps {
-	count: number;
-	isExpanded: boolean;
-	onToggle: () => void;
-}
-
-function MoreButton({ count, isExpanded, onToggle }: MoreButtonProps) {
-	if (count <= 0 && !isExpanded) return null;
-
-	return (
-		<UnstyledButton
-			onClick={onToggle}
-			style={{
-				width: MINI_CARD_WIDTH,
-				flexShrink: 0,
-			}}
-		>
-			<Box
-				style={{
-					aspectRatio: CARD_ASPECT_RATIO_STRING,
-					border: "1px dashed var(--mantine-color-default-border)",
-					borderRadius: "var(--mantine-radius-sm)",
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-					backgroundColor: BG_HOVER,
-					cursor: "pointer",
-				}}
-			>
-				<Text size="sm" c="dimmed" ta="center" fw={500}>
-					{isExpanded ? "Show less" : `+${String(count)} more`}
-				</Text>
-			</Box>
-		</UnstyledButton>
-	);
-}
-
-// ============================================================================
 // Filter Section
 // ============================================================================
 
@@ -210,7 +166,6 @@ function FilterSection({
 	getItemCount = (e) => (e as { itemIds?: string[] }).itemIds?.length ?? 0,
 }: FilterSectionProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
-	const [showAllItems, setShowAllItems] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const selectedCount = selectedIds.length;
@@ -238,22 +193,6 @@ function FilterSection({
 			return getItemCount(b) - getItemCount(a);
 		});
 	}, [filteredEntities, selectedIds, getItemCount]);
-
-	// Determine visible entities
-	const visibleEntities = useMemo(() => {
-		if (showAllItems) return sortedEntities;
-
-		// Always show selected items
-		const selected = sortedEntities.filter((e) => selectedIds.includes(e.id));
-		const unselected = sortedEntities.filter((e) => !selectedIds.includes(e.id));
-
-		// Fill remaining slots with unselected items
-		const remainingSlots = Math.max(0, INITIAL_VISIBLE_COUNT - selected.length);
-		return [...selected, ...unselected.slice(0, remainingSlots)];
-	}, [sortedEntities, selectedIds, showAllItems]);
-
-	// Count of hidden items
-	const hiddenCount = sortedEntities.length - visibleEntities.length;
 
 	// Include "Other" option
 	const showOther = otherCount > 0;
@@ -315,7 +254,7 @@ function FilterSection({
 							gap: 8,
 						}}
 					>
-						{visibleEntities.map((entity) => (
+						{sortedEntities.map((entity) => (
 							<MiniEntityCard
 								key={entity.id}
 								id={entity.id}
@@ -328,22 +267,13 @@ function FilterSection({
 						))}
 
 						{/* "Other" card */}
-						{showOther && (showAllItems || visibleEntities.length < INITIAL_VISIBLE_COUNT) && (
+						{showOther && (
 							<MiniEntityCard
 								id={OTHER_FILTER_ID}
 								name="Other"
 								itemCount={otherCount}
 								isSelected={isOtherSelected}
 								onToggle={() => { onToggle(OTHER_FILTER_ID); }}
-							/>
-						)}
-
-						{/* +N more button */}
-						{(hiddenCount > 0 || showAllItems) && (
-							<MoreButton
-								count={hiddenCount + (showOther && !showAllItems && visibleEntities.length >= INITIAL_VISIBLE_COUNT ? 1 : 0)}
-								isExpanded={showAllItems}
-								onToggle={() => { setShowAllItems(!showAllItems); }}
 							/>
 						)}
 					</Box>
@@ -366,7 +296,6 @@ interface GradeSectionProps {
 
 function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: GradeSectionProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
-	const [showAllItems, setShowAllItems] = useState(false);
 
 	const gradeHierarchy = useMemo(() => getGradesHierarchy(), []);
 
@@ -390,22 +319,6 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 		});
 	}, [gradeEntries, selectedIds]);
 
-	// Visible entries
-	const visibleEntries = useMemo(() => {
-		if (showAllItems) return sortedEntries;
-
-		const selected = sortedEntries.filter((e) =>
-			e.familyIds.some((id) => selectedIds.includes(id)),
-		);
-		const unselected = sortedEntries.filter((e) =>
-			!e.familyIds.some((id) => selectedIds.includes(id)),
-		);
-
-		const remainingSlots = Math.max(0, INITIAL_VISIBLE_COUNT - selected.length);
-		return [...selected, ...unselected.slice(0, remainingSlots)];
-	}, [sortedEntries, selectedIds, showAllItems]);
-
-	const hiddenCount = sortedEntries.length - visibleEntries.length;
 	const selectedCount = selectedIds.filter((id) => id !== OTHER_FILTER_ID).length;
 	const isOtherSelected = selectedIds.includes(OTHER_FILTER_ID);
 
@@ -438,7 +351,7 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 							gap: 8,
 						}}
 					>
-						{visibleEntries.map((entry) => {
+						{sortedEntries.map((entry) => {
 							const isAnySelected = entry.familyIds.some((id) => selectedIds.includes(id));
 							return (
 								<MiniEntityCard
@@ -460,22 +373,13 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 						})}
 
 						{/* "Other" card */}
-						{otherCount > 0 && (showAllItems || visibleEntries.length < INITIAL_VISIBLE_COUNT) && (
+						{otherCount > 0 && (
 							<MiniEntityCard
 								id={OTHER_FILTER_ID}
 								name="Other"
 								itemCount={otherCount}
 								isSelected={isOtherSelected}
 								onToggle={() => { onToggle(OTHER_FILTER_ID); }}
-							/>
-						)}
-
-						{/* +N more button */}
-						{(hiddenCount > 0 || showAllItems) && (
-							<MoreButton
-								count={hiddenCount}
-								isExpanded={showAllItems}
-								onToggle={() => { setShowAllItems(!showAllItems); }}
 							/>
 						)}
 					</Box>
