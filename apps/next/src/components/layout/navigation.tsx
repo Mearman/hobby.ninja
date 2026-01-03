@@ -351,9 +351,10 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 		);
 	}
 
-	// Otherwise, render as drawer (uses default width)
+	// Otherwise, render as drawer
 	// On desktop, use resized width; on mobile, use default
 	const drawerSize = isDesktop ? sidebarWidth : DEFAULT_SIDEBAR_WIDTH;
+	const showResizeHandle = isDesktop;
 
 	return (
 		<Drawer
@@ -369,6 +370,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 					display: "flex",
 					flexDirection: "column",
 					height: "100%",
+					position: "relative",
 				},
 				content: {
 					backgroundColor: "var(--mantine-color-body)",
@@ -376,6 +378,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 			}}
 		>
 			<NavigationContent onClose={onClose} isPinned={false} isDesktop={isDesktop} />
+			{showResizeHandle && <ResizeHandle onResize={setSidebarWidth} />}
 		</Drawer>
 	);
 }
