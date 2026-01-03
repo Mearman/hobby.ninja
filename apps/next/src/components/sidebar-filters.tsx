@@ -21,6 +21,7 @@ import {
 	IconBook,
 	IconChevronDown,
 	IconChevronUp,
+	IconList,
 	IconSearch,
 	IconSortAscendingLetters,
 	IconSortDescendingNumbers,
@@ -67,6 +68,10 @@ const BG_SELECTED_LIGHT = "var(--mantine-primary-color-light)";
 
 /** Selected text color */
 const COLOR_SELECTED = "var(--mantine-primary-color-filled)";
+
+/** Tooltip labels for sort toggle */
+const TOOLTIP_SORT_BY_COUNT = "Sort by count";
+const TOOLTIP_SORT_BY_NAME = "Sort by name";
 
 /** Helper to get entity name as string */
 function getEntityName(entity: FilterableEntity): string {
@@ -388,15 +393,29 @@ function FilterSection({
 							</UnstyledButton>
 
 							{/* Sort toggle */}
-							<Tooltip label={sortMode === "count" ? "Sort by name" : "Sort by count"} position="top">
-								<ActionIcon
-									variant="subtle"
-									size="xs"
-									onClick={() => { setSortMode((prev) => prev === "count" || prev === "default" ? "name" : "count"); }}
-								>
-									{sortMode === "count" || sortMode === "default" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
-								</ActionIcon>
-							</Tooltip>
+							{defaultSort === "default" ? (
+								// For sections with original order (scales, years): toggle between default and count
+								<Tooltip label={sortMode === "default" ? TOOLTIP_SORT_BY_COUNT : "Original order"} position="top">
+									<ActionIcon
+										variant="subtle"
+										size="xs"
+										onClick={() => { setSortMode((prev) => prev === "default" ? "count" : "default"); }}
+									>
+										{sortMode === "default" ? <IconList size={14} /> : <IconSortDescendingNumbers size={14} />}
+									</ActionIcon>
+								</Tooltip>
+							) : (
+								// For sections sorted by count: toggle between count and name
+								<Tooltip label={sortMode === "count" ? TOOLTIP_SORT_BY_NAME : TOOLTIP_SORT_BY_COUNT} position="top">
+									<ActionIcon
+										variant="subtle"
+										size="xs"
+										onClick={() => { setSortMode((prev) => prev === "count" ? "name" : "count"); }}
+									>
+										{sortMode === "count" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
+									</ActionIcon>
+								</Tooltip>
+							)}
 						</>
 					)}
 					{/* Chevron - clickable to expand/collapse */}
@@ -562,13 +581,13 @@ function GradeSection({ selectedIds, onToggle, onClear, onSelectAll, otherCount 
 							</UnstyledButton>
 
 							{/* Sort toggle */}
-							<Tooltip label={sortMode === "default" ? "Sort by count" : "Default order"} position="top">
+							<Tooltip label={sortMode === "default" ? TOOLTIP_SORT_BY_COUNT : "Grade order"} position="top">
 								<ActionIcon
 									variant="subtle"
 									size="xs"
 									onClick={() => { setSortMode((prev) => prev === "default" ? "count" : "default"); }}
 								>
-									{sortMode === "default" ? <IconSortAscendingLetters size={14} /> : <IconSortDescendingNumbers size={14} />}
+									{sortMode === "default" ? <IconList size={14} /> : <IconSortDescendingNumbers size={14} />}
 								</ActionIcon>
 							</Tooltip>
 						</>
