@@ -878,7 +878,11 @@ export default [
 			"no-irregular-whitespace": "off",
 		},
 	},
-	// Storybook files configuration
+	// Storybook files configuration - disable all type-checked linting
+	...tseslint.configs.disableTypeChecked.map((config) => ({
+		...config,
+		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
+	})),
 	{
 		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
 		languageOptions: {
@@ -896,20 +900,6 @@ export default [
 			storybook: storybook as unknown as ESLint.Plugin,
 		},
 		rules: {
-			// Disable TypeScript rules that require type information
-			"@typescript-eslint/no-base-to-string": "off",
-			"@typescript-eslint/restrict-plus-operands": "off",
-			"@typescript-eslint/no-floating-promises": "off",
-			"@typescript-eslint/no-misused-promises": "off",
-			"@typescript-eslint/no-unsafe-argument": "off",
-			"@typescript-eslint/no-unsafe-assignment": "off",
-			"@typescript-eslint/no-unsafe-call": "off",
-			"@typescript-eslint/no-unsafe-member-access": "off",
-			"@typescript-eslint/no-unsafe-return": "off",
-			"@typescript-eslint/require-await": "off",
-			"@typescript-eslint/unbound-method": "off",
-			"@typescript-eslint/no-unnecessary-condition": "off",
-			"@typescript-eslint/restrict-template-expressions": "off",
 			// Storybook best practices
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- storybook plugin lacks proper types
 			...(storybook.configs.recommended.rules as Record<string, unknown>),
