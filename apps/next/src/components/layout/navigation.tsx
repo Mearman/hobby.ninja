@@ -352,11 +352,14 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 	}
 
 	// Otherwise, render as drawer (uses default width)
+	// On desktop, use resized width; on mobile, use default
+	const drawerSize = isDesktop ? sidebarWidth : DEFAULT_SIDEBAR_WIDTH;
+
 	return (
 		<Drawer
 			opened={opened}
 			onClose={onClose}
-			size={DEFAULT_SIDEBAR_WIDTH}
+			size={drawerSize}
 			padding={0}
 			withCloseButton={false}
 			className={fadeIn}
