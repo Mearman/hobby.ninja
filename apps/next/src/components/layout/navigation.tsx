@@ -242,8 +242,9 @@ function NavigationContent({ onClose, isPinned, isDesktop }: { onClose: () => vo
 
 export function Navigation({ opened, onClose }: NavigationProps) {
 	const { sidebarPinned } = useThemeContext();
-	// Desktop breakpoint (lg = 992px) - use initialValue for SSR
-	const isDesktop = useMediaQuery("(min-width: 992px)", false, { getInitialValueInEffect: false });
+	// Desktop breakpoint (lg = 992px) - use default behavior for reliability
+	const isDesktopQuery = useMediaQuery("(min-width: 992px)");
+	const isDesktop = isDesktopQuery;
 	const isPinned = isDesktop && sidebarPinned;
 
 	// When pinned on desktop, render as fixed sidebar
@@ -278,6 +279,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 			padding={0}
 			withCloseButton={false}
 			className={fadeIn}
+			zIndex={1100}
 			styles={{
 				body: {
 					display: "flex",
