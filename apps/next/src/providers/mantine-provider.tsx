@@ -12,6 +12,12 @@ import { theme } from "../lib/theme";
 const STORAGE_KEY_COLOR_SCHEME = "hobby-ninja-color-scheme";
 const STORAGE_KEY_FULL_WIDTH = "hobby-ninja-full-width";
 const STORAGE_KEY_SIDEBAR_PINNED = "hobby-ninja-sidebar-pinned";
+const STORAGE_KEY_SIDEBAR_WIDTH = "hobby-ninja-sidebar-width";
+
+// Sidebar width constraints
+export const MIN_SIDEBAR_WIDTH = 240;
+export const MAX_SIDEBAR_WIDTH = 480;
+export const DEFAULT_SIDEBAR_WIDTH = 300;
 
 // Theme context value type
 export interface ThemeContextValue {
@@ -22,6 +28,8 @@ export interface ThemeContextValue {
 	toggleFullWidth: () => void;
 	sidebarPinned: boolean;
 	toggleSidebarPinned: () => void;
+	sidebarWidth: number;
+	setSidebarWidth: (width: number) => void;
 }
 
 // Create context for theme functions (exported for Storybook)
@@ -46,6 +54,7 @@ function useTheme() {
 	const [colorScheme, setColorScheme] = React.useState<"light" | "dark" | "system">("system");
 	const [fullWidth, setFullWidth] = React.useState(false);
 	const [sidebarPinned, setSidebarPinned] = React.useState(false);
+	const [sidebarWidth, setSidebarWidthState] = React.useState(DEFAULT_SIDEBAR_WIDTH);
 	const [mounted, setMounted] = React.useState(false);
 
 	// Mark when component is mounted on client and restore preferences
@@ -63,6 +72,13 @@ function useTheme() {
 		const savedSidebarPinned = localStorage.getItem(STORAGE_KEY_SIDEBAR_PINNED);
 		if (savedSidebarPinned === "true") {
 			setSidebarPinned(true);
+		}
+		const savedSidebarWidth = localStorage.getItem(STORAGE_KEY_SIDEBAR_WIDTH);
+		if (savedSidebarWidth) {
+			const width = Number.parseInt(savedSidebarWidth, 10);
+			if (!Number.isNaN(width) && width >= MIN_SIDEBAR_WIDTH && width <= MAX_SIDEBAR_WIDTH) {
+				setSidebarWidthState(width);
+			}
 		}
 	}, []);
 
@@ -86,6 +102,13 @@ function useTheme() {
 			localStorage.setItem(STORAGE_KEY_SIDEBAR_PINNED, String(sidebarPinned));
 		}
 	}, [mounted, sidebarPinned]);
+
+	// Persist sidebar width to localStorage
+	React.useEffect(() => {
+		if (mounted) {
+			localStorage.setItem(STORAGE_KEY_SIDEBAR_WIDTH, String(sidebarWidth));
+		}
+	}, [mounted, sidebarWidth]);
 
 	const getEffectiveColorScheme = (): "light" | "dark" => {
 		if (!mounted) return "light"; // Default for SSR
@@ -114,6 +137,11 @@ function useTheme() {
 		setSidebarPinned(prev => !prev);
 	};
 
+	const setSidebarWidth = (width: number) => {
+		const clampedWidth = Math.max(MIN_SIDEBAR_WIDTH, Math.min(MAX_SIDEBAR_WIDTH, width));
+		setSidebarWidthState(clampedWidth);
+	};
+
 	// Listen for system preference changes when in "system" mode
 	React.useEffect(() => {
 		if (!mounted || colorScheme !== "system") return;
@@ -136,14 +164,16 @@ function useTheme() {
 		toggleFullWidth,
 		sidebarPinned,
 		toggleSidebarPinned,
+		sidebarWidth,
+		setSidebarWidth,
 	};
 }
 
 export function MantineThemeProvider({ children }: MantineThemeProviderProps) {
-	const { colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth, sidebarPinned, toggleSidebarPinned } = useTheme();
+	const { colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth, sidebarPinned, toggleSidebarPinned, sidebarWidth, setSidebarWidth } = useTheme();
 
 	return (
-		<ThemeContext.Provider value={{ colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth, sidebarPinned, toggleSidebarPinned }}>
+		<ThemeContext.Provider value={{ colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth, sidebarPinned, toggleSidebarPinned, sidebarWidth, setSidebarWidth }}>
 			<MantineProvider
 				theme={theme}
 				defaultColorScheme={effectiveColorScheme}
