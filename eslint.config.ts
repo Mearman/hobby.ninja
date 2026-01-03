@@ -879,10 +879,10 @@ export default [
 		},
 	},
 	// Storybook files configuration - disable all type-checked linting
-	...tseslint.configs.disableTypeChecked.map((config) => ({
-		...config,
+	{
+		...tseslint.configs.disableTypeChecked,
 		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
-	})),
+	},
 	{
 		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
 		languageOptions: {
