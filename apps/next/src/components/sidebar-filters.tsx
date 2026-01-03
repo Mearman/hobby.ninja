@@ -247,11 +247,13 @@ function FilterSection({
 
 	return (
 		<Box>
-			{/* Section header */}
-			<Group justify="space-between" py="xs">
-				<UnstyledButton
-					onClick={() => { setIsExpanded(!isExpanded); }}
-				>
+			{/* Section header - entire row is clickable */}
+			<UnstyledButton
+				onClick={() => { setIsExpanded(!isExpanded); }}
+				w="100%"
+				py="xs"
+			>
+				<Group justify="space-between">
 					<Group gap="xs">
 						<Text size="sm" fw={600}>{title}</Text>
 						{selectedCount > 0 && (
@@ -259,35 +261,36 @@ function FilterSection({
 								{selectedCount}
 							</Badge>
 						)}
+					</Group>
+					<Group gap={4}>
+						{/* Controls - only show when expanded, stop propagation to prevent collapse */}
+						{isExpanded && (
+							<>
+								{/* Select all/none toggle */}
+								<UnstyledButton
+									onClick={(e) => { e.stopPropagation(); selectedCount > 0 ? onClear() : onSelectAll(); }}
+								>
+									<Text size="xs" c="dimmed">
+										{selectedCount > 0 ? "None" : "All"}
+									</Text>
+								</UnstyledButton>
+
+								{/* Sort toggle */}
+								<Tooltip label={sortMode === "count" ? "Sort by name" : "Sort by count"} position="top">
+									<ActionIcon
+										variant="subtle"
+										size="xs"
+										onClick={(e) => { e.stopPropagation(); setSortMode((prev) => prev === "count" ? "name" : "count"); }}
+									>
+										{sortMode === "count" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
+									</ActionIcon>
+								</Tooltip>
+							</>
+						)}
 						{isExpanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
 					</Group>
-				</UnstyledButton>
-
-				{/* Controls - only show when expanded */}
-				{isExpanded && (
-					<Group gap={4}>
-						{/* Select all/none toggle */}
-						<UnstyledButton
-							onClick={selectedCount > 0 ? onClear : onSelectAll}
-						>
-							<Text size="xs" c="dimmed">
-								{selectedCount > 0 ? "None" : "All"}
-							</Text>
-						</UnstyledButton>
-
-						{/* Sort toggle */}
-						<Tooltip label={sortMode === "count" ? "Sort by name" : "Sort by count"} position="top">
-							<ActionIcon
-								variant="subtle"
-								size="xs"
-								onClick={() => { setSortMode((prev) => prev === "count" ? "name" : "count"); }}
-							>
-								{sortMode === "count" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
-							</ActionIcon>
-						</Tooltip>
-					</Group>
-				)}
-			</Group>
+				</Group>
+			</UnstyledButton>
 
 			<Collapse in={isExpanded}>
 				<Stack gap="xs" pb="sm">
@@ -413,11 +416,13 @@ function GradeSection({ selectedIds, onToggle, onClear, onSelectAll, otherCount 
 
 	return (
 		<Box>
-			{/* Section header */}
-			<Group justify="space-between" py="xs">
-				<UnstyledButton
-					onClick={() => { setIsExpanded(!isExpanded); }}
-				>
+			{/* Section header - entire row is clickable */}
+			<UnstyledButton
+				onClick={() => { setIsExpanded(!isExpanded); }}
+				w="100%"
+				py="xs"
+			>
+				<Group justify="space-between">
 					<Group gap="xs">
 						<Text size="sm" fw={600}>Grade</Text>
 						{selectedCount > 0 && (
@@ -425,35 +430,36 @@ function GradeSection({ selectedIds, onToggle, onClear, onSelectAll, otherCount 
 								{selectedCount}
 							</Badge>
 						)}
+					</Group>
+					<Group gap={4}>
+						{/* Controls - only show when expanded, stop propagation to prevent collapse */}
+						{isExpanded && (
+							<>
+								{/* Select all/none toggle */}
+								<UnstyledButton
+									onClick={(e) => { e.stopPropagation(); selectedCount > 0 ? onClear() : onSelectAll(); }}
+								>
+									<Text size="xs" c="dimmed">
+										{selectedCount > 0 ? "None" : "All"}
+									</Text>
+								</UnstyledButton>
+
+								{/* Sort toggle */}
+								<Tooltip label={sortMode === "default" ? "Sort by count" : "Default order"} position="top">
+									<ActionIcon
+										variant="subtle"
+										size="xs"
+										onClick={(e) => { e.stopPropagation(); setSortMode((prev) => prev === "default" ? "count" : "default"); }}
+									>
+										{sortMode === "default" ? <IconSortAscendingLetters size={14} /> : <IconSortDescendingNumbers size={14} />}
+									</ActionIcon>
+								</Tooltip>
+							</>
+						)}
 						{isExpanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
 					</Group>
-				</UnstyledButton>
-
-				{/* Controls - only show when expanded */}
-				{isExpanded && (
-					<Group gap={4}>
-						{/* Select all/none toggle */}
-						<UnstyledButton
-							onClick={selectedCount > 0 ? onClear : onSelectAll}
-						>
-							<Text size="xs" c="dimmed">
-								{selectedCount > 0 ? "None" : "All"}
-							</Text>
-						</UnstyledButton>
-
-						{/* Sort toggle */}
-						<Tooltip label={sortMode === "default" ? "Sort by count" : "Default order"} position="top">
-							<ActionIcon
-								variant="subtle"
-								size="xs"
-								onClick={() => { setSortMode((prev) => prev === "default" ? "count" : "default"); }}
-							>
-								{sortMode === "default" ? <IconSortAscendingLetters size={14} /> : <IconSortDescendingNumbers size={14} />}
-							</ActionIcon>
-						</Tooltip>
-					</Group>
-				)}
-			</Group>
+				</Group>
+			</UnstyledButton>
 
 			<Collapse in={isExpanded}>
 				<Box pb="sm">
