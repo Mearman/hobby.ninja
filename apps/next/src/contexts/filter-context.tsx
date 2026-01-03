@@ -7,6 +7,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
 import type { YearData } from "@/components/homepage-client";
+import { incrementFilterUsage, type FilterType } from "@/lib/collection-storage";
 import { TIMING } from "@/lib/constants";
 import { itemHasGlobalSite, itemHasManual } from "@/lib/relationship-utils";
 
@@ -259,6 +260,15 @@ export function FilterProvider({ children, entityData: initialEntityData }: Filt
 		setFiltersState((prev) => {
 			const current = prev[type];
 			const isSelected = current.includes(id);
+
+			// Track usage when filter is turned ON (not when turned off)
+			if (!isSelected) {
+				// Fire and forget - don't await
+				incrementFilterUsage(type as FilterType, id).catch(() => {
+					// Silently ignore storage errors
+				});
+			}
+
 			return {
 				...prev,
 				[type]: isSelected
@@ -346,7 +356,7 @@ export function FilterProvider({ children, entityData: initialEntityData }: Filt
 			const anySelected = familyIds.some((id) => currentGrades.includes(id));
 
 			if (anySelected) {
-				// Deselect all family grades and collapse
+				// Deselect all family grades and collapse - don't track usage
 				setExpandedFamilies((prevExp) => {
 					const next = new Set(prevExp);
 					next.delete(rootId);
@@ -357,7 +367,7 @@ export function FilterProvider({ children, entityData: initialEntityData }: Filt
 					grades: currentGrades.filter((id) => !familyIds.includes(id)),
 				};
 			} else {
-				// Select all family grades and expand
+				// Select all family grades and expand - track usage for new grades
 				setExpandedFamilies((prevExp) => {
 					const next = new Set(prevExp);
 					next.add(rootId);
@@ -367,6 +377,10 @@ export function FilterProvider({ children, entityData: initialEntityData }: Filt
 				for (const id of familyIds) {
 					if (!newGrades.includes(id)) {
 						newGrades.push(id);
+						// Track usage for each grade being added
+						incrementFilterUsage("grades", id).catch(() => {
+							// Silently ignore storage errors
+						});
 					}
 				}
 				return { ...prev, grades: newGrades };
@@ -504,7 +518,7 @@ export function FilterProvider({ children, entityData: initialEntityData }: Filt
 			}
 
 			if (isActive) {
-				// Remove preset filters
+				// Remove preset filters - don't track usage for removal
 				const newFilters: FilterState = { ...prev };
 				for (const [key, value] of Object.entries(presetFilters)) {
 					if (Array.isArray(value) && key in newFilters) {
@@ -517,12 +531,20 @@ export function FilterProvider({ children, entityData: initialEntityData }: Filt
 				}
 				return newFilters;
 			} else {
-				// Apply preset filters (additive)
+				// Apply preset filters (additive) - track usage for new filters
 				const newFilters: FilterState = { ...prev };
 				for (const [key, value] of Object.entries(presetFilters)) {
 					if (Array.isArray(value) && key in newFilters) {
 						const typedKey = key as ArrayFilterType;
 						const current = newFilters[typedKey];
+						// Track usage for filters being added
+						for (const filterId of value) {
+							if (!current.includes(filterId)) {
+								incrementFilterUsage(typedKey as FilterType, filterId).catch(() => {
+									// Silently ignore storage errors
+								});
+							}
+						}
 						newFilters[typedKey] = [...new Set([...current, ...value])];
 					} else if (typeof value === "boolean") {
 						if (key === "hasManual") newFilters.hasManual = value;
