@@ -11,7 +11,7 @@ interface ImageWithFallbackProps {
 	maxFontSize?: number;
 }
 
-const FONT_SIZES_PX = [20, 18, 16, 14, 12, 11, 10, 9, 8];
+const FONT_SIZES_PX = [20, 18, 16, 14, 12, 11, 10, 9, 8, 7, 6];
 
 interface FittedTextProps {
 	text: string;
@@ -33,14 +33,36 @@ export function FittedText({ text, maxFontSize = 20 }: FittedTextProps): React.R
 		// Filter font sizes to only those <= maxFontSize
 		const availableSizes = FONT_SIZES_PX.filter(size => size <= maxFontSize);
 
-		// Find the largest font size that fits by measuring at each size
-		for (const size of availableSizes) {
-			textEl.style.fontSize = `${size}px`;
-			// Force reflow to ensure scrollHeight is recalculated
-			void textEl.offsetHeight;
-			if (textEl.scrollHeight <= container.clientHeight) {
-				break;
+		// Function to update font size
+		const updateFontSize = () => {
+			if (container.clientHeight === 0) return; // Still not laid out
+
+			// Find the largest font size that fits by measuring at each size
+			for (const size of availableSizes) {
+				textEl.style.fontSize = `${size}px`;
+				// Force reflow to ensure scrollHeight is recalculated
+				void textEl.offsetHeight;
+				if (textEl.scrollHeight <= container.clientHeight) {
+					break;
+				}
 			}
+		};
+
+		// Try immediately first
+		updateFontSize();
+
+		// If container has no height, use ResizeObserver to wait for layout
+		if (container.clientHeight === 0) {
+			const resizeObserver = new ResizeObserver(() => {
+				if (container.clientHeight > 0) {
+					updateFontSize();
+					resizeObserver.disconnect();
+				}
+			});
+			resizeObserver.observe(container);
+
+			// Cleanup: disconnect observer on unmount
+			return () => { resizeObserver.disconnect(); };
 		}
 	}, [text, maxFontSize]);
 
