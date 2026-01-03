@@ -1,7 +1,7 @@
 "use client";
 
 import type { Brand, Category, GradeData, ScaleData, Series } from "@hobby-ninja/data";
-import { getGradeFamilyIds, getGradeFamilyItemIds, getGradesHierarchy, resolveCdnUrl } from "@hobby-ninja/data";
+import { getGradesHierarchy, resolveCdnUrl } from "@hobby-ninja/data";
 import {
 	Badge,
 	Box,
@@ -47,6 +47,9 @@ const CARD_ASPECT_RATIO_STRING = "300 / 170";
 
 /** Padding for count section */
 const COUNT_PADDING = "2px 4px";
+
+/** Threshold for showing search input in filter sections */
+const SEARCH_THRESHOLD = 15;
 
 /** Default hover background color */
 const BG_HOVER = "var(--mantine-color-default-hover)";
@@ -294,33 +297,49 @@ interface GradeSectionProps {
 	otherCount: number;
 }
 
-function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: GradeSectionProps) {
+function GradeSection({ selectedIds, onToggle, onToggleFamily: _onToggleFamily, otherCount }: GradeSectionProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
+	const [searchQuery, setSearchQuery] = useState("");
 
 	const gradeHierarchy = useMemo(() => getGradesHierarchy(), []);
 
-	// Build flat list of grades with family info
-	const gradeEntries = useMemo(() => {
-		return gradeHierarchy.map((entry) => ({
-			root: entry.root,
-			children: entry.children,
-			totalItemCount: getGradeFamilyItemIds(entry.root.id).length,
-			familyIds: getGradeFamilyIds(entry.root.id),
-		}));
+	// Flatten hierarchy to show all grades (root + children)
+	const allGrades = useMemo(() => {
+		const grades: Array<{ grade: GradeData; isChild: boolean; parentId: string | null }> = [];
+		for (const entry of gradeHierarchy) {
+			// Add root grade
+			grades.push({ grade: entry.root, isChild: false, parentId: null });
+			// Add child grades
+			for (const child of entry.children) {
+				grades.push({ grade: child, isChild: true, parentId: entry.root.id });
+			}
+		}
+		return grades;
 	}, [gradeHierarchy]);
 
-	// Sort: selected families first, then by item count
-	const sortedEntries = useMemo(() => {
-		return gradeEntries.toSorted((a, b) => {
-			const aSelected = a.familyIds.some((id) => selectedIds.includes(id));
-			const bSelected = b.familyIds.some((id) => selectedIds.includes(id));
-			if (aSelected !== bSelected) return aSelected ? -1 : 1;
-			return b.totalItemCount - a.totalItemCount;
+	// Filter by search
+	const filteredGrades = useMemo(() => {
+		if (!searchQuery.trim()) return allGrades;
+		const query = searchQuery.toLowerCase();
+		return allGrades.filter(({ grade }) => {
+			const name = typeof grade.name === "string" ? grade.name : grade.name.en;
+			return name.toLowerCase().includes(query);
 		});
-	}, [gradeEntries, selectedIds]);
+	}, [allGrades, searchQuery]);
+
+	// Sort: selected first, then by item count
+	const sortedGrades = useMemo(() => {
+		return filteredGrades.toSorted((a, b) => {
+			const aSelected = selectedIds.includes(a.grade.id);
+			const bSelected = selectedIds.includes(b.grade.id);
+			if (aSelected !== bSelected) return aSelected ? -1 : 1;
+			return b.grade.itemIds.length - a.grade.itemIds.length;
+		});
+	}, [filteredGrades, selectedIds]);
 
 	const selectedCount = selectedIds.filter((id) => id !== OTHER_FILTER_ID).length;
 	const isOtherSelected = selectedIds.includes(OTHER_FILTER_ID);
+	const showSearch = allGrades.length > SEARCH_THRESHOLD;
 
 	return (
 		<Box>
@@ -344,6 +363,31 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 
 			<Collapse in={isExpanded}>
 				<Stack gap="xs" pb="sm">
+					{/* Search input */}
+					{showSearch && (
+						<TextInput
+							placeholder="Search grades..."
+							size="xs"
+							leftSection={<IconSearch size={14} />}
+							value={searchQuery}
+							onChange={(e) => { setSearchQuery(e.currentTarget.value); }}
+							rightSection={
+								searchQuery ? (
+									<UnstyledButton onClick={() => { setSearchQuery(""); }}>
+										<IconX size={14} />
+									</UnstyledButton>
+								) : null
+							}
+						/>
+					)}
+
+					{/* Search results count */}
+					{showSearch && searchQuery && (
+						<Text size="xs" c="dimmed">
+							{filteredGrades.length} of {allGrades.length} shown
+						</Text>
+					)}
+
 					<Box
 						style={{
 							display: "flex",
@@ -351,26 +395,17 @@ function GradeSection({ selectedIds, onToggle, onToggleFamily, otherCount }: Gra
 							gap: 8,
 						}}
 					>
-						{sortedEntries.map((entry) => {
-							const isAnySelected = entry.familyIds.some((id) => selectedIds.includes(id));
-							return (
-								<MiniEntityCard
-									key={entry.root.id}
-									id={entry.root.id}
-									name={entry.root.name}
-									itemCount={entry.totalItemCount}
-									image={entry.root.image}
-									isSelected={isAnySelected}
-									onToggle={() => {
-										if (entry.children.length > 0) {
-											onToggleFamily(entry.root.id);
-										} else {
-											onToggle(entry.root.id);
-										}
-									}}
-								/>
-							);
-						})}
+						{sortedGrades.map(({ grade }) => (
+							<MiniEntityCard
+								key={grade.id}
+								id={grade.id}
+								name={grade.name}
+								itemCount={grade.itemIds.length}
+								image={grade.image}
+								isSelected={selectedIds.includes(grade.id)}
+								onToggle={() => { onToggle(grade.id); }}
+							/>
+						))}
 
 						{/* "Other" card */}
 						{otherCount > 0 && (
