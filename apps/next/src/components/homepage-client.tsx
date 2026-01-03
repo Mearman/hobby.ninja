@@ -17,7 +17,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
 import { EntityCard } from "@/components/entity-card";
-import { ExploreSection, OTHER_FILTER_ID, type ArrayFilterType, type ExploreSectionHandle, type FilterState } from "@/components/explore-section";
+import { ExploreSection, OTHER_FILTER_ID, type ExploreSectionHandle } from "@/components/explore-section";
 import { YearScrollbar } from "@/components/ui/year-scrollbar";
 import { useFilters, type FilterEntityData } from "@/contexts/filter-context";
 import { useStickyFilters } from "@/contexts/sticky-filters-context";
@@ -84,71 +84,14 @@ export function HomepageClient({ categories, series, grades, brands, scales, yea
  * Inner component that contains the homepage logic
  */
 function HomepageClientContent({ categories, series, grades, brands, scales, years, items }: HomepageClientProps): React.ReactElement {
-	// Get filter context for syncing with sidebar
-	const filterContext = useFilters();
-
-	const [filters, setFilters] = useState<FilterState>({
-		categories: [],
-		series: [],
-		brands: [],
-		grades: [],
-		scales: [],
-		years: [],
-		hasManual: false,
-		hasGlobalSite: false,
-	});
-
-	// Track if we're updating from context to avoid loops
-	const isUpdatingFromContext = useRef(false);
-	const prevContextFiltersRef = useRef(filterContext.filters);
-
-	// Sync local filters to context (for sidebar to read)
-	useEffect(() => {
-		if (!isUpdatingFromContext.current) {
-			filterContext.setFilters(filters);
-		}
-	}, [filters, filterContext]);
-
-	// Sync context filters to local state (when sidebar changes filters)
-	// Using layout effect to ensure state sync happens before paint
-	useEffect(() => {
-		const contextFilters = filterContext.filters;
-		const prevContextFilters = prevContextFiltersRef.current;
-
-		// Only update if context changed from external source (not from our own sync)
-		const contextChanged =
-			contextFilters.categories.join(",") !== prevContextFilters.categories.join(",") ||
-			contextFilters.series.join(",") !== prevContextFilters.series.join(",") ||
-			contextFilters.brands.join(",") !== prevContextFilters.brands.join(",") ||
-			contextFilters.grades.join(",") !== prevContextFilters.grades.join(",") ||
-			contextFilters.scales.join(",") !== prevContextFilters.scales.join(",") ||
-			contextFilters.years.join(",") !== prevContextFilters.years.join(",") ||
-			contextFilters.hasManual !== prevContextFilters.hasManual ||
-			contextFilters.hasGlobalSite !== prevContextFilters.hasGlobalSite;
-
-		prevContextFiltersRef.current = contextFilters;
-
-		if (contextChanged && !isUpdatingFromContext.current) {
-			const localDifferent =
-				contextFilters.categories.join(",") !== filters.categories.join(",") ||
-				contextFilters.series.join(",") !== filters.series.join(",") ||
-				contextFilters.brands.join(",") !== filters.brands.join(",") ||
-				contextFilters.grades.join(",") !== filters.grades.join(",") ||
-				contextFilters.scales.join(",") !== filters.scales.join(",") ||
-				contextFilters.years.join(",") !== filters.years.join(",") ||
-				contextFilters.hasManual !== filters.hasManual ||
-				contextFilters.hasGlobalSite !== filters.hasGlobalSite;
-
-			if (localDifferent) {
-				isUpdatingFromContext.current = true;
-				// eslint-disable-next-line react-hooks/set-state-in-effect -- Intentional sync from context
-				setFilters(contextFilters);
-				requestAnimationFrame(() => {
-					isUpdatingFromContext.current = false;
-				});
-			}
-		}
-	}, [filterContext.filters, filters]);
+	// Use filter context directly as single source of truth
+	const {
+		filters,
+		toggleFilter,
+		clearFilters,
+		hasActiveFilters,
+		selectedCount,
+	} = useFilters();
 
 	// Year scrollbar data - all years for initial render
 	const allYearNumbers = useMemo(
@@ -213,65 +156,10 @@ function HomepageClientContent({ categories, series, grades, brands, scales, yea
 		[brands],
 	);
 
-	// Track release date (as YYYYMMDD number) of center item to restore after filter changes
-	const dateToRestoreRef = useRef<number | null>(null);
-
-	// Helper to capture current center item's date before filter changes
-	const captureViewPosition = useCallback(() => {
-		const centerDate = exploreSectionRef.current?.getCenterItemDate();
-		if (centerDate !== null && centerDate !== undefined) {
-			dateToRestoreRef.current = centerDate;
-		}
-	}, []);
-
-	// Restore scroll position to item with closest date after filter changes
-	useEffect(() => {
-		if (dateToRestoreRef.current !== null) {
-			const dateToRestore = dateToRestoreRef.current;
-			dateToRestoreRef.current = null;
-			// Small delay to let filtered items render
-			const timeoutId = setTimeout(() => {
-				exploreSectionRef.current?.scrollToNearestDate(dateToRestore);
-			}, 50);
-			return () => { clearTimeout(timeoutId); };
-		}
-	}, [filters]);
-
-	const toggleFilter = useCallback((type: ArrayFilterType, id: string) => {
-		captureViewPosition();
-		setFilters((prev) => {
-			const current = prev[type];
-			const isSelected = current.includes(id);
-			return {
-				...prev,
-				[type]: isSelected
-					? current.filter((i) => i !== id)
-					: [...current, id],
-			};
-		});
-	}, [captureViewPosition]);
-
-	const clearFilters = useCallback(() => {
-		captureViewPosition();
-		setFilters({ categories: [], series: [], brands: [], grades: [], scales: [], years: [], hasManual: false, hasGlobalSite: false });
-	}, [captureViewPosition]);
-
-	const hasActiveFilters =
-		filters.categories.length > 0 ||
-		filters.series.length > 0 ||
-		filters.brands.length > 0 ||
-		filters.grades.length > 0 ||
-		filters.scales.length > 0 ||
-		filters.years.length > 0 ||
-		filters.hasManual ||
-		filters.hasGlobalSite;
-
 	// Sync hasActiveFilters to context for header button visibility
 	useEffect(() => {
 		stickyFilters.setHasActiveFilters(hasActiveFilters);
 	}, [hasActiveFilters, stickyFilters]);
-
-	const selectedCount = filters.categories.length + filters.series.length + filters.brands.length + filters.grades.length + filters.scales.length + filters.years.length + (filters.hasManual ? 1 : 0) + (filters.hasGlobalSite ? 1 : 0);
 
 	// Count items without categories/series/brands/grades/scales/years for "Other" option
 	const otherCounts = useMemo(() => ({
