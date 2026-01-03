@@ -371,19 +371,25 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 
 			<Collapse in={isExpanded}>
 				<Stack gap="xs" pb="sm">
-					{sortedHierarchy.map((entry) => {
-						const { root, children } = entry;
-						const hasChildren = children.length > 0;
-						const isFamilyExpanded = expandedFamilies.has(root.id);
-						const familyIds = getGradeFamilyIds(root.id);
-						const selectedInFamily = familyIds.filter((id) => selectedIds.includes(id));
-						const isAnySelected = selectedInFamily.length > 0;
-						const totalFamilyItems = root.itemIds.length + children.reduce((sum, c) => sum + c.itemIds.length, 0);
+					{/* Parent grades grid */}
+					<Box
+						style={{
+							display: "flex",
+							flexWrap: "wrap",
+							gap: 8,
+						}}
+					>
+						{sortedHierarchy.map((entry) => {
+							const { root, children } = entry;
+							const hasChildren = children.length > 0;
+							const familyIds = getGradeFamilyIds(root.id);
+							const selectedInFamily = familyIds.filter((id) => selectedIds.includes(id));
+							const isAnySelected = selectedInFamily.length > 0;
+							const totalFamilyItems = root.itemIds.length + children.reduce((sum, c) => sum + c.itemIds.length, 0);
 
-						return (
-							<Box key={root.id}>
-								{/* Parent grade card - click to expand/collapse if has children, or toggle if no children */}
+							return (
 								<MiniEntityCard
+									key={root.id}
 									id={root.id}
 									name={root.name}
 									itemCount={totalFamilyItems}
@@ -396,56 +402,61 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 											onToggle(root.id);
 										}
 									}}
-									badge={hasChildren ? (isFamilyExpanded ? "▾" : "▸") : undefined}
+									badge={hasChildren ? (expandedFamilies.has(root.id) ? "▾" : "▸") : undefined}
 								/>
+							);
+						})}
 
-								{/* Child grades (when expanded) */}
-								{hasChildren && (
-									<Collapse in={isFamilyExpanded}>
-										<Box
-											mt="xs"
-											ml={28}
-											pl="xs"
-											style={{
-												borderLeft: "2px solid var(--mantine-color-blue-light)",
-											}}
-										>
-											<Box
-												style={{
-													display: "flex",
-													flexWrap: "wrap",
-													gap: 8,
-												}}
-											>
-												{children.map((child) => (
-													<MiniEntityCard
-														key={child.id}
-														id={child.id}
-														name={child.name}
-														itemCount={child.itemIds.length}
-														image={child.image}
-														isSelected={selectedIds.includes(child.id)}
-														onToggle={() => { onToggle(child.id); }}
-													/>
-												))}
-											</Box>
-										</Box>
-									</Collapse>
-								)}
-							</Box>
+						{/* "Other" card */}
+						{otherCount > 0 && (
+							<MiniEntityCard
+								id={OTHER_FILTER_ID}
+								name="Other"
+								itemCount={otherCount}
+								isSelected={isOtherSelected}
+								onToggle={() => { onToggle(OTHER_FILTER_ID); }}
+							/>
+						)}
+					</Box>
+
+					{/* Expanded children sections */}
+					{sortedHierarchy.map((entry) => {
+						const { root, children } = entry;
+						if (children.length === 0) return null;
+						const isFamilyExpanded = expandedFamilies.has(root.id);
+
+						return (
+							<Collapse key={`${root.id}-children`} in={isFamilyExpanded}>
+								<Box
+									pl="xs"
+									style={{
+										borderLeft: "2px solid var(--mantine-color-blue-light)",
+									}}
+								>
+									<Text size="xs" c="dimmed" mb={4}>{root.name.en} variants</Text>
+									<Box
+										style={{
+											display: "flex",
+											flexWrap: "wrap",
+											gap: 8,
+										}}
+									>
+										{children.map((child) => (
+											<MiniEntityCard
+												key={child.id}
+												id={child.id}
+												name={child.name}
+												itemCount={child.itemIds.length}
+												image={child.image}
+												isSelected={selectedIds.includes(child.id)}
+												onToggle={() => { onToggle(child.id); }}
+											/>
+										))}
+									</Box>
+								</Box>
+							</Collapse>
 						);
 					})}
-
-					{/* "Other" card */}
-					{otherCount > 0 && (
-						<MiniEntityCard
-							id={OTHER_FILTER_ID}
-							name="Other"
-							itemCount={otherCount}
-							isSelected={isOtherSelected}
-							onToggle={() => { onToggle(OTHER_FILTER_ID); }}
-						/>
-					)}
 				</Stack>
 			</Collapse>
 		</Box>
