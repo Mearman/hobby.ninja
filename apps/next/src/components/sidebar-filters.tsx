@@ -27,11 +27,12 @@ import {
 	IconWorld,
 	IconX,
 } from "@tabler/icons-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import type { YearData } from "@/components/homepage-client";
 import { FittedText, ImageWithFallback } from "@/components/image-with-fallback";
-import { OTHER_FILTER_ID, useFilters } from "@/contexts/filter-context";
+import { OTHER_FILTER_ID, useFilters, type FilterPreset } from "@/contexts/filter-context";
+import { getTopUsedFilters, type FilterUsage } from "@/lib/collection-storage";
 
 // ============================================================================
 // Types
@@ -643,6 +644,66 @@ function GradeSection({ selectedIds, onToggle, onClear, onSelectAll, otherCount 
 // Main Component (inner content when context is available)
 // ============================================================================
 
+/** Maximum number of quick filters to display */
+const MAX_QUICK_FILTERS = 8;
+
+/** Convert filter usage records to presets */
+function usageToPresets(
+	usageRecords: FilterUsage[],
+	entityData: ReturnType<typeof useFilters>["entityData"],
+): FilterPreset[] {
+	return usageRecords.map((usage) => {
+		const { filterType, filterId } = usage;
+
+		// Build label based on filter type
+		let label = filterId;
+		switch (filterType) {
+			case "grades": {
+				const grade = entityData.grades.find((g) => g.id === filterId);
+				if (grade) label = typeof grade.name === "string" ? grade.name : (grade.name.en ?? grade.name.ja);
+		
+				break;
+			}
+			case "years": {
+				label = filterId; // Year ID is the label
+		
+				break;
+			}
+			case "brands": {
+				const brand = entityData.brands.find((b) => b.id === filterId);
+				if (brand) label = typeof brand.name === "string" ? brand.name : (brand.name.en ?? brand.name.ja);
+		
+				break;
+			}
+			case "series": {
+				const series = entityData.series.find((s) => s.id === filterId);
+				if (series) label = typeof series.name === "string" ? series.name : (series.name.en ?? series.name.ja);
+		
+				break;
+			}
+			case "categories": {
+				const category = entityData.categories.find((c) => c.id === filterId);
+				if (category) label = typeof category.name === "string" ? category.name : (category.name.en ?? category.name.ja);
+		
+				break;
+			}
+			case "scales": {
+				const scale = entityData.scales.find((s) => s.id === filterId);
+				if (scale) label = scale.name; // ScaleData.name is always a string
+		
+				break;
+			}
+		// No default
+		}
+
+		return {
+			id: `${filterType}:${filterId}`,
+			label,
+			filters: { [filterType]: [filterId] } as Partial<FilterPreset["filters"]>,
+		};
+	});
+}
+
 function SidebarFiltersContent() {
 	const {
 		isReady,
@@ -658,12 +719,29 @@ function SidebarFiltersContent() {
 		filteredItemCount,
 		entityData,
 		otherCounts,
-		presets,
+		presets: defaultPresets,
 		applyPreset,
 		isPresetActive,
 	} = useFilters();
 
 	const [filtersExpanded, setFiltersExpanded] = useState(true);
+	const [topUsedFilters, setTopUsedFilters] = useState<FilterUsage[]>([]);
+
+	// Fetch top used filters on mount
+	useEffect(() => {
+		getTopUsedFilters(MAX_QUICK_FILTERS).then(setTopUsedFilters).catch(() => {
+			// Silently ignore storage errors
+		});
+	}, []);
+
+	// Convert usage data to presets
+	const dynamicPresets = useMemo(() => {
+		if (!isReady || topUsedFilters.length === 0) return [];
+		return usageToPresets(topUsedFilters, entityData);
+	}, [isReady, topUsedFilters, entityData]);
+
+	// Use dynamic presets if available, otherwise fall back to defaults
+	const quickFilterPresets = dynamicPresets.length > 0 ? dynamicPresets : defaultPresets;
 
 	// P-Bandai child brand IDs - filtered from display
 	const displayBrands = useMemo(() => {
@@ -709,16 +787,38 @@ function SidebarFiltersContent() {
 				<Stack gap={0} px="md">
 					{/* Quick presets */}
 					<Box py="xs">
-						<Text size="xs" c="dimmed" mb="xs">Quick filters</Text>
+						<Text size="xs" c="dimmed" mb="xs">
+							{dynamicPresets.length > 0 ? "Frequently used" : "Quick filters"}
+						</Text>
 						<Group gap="xs">
-							{presets.map((preset) => {
-								// Look up data for grade or year presets
+							{quickFilterPresets.map((preset) => {
+								// Look up image and item count based on filter type
 								const gradeId = preset.filters.grades?.[0];
 								const yearId = preset.filters.years?.[0];
+								const brandId = preset.filters.brands?.[0];
+								const seriesId = preset.filters.series?.[0];
+								const categoryId = preset.filters.categories?.[0];
+								const scaleId = preset.filters.scales?.[0];
+
 								const grade = gradeId ? entityData.grades.find((g) => g.id === gradeId) : null;
 								const year = yearId ? entityData.years.find((y) => y.id === yearId) : null;
-								const image = grade?.image;
-								const itemCount = grade?.itemIds.length ?? year?.itemIds.length ?? 0;
+								const brand = brandId ? entityData.brands.find((b) => b.id === brandId) : null;
+								const series = seriesId ? entityData.series.find((s) => s.id === seriesId) : null;
+								const category = categoryId ? entityData.categories.find((c) => c.id === categoryId) : null;
+								const scale = scaleId ? entityData.scales.find((s) => s.id === scaleId) : null;
+
+								// Get image (grades, brands, series, categories have images)
+								const image = grade?.image ?? brand?.image ?? series?.image ?? category?.image;
+
+								// Get item count from whichever entity matched
+								const itemCount =
+									grade?.itemIds.length ??
+									year?.itemIds.length ??
+									brand?.itemIds.length ??
+									series?.itemIds.length ??
+									category?.itemIds.length ??
+									scale?.itemIds.length ??
+									0;
 
 								return (
 									<PresetChip
