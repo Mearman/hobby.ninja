@@ -2,6 +2,7 @@
 
 import {
 	Anchor,
+	Box,
 	Drawer,
 	Stack,
 	Group,
@@ -11,8 +12,10 @@ import {
 	ActionIcon,
 	ScrollArea,
 	ThemeIcon,
+	Tooltip,
 	UnstyledButton,
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import {
 	IconArrowsDiagonal,
 	IconArrowsDiagonalMinimize,
@@ -20,7 +23,10 @@ import {
 	IconFilterDown,
 	IconFilterUp,
 	IconMoon,
+	IconPin,
+	IconPinFilled,
 	IconSun,
+	IconX,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -32,6 +38,9 @@ import { isPathActive } from "@/lib/navigation-utils";
 import { useThemeContext } from "@/providers/mantine-provider";
 import { fadeIn } from "@/styles/components.css";
 
+/** Sidebar width when pinned */
+export const SIDEBAR_WIDTH = 300;
+
 interface NavigationProps {
 	opened: boolean;
 	onClose: () => void;
@@ -39,6 +48,8 @@ interface NavigationProps {
 
 const ARIA_LABELS = {
 	CLOSE_MENU: "Close menu",
+	PIN_SIDEBAR: "Pin sidebar",
+	UNPIN_SIDEBAR: "Unpin sidebar",
 } as const;
 
 const NAVIGATION_ITEM_BASE_STYLES = {
@@ -60,37 +71,39 @@ const THEME_COLORS = {
 	DIMMED: "var(--mantine-color-dimmed)",
 } as const;
 
-export function Navigation({ opened, onClose }: NavigationProps) {
+/** Shared navigation content used in both drawer and pinned sidebar modes */
+function NavigationContent({ onClose, isPinned, isDesktop }: { onClose: () => void; isPinned: boolean; isDesktop: boolean }) {
 	const pathname = usePathname();
-	const { colorScheme, cycleTheme, fullWidth, toggleFullWidth } = useThemeContext();
+	const { colorScheme, cycleTheme, fullWidth, toggleFullWidth, sidebarPinned, toggleSidebarPinned } = useThemeContext();
 	const stickyFilters = useStickyFilters();
 
 	return (
-		<Drawer
-			opened={opened}
-			onClose={onClose}
-			size={300}
-			padding={0}
-			withCloseButton={false}
-			className={fadeIn}
-			styles={{
-				body: {
-					display: "flex",
-					flexDirection: "column",
-					height: "100%",
-				},
-				content: {
-					backgroundColor: "var(--mantine-color-body)",
-				},
-			}}
-		>
+		<>
 			{/* Header */}
 			<Stack p="md" gap="xs">
 				<Group justify="space-between" align="center">
 					<Title order={3}>Menu</Title>
-					<ActionIcon variant="subtle" onClick={onClose} aria-label={ARIA_LABELS.CLOSE_MENU}>
-						×
-					</ActionIcon>
+					<Group gap={4}>
+						{/* Pin button - only show on desktop */}
+						{isDesktop && (
+							<Tooltip label={sidebarPinned ? "Unpin sidebar" : "Pin sidebar"} position="bottom">
+								<ActionIcon
+									variant={sidebarPinned ? "filled" : "subtle"}
+									color={sidebarPinned ? "blue" : "gray"}
+									onClick={toggleSidebarPinned}
+									aria-label={sidebarPinned ? ARIA_LABELS.UNPIN_SIDEBAR : ARIA_LABELS.PIN_SIDEBAR}
+								>
+									{sidebarPinned ? <IconPinFilled size={16} /> : <IconPin size={16} />}
+								</ActionIcon>
+							</Tooltip>
+						)}
+						{/* Close button - only show when not pinned */}
+						{!isPinned && (
+							<ActionIcon variant="subtle" onClick={onClose} aria-label={ARIA_LABELS.CLOSE_MENU}>
+								<IconX size={16} />
+							</ActionIcon>
+						)}
+					</Group>
 				</Group>
 			</Stack>
 
@@ -160,7 +173,7 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 									href={action.href}
 									w="100%"
 									p="md"
-									onClick={onClose}
+									onClick={isPinned ? undefined : onClose}
 									style={{
 										...NAVIGATION_ITEM_BASE_STYLES,
 										backgroundColor: active ? THEME_COLORS.ACTIVE_BG : "transparent",
@@ -218,11 +231,65 @@ export function Navigation({ opened, onClose }: NavigationProps) {
 				<Text size="xs" c="dimmed" ta="center">
 					hobby.ninja is an unofficial fan reference. Not affiliated with BANDAI SPIRITS.
 					All trademarks belong to their respective owners.{" "}
-					<Anchor component={Link} href="/about" size="xs" onClick={onClose}>
+					<Anchor component={Link} href="/about" size="xs" onClick={isPinned ? undefined : onClose}>
 						About
 					</Anchor>
 				</Text>
 			</Stack>
+		</>
+	);
+}
+
+export function Navigation({ opened, onClose }: NavigationProps) {
+	const { sidebarPinned } = useThemeContext();
+	// Desktop breakpoint (md = 768px in Mantine default)
+	const isDesktop = useMediaQuery("(min-width: 992px)");
+	const isPinned = isDesktop && sidebarPinned;
+
+	// When pinned on desktop, render as fixed sidebar
+	if (isPinned) {
+		return (
+			<Box
+				component="aside"
+				style={{
+					position: "fixed",
+					top: 0,
+					left: 0,
+					width: SIDEBAR_WIDTH,
+					height: "100vh",
+					display: "flex",
+					flexDirection: "column",
+					backgroundColor: "var(--mantine-color-body)",
+					borderRight: "1px solid var(--mantine-color-default-border)",
+					zIndex: 100,
+				}}
+			>
+				<NavigationContent onClose={onClose} isPinned={true} isDesktop={true} />
+			</Box>
+		);
+	}
+
+	// Otherwise, render as drawer
+	return (
+		<Drawer
+			opened={opened}
+			onClose={onClose}
+			size={SIDEBAR_WIDTH}
+			padding={0}
+			withCloseButton={false}
+			className={fadeIn}
+			styles={{
+				body: {
+					display: "flex",
+					flexDirection: "column",
+					height: "100%",
+				},
+				content: {
+					backgroundColor: "var(--mantine-color-body)",
+				},
+			}}
+		>
+			<NavigationContent onClose={onClose} isPinned={false} isDesktop={isDesktop} />
 		</Drawer>
 	);
 }

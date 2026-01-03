@@ -11,6 +11,7 @@ import { theme } from "../lib/theme";
 // LocalStorage keys for preferences
 const STORAGE_KEY_COLOR_SCHEME = "hobby-ninja-color-scheme";
 const STORAGE_KEY_FULL_WIDTH = "hobby-ninja-full-width";
+const STORAGE_KEY_SIDEBAR_PINNED = "hobby-ninja-sidebar-pinned";
 
 // Theme context value type
 export interface ThemeContextValue {
@@ -19,6 +20,8 @@ export interface ThemeContextValue {
 	cycleTheme: () => void;
 	fullWidth: boolean;
 	toggleFullWidth: () => void;
+	sidebarPinned: boolean;
+	toggleSidebarPinned: () => void;
 }
 
 // Create context for theme functions (exported for Storybook)
@@ -42,6 +45,7 @@ function useTheme() {
 	// Initialize with system preference but allow client-side switching
 	const [colorScheme, setColorScheme] = React.useState<"light" | "dark" | "system">("system");
 	const [fullWidth, setFullWidth] = React.useState(false);
+	const [sidebarPinned, setSidebarPinned] = React.useState(false);
 	const [mounted, setMounted] = React.useState(false);
 
 	// Mark when component is mounted on client and restore preferences
@@ -55,6 +59,10 @@ function useTheme() {
 		const savedFullWidth = localStorage.getItem(STORAGE_KEY_FULL_WIDTH);
 		if (savedFullWidth === "true") {
 			setFullWidth(true);
+		}
+		const savedSidebarPinned = localStorage.getItem(STORAGE_KEY_SIDEBAR_PINNED);
+		if (savedSidebarPinned === "true") {
+			setSidebarPinned(true);
 		}
 	}, []);
 
@@ -71,6 +79,13 @@ function useTheme() {
 			localStorage.setItem(STORAGE_KEY_FULL_WIDTH, String(fullWidth));
 		}
 	}, [mounted, fullWidth]);
+
+	// Persist sidebar pinned preference to localStorage
+	React.useEffect(() => {
+		if (mounted) {
+			localStorage.setItem(STORAGE_KEY_SIDEBAR_PINNED, String(sidebarPinned));
+		}
+	}, [mounted, sidebarPinned]);
 
 	const getEffectiveColorScheme = (): "light" | "dark" => {
 		if (!mounted) return "light"; // Default for SSR
@@ -95,6 +110,10 @@ function useTheme() {
 		setFullWidth(prev => !prev);
 	};
 
+	const toggleSidebarPinned = () => {
+		setSidebarPinned(prev => !prev);
+	};
+
 	// Listen for system preference changes when in "system" mode
 	React.useEffect(() => {
 		if (!mounted || colorScheme !== "system") return;
@@ -115,14 +134,16 @@ function useTheme() {
 		cycleTheme,
 		fullWidth,
 		toggleFullWidth,
+		sidebarPinned,
+		toggleSidebarPinned,
 	};
 }
 
 export function MantineThemeProvider({ children }: MantineThemeProviderProps) {
-	const { colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth } = useTheme();
+	const { colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth, sidebarPinned, toggleSidebarPinned } = useTheme();
 
 	return (
-		<ThemeContext.Provider value={{ colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth }}>
+		<ThemeContext.Provider value={{ colorScheme, effectiveColorScheme, cycleTheme, fullWidth, toggleFullWidth, sidebarPinned, toggleSidebarPinned }}>
 			<MantineProvider
 				theme={theme}
 				defaultColorScheme={effectiveColorScheme}
