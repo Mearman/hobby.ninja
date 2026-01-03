@@ -20,8 +20,6 @@ import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import sonarjs from "eslint-plugin-sonarjs";
-// @ts-expect-error - no types available
-import storybook from "eslint-plugin-storybook";
 import unicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
 
@@ -78,6 +76,10 @@ export default [
 			"specs/**",
 			"scripts/*.js",
 			"packages/cli/tests/**",
+			// Storybook files - linted and type-checked separately
+			"**/.storybook/**",
+			"**/stories/**",
+			"**/*.stories.*",
 		],
 	},
 
@@ -878,39 +880,4 @@ export default [
 			"no-irregular-whitespace": "off",
 		},
 	},
-	// Storybook files configuration - disable all type-checked linting
-	{
-		...tseslint.configs.disableTypeChecked,
-		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
-	},
-	{
-		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
-		languageOptions: {
-			parser: typescriptParser,
-			parserOptions: {
-				project: false, // Storybook files not in main tsconfig
-				ecmaVersion: "latest",
-				sourceType: "module",
-				ecmaFeatures: {
-					jsx: true,
-				},
-			},
-		},
-		plugins: {
-			storybook: storybook as unknown as ESLint.Plugin,
-		},
-		rules: {
-			// Storybook best practices
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- storybook plugin lacks proper types
-			...(storybook.configs.recommended.rules as Record<string, unknown>),
-			"storybook/story-exports": "error",
-			"storybook/csf-component": "warn",
-			"storybook/no-redundant-story-name": "warn",
-			"storybook/prefer-pascal-case": "warn",
-			// Allow default exports in stories (required by CSF format)
-			"import/no-default-export": "off",
-			// Disable react-refresh for stories (they're not HMR components)
-			"react-refresh/only-export-components": "off",
-		},
-	},
-	];
+];
