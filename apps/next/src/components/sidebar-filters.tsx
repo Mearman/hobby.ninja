@@ -3,6 +3,7 @@
 import type { Brand, Category, GradeData, ScaleData, Series } from "@hobby-ninja/data";
 import { getGradeFamilyIds, getGradesHierarchy, resolveCdnUrl } from "@hobby-ninja/data";
 import {
+	ActionIcon,
 	Badge,
 	Box,
 	Button,
@@ -13,6 +14,7 @@ import {
 	Switch,
 	Text,
 	TextInput,
+	Tooltip,
 	UnstyledButton,
 } from "@mantine/core";
 import {
@@ -20,6 +22,8 @@ import {
 	IconChevronDown,
 	IconChevronUp,
 	IconSearch,
+	IconSortAscendingLetters,
+	IconSortDescendingNumbers,
 	IconWorld,
 	IconX,
 } from "@tabler/icons-react";
@@ -50,6 +54,14 @@ const COUNT_PADDING = "2px 4px";
 
 /** Default hover background color */
 const BG_HOVER = "var(--mantine-color-default-hover)";
+
+/** Helper to get entity name as string */
+function getEntityName(entity: FilterableEntity): string {
+	const entityName = entity.name;
+	return typeof entityName === "string"
+		? entityName
+		: (entityName.en ?? entityName.ja);
+}
 
 // ============================================================================
 // Mini Entity Card
@@ -164,15 +176,22 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }:
 // Filter Section
 // ============================================================================
 
+/** Sort mode for filter sections */
+type SortMode = "count" | "name";
+
 interface FilterSectionProps {
 	title: string;
 	entities: FilterableEntity[];
 	selectedIds: string[];
 	onToggle: (id: string) => void;
+	onClear: () => void;
+	onSelectAll: () => void;
 	otherCount?: number;
 	showSearch?: boolean;
 	getImage?: (entity: FilterableEntity) => string | undefined;
 	getItemCount?: (entity: FilterableEntity) => number;
+	/** Default sort mode (default: "count") */
+	defaultSort?: SortMode;
 }
 
 function FilterSection({
@@ -180,13 +199,17 @@ function FilterSection({
 	entities,
 	selectedIds,
 	onToggle,
+	onClear,
+	onSelectAll,
 	otherCount = 0,
 	showSearch = false,
 	getImage = (e) => (e as { image?: string }).image,
 	getItemCount = (e) => (e as { itemIds?: string[] }).itemIds?.length ?? 0,
+	defaultSort = "count",
 }: FilterSectionProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [searchQuery, setSearchQuery] = useState("");
+	const [sortMode, setSortMode] = useState<SortMode>(defaultSort);
 
 	const selectedCount = selectedIds.length;
 
@@ -204,15 +227,19 @@ function FilterSection({
 		});
 	}, [entities, searchQuery]);
 
-	// Sort: selected items first, then by item count
+	// Sort: selected items first, then by sort mode
 	const sortedEntities = useMemo(() => {
 		return filteredEntities.toSorted((a, b) => {
 			const aSelected = selectedIds.includes(a.id);
 			const bSelected = selectedIds.includes(b.id);
 			if (aSelected !== bSelected) return aSelected ? -1 : 1;
+
+			if (sortMode === "name") {
+				return getEntityName(a).localeCompare(getEntityName(b));
+			}
 			return getItemCount(b) - getItemCount(a);
 		});
-	}, [filteredEntities, selectedIds, getItemCount]);
+	}, [filteredEntities, selectedIds, getItemCount, sortMode]);
 
 	// Include "Other" option
 	const showOther = otherCount > 0;
@@ -221,12 +248,10 @@ function FilterSection({
 	return (
 		<Box>
 			{/* Section header */}
-			<UnstyledButton
-				onClick={() => { setIsExpanded(!isExpanded); }}
-				w="100%"
-				py="xs"
-			>
-				<Group justify="space-between">
+			<Group justify="space-between" py="xs">
+				<UnstyledButton
+					onClick={() => { setIsExpanded(!isExpanded); }}
+				>
 					<Group gap="xs">
 						<Text size="sm" fw={600}>{title}</Text>
 						{selectedCount > 0 && (
@@ -234,10 +259,35 @@ function FilterSection({
 								{selectedCount}
 							</Badge>
 						)}
+						{isExpanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
 					</Group>
-					{isExpanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
-				</Group>
-			</UnstyledButton>
+				</UnstyledButton>
+
+				{/* Controls - only show when expanded */}
+				{isExpanded && (
+					<Group gap={4}>
+						{/* Select all/none toggle */}
+						<UnstyledButton
+							onClick={selectedCount > 0 ? onClear : onSelectAll}
+						>
+							<Text size="xs" c="dimmed">
+								{selectedCount > 0 ? "None" : "All"}
+							</Text>
+						</UnstyledButton>
+
+						{/* Sort toggle */}
+						<Tooltip label={sortMode === "count" ? "Sort by name" : "Sort by count"} position="top">
+							<ActionIcon
+								variant="subtle"
+								size="xs"
+								onClick={() => { setSortMode((prev) => prev === "count" ? "name" : "count"); }}
+							>
+								{sortMode === "count" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
+							</ActionIcon>
+						</Tooltip>
+					</Group>
+				)}
+			</Group>
 
 			<Collapse in={isExpanded}>
 				<Stack gap="xs" pb="sm">
@@ -307,19 +357,25 @@ function FilterSection({
 // Grade Section (with hierarchy)
 // ============================================================================
 
+/** Sort mode for grades - default keeps standard grade ordering */
+type GradeSortMode = "default" | "count";
+
 interface GradeSectionProps {
 	selectedIds: string[];
 	onToggle: (id: string) => void;
+	onClear: () => void;
+	onSelectAll: () => void;
 	otherCount: number;
 }
 
-function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) {
+function GradeSection({ selectedIds, onToggle, onClear, onSelectAll, otherCount }: GradeSectionProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
+	const [sortMode, setSortMode] = useState<GradeSortMode>("default");
 
 	const gradeHierarchy = useMemo(() => getGradesHierarchy(), []);
 
-	// Sort hierarchy: families with selections first, then by total item count
+	// Sort hierarchy based on mode
 	const sortedHierarchy = useMemo(() => {
 		return gradeHierarchy.toSorted((a, b) => {
 			const aFamilyIds = getGradeFamilyIds(a.root.id);
@@ -327,12 +383,18 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 			const aHasSelection = aFamilyIds.some((id) => selectedIds.includes(id));
 			const bHasSelection = bFamilyIds.some((id) => selectedIds.includes(id));
 			if (aHasSelection !== bHasSelection) return aHasSelection ? -1 : 1;
-			// Sort by total item count in family
-			const aTotalItems = a.root.itemIds.length + a.children.reduce((sum, c) => sum + c.itemIds.length, 0);
-			const bTotalItems = b.root.itemIds.length + b.children.reduce((sum, c) => sum + c.itemIds.length, 0);
-			return bTotalItems - aTotalItems;
+
+			if (sortMode === "count") {
+				// Sort by total item count in family
+				const aTotalItems = a.root.itemIds.length + a.children.reduce((sum, c) => sum + c.itemIds.length, 0);
+				const bTotalItems = b.root.itemIds.length + b.children.reduce((sum, c) => sum + c.itemIds.length, 0);
+				return bTotalItems - aTotalItems;
+			}
+
+			// Default: use sortOrder from grade data
+			return a.root.sortOrder - b.root.sortOrder;
 		});
-	}, [gradeHierarchy, selectedIds]);
+	}, [gradeHierarchy, selectedIds, sortMode]);
 
 	const selectedCount = selectedIds.filter((id) => id !== OTHER_FILTER_ID).length;
 	const isOtherSelected = selectedIds.includes(OTHER_FILTER_ID);
@@ -351,12 +413,11 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 
 	return (
 		<Box>
-			<UnstyledButton
-				onClick={() => { setIsExpanded(!isExpanded); }}
-				w="100%"
-				py="xs"
-			>
-				<Group justify="space-between">
+			{/* Section header */}
+			<Group justify="space-between" py="xs">
+				<UnstyledButton
+					onClick={() => { setIsExpanded(!isExpanded); }}
+				>
 					<Group gap="xs">
 						<Text size="sm" fw={600}>Grade</Text>
 						{selectedCount > 0 && (
@@ -364,10 +425,35 @@ function GradeSection({ selectedIds, onToggle, otherCount }: GradeSectionProps) 
 								{selectedCount}
 							</Badge>
 						)}
+						{isExpanded ? <IconChevronUp size={14} /> : <IconChevronDown size={14} />}
 					</Group>
-					{isExpanded ? <IconChevronUp size={16} /> : <IconChevronDown size={16} />}
-				</Group>
-			</UnstyledButton>
+				</UnstyledButton>
+
+				{/* Controls - only show when expanded */}
+				{isExpanded && (
+					<Group gap={4}>
+						{/* Select all/none toggle */}
+						<UnstyledButton
+							onClick={selectedCount > 0 ? onClear : onSelectAll}
+						>
+							<Text size="xs" c="dimmed">
+								{selectedCount > 0 ? "None" : "All"}
+							</Text>
+						</UnstyledButton>
+
+						{/* Sort toggle */}
+						<Tooltip label={sortMode === "default" ? "Sort by count" : "Default order"} position="top">
+							<ActionIcon
+								variant="subtle"
+								size="xs"
+								onClick={() => { setSortMode((prev) => prev === "default" ? "count" : "default"); }}
+							>
+								{sortMode === "default" ? <IconSortAscendingLetters size={14} /> : <IconSortDescendingNumbers size={14} />}
+							</ActionIcon>
+						</Tooltip>
+					</Group>
+				)}
+			</Group>
 
 			<Collapse in={isExpanded}>
 				<Box pb="sm">
@@ -453,6 +539,8 @@ function SidebarFiltersContent() {
 		filters,
 		toggleFilter,
 		clearFilters,
+		clearFilterType,
+		selectAllInType,
 		toggleHasManual,
 		toggleHasGlobalSite,
 		hasActiveFilters,
@@ -534,6 +622,8 @@ function SidebarFiltersContent() {
 						entities={entityData.categories}
 						selectedIds={filters.categories}
 						onToggle={(id) => { toggleFilter("categories", id); }}
+						onClear={() => { clearFilterType("categories"); }}
+						onSelectAll={() => { selectAllInType("categories"); }}
 						otherCount={otherCounts.categories}
 					/>
 
@@ -542,6 +632,8 @@ function SidebarFiltersContent() {
 					<GradeSection
 						selectedIds={filters.grades}
 						onToggle={(id) => { toggleFilter("grades", id); }}
+						onClear={() => { clearFilterType("grades"); }}
+						onSelectAll={() => { selectAllInType("grades"); }}
 						otherCount={otherCounts.grades}
 					/>
 
@@ -552,6 +644,8 @@ function SidebarFiltersContent() {
 						entities={displayBrands}
 						selectedIds={filters.brands}
 						onToggle={(id) => { toggleFilter("brands", id); }}
+						onClear={() => { clearFilterType("brands"); }}
+						onSelectAll={() => { selectAllInType("brands"); }}
 						otherCount={otherCounts.brands}
 						showSearch={displayBrands.length > 20}
 					/>
@@ -563,6 +657,8 @@ function SidebarFiltersContent() {
 						entities={entityData.series}
 						selectedIds={filters.series}
 						onToggle={(id) => { toggleFilter("series", id); }}
+						onClear={() => { clearFilterType("series"); }}
+						onSelectAll={() => { selectAllInType("series"); }}
 						otherCount={otherCounts.series}
 						showSearch={entityData.series.length > 20}
 					/>
@@ -574,6 +670,8 @@ function SidebarFiltersContent() {
 						entities={entityData.scales}
 						selectedIds={filters.scales}
 						onToggle={(id) => { toggleFilter("scales", id); }}
+						onClear={() => { clearFilterType("scales"); }}
+						onSelectAll={() => { selectAllInType("scales"); }}
 						otherCount={otherCounts.scales}
 					/>
 
@@ -584,6 +682,8 @@ function SidebarFiltersContent() {
 						entities={entityData.years}
 						selectedIds={filters.years}
 						onToggle={(id) => { toggleFilter("years", id); }}
+						onClear={() => { clearFilterType("years"); }}
+						onSelectAll={() => { selectAllInType("years"); }}
 						otherCount={otherCounts.years}
 						getItemCount={(e) => (e as YearData).itemIds.length}
 					/>
