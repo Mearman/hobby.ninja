@@ -97,6 +97,9 @@ interface PresetChipProps {
 }
 
 function PresetChip({ label, image, itemCount, isActive, onClick }: PresetChipProps) {
+	// Determine max font size based on label type
+	const isShortLabel = /^\d{4}$/.test(label) || /^\d+\/\d+$/.test(label);
+	const maxFontSize = isShortLabel ? 14 : 20;
 	return (
 		<UnstyledButton
 			onClick={onClick}
@@ -130,9 +133,10 @@ function PresetChip({ label, image, itemCount, isActive, onClick }: PresetChipPr
 							src={resolveCdnUrl(image)}
 							alt={label}
 							fallbackText={label}
+							maxFontSize={maxFontSize}
 						/>
 					) : (
-						<FittedText text={label} />
+						<FittedText text={label} maxFontSize={maxFontSize} />
 					)}
 
 					{/* Active overlay */}
@@ -195,6 +199,10 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }:
 		? name
 		: (name?.en ?? name?.ja ?? "");
 
+	// Determine max font size based on label type
+	const isShortLabel = /^\d{4}$/.test(displayName) || /^\d+\/\d+$/.test(displayName);
+	const maxFontSize = isShortLabel ? 14 : 20;
+
 	return (
 		<UnstyledButton
 			onClick={onToggle}
@@ -228,9 +236,10 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }:
 							src={resolveCdnUrl(image)}
 							alt={displayName}
 							fallbackText={displayName}
+							maxFontSize={maxFontSize}
 						/>
 					) : (
-						<FittedText text={displayName} />
+						<FittedText text={displayName} maxFontSize={maxFontSize} />
 					)}
 
 					{/* Selected overlay */}

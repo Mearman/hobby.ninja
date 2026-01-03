@@ -8,12 +8,19 @@ interface ImageWithFallbackProps {
 	src: string;
 	alt: string;
 	fallbackText: string;
+	maxFontSize?: number;
 }
 
 const FONT_SIZES_PX = [20, 18, 16, 14, 12];
 
+interface FittedTextProps {
+	text: string;
+	/** Maximum font size in pixels (default: 20) */
+	maxFontSize?: number;
+}
+
 /** Text that auto-scales to fit its container */
-export function FittedText({ text }: { text: string }): React.ReactElement {
+export function FittedText({ text, maxFontSize = 20 }: FittedTextProps): React.ReactElement {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const textRef = useRef<HTMLDivElement>(null);
 
@@ -23,14 +30,17 @@ export function FittedText({ text }: { text: string }): React.ReactElement {
 		const textEl = textRef.current;
 		if (!container || !textEl) return;
 
+		// Filter font sizes to only those <= maxFontSize
+		const availableSizes = FONT_SIZES_PX.filter(size => size <= maxFontSize);
+
 		// Find the largest font size that fits by measuring at each size
-		for (const size of FONT_SIZES_PX) {
+		for (const size of availableSizes) {
 			textEl.style.fontSize = `${size}px`;
 			if (textEl.scrollHeight <= container.clientHeight) {
 				break;
 			}
 		}
-	}, [text]);
+	}, [text, maxFontSize]);
 
 	return (
 		<Box
@@ -68,11 +78,12 @@ export function ImageWithFallback({
 	src,
 	alt,
 	fallbackText,
+	maxFontSize = 20,
 }: ImageWithFallbackProps): React.ReactElement {
 	const [hasError, setHasError] = useState(false);
 
 	if (hasError) {
-		return <FittedText text={fallbackText} />;
+		return <FittedText text={fallbackText} maxFontSize={maxFontSize} />;
 	}
 
 	return (
