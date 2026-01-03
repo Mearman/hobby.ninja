@@ -80,8 +80,8 @@ function getEntityName(entity: FilterableEntity): string {
 // Preset Chip (Quick filter with optional image)
 // ============================================================================
 
-/** Preset chip width - compact for horizontal layout */
-const PRESET_CHIP_WIDTH = 56;
+/** Preset chip width - same as MiniEntityCard for visual consistency */
+const PRESET_CHIP_WIDTH = MINI_CARD_WIDTH;
 
 interface PresetChipProps {
 	label: string;
@@ -727,12 +727,12 @@ function SidebarFiltersContent() {
 	const [filtersExpanded, setFiltersExpanded] = useState(true);
 	const [topUsedFilters, setTopUsedFilters] = useState<FilterUsage[]>([]);
 
-	// Fetch top used filters on mount
+	// Fetch top used filters on mount and when filters change
 	useEffect(() => {
 		getTopUsedFilters(MAX_QUICK_FILTERS).then(setTopUsedFilters).catch(() => {
 			// Silently ignore storage errors
 		});
-	}, []);
+	}, [filters]);
 
 	// Convert usage data to presets
 	const dynamicPresets = useMemo(() => {
