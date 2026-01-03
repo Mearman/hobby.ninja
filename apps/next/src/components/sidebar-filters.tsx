@@ -55,12 +55,118 @@ const COUNT_PADDING = "2px 4px";
 /** Default hover background color */
 const BG_HOVER = "var(--mantine-color-default-hover)";
 
+/** Selected border color */
+const BORDER_SELECTED = "2px solid var(--mantine-primary-color-filled)";
+
+/** Unselected border color */
+const BORDER_UNSELECTED = "1px solid var(--mantine-color-default-border)";
+
+/** Selected overlay/background color */
+const BG_SELECTED_LIGHT = "var(--mantine-primary-color-light)";
+
+/** Selected text color */
+const COLOR_SELECTED = "var(--mantine-primary-color-filled)";
+
 /** Helper to get entity name as string */
 function getEntityName(entity: FilterableEntity): string {
 	const entityName = entity.name;
 	return typeof entityName === "string"
 		? entityName
 		: (entityName.en ?? entityName.ja);
+}
+
+// ============================================================================
+// Preset Chip (Quick filter with optional image)
+// ============================================================================
+
+/** Preset chip width - compact for horizontal layout */
+const PRESET_CHIP_WIDTH = 56;
+
+interface PresetChipProps {
+	label: string;
+	image?: string;
+	itemCount: number;
+	isActive: boolean;
+	onClick: () => void;
+}
+
+function PresetChip({ label, image, itemCount, isActive, onClick }: PresetChipProps) {
+	return (
+		<UnstyledButton
+			onClick={onClick}
+			style={{
+				width: PRESET_CHIP_WIDTH,
+				flexShrink: 0,
+			}}
+		>
+			<Box
+				style={{
+					border: isActive ? BORDER_SELECTED : BORDER_UNSELECTED,
+					borderRadius: "var(--mantine-radius-sm)",
+					overflow: "hidden",
+					backgroundColor: "var(--mantine-color-body)",
+				}}
+			>
+				{/* Image area with aspect ratio */}
+				<Box
+					style={{
+						aspectRatio: CARD_ASPECT_RATIO_STRING,
+						backgroundColor: "white",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						position: "relative",
+						overflow: "hidden",
+					}}
+				>
+					{image ? (
+						<ImageWithFallback
+							src={resolveCdnUrl(image)}
+							alt={label}
+							fallbackText={label}
+						/>
+					) : (
+						<FittedText text={label} />
+					)}
+
+					{/* Active overlay */}
+					{isActive && (
+						<Box
+							style={{
+								position: "absolute",
+								inset: 0,
+								background: BG_SELECTED_LIGHT,
+								pointerEvents: "none",
+							}}
+						/>
+					)}
+				</Box>
+
+				{/* Count section */}
+				<Box
+					style={{
+						padding: COUNT_PADDING,
+						textAlign: "center",
+						backgroundColor: isActive ? BG_SELECTED_LIGHT : BG_HOVER,
+					}}
+				>
+					<Text
+						size="xs"
+						fw={isActive ? 600 : 400}
+						c={isActive ? COLOR_SELECTED : "dimmed"}
+						style={{
+							lineHeight: 1.2,
+							whiteSpace: "nowrap",
+							overflow: "hidden",
+							textOverflow: "ellipsis",
+						}}
+					>
+						{itemCount.toLocaleString()}
+					</Text>
+				</Box>
+			</Box>
+		</UnstyledButton>
+	);
 }
 
 // ============================================================================
@@ -93,9 +199,7 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }:
 		>
 			<Box
 				style={{
-					border: isSelected
-						? "2px solid var(--mantine-primary-color-filled)"
-						: "1px solid var(--mantine-color-default-border)",
+					border: isSelected ? BORDER_SELECTED : BORDER_UNSELECTED,
 					borderRadius: "var(--mantine-radius-sm)",
 					overflow: "hidden",
 					backgroundColor: "var(--mantine-color-body)",
@@ -129,7 +233,7 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }:
 							style={{
 								position: "absolute",
 								inset: 0,
-								background: "var(--mantine-primary-color-light)",
+								background: BG_SELECTED_LIGHT,
 								pointerEvents: "none",
 							}}
 						/>
@@ -607,16 +711,26 @@ function SidebarFiltersContent() {
 					<Box py="xs">
 						<Text size="xs" c="dimmed" mb="xs">Quick filters</Text>
 						<Group gap="xs">
-							{presets.map((preset) => (
-								<Button
-									key={preset.id}
-									size="xs"
-									variant={isPresetActive(preset) ? "filled" : "light"}
-									onClick={() => { applyPreset(preset); }}
-								>
-									{preset.label}
-								</Button>
-							))}
+							{presets.map((preset) => {
+								// Look up data for grade or year presets
+								const gradeId = preset.filters.grades?.[0];
+								const yearId = preset.filters.years?.[0];
+								const grade = gradeId ? entityData.grades.find((g) => g.id === gradeId) : null;
+								const year = yearId ? entityData.years.find((y) => y.id === yearId) : null;
+								const image = grade?.image;
+								const itemCount = grade?.itemIds.length ?? year?.itemIds.length ?? 0;
+
+								return (
+									<PresetChip
+										key={preset.id}
+										label={preset.label}
+										image={image}
+										itemCount={itemCount}
+										isActive={isPresetActive(preset)}
+										onClick={() => { applyPreset(preset); }}
+									/>
+								);
+							})}
 						</Group>
 					</Box>
 
