@@ -881,10 +881,35 @@ export default [
 	// Storybook files configuration
 	{
 		files: ["**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)", "**/.storybook/**/*.@(ts|tsx|js|jsx)"],
+		languageOptions: {
+			parser: typescriptParser,
+			parserOptions: {
+				project: false, // Storybook files not in main tsconfig
+				ecmaVersion: "latest",
+				sourceType: "module",
+				ecmaFeatures: {
+					jsx: true,
+				},
+			},
+		},
 		plugins: {
 			storybook: storybook as unknown as ESLint.Plugin,
 		},
 		rules: {
+			// Disable TypeScript rules that require type information
+			"@typescript-eslint/no-base-to-string": "off",
+			"@typescript-eslint/restrict-plus-operands": "off",
+			"@typescript-eslint/no-floating-promises": "off",
+			"@typescript-eslint/no-misused-promises": "off",
+			"@typescript-eslint/no-unsafe-argument": "off",
+			"@typescript-eslint/no-unsafe-assignment": "off",
+			"@typescript-eslint/no-unsafe-call": "off",
+			"@typescript-eslint/no-unsafe-member-access": "off",
+			"@typescript-eslint/no-unsafe-return": "off",
+			"@typescript-eslint/require-await": "off",
+			"@typescript-eslint/unbound-method": "off",
+			"@typescript-eslint/no-unnecessary-condition": "off",
+			"@typescript-eslint/restrict-template-expressions": "off",
 			// Storybook best practices
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- storybook plugin lacks proper types
 			...(storybook.configs.recommended.rules as Record<string, unknown>),
