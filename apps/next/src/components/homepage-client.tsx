@@ -11,8 +11,7 @@ import {
 	Text,
 	Title,
 } from "@mantine/core";
-import { IconArrowNarrowRight, IconChevronDown, IconChevronUp, IconX } from "@tabler/icons-react";
-import Link from "next/link";
+import { IconChevronDown, IconChevronUp, IconX } from "@tabler/icons-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { CollapsibleGrid } from "@/components/collapsible-grid";
@@ -459,39 +458,13 @@ function HomepageClientContent({ categories, series, grades, brands, scales, yea
 			<Box pr={fullWidth ? { base: 44, md: 76 } : { base: 44, md: 76, xl: 0 }}>
 				{/* Explore */}
 				<Container size={containerSize} py="xl" w="100%">
-					<Stack gap="xl">
-						<Group justify="space-between" align="center">
-							<Group gap="md">
-								<Title order={2} size="h2" fw={600}>
-								Explore
-								</Title>
-								{hasActiveFilters && (
-									<Button
-										variant="subtle"
-										size="xs"
-										leftSection={<IconX size={14} />}
-										onClick={clearFilters}
-									>
-									Clear {selectedCount} filter{selectedCount > 1 ? "s" : ""}
-									</Button>
-								)}
-							</Group>
-							<Link href="/database" style={{ textDecoration: "none" }}>
-								<Group gap="xs" c="blue">
-									<Text size="sm" fw={600}>View all</Text>
-									<IconArrowNarrowRight size={16} />
-								</Group>
-							</Link>
-						</Group>
-
-						<ExploreSection
-							ref={exploreSectionRef}
-							items={items}
-							filters={filters}
-							totalCount={items.length}
-							onFilterToggle={toggleFilter}
-						/>
-					</Stack>
+					<ExploreSection
+						ref={exploreSectionRef}
+						items={items}
+						filters={filters}
+						totalCount={items.length}
+						onFilterToggle={toggleFilter}
+					/>
 				</Container>
 			</Box>
 
