@@ -282,7 +282,7 @@ function MiniEntityCard({ name, itemCount, image, isSelected, onToggle, badge }:
 // ============================================================================
 
 /** Sort mode for filter sections */
-type SortMode = "count" | "name";
+type SortMode = "count" | "name" | "default";
 
 interface FilterSectionProps {
 	title: string;
@@ -342,6 +342,10 @@ function FilterSection({
 			if (sortMode === "name") {
 				return getEntityName(a).localeCompare(getEntityName(b));
 			}
+			if (sortMode === "default") {
+				// Preserve original array order (except selected items first)
+				return 0;
+			}
 			return getItemCount(b) - getItemCount(a);
 		});
 	}, [filteredEntities, selectedIds, getItemCount, sortMode]);
@@ -388,9 +392,9 @@ function FilterSection({
 								<ActionIcon
 									variant="subtle"
 									size="xs"
-									onClick={() => { setSortMode((prev) => prev === "count" ? "name" : "count"); }}
+									onClick={() => { setSortMode((prev) => prev === "count" || prev === "default" ? "name" : "count"); }}
 								>
-									{sortMode === "count" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
+									{sortMode === "count" || sortMode === "default" ? <IconSortDescendingNumbers size={14} /> : <IconSortAscendingLetters size={14} />}
 								</ActionIcon>
 							</Tooltip>
 						</>
@@ -903,6 +907,7 @@ function SidebarFiltersContent() {
 						onClear={() => { clearFilterType("scales"); }}
 						onSelectAll={() => { selectAllInType("scales"); }}
 						otherCount={otherCounts.scales}
+						defaultSort="default"
 					/>
 
 					<Divider />
@@ -916,6 +921,7 @@ function SidebarFiltersContent() {
 						onSelectAll={() => { selectAllInType("years"); }}
 						otherCount={otherCounts.years}
 						getItemCount={(e) => (e as YearData).itemIds.length}
+						defaultSort="default"
 					/>
 
 					<Divider />
