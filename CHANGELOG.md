@@ -1,3 +1,9 @@
+## [1.11.1](https://github.com/Mearman/hobby.ninja/compare/v1.11.0...v1.11.1) (2026-11-23)
+
+### Documentation
+
+- remove links to private repositories ([a5a893d](https://github.com/Mearman/hobby.ninja/commit/a5a893d618cb36d6a9e64345305191b4f8446f08))
+
 ## [1.11.0](https://github.com/Mearman/hobby.ninja/compare/v1.10.0...v1.11.0) (2026-01-04)
 
 ### Features
